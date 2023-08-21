@@ -14,18 +14,24 @@ const shareTechMono = localFont({
     },
   ],
 });
+
 export default function Logo() {
   const [isFinished, setIsFinished] = useState(false);
   return (
     <h1
       className={`${
-        isFinished ? 'dark-mode-bg text-white' : 'light-mode-bg text-zinc-800'
+        isFinished ? 'bg-black text-white' : 'light-mode-bg text-zinc-800'
       } p-6 font-bold text-4xl border-r-2 border-style ease-in transition-colors`}
     >
       <Link href="/">
         <TypeAnimation
           preRenderFirstString
-          sequence={['Lani.world', 1000, 'Lani.log', () => setIsFinished(true)]}
+          sequence={[
+            '<Welcome! />',
+            1000,
+            '<Lani.log />',
+            () => setIsFinished(true),
+          ]}
           className={shareTechMono.className}
           cursor={false}
         />

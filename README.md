@@ -1,6 +1,6 @@
 lani의 개발 블로그
 
-사용 스택
+## Base 스택
 
 - [x] Next@13.4.18(App route)
 - [x] Typescript
@@ -9,5 +9,10 @@ lani의 개발 블로그
 - [x] Prettier
 - [x] Husky
 - [x] Lint-staged
-- [ ] react-markdown
-- [ ] react-syntax-highlighter
+
+## Markdown을 위한 스택
+
+- [x] glob
+- [x] gray-matter
+- [x] react-markdown
+- [x] react-syntax-highlighter
