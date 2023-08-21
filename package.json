@@ -1,5 +1,5 @@
 {
-  "name": "devlog",
+  "name": "lani.log",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -23,6 +23,7 @@
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-type-animation": "^3.1.0",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {

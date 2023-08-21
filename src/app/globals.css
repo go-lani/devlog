@@ -4,7 +4,7 @@
 
 @layer base {
   .light-mode-bg {
-    background: #e2e4dd;
+    background-color: #e2e4dd;
   }
   .dark-mode-bg {
     @apply bg-zinc-800;

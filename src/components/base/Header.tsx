@@ -1,5 +1,6 @@
 import { Roboto_Mono } from 'next/font/google';
 import Link from 'next/link';
+import Logo from './Logo';
 
 const roboto = Roboto_Mono({ subsets: ['latin'] });
 
@@ -7,11 +8,7 @@ export default function Header() {
   return (
     <header className="flex justify-center border-b-2 container-layout border-style">
       <div className="flex justify-between items-center content-layout border-x-2 border-style">
-        <h1
-          className={`${roboto.className} p-6 font-bold text-4xl text-zinc-800`}
-        >
-          <Link href="/">Lani World</Link>
-        </h1>
+        <Logo />
         <ul className="flex h-full">
           <li className="flex items-center h-full">
             <Link
