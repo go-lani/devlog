@@ -4,7 +4,7 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import Image from 'next/image';
+import Img from '../common/Img';
 
 interface IProps {
   content: string;
@@ -34,11 +34,9 @@ export default function MarkdownViewer({ content }: IProps) {
           },
           img: ({ node, ...props }) => {
             return (
-              <Image
+              <Img
                 src={props.src || ''}
                 alt={props.alt || ''}
-                width={500}
-                height={300}
                 className="w-full"
               />
             );

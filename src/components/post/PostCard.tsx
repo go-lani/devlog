@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Meta } from '@/types/post';
-import ThumbnailImage from '../common/ThumbnailImage';
+import Img from '../common/Img';
 
 interface Props {
   meta: Meta;
@@ -13,7 +13,7 @@ export default function PostCard({
     <Link href={`/posts/${path}`}>
       <article className="overflow-hidden rounded-lg shadow-md hover:shadow-xl">
         <div>
-          <ThumbnailImage className="w-full" src={thumbnail} alt={title} />
+          <Img className="w-full" src={thumbnail} alt={title} />
         </div>
         <div className="px-3 py-5 flex flex-col items-center">
           <time className="font-semibold self-end text-xs text-gray-700">

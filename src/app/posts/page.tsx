@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { getAllPostCategories, getAllPosts, getPost } from '@/service/posts';
-import ThumbnailImage from '@/components/common/ThumbnailImage';
+import Img from '@/components/common/Img';
 import PostContainer from '@/components/post/PostContainer';
 
 export const metadata: Metadata = {

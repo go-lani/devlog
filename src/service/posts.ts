@@ -9,14 +9,17 @@ import { ALL_POST } from '@/constants/post';
 const POSTS_PATH = './contents';
 
 const getThumbnail = (filePath: string) => {
-  let thumbnail = '/api/images?imgPath=/contents/default-thumbnail.webp';
+  let thumbnail = path.join(
+    '/api/images?imgPath=contents',
+    'default-thumbnail.webp',
+  );
   const folderPath = path.dirname(filePath);
   try {
     const files = readdirSync(folderPath);
     const imageExtensions = ['.jpg', '.png', '.webp'];
-    const imageFiles = files.filter((file) =>
-      imageExtensions.includes(path.extname(file)),
-    );
+    const imageFiles = files.filter((file) => {
+      return imageExtensions.includes(path.extname(file));
+    });
 
     if (imageFiles.length > 0) {
       thumbnail = path.join(`/api/images?imgPath=${folderPath}`, imageFiles[0]); // First image found
