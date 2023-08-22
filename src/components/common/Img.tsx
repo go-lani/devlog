@@ -1,6 +1,4 @@
-'use client';
-
-import { ImgHTMLAttributes, useEffect, useState } from 'react';
+import { ImgHTMLAttributes, useCallback, useEffect, useState } from 'react';
 
 export default function Img({
   src,
@@ -10,7 +8,7 @@ export default function Img({
 }: ImgHTMLAttributes<HTMLImageElement>) {
   const [imageUrl, setImageUrl] = useState(null);
 
-  useEffect(() => {
+  const setBaseUrl = useCallback(() => {
     fetch(src!)
       .then((response) => response.json())
       .then((data) => {
@@ -19,9 +17,11 @@ export default function Img({
       .catch((error) => console.error(error));
   }, [src]);
 
-  if (!imageUrl) {
-    return <div>Loading...</div>;
-  }
+  useEffect(() => {
+    setBaseUrl();
+  }, [setBaseUrl]);
 
-  return <img {...rest} src={imageUrl} className={className} alt={alt} />;
+  return (
+    imageUrl && <img {...rest} src={imageUrl} className={className} alt={alt} />
+  );
 }

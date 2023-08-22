@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import { getAllPostCategories, getFeaturedPosts } from '@/service/posts';
-import Img from '@/components/common/Img';
 import PostContainer from '@/components/post/PostContainer';
 
 export const metadata: Metadata = {
