@@ -15,15 +15,15 @@ export default function PostCard({
         <div>
           <Img className="w-full" src={thumbnail} alt={title} />
         </div>
-        <div className="px-3 py-5 flex flex-col items-center">
-          <time className="font-semibold self-end text-xs text-gray-700">
+        <div className="flex flex-col items-center px-3 py-5">
+          <time className="self-end text-xs font-semibold text-gray-700">
             {new Date(date).toLocaleDateString()}
           </time>
-          <h3 className="text-xl font-bold mt-3">{title}</h3>
-          <p className="w-full text-xl mt-2 truncate text-center">
+          <h3 className="mt-3 text-xl font-bold">{title}</h3>
+          <p className="mt-2 w-full truncate text-center text-xl">
             {description}
           </p>
-          <span className="text-s mt-2 py-2 px-3 bg-zinc-800 rounded-xl overflow-hidden text-white">
+          <span className="text-s mt-2 overflow-hidden rounded-xl bg-zinc-800 px-3 py-2 text-white">
             {category}
           </span>
         </div>

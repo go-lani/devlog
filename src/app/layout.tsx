@@ -1,7 +1,7 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import Header from '@/components/base/Header';
-import './globals.css';
+import '@/styles/globals.css';
 import Footer from '@/components/base/Footer';
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${spoqaSans.className} light-mode-bg`}>
         <Header />
-        <main className="flex flex-col min-h-screen">{children}</main>
+        <main className="flex min-h-screen flex-col">{children}</main>
         <Footer />
       </body>
     </html>

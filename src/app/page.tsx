@@ -3,19 +3,19 @@ import Image from 'next/image';
 export default function App() {
   return (
     <>
-      <section className="container-layout border-style border-b-2">
-        <div className="flex justify-center content-layout border-x-2 border-style">
+      <section className="container-layout border-style border-b">
+        <div className="content-layout border-style flex justify-center border-x">
           <Image
             src="/assets/images/character.png"
             width={250}
             height={250}
             alt=""
-            className="border-x-2 border-style"
+            className="border-style border-x"
           />
         </div>
       </section>
-      <section className="flex w-full justify-center h-screen bg-white">
-        <div className="content-layout border-x-2 border-style">
+      <section className="flex h-screen w-full justify-center bg-white">
+        <div className="content-layout border-style border-x">
           <p>next content</p>
         </div>
       </section>

@@ -13,8 +13,8 @@ export default function Categories({
   setSelectedCategory,
 }: Props) {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <ul className="flex gap-4 mt-5">
+    <div className="flex flex-col items-center justify-center">
+      <ul className="mt-5 flex gap-4">
         {categories.map((category) => (
           <li key={category}>
             <Category

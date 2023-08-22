@@ -13,14 +13,14 @@ export default function Navigation() {
   return (
     <ul className="flex h-full">
       {MENU.map(({ href, title }) => (
-        <li className="flex items-center h-full" key="href">
+        <li className="flex h-full items-center" key="href">
           <Link
             href={href}
             className={`${
               pathname.includes(href)
                 ? 'dark-mode-bg text-white'
                 : 'light-mode-bg text-zinc-700'
-            } flex items-center h-full px-6 font-medium text-xl border-style border-l-2`}
+            } border-style flex h-full items-center border-l px-5 text-lg`}
           >
             {title}
           </Link>

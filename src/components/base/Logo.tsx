@@ -21,7 +21,7 @@ export default function Logo() {
     <h1
       className={`${
         isFinished ? 'bg-black text-white' : 'light-mode-bg text-zinc-800'
-      } p-6 font-bold text-4xl border-r-2 border-style ease-in transition-colors`}
+      } border-style border-r p-4 text-2xl font-bold transition-colors ease-in`}
     >
       <Link href="/">
         <TypeAnimation

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Series() {
   return (
     <section className="container-layout">
-      <div className="content-layout border-style border-x-2">
+      <div className="content-layout border-style border-x">
         <ul>
           <li>series1</li>
           <li>series2</li>

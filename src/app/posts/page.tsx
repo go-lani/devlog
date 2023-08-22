@@ -20,7 +20,7 @@ export default async function Posts() {
 
   return (
     <section className="container-layout">
-      <div className="content-layout border-style border-x-2">
+      <div className="content-layout border-style border-x">
         <PostContainer categories={categories} posts={posts} />
       </div>
     </section>
