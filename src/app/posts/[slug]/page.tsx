@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/MarkdownViewer';
 

@@ -34,11 +34,7 @@ export default function MarkdownViewer({ content }: IProps) {
           },
           img: ({ node, ...props }) => {
             return (
-              <Img
-                src={props.src || ''}
-                alt={props.alt || ''}
-                className="max-w-full"
-              />
+              <Img src={props.src} alt={props.alt} className="max-w-full" />
             );
           },
         }}
