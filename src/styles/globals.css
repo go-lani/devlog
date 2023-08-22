@@ -13,9 +13,9 @@
     @apply border-solid border-black;
   }
   .content-layout {
-    @apply max-w-screen-xl w-full;
+    @apply mx-4 w-full max-w-screen-lg;
   }
   .container-layout {
-    @apply flex w-full h-full justify-center grow;
+    @apply flex h-full w-full grow justify-center;
   }
 }

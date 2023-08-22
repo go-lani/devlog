@@ -1,21 +1,24 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { getAllPostSeries } from '@/service/posts';
 
 export const metadata: Metadata = {
   title: 'devlog - series',
   description: "lani's devlog",
 };
 
-export default function Series() {
+export default async function Series() {
+  const series = await getAllPostSeries();
+  console.log('series', series);
   return (
     <section className="container-layout">
       <div className="content-layout border-style border-x">
         <ul>
-          <li>series1</li>
-          <li>series2</li>
-          <li>series3</li>
-          <li>series4</li>
-          <li>series5</li>
-          <li>series6</li>
+          {series.map((aSeries) => (
+            <li>
+              <Link href={`/series/${aSeries}`}>{aSeries}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
