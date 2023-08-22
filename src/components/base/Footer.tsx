@@ -7,7 +7,7 @@ export default function Footer() {
     <footer
       className={`${roboto.className} container-layout border-style border-t-2 bg-zinc-800`}
     >
-      <div className="content-layout border-style border-x py-3">
+      <div className="content-layout border-style border-x py-4">
         <p className="text-center text-base font-bold text-white">
           © 2023 Lani. All Rights Reserved.
         </p>

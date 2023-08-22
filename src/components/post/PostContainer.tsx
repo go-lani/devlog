@@ -7,7 +7,7 @@ import Categories from './Categories';
 import PostsGrid from './PostsGrid';
 
 interface Props {
-  categories: string[];
+  categories?: string[];
   posts: Post[];
 }
 
@@ -21,11 +21,13 @@ export default function PostContainer({ categories, posts }: Props) {
 
   return (
     <section className="px-10">
-      <Categories
-        categories={categories}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
+      {categories && (
+        <Categories
+          categories={categories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
+      )}
       <PostsGrid posts={filteredPosts} />
     </section>
   );

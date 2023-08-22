@@ -4,7 +4,6 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
   const { imgPath } = Object.fromEntries(req.nextUrl.searchParams);
-  console.log(imgPath);
   const filePath = path.join(process.cwd(), imgPath);
 
   if (!fs.existsSync(filePath)) {

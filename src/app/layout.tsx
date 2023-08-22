@@ -36,10 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={`${spoqaSans.className} light-mode-bg`}>
-        <Header />
-        <main className="flex min-h-screen flex-col">{children}</main>
-        <Footer />
+      <body className={`${spoqaSans.className} light-mode-bg px-[20px]`}>
+        <div className="mx-[-20px]">
+          <Header />
+          <main className="flex min-h-screen flex-col">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

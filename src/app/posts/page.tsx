@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { getAllPostCategories, getAllPosts, getPost } from '@/service/posts';
+import { getAllPostCategories, getFeaturedPosts } from '@/service/posts';
 import Img from '@/components/common/Img';
 import PostContainer from '@/components/post/PostContainer';
 
@@ -16,7 +16,7 @@ export default async function Posts() {
   // const src = `/api/images?imgPath=${post.meta.thumbnail}`;
   // console.log('post', post);
 
-  const posts = await getAllPosts();
+  const posts = await getFeaturedPosts();
 
   return (
     <section className="container-layout">

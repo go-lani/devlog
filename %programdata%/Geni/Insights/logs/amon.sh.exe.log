@@ -1,0 +1,25 @@
+[33360:1] 2023-08-22 15:11:35.369 [0x5E50(0) CxCommonApi::LogModuleInfo] [MODULE LOADING] ModuleName amon64.dll, Version [2.0.0.1], ModulePath C:\Program Files\Geni\Insights\temp\amon64.dll ModifiedTime 2023-04-06 11:48:32
+[33360:1] 2023-08-22 15:11:35.370 [0x5E50(0) CxSensorPipeClient::Initialize] [Initialize]
+[33360:1] 2023-08-22 15:11:35.370 [0x5E50(0) CxThreadPool::Initialize] Queue init : OutputQue 0, nThreadPoolSize : 1
+[33360:1] 2023-08-22 15:11:35.370 [0x5E50(183) CxThreadPool::CreateThreadPool] Create 1 WorkerThread
+[33360:1] 2023-08-22 15:11:35.371 [0x5E50(0) CAttachMonitor::_InstallHook] [INSTALL_HOOK] GetOpenFileNameW : sh.exe:33360
+[33360:1] 2023-08-22 15:11:35.371 [0x5E50(183) CAttachMonitor::_InstallHook] [INSTALL_HOOK] CoCreateInstance : sh.exe:33360
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(183) CAttachMonitor::_InstallHook] [INSTALL_HOOK] DoDragDrop : sh.exe:33360
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(183) CUIAManager::Initialize] [Initialize]
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(183) CUIAManager::Initialize] [/Initialize] SUCCESS
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(536871044) CxDllNotifier::Initialize] [Initialize]
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(183) CxDllNotifier::Initialize] [RegisterDllNotification] 00000000007D6260
+[33360:1] 2023-08-22 15:11:35.372 [0x5E50(183) CxDllNotifier::RegisterCallback] [RegisterCallback] Callback 00007FFBDEE05300 Context 00000000007F5470
+[33360:1] 2023-08-22 15:11:35.373 [0x7904(0) CxThreadPool::ThreadEntry] Worker Thread begins
+[33360:1] 2023-08-22 15:11:35.374 [0x7904(1) CxSensorPipeClient::SendJson] [SEND][ReqType:10] {
+   "PID" : 33360,
+   "ProcPath" : "C:\\Program Files\\Git\\usr\\bin\\sh.exe",
+   "ReqType" : "xSensorRequestType_GetAmonProfile"
+}
+
+[33360:1] 2023-08-22 15:11:35.374 [0x7904(183) CxSensorPipeClient::SendJson] [RECV] {
+   "DetectionProcessList" : ""
+}
+
+[33360:1] 2023-08-22 15:11:35.374 [0x7904(183) CAttachMonitor::_PipeResponseCallback] Addtional DetectionProcessList is empty
+[33360:1] 2023-08-22 15:11:35.374 [0x7904(183) CAttachMonitor::_PipeResponseCallback] Not Target Process[myself]
