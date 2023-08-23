@@ -103,7 +103,7 @@ export async function getAllPostSeries(): Promise<string[]> {
 
 export async function getSeriesPosts(series: string): Promise<Post[]> {
   return getFeaturedPosts().then((posts) =>
-    posts.filter((post) => post.meta.series === series),
+    posts.filter((post) => post.meta.series === decodeURI(series)),
   );
 }
 
