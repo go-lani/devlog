@@ -19,3 +19,30 @@
     @apply light-mode-bg flex h-full w-full grow justify-center;
   }
 }
+
+@layer components {
+  .markdown-viewer div[data-remark-code-title='true'] {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+    padding: 1em 1em 0.5em;
+    background-color: #282c34;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #7d8189;
+  }
+  .markdown-viewer > pre {
+    position: relative;
+  }
+  .markdown-viewer .language-text {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0.35em 0.5em;
+    border: 1px solid #7a6900;
+    color: #7a6900;
+  }
+}

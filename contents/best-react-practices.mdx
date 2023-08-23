@@ -10,9 +10,14 @@ React is a JavaScript library for building user interfaces.
 
 ## A Simple Component
 
+```bash title="Terminal"
+cd ..
+rm -rf node_modules
+```
+
 React components implement a `render()` method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by `render()` via `this.props`.
 
-```jsx
+```jsx title="/example/index.js"
 class HelloMessage extends React.Component {
   render() {
     return <div>Hello {this.props.name}</div>;
