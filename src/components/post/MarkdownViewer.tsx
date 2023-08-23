@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
+import remarkCodeTitle from 'remark-code-title';
 import transformImgSrc from '@/utils/transformImgSrc';
 import Syntax from './SyntaxHighlighter';
 
@@ -9,10 +10,10 @@ interface IProps {
 
 export default function MarkdownViewer({ content }: IProps) {
   return (
-    <div className="w-full">
+    <div className="markdown-viewer">
       <ReactMarkdown
         children={content}
-        remarkPlugins={[transformImgSrc]}
+        remarkPlugins={[transformImgSrc, remarkCodeTitle]}
         components={{
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');

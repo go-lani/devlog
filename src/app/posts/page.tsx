@@ -9,11 +9,6 @@ export const metadata: Metadata = {
 
 export default async function Posts() {
   const categories = await getAllPostCategories();
-
-  // const post = await getPost('best-react-practices');
-  // const src = `/api/images?imgPath=${post.meta.thumbnail}`;
-  // console.log('post', post);
-
   const posts = await getFeaturedPosts();
 
   return (
