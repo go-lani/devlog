@@ -16,6 +16,6 @@
     @apply mx-4 w-full max-w-screen-lg;
   }
   .container-layout {
-    @apply flex h-full w-full grow justify-center;
+    @apply light-mode-bg flex h-full w-full grow justify-center;
   }
 }
