@@ -16,3 +16,9 @@ lani의 개발 블로그
 - [x] gray-matter
 - [x] react-markdown
 - [x] react-syntax-highlighter
+
+## 규칙
+
+1. /contents 폴더에 md파일을 추가하면 자동으로 라우팅이 됩니다.
+2. markdown내부에서 이미지 사용시 ./의 기준은 **/contents** 입니다.
+3. thumbnail 이미지는 해당 폴더에 \_thumbnail로 끝나는 파일을 추가하면 자동으로 적용됩니다.(없을 경우 /contents/default_thumbnail.webp가 적용됩니다.)

@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 
 export default async function Series() {
   const series = await getAllPostSeries();
-  console.log('series', series);
   return (
     <section className="container-layout">
       <div className="content-layout border-style border-x">
