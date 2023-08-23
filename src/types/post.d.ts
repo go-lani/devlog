@@ -6,6 +6,7 @@ export type Meta = {
   path: string;
   featured: boolean;
   series?: string;
+  series_number?: string;
   thumbnail: string;
 };
 
