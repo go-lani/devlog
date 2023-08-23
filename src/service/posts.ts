@@ -6,32 +6,51 @@ import matter from 'gray-matter';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
 
-const POSTS_PATH = './contents';
+const POSTS_PATH = 'contents';
+
+const getThumnailBase64 = (
+  thumbnailPath = path.join(POSTS_PATH, 'images', 'default_thumbnail.webp'),
+) => {
+  const fileName = path.basename(thumbnailPath);
+  const imageBuffer = readFileSync(thumbnailPath);
+  const base64String = imageBuffer.toString('base64');
+  return `data:image/${fileName};base64,${base64String}`;
+};
 
 const getThumbnail = (filePath: string) => {
-  let thumbnail = path.join(
-    '/api/images?imgPath=contents',
-    'default_thumbnail.webp',
-  );
-
+  const mdxName = path.basename(filePath).replace(path.extname(filePath), '');
   const folderPath = path.dirname(filePath);
+  const folderImagePath = path.join(folderPath, 'images');
+  const folderName = folderPath.replace(`${POSTS_PATH}\\`, '');
+
+  const imageExtensions = ['.jpg', '.png', '.webp'];
+
   try {
-    const files = readdirSync(folderPath);
-    const imageExtensions = ['.jpg', '.png', '.webp'];
+    const files = readdirSync(folderImagePath);
     const imageFiles = files.filter(
       (file) =>
         file.includes('_thumbnail') &&
         imageExtensions.includes(path.extname(file)),
     );
+    const hasSpecificThumbnail = imageFiles.some((file) =>
+      file.includes(mdxName),
+    );
 
-    if (imageFiles.length > 0) {
-      thumbnail = path.join(`/api/images?imgPath=${folderPath}`, imageFiles[0]); // First image found
-    }
+    const imagePaths = imageFiles
+      .filter((file) =>
+        hasSpecificThumbnail
+          ? file.includes(mdxName)
+          : !file.includes(mdxName) && file.includes(folderName),
+      )
+      .map((file) => path.join(folderImagePath, file));
+
+    return imagePaths.length > 0
+      ? getThumnailBase64(imagePaths[0])
+      : getThumnailBase64();
   } catch (err) {
     console.error('An error occurred:', err);
+    return '';
   }
-
-  return thumbnail;
 };
 
 const parsePost = async (filePath: string): Promise<Post> => {
@@ -40,11 +59,12 @@ const parsePost = async (filePath: string): Promise<Post> => {
 
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
+
   return { meta: { ...meta, thumbnail, path: slug }, content } as Post;
 };
 
 export const getAllPosts = cache(async () => {
-  const files = sync(`${POSTS_PATH}/**/*.{md,mdx}`);
+  const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
 
   const result = await Promise.all(files.map(parsePost));
 

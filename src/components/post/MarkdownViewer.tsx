@@ -1,10 +1,7 @@
-'use client';
-
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import Img from '../common/Img';
+import transformImgSrc from '@/utils/transformImgSrc';
+import Syntax from './SyntaxHighlighter';
 
 interface IProps {
   content: string;
@@ -15,16 +12,16 @@ export default function MarkdownViewer({ content }: IProps) {
     <div className="w-full">
       <ReactMarkdown
         children={content}
+        remarkPlugins={[transformImgSrc]}
         components={{
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
-              <SyntaxHighlighter
-                children={String(children).replace(/\n$/, '')}
-                {...props}
-                style={oneDark}
+              <Syntax
+                node={node}
+                children={children}
                 language={match[1]}
-                PreTag="div"
+                {...props}
               />
             ) : (
               <code {...props} className={className}>
@@ -34,7 +31,11 @@ export default function MarkdownViewer({ content }: IProps) {
           },
           img: ({ node, ...props }) => {
             return (
-              <Img src={props.src} alt={props.alt} className="max-w-full" />
+              <img
+                src={props.src!}
+                alt={props.alt || ''}
+                className="max-w-full"
+              />
             );
           },
         }}
