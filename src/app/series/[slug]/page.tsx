@@ -2,11 +2,11 @@ import React from 'react';
 import { getSeriesPosts } from '@/service/posts';
 import PostContainer from '@/components/post/PostContainer';
 
-interface IProps {
+interface Props {
   params: { slug: string };
 }
 
-export default async function DetailPage({ params: { slug } }: IProps) {
+export default async function DetailPage({ params: { slug } }: Props) {
   const posts = await getSeriesPosts(slug);
   return (
     <section className="container-layout">

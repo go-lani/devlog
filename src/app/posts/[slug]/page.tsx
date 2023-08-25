@@ -1,11 +1,11 @@
 import { getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/MarkdownViewer';
 
-interface IProps {
+interface Props {
   params: { slug: string };
 }
 
-export default async function DetailPage({ params: { slug } }: IProps) {
+export default async function DetailPage({ params: { slug } }: Props) {
   const post = await getPost(slug);
   return (
     <>

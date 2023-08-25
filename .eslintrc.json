@@ -61,6 +61,7 @@
     "react/prop-types": "off",
     "@next/next/no-page-custom-font": "off",
     "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "no-console": "off"
