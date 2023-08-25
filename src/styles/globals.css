@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  .light-mode-bg {
-    background-color: #e2e4dd;
-  }
-  .dark-mode-bg {
-    @apply bg-zinc-800;
-  }
   .border-style {
     @apply border-solid border-black;
   }
@@ -16,7 +10,13 @@
     @apply mx-4 w-full max-w-screen-lg;
   }
   .container-layout {
-    @apply light-mode-bg flex h-full w-full grow justify-center;
+    @apply bg-app-white flex h-full w-full grow justify-center;
+  }
+  .only-mobile {
+    @apply flex md:hidden;
+  }
+  .only-pc {
+    @apply hidden md:flex;
   }
 }
 
@@ -40,8 +40,8 @@
     right: 1em;
     bottom: 1em;
     font-size: 14px;
-    line-height: 1;
-    padding: 0.35em 0.5em;
+    line-height: 1.2;
+    padding: 0.3em 0.5em;
     border: 1px solid #7a6900;
     color: #7a6900;
   }
