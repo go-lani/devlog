@@ -4,11 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Modal from '../common/modal/Modal';
 import MobileNavigation from './MobileNavigation';
-import Sample2 from '../common/modal/Sample2';
-import Sample1 from '../common/modal/Sample1';
-import Sample3 from '../common/modal/Sample3';
 
-const MENU = [
+export const MENU = [
   { href: '/posts', title: 'Posts' },
   { href: '/series', title: 'Series' },
 ];
@@ -17,20 +14,18 @@ export default function Navigation() {
   const pathname = usePathname();
   return (
     <>
-      <div className="flex">
+      <div className="border-style flex h-full items-center border-l md:hidden">
         <Modal
-          trigger={<button type="button">모달 1</button>}
-          component={<Sample1 />}
+          trigger={
+            <button
+              type="button"
+              className="relative h-[32px] w-[32px] bg-zinc-600"
+            >
+              <span className="hidden-text">메뉴 열기</span>
+            </button>
+          }
+          component={<MobileNavigation />}
           hasDim
-        />
-        <Modal
-          hasDim
-          trigger={<button type="button">모달 2</button>}
-          component={<Sample2 />}
-        />
-        <Modal
-          trigger={<button type="button">모달 3</button>}
-          component={<Sample3 />}
         />
       </div>
       <ul className="hidden h-full md:flex">

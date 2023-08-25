@@ -12,11 +12,15 @@
   .container-layout {
     @apply bg-app-white flex h-full w-full grow justify-center;
   }
-  .only-mobile {
-    @apply flex md:hidden;
-  }
-  .only-pc {
-    @apply hidden md:flex;
+  .hidden-text {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    background-color: transparent;
+    clip: rect(0px, 0px, 0px, 0px);
+    white-space: nowrap;
   }
 }
 

@@ -14,7 +14,7 @@ export default function Category({
   return (
     <button
       type="button"
-      className={`${isSelected && 'text-blue-500'} text-xl`}
+      className={`text-base md:text-xl ${isSelected ? 'text-blue-500' : ''}`}
       onClick={() => {
         setSelectedCategory(category);
       }}
