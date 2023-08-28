@@ -5,6 +5,7 @@ import { cache } from 'react';
 import matter from 'gray-matter';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
+import readingTime from 'reading-time';
 
 const POSTS_PATH = 'contents';
 
@@ -60,7 +61,17 @@ const parsePost = async (filePath: string): Promise<Post> => {
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
 
-  return { meta: { ...meta, thumbnail, path: slug }, content } as Post;
+  return {
+    meta: {
+      ...meta,
+      tags: meta.tags.split(',').map((category: string) => category.trim()),
+      thumbnail,
+      path: slug,
+      readingMinutes: Math.ceil(readingTime(content).minutes),
+      wordCount: content.split(/\s+/gu).length,
+    },
+    content,
+  } as Post;
 };
 
 export const getAllPosts = cache(async () => {
@@ -85,7 +96,7 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
 
 export async function getAllPostCategories(): Promise<string[]> {
   return getFeaturedPosts().then((posts) =>
-    Array.from(new Set([ALL_POST, ...posts.map((post) => post.meta.category)])),
+    Array.from(new Set([ALL_POST, ...posts.map((post) => post.meta.tags)])),
   );
 }
 

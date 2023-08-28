@@ -2,7 +2,6 @@
 
 import localFont from 'next/font/local';
 import Link from 'next/link';
-import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 const shareTechMono = localFont({
