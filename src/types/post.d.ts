@@ -2,12 +2,14 @@ export type Meta = {
   title: string;
   description: string;
   date: string;
-  category: string;
+  tags: string[];
   path: string;
   featured: boolean;
   series?: string;
   series_number?: string;
   thumbnail: string;
+  wordCount: number;
+  readingMinutes: number;
 };
 
 export type Post = {
