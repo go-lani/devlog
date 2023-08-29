@@ -11,8 +11,6 @@ interface Props {
 
 export default async function DetailPage({ params: { slug } }: Props) {
   const post = await getPost(slug);
-  const categories = [...post.meta.tags];
-  const displayCategories = categories.splice(0, 3);
   return (
     <>
       <div className="container-layout border-style grow-0 border-b bg-neutral-900">
@@ -31,14 +29,12 @@ export default async function DetailPage({ params: { slug } }: Props) {
               {getDateString({ inputDate: post.meta.date })}
             </h3>
             <p className="border-style flex items-center justify-center gap-1 border-x p-2 text-sm">
-              <span>
-                <Image
-                  src="/assets/images/icons/timer.svg"
-                  width={21}
-                  height={21}
-                  alt=""
-                />
-              </span>
+              <Image
+                src="/assets/images/icons/timer.svg"
+                width={21}
+                height={21}
+                alt=""
+              />
               약 {post.meta.readingMinutes}분
             </p>
           </div>
