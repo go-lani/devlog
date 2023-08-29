@@ -16,7 +16,7 @@ const shareTechMono = localFont({
 
 export default function Logo() {
   return (
-    <h1 className="bg-black px-4 py-3 text-xl font-bold text-white transition-colors ease-in md:text-2xl">
+    <p className="bg-black px-4 py-3 text-xl font-bold text-white transition-colors ease-in md:text-2xl">
       <Link href="/">
         <TypeAnimation
           preRenderFirstString
@@ -25,6 +25,6 @@ export default function Logo() {
           cursor={false}
         />
       </Link>
-    </h1>
+    </p>
   );
 }
