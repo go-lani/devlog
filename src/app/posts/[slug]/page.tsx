@@ -1,8 +1,8 @@
 import { getPost } from '@/service/posts';
-import MarkdownViewer from '@/components/post/MarkdownViewer';
+import MarkdownViewer from '@/components/post/detail/MarkdownViewer';
 import { getDateString } from '@/utils/date';
 import Image from 'next/image';
-import Sidebar from '@/components/post/Sidebar';
+import Sidebar from '@/components/post/detail/Sidebar';
 
 interface Props {
   params: { slug: string };
@@ -13,7 +13,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
   return (
     <>
       <section className="container-layout border-style grow-0 border-b bg-neutral-900">
-        <div className="content-layout border-style text-app-white relative justify-center border-x text-center">
+        <div className="content-layout border-style relative justify-center border-x text-center text-app-white">
           <div className="flex flex-col justify-center px-4 py-16 md:px-5 md:py-28">
             {post.meta.series && (
               <p className="mb-3">
@@ -23,7 +23,11 @@ export default async function DetailPage({ params: { slug } }: Props) {
             )}
             <h1 className="text-xl md:text-4xl">{post.meta.title}</h1>
           </div>
-          <div className="border-style align-center flex justify-center border-t md:justify-start md:text-center">
+        </div>
+      </section>
+      <div className="container-layout border-style grow-0 border-b bg-neutral-900">
+        <div className="content-layout">
+          <div className="border-style align-center flex justify-center border-x text-app-white md:justify-start md:text-center">
             <p className="border-style border-l p-2 text-sm md:border-l-0">
               {getDateString({ inputDate: post.meta.date })}
             </p>
@@ -38,7 +42,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
             </p>
           </div>
         </div>
-      </section>
+      </div>
       <section className="container-layout border-style">
         <div className="content-layout border-style flex border-x">
           <Sidebar toc={post.toc} tags={post.meta.tags} />
