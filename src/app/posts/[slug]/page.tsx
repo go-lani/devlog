@@ -25,7 +25,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
           </div>
         </div>
       </section>
-      <div className="container-layout border-style grow-0 border-b bg-neutral-900">
+      <section className="container-layout border-style grow-0 border-b bg-neutral-900">
         <div className="content-layout">
           <div className="border-style align-center flex justify-center border-x text-app-white md:justify-start md:text-center">
             <p className="border-style border-l p-2 text-sm md:border-l-0">
@@ -42,7 +42,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       <section className="container-layout border-style">
         <div className="content-layout border-style flex border-x">
           <Sidebar toc={post.toc} tags={post.meta.tags} />
