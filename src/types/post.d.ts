@@ -14,6 +14,7 @@ export type Meta = {
 
 export type Post = {
   meta: Meta;
+  toc: Toc[];
   content: string;
 };
 

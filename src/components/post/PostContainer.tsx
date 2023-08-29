@@ -16,7 +16,7 @@ export default function PostContainer({ categories, posts }: Props) {
 
   const filteredPosts = useMemo(() => {
     if (selectedCategory === ALL_POST) return posts;
-    return posts.filter((post) => post.meta.tags === selectedCategory);
+    return posts.filter((post) => post.meta.tags.includes(selectedCategory));
   }, [posts, selectedCategory]);
 
   return (

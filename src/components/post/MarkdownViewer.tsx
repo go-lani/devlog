@@ -3,6 +3,9 @@ import React from 'react';
 import remarkCodeTitle from 'remark-code-title';
 import transformImgSrc from '@/utils/transformImgSrc';
 import Syntax from './SyntaxHighlighter';
+import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 interface IProps {
   content: string;
@@ -10,10 +13,11 @@ interface IProps {
 
 export default function MarkdownViewer({ content }: IProps) {
   return (
-    <div className="markdown-viewer">
+    <div className="markdown-viewer box-border w-full p-4 md:p-5">
       <ReactMarkdown
         children={content}
-        remarkPlugins={[transformImgSrc, remarkCodeTitle]}
+        remarkPlugins={[remarkGfm, remarkCodeTitle, transformImgSrc]}
+        rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
         components={{
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || '');
