@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
 import readingTime from 'reading-time';
+import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
 
 const POSTS_PATH = 'contents';
 
@@ -60,16 +61,19 @@ const parsePost = async (filePath: string): Promise<Post> => {
 
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
+  const headings = await getHeadingTree(content);
+  const toc = await generateTocTree(headings);
 
   return {
     meta: {
       ...meta,
-      tags: meta.tags.split(',').map((category: string) => category.trim()),
+      tags: meta.tags.split(',').map((tag: string) => tag.trim()),
       thumbnail,
       path: slug,
       readingMinutes: Math.ceil(readingTime(content).minutes),
       wordCount: content.split(/\s+/gu).length,
     },
+    toc,
     content,
   } as Post;
 };
@@ -95,9 +99,15 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
 }
 
 export async function getAllPostCategories(): Promise<string[]> {
-  return getFeaturedPosts().then((posts) =>
-    Array.from(new Set([ALL_POST, ...posts.map((post) => post.meta.tags)])),
-  );
+  return getFeaturedPosts().then((posts) => {
+    const allCategegories = posts.map((post) => post.meta.tags);
+    const flattenCategories = allCategegories.flat();
+    const removeDuplicateCategories = [
+      ALL_POST,
+      ...Array.from(new Set(flattenCategories)),
+    ];
+    return removeDuplicateCategories;
+  });
 }
 
 export async function getAllPostSeries(): Promise<string[]> {

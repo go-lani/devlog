@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function PostCard({
-  meta: { thumbnail, path, date, title, description, category },
+  meta: { thumbnail, path, date, title, description, tags },
 }: Props) {
   return (
     <Link href={`/posts/${path}`}>
@@ -22,8 +22,8 @@ export default function PostCard({
           <p className="mt-2 w-full truncate text-center text-xl">
             {description}
           </p>
-          <span className="text-s mt-2 overflow-hidden rounded-xl bg-zinc-800 px-3 py-2 text-white">
-            {category}
+          <span className="text-s mt-2 overflow-hidden rounded-xl bg-neutral-900 px-3 py-2 text-white">
+            {tags}
           </span>
         </div>
       </article>
