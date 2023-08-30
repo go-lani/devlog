@@ -6,7 +6,7 @@ export default function ShortProfile() {
       <div className="relative h-[40px] w-[40px] rounded-full border border-transparent bg-white">
         <Image src="/assets/images/character.webp" alt="lani" fill />
       </div>
-      <p className="ml-4 text-white">developer Lani</p>
+      <p className="ml-4 text-app-white">developer Lani</p>
     </div>
   );
 }

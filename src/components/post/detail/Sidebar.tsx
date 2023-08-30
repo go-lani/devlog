@@ -3,8 +3,8 @@
 import { Toc } from '@/utils/generateTocTree';
 import TableOfContent from './TableOfContent';
 import Tags from './Tags';
-import ShortProfile from '../common/profile/ShortProfile';
 import { useRouter } from 'next/navigation';
+import ShortProfile from '@/components/common/profile/ShortProfile';
 
 type Props = {
   toc: Toc[];
@@ -14,13 +14,13 @@ type Props = {
 export default function Sidebar({ toc, tags }: Props) {
   const router = useRouter();
   return (
-    <div className="border-style relative hidden w-[280px] shrink-0 border-r lg:block">
-      <div className="sticky top-0 bg-neutral-900">
+    <div className="border-style relative hidden w-[280px] shrink-0 border-r bg-zinc-800 lg:block">
+      <div className="sticky top-0 bg-zinc-800">
         <div className="border-style px-4">
           <ShortProfile />
           <div className="border-style mx-[-1rem] border-b p-4">
             <button
-              className="text-app-pink flex items-center gap-2 text-sm font-bold"
+              className="flex items-center gap-2 text-sm font-bold text-app-pink"
               onClick={() => router.back()}
             >
               <img

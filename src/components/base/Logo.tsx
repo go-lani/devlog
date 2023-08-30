@@ -16,7 +16,7 @@ const shareTechMono = localFont({
 
 export default function Logo() {
   return (
-    <p className="bg-black px-4 py-3 text-xl font-bold text-white transition-colors ease-in md:text-2xl">
+    <p className="border-style border-r bg-neutral-900 px-4 py-3 text-xl font-bold text-app-white transition-colors ease-in md:text-2xl">
       <Link href="/">
         <TypeAnimation
           preRenderFirstString
