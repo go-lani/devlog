@@ -22,6 +22,16 @@
     clip: rect(0px, 0px, 0px, 0px);
     white-space: nowrap;
   }
+
+  .off-hidden-text {
+    overflow: visible;
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: unset;
+    white-space: normal;
+  }
 }
 
 @layer components {
@@ -608,23 +618,27 @@
   }
 
   .markdown-viewer table th {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .markdown-viewer table th,
   .markdown-viewer table td {
     padding: 6px 13px;
-    border: 1px solid #d0d7de;
+    border: 1px solid #000;
   }
 
   .markdown-viewer table tr {
-    background-color: #e9e9e9;
+    background-color: #4a4a4a;
     border-top: 1px solid hsla(210, 18%, 87%, 1);
   }
 
-  .markdown-viewer table tr:nth-child(2n) {
-    background-color: #f6f8fa;
+  .markdown-viewer table td {
+    background-color: #303030;
   }
+
+  /* .markdown-viewer table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  } */
 
   .markdown-viewer table img {
     background-color: transparent;

@@ -21,11 +21,11 @@ export default function MobileNavigation({ closeModal }: Props) {
   const pathname = usePathname();
   const router = useRouter();
   return (
-    <div className="min-h-screen w-screen bg-neutral-900">
+    <div className="min-h-screen w-screen bg-zinc-800">
       <div className="border-style border-b px-4">
         <div className="border-style flex  w-full justify-between border-x">
           <p
-            className={`${shareTechMono.className} bg-black px-4 py-3 text-xl text-white`}
+            className={`${shareTechMono.className} bg-neutral-900 px-4 py-3 text-xl text-app-white`}
           >
             &lt;Menu /&gt;
           </p>
@@ -34,7 +34,7 @@ export default function MobileNavigation({ closeModal }: Props) {
             className="border-style border-l"
             onClick={closeModal}
           >
-            <div className="border-[16px] border-b-neutral-900	 border-l-zinc-600 border-r-zinc-600 border-t-neutral-900" />
+            <div className="border-[18px] border-b-neutral-900	border-l-neutral-700 border-r-neutral-700 border-t-neutral-900" />
           </button>
         </div>
       </div>
@@ -49,8 +49,8 @@ export default function MobileNavigation({ closeModal }: Props) {
                 <button
                   type="button"
                   className={`${
-                    pathname.includes(href) && 'bg-black'
-                  } border-style w-full rounded-full border-x px-4 py-4 text-left text-sm text-white`}
+                    pathname.includes(href) && 'bg-neutral-900'
+                  } border-style w-full rounded-full border-x px-4 py-4 text-left text-sm text-app-white`}
                   onClick={() => {
                     router.push(href);
                     closeModal!();

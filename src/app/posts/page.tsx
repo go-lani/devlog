@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { getAllPostCategories, getFeaturedPosts } from '@/service/posts';
-import PostContainer from '@/components/post/PostContainer';
+import { getAllPostTags, getFeaturedPosts } from '@/service/posts';
+import ListPage from '@/components/post/list/ListPage';
 
 export const metadata: Metadata = {
   title: 'devlog - posts',
@@ -8,14 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Posts() {
-  const categories = await getAllPostCategories();
+  const tags = await getAllPostTags();
   const posts = await getFeaturedPosts();
 
-  return (
-    <section className="container-layout">
-      <div className="content-layout border-style border-x">
-        <PostContainer categories={categories} posts={posts} />
-      </div>
-    </section>
-  );
+  return <ListPage tags={tags} posts={posts} />;
 }

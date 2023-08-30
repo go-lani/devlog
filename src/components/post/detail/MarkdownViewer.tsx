@@ -13,7 +13,7 @@ interface IProps {
 
 export default function MarkdownViewer({ content }: IProps) {
   return (
-    <div className="markdown-viewer box-border w-full p-4 md:p-5">
+    <div className="markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5">
       <ReactMarkdown
         children={content}
         remarkPlugins={[remarkGfm, remarkCodeTitle, transformImgSrc]}

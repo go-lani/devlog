@@ -98,28 +98,45 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
   );
 }
 
-export async function getAllPostCategories(): Promise<string[]> {
+export async function getAllPostTags(): Promise<string[]> {
   return getFeaturedPosts().then((posts) => {
     const allCategegories = posts.map((post) => post.meta.tags);
     const flattenCategories = allCategegories.flat();
-    const removeDuplicateCategories = [
-      ALL_POST,
-      ...Array.from(new Set(flattenCategories)),
-    ];
-    return removeDuplicateCategories;
+    return [ALL_POST, ...Array.from(new Set(flattenCategories))];
   });
 }
 
-export async function getAllPostSeries(): Promise<string[]> {
-  return getFeaturedPosts().then((posts) =>
-    Array.from(
-      new Set(
-        posts
-          .filter((post) => post.meta.series)
-          .map((post) => post.meta.series!),
-      ),
-    ),
-  );
+export type SeriesGroup = {
+  [key: string]: Post[];
+};
+
+function groupBySeries(posts: Post[]) {
+  return posts.reduce((acc: SeriesGroup, cur: Post) => {
+    const seriesKey = cur.meta.series;
+    if (!seriesKey) return acc;
+
+    if (!acc[seriesKey]) {
+      acc[seriesKey] = [];
+    }
+    acc[seriesKey].push(cur);
+    return acc;
+  }, {});
+}
+
+export async function getAllPostSeries(): Promise<{
+  seriesNames: string[];
+  seriesGroup: SeriesGroup;
+}> {
+  return getFeaturedPosts().then((posts) => {
+    const postWithSeries = Array.from(
+      new Set(posts.filter((post) => post.meta.series)),
+    );
+    const seriesNames = Array.from(
+      new Set(postWithSeries.map((post) => post.meta.series!)),
+    );
+    const seriesGroup = groupBySeries(postWithSeries);
+    return { seriesNames, seriesGroup };
+  });
 }
 
 export async function getSeriesPosts(series: string): Promise<Post[]> {
