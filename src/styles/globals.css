@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-zinc-800;
+  }
   .border-style {
     @apply border-solid border-neutral-700;
   }

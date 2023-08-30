@@ -6,7 +6,7 @@
     "es6": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier-plugin-tailwindcss", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "airbnb",
     "airbnb-typescript",
