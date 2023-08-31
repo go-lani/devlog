@@ -16,7 +16,7 @@ export default function PageNavigator({ next, prev }: Props) {
               <img
                 src="/assets/images/icons/left-arrow.svg"
                 alt="prev"
-                className="b-[18px] h-[18px]"
+                className="h-[18px] w-[18px]"
               />
             </span>
             <div className="flex flex-col items-start gap-1">
@@ -45,7 +45,7 @@ export default function PageNavigator({ next, prev }: Props) {
               <img
                 src="/assets/images/icons/right-arrow.svg"
                 alt="prev"
-                className="b-[18px] h-[18px]"
+                className="h-[18px] w-[18px]"
               />
             </span>
           </Link>

@@ -1,19 +1,27 @@
 import Image from 'next/image';
 import { Metadata } from 'next/types';
+import { notFound } from 'next/navigation';
 import { getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/detail/MarkdownViewer';
 import { getDateString } from '@/utils/date';
 import Sidebar from '@/components/post/detail/Sidebar';
 import PageNavigator from '@/components/post/detail/PageNavigator';
 import SeriesNavigator from '@/components/post/detail/SeriesNavigator';
+import { PostDetail } from '@/types/post';
 
 export async function generateMetadata({
   params: { slug },
 }: Props): Promise<Metadata> {
-  const {
-    meta: { title, description },
-  } = await getPost(slug);
-  return { title, description };
+  try {
+    const {
+      meta: { title, description },
+    } = await getPost(slug);
+
+    return { title, description };
+  } catch (err) {
+    notFound();
+    return {};
+  }
 }
 
 interface Props {
@@ -21,7 +29,13 @@ interface Props {
 }
 
 export default async function DetailPage({ params: { slug } }: Props) {
-  const post = await getPost(slug);
+  let post: PostDetail;
+  try {
+    post = await getPost(slug);
+  } catch (err) {
+    notFound();
+  }
+
   return (
     <>
       <section className="container-layout border-style grow-0 border-b bg-zinc-800">
