@@ -1,10 +1,20 @@
 import Image from 'next/image';
+import { Metadata } from 'next/types';
 import { getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/detail/MarkdownViewer';
 import { getDateString } from '@/utils/date';
 import Sidebar from '@/components/post/detail/Sidebar';
 import PageNavigator from '@/components/post/detail/PageNavigator';
 import SeriesNavigator from '@/components/post/detail/SeriesNavigator';
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const {
+    meta: { title, description },
+  } = await getPost(slug);
+  return { title, description };
+}
 
 interface Props {
   params: { slug: string };

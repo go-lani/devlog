@@ -4,11 +4,6 @@ import Header from '@/components/base/Header';
 import '@/styles/globals.css';
 import Footer from '@/components/base/Footer';
 
-export const metadata: Metadata = {
-  title: 'devlog',
-  description: "lani's devlog",
-};
-
 const spoqaSans = localFont({
   src: [
     {
@@ -28,6 +23,17 @@ const spoqaSans = localFont({
     },
   ],
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: '라니의 블로그',
+    template: '라니의 블로그 | %s',
+  },
+  description: '프론트엔드 개발자 라니의 블로그',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
 
 export default function RootLayout({
   children,
