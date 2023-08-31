@@ -4,6 +4,7 @@ import { sync } from 'glob';
 import { cache } from 'react';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import { notFound } from 'next/navigation';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
@@ -149,7 +150,10 @@ export async function getPost(fileName: string): Promise<PostDetail> {
   const posts = await getFeaturedPosts();
   const post = posts.find((post) => post.meta.path === fileName);
 
-  if (!post) throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
+  if (!post) {
+    console.error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
+    return notFound();
+  }
 
   const index = posts.indexOf(post);
   const next = index > 0 ? posts[index - 1] : null;

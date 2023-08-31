@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html,
+  body {
     @apply bg-zinc-800;
   }
   .border-style {

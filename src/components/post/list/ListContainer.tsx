@@ -36,44 +36,60 @@ export default function ListContainer({ selectedTag, posts }: Props) {
           </span>
         </h2>
         <ul className="md:border-style flex flex-col bg-neutral-800 text-app-white md:border-t">
-          {posts.map((post) => (
-            <li
-              className="border-style flex gap-4 border-b px-4 py-5"
-              key={post.meta.path}
-            >
-              <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
-                {getDateString({
-                  inputDate: post.meta.date,
-                  separator: '.',
-                })}
-              </p>
-              <div>
-                <Link
-                  href={`/posts/${post.meta.path}`}
-                  className="break-keep text-xl font-semibold md:text-2xl"
-                >
-                  {post.meta.title}
-                </Link>
-                <ul className="mt-2 flex gap-2">
-                  {post.meta.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className={`text-xs md:text-sm ${
-                        selectedTag === ALL_POST || selectedTag === tag
-                          ? 'font-bold text-app-blue-green'
-                          : 'text-gray-500'
-                      }`}
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
-                  {post.meta.description}
+          {posts.length > 0 ? (
+            posts.map((post) => (
+              <li
+                className="border-style flex gap-4 border-b px-4 py-5"
+                key={post.meta.path}
+              >
+                <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
+                  {getDateString({
+                    inputDate: post.meta.date,
+                    separator: '.',
+                  })}
                 </p>
-              </div>
+                <div>
+                  <Link
+                    href={`/posts/${post.meta.path}`}
+                    className="break-keep text-xl font-semibold md:text-2xl"
+                  >
+                    {post.meta.title}
+                  </Link>
+                  <ul className="mt-2 flex gap-2">
+                    {post.meta.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className={`text-xs md:text-sm ${
+                          selectedTag === ALL_POST || selectedTag === tag
+                            ? 'font-bold text-app-blue-green'
+                            : 'text-gray-500'
+                        }`}
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
+                    {post.meta.description}
+                  </p>
+                </div>
+              </li>
+            ))
+          ) : (
+            <li className="flex flex-col items-center justify-center px-4 py-8">
+              <img
+                src="/assets/images/icons/not.svg"
+                className="h-[80px] w-[80px]"
+                alt="series is empty"
+              />
+              <p className="mt-8 flex items-center text-base text-app-white md:text-lg">
+                포스팅된 글이 존재하지 않습니다.
+              </p>
+              <p className="flex items-center gap-1 text-sm text-app-white md:text-base">
+                조금만 기다려주세요.
+              </p>
             </li>
-          ))}
+          )}
         </ul>
       </div>
     </>
