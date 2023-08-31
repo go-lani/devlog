@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Post } from '@/types/post';
+import { prefix } from '@/utils/prefix';
 
 type Props = {
   prev: Post | null;
@@ -14,7 +15,7 @@ export default function PageNavigator({ next, prev }: Props) {
           <Link href={`/posts/${prev.meta.path}`} className="flex gap-4">
             <span>
               <img
-                src="/assets/images/icons/left-arrow.svg"
+                src={`${prefix}/assets/images/icons/left-arrow.svg`}
                 alt="prev"
                 className="h-[18px] w-[18px]"
               />
@@ -43,7 +44,7 @@ export default function PageNavigator({ next, prev }: Props) {
             </div>
             <span>
               <img
-                src="/assets/images/icons/right-arrow.svg"
+                src={`${prefix}/assets/images/icons/right-arrow.svg`}
                 alt="prev"
                 className="h-[18px] w-[18px]"
               />

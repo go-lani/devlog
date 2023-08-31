@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { Toc } from '@/utils/generateTocTree';
 import ShortProfile from '@/components/common/profile/ShortProfile';
+import { prefix } from '@/utils/prefix';
 import TableOfContent from './TableOfContent';
 import Tags from './Tags';
 
@@ -25,7 +26,7 @@ export default function Sidebar({ toc, tags }: Props) {
               onClick={() => router.back()}
             >
               <img
-                src="/assets/images/icons/back.svg"
+                src={`${prefix}/assets/images/icons/back.svg`}
                 alt="back"
                 className="b-[15px] h-[15px]"
               />
