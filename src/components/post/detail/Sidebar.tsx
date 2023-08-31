@@ -1,10 +1,10 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Toc } from '@/utils/generateTocTree';
+import ShortProfile from '@/components/common/profile/ShortProfile';
 import TableOfContent from './TableOfContent';
 import Tags from './Tags';
-import { useRouter } from 'next/navigation';
-import ShortProfile from '@/components/common/profile/ShortProfile';
 
 type Props = {
   toc: Toc[];
@@ -20,6 +20,7 @@ export default function Sidebar({ toc, tags }: Props) {
           <ShortProfile />
           <div className="border-style mx-[-1rem] border-b p-4">
             <button
+              type="button"
               className="flex items-center gap-2 text-sm font-bold text-app-pink"
               onClick={() => router.back()}
             >

@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown';
 import React from 'react';
 import remarkCodeTitle from 'remark-code-title';
-import transformImgSrc from '@/utils/transformImgSrc';
-import Syntax from './SyntaxHighlighter';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import transformImgSrc from '@/utils/transformImgSrc';
+import Syntax from './SyntaxHighlighter';
 
 interface IProps {
   content: string;

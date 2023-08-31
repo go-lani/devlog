@@ -2,13 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { MENU } from '@/constants/app';
 import Modal from '../common/modal/Modal';
 import MobileNavigation from './MobileNavigation';
-
-export const MENU = [
-  { href: '/posts', title: 'Posts' },
-  { href: '/series', title: 'Series' },
-];
 
 export default function Navigation() {
   const pathname = usePathname();

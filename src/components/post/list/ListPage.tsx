@@ -1,8 +1,8 @@
 'use client';
 
+import { useMemo, useState } from 'react';
 import { ALL_POST } from '@/constants/post';
 import { Post } from '@/types/post';
-import { useMemo, useState } from 'react';
 import Categories from './Categories';
 import ListContainer from './ListContainer';
 
