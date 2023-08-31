@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next/types';
+import { prefix } from '@/utils/prefix';
 
 export const metadata: Metadata = {
   title: 'Not Found',
@@ -10,7 +11,7 @@ export default async function NotFound() {
   return (
     <div className="flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white">
       <img
-        src="/assets/images/icons/not-found.svg"
+        src={`${prefix}/assets/images/icons/not-found.svg`}
         alt="page not found"
         className="h-[128px] w-[128px]"
       />
@@ -18,7 +19,7 @@ export default async function NotFound() {
       <Link href="/" className="mt-2 flex items-center gap-2">
         <p>홈으로</p>
         <img
-          src="/assets/images/icons/right-arrow.svg"
+          src={`${prefix}/assets/images/icons/right-arrow.svg`}
           alt="move to home"
           className="h-[18px] w-[18px]"
         />

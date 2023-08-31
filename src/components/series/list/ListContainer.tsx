@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SeriesGroup } from '@/service/posts';
 import { getDateString } from '@/utils/date';
+import { prefix } from '@/utils/prefix';
 
 type Props = {
   seriesNames: string[];
@@ -56,7 +57,7 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
       ) : (
         <li className="flex flex-col items-center justify-center bg-neutral-800 py-32">
           <img
-            src="/assets/images/icons/not.svg"
+            src={`${prefix}/assets/images/icons/not.svg`}
             className="h-[80px] w-[80px]"
             alt="series is empty"
           />

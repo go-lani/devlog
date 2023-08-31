@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
+const development = process.env.NODE_ENV !== 'production';
+
 const nextConfig = {
+  output: 'export',
+  basePath: !development ? '/devlog' : '',
+  assetPrefix: !development ? '/devlog/' : '',
   images: {
     remotePatterns: [
       {
