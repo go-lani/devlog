@@ -8,6 +8,7 @@ import Sidebar from '@/components/post/detail/Sidebar';
 import PageNavigator from '@/components/post/detail/PageNavigator';
 import SeriesNavigator from '@/components/post/detail/SeriesNavigator';
 import { PostDetail } from '@/types/post';
+import Comments from '@/components/post/detail/Comments';
 
 export async function generateMetadata({
   params: { slug },
@@ -70,17 +71,21 @@ export default async function DetailPage({ params: { slug } }: Props) {
         </div>
       </section>
       <section className="container-layout bg-zinc-800">
-        <div className="content-layout border-style flex border-x">
-          <Sidebar toc={post.toc} tags={post.meta.tags} />
-          <div className="flex w-full flex-col bg-neutral-800">
-            <MarkdownViewer content={post.content} />
-            {post.meta.series && (
-              <SeriesNavigator seriesName={post.meta.series} />
-            )}
-            {(post.next || post.prev) && (
-              <PageNavigator next={post.next} prev={post.prev} />
-            )}
+        <div className="content-layout border-style flex flex-col border-x">
+          <div className="flex">
+            <Sidebar toc={post.toc} tags={post.meta.tags} />
+            <div className="flex w-full flex-col bg-neutral-800">
+              <MarkdownViewer content={post.content} />
+              {post.meta.series && (
+                <SeriesNavigator seriesName={post.meta.series} />
+              )}
+              {(post.next || post.prev) && (
+                <PageNavigator next={post.next} prev={post.prev} />
+              )}
+              <Comments />
+            </div>
           </div>
+          <div />
         </div>
       </section>
     </>
