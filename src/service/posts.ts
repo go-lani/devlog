@@ -3,9 +3,9 @@ import { readFileSync, readdirSync } from 'fs';
 import { sync } from 'glob';
 import { cache } from 'react';
 import matter from 'gray-matter';
+import readingTime from 'reading-time';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
-import readingTime from 'reading-time';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
 
 const POSTS_PATH = 'contents';

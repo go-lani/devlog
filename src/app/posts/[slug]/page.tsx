@@ -1,9 +1,8 @@
+import Image from 'next/image';
 import { getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/detail/MarkdownViewer';
 import { getDateString } from '@/utils/date';
-import Image from 'next/image';
 import Sidebar from '@/components/post/detail/Sidebar';
-import Link from 'next/link';
 import PageNavigator from '@/components/post/detail/PageNavigator';
 import SeriesNavigator from '@/components/post/detail/SeriesNavigator';
 

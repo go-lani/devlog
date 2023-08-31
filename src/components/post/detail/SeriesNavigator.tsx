@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import { getSeriesPosts } from '@/service/posts';
 import { getDateString } from '@/utils/date';
-import Link from 'next/link';
 
 type Props = {
   seriesName: string;
@@ -12,7 +12,7 @@ export default async function SeriesNavigator({ seriesName }: Props) {
     <div className="border-style mt-auto flex flex-col border-t p-4 text-app-white">
       <p className="text-base text-app-blue-green">
         <span className="border-style inline-block border-x border-t bg-zinc-800 px-4 py-2">
-          See more "{seriesName}"
+          See more &quot;{seriesName}&quot;
         </span>
       </p>
       <ul className="border-style border bg-zinc-800">

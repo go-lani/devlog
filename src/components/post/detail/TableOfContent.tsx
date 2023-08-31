@@ -1,7 +1,8 @@
 'use client';
-import { Toc } from '@/utils/generateTocTree';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Toc } from '@/utils/generateTocTree';
 
 type Props = {
   toc: Toc[];

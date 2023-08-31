@@ -1,7 +1,6 @@
 import localFont from 'next/font/local';
-import { MENU } from './Navigation';
-import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
+import { MENU } from '@/constants/app';
 
 interface Props {
   closeModal?: () => void;
@@ -23,7 +22,7 @@ export default function MobileNavigation({ closeModal }: Props) {
   return (
     <div className="min-h-screen w-screen bg-zinc-800">
       <div className="border-style border-b px-4">
-        <div className="border-style flex  w-full justify-between border-x">
+        <div className="border-style flex w-full justify-between border-x">
           <p
             className={`${shareTechMono.className} bg-neutral-900 px-4 py-3 text-xl text-app-white`}
           >
