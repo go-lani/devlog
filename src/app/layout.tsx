@@ -1,8 +1,6 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
-import Header from '@/components/base/Header';
-import Footer from '@/components/base/Footer';
 
 const spoqaSans = localFont({
   src: [
@@ -44,9 +42,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={`${spoqaSans.className} px-[20px]`}>
         <div id="main-root" className="mx-[-20px]">
-          <Header />
-          <main className="flex min-h-screen flex-col">{children}</main>
-          <Footer />
+          {children}
         </div>
         <div id="modal-root" />
       </body>

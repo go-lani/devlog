@@ -151,8 +151,7 @@ export async function getPost(fileName: string): Promise<PostDetail> {
   const post = posts.find((post) => post.meta.path === fileName);
 
   if (!post) {
-    console.error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
-    return notFound();
+    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
   }
 
   const index = posts.indexOf(post);

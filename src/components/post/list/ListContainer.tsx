@@ -83,7 +83,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                 alt="series is empty"
               />
               <p className="mt-8 flex items-center text-base text-app-white md:text-lg">
-                포스팅된 글이 존재하지 않습니다.
+                포스팅된 글이 존재하지 않아요.
               </p>
               <p className="flex items-center gap-1 text-sm text-app-white md:text-base">
                 조금만 기다려주세요.
