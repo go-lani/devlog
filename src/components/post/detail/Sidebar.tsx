@@ -26,7 +26,7 @@ export default function Sidebar({ toc, tags }: Props) {
               onClick={() => router.back()}
             >
               <img
-                src={`${prefix}/assets/images/icons/back.svg`}
+                src="/assets/images/icons/back.svg"
                 alt="back"
                 className="b-[15px] h-[15px]"
               />
