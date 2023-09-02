@@ -24,10 +24,10 @@ const spoqaSans = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: '라니의 블로그',
-    template: '라니의 블로그 | %s',
+    default: '라니.로그',
+    template: '라니.로그 | %s',
   },
-  description: '프론트엔드 개발자 라니의 블로그',
+  description: '프론트엔드 개발자 라니.로그',
   icons: {
     icon: '/favicon.ico',
   },
