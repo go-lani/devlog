@@ -35,7 +35,7 @@ export default function App() {
                   <li>
                     <Link href="https://github.com/go-lani" target="_black">
                       <img
-                        src={`${prefix}/assets/images/icons/github.svg`}
+                        src="/assets/images/icons/github.svg"
                         alt="github"
                         className="h-[16px] w-[16px] md:h-[18px] md:w-[18px]"
                       />
@@ -47,7 +47,7 @@ export default function App() {
                       target="_blank"
                     >
                       <img
-                        src={`${prefix}/assets/images/icons/resume.svg`}
+                        src="/assets/images/icons/resume.svg"
                         alt="mail"
                         className="h-[18px] w-[18px] md:h-[22px] md:w-[22px]"
                       />
@@ -56,7 +56,7 @@ export default function App() {
                   <li>
                     <a href="mailto:go.lani.developer@gmail.com">
                       <img
-                        src={`${prefix}/assets/images/icons/mail.svg`}
+                        src="/assets/images/icons/mail.svg"
                         alt="mail"
                         className="h-[24px] w-[24px] md:h-[22px] md:w-[22px]"
                       />
