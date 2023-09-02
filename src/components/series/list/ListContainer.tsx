@@ -57,7 +57,7 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
       ) : (
         <li className="flex flex-col items-center justify-center bg-neutral-800 py-32">
           <img
-            src={`${prefix}/assets/images/icons/not.svg`}
+            src="/assets/images/icons/not.svg"
             className="h-[80px] w-[80px]"
             alt="series is empty"
           />
