@@ -79,7 +79,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
           ) : (
             <li className="flex flex-col items-center justify-center px-4 py-8">
               <img
-                src={`${prefix}/assets/images/icons/not.svg`}
+                src="/assets/images/icons/not.svg"
                 className="h-[80px] w-[80px]"
                 alt="series is empty"
               />
