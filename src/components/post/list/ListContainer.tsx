@@ -54,7 +54,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                     href={`/posts/${post.meta.path}`}
                     className="break-keep text-xl font-semibold md:text-2xl"
                   >
-                    {post.meta.title}
+                    <h3>{post.meta.title}</h3>
                   </Link>
                   <ul className="mt-2 flex gap-2">
                     {post.meta.tags.map((tag) => (

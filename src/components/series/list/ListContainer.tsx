@@ -42,7 +42,7 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
                         href={`/posts/${post.meta.path}`}
                         className="break-keep text-xl font-semibold md:text-2xl"
                       >
-                        {post.meta.title}
+                        <h3>{post.meta.title}</h3>
                       </Link>
                       <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
                         {post.meta.description}
