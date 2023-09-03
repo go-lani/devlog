@@ -367,6 +367,7 @@
   .markdown-viewer p {
     margin-top: 0;
     margin-bottom: 10px;
+    word-break: keep-all;
   }
 
   .markdown-viewer blockquote {
@@ -386,9 +387,24 @@
     margin-bottom: 0;
   }
 
+  .markdown-viewer ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+
+  .markdown-viewer ol {
+    list-style-type: decimal;
+    text-indent: 0;
+    padding-left: 20px;
+  }
+
   .markdown-viewer ol ol,
   .markdown-viewer ul ol {
     list-style-type: lower-roman;
+  }
+
+  .markdown-viewer li {
+    word-break: keep-all;
   }
 
   .markdown-viewer ul ul ol,
