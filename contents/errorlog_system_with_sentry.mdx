@@ -7,9 +7,9 @@ series: 개선 시리즈
 featured: true
 ---
 
-## 도입하려는 이유가 무엇인가?
+## 도입 이유
 
-현재 우리 서비스에는 에러 메시지 로그를 쌓고 있기는 하다. 하지만 이 로그를 보고 어떻게 발생했는지에 대한 과정은 알 수가 없으며, 코드를 일일히 확인해보고 개발자가 직접 에러를 트리거해보면서 에러를 발견하여 수정하거나 그래도 발견되지 않는다면 에러가 발생한 유저에게 직접 문의를 해서 해결했었다.
+현재 운영중인 서비스에는 에러 메시지 로그를 쌓고 있기는 하다. 하지만 이 로그를 보고 어떻게 발생했는지에 대한 과정은 알 수가 없으며, 코드를 일일히 확인해보고 개발자가 직접 에러를 트리거해보면서 에러를 발견하여 수정하거나 그래도 발견되지 않는다면 에러가 발생한 유저에게 직접 문의를 해서 해결했었다.
 
 이러한 일련의 과정들을 Sentry 서비스를 활용해서 어느정도 해소할 수 있다.
 
@@ -19,24 +19,22 @@ Sentry는 해당 이벤트 로그(=에러 로그)에 대한 다양한 정보를 
 - OS: 이벤트 발생 OS wjdqh
 - Browser 이벤트 발생 브라우저 정보
 - Exception & Message: 이벤트 로그 메시지와 코드 정보 등을 제공(source map을 설정해야함. @sentry/nextjs는 sourcemap을 자동으로 생성하여 업로드한다.)
-- Breadcrumbs: 이벤트 발생 과정(= 유저의 행동 데이터)
-- Context: 기본적으로 해당 이벤트 환경으 정보와 개발자가 추가한 정보를 제공
+- **Breadcrumbs**: 이벤트 발생 과정(= 유저의 행동 데이터)
+- **Context**: 기본적으로 해당 이벤트 환경의 정보와 개발자가 추가한 정보를 제공
 
 또한 Sentry는 이벤트 로그들을 그룹화해준다.
 
 그룹화의 기준은 Stack Trace >Exception > Message 순으로 그룹핑해준다.
 
----
+## 진행
 
-## 현재 상황은 어떤가?
-
-현재 상황
+### 현재 상황
 
 - 별도의 ErrorHandler 함수를 만들어 backend API 호출
 - ErrorHandler는 에러에 대한 전체 메시지를 던져주므로 별도의 타입 구분을 않하고 있음
 - backendAPI에서는 request body로 전달받은 에러 객체를 풀어서 유저정보를 포함하여 텔레그램 알림 API 호출
 
-개선해야될 부분
+### 개선해야될 부분
 
 - 에러에 대한 분리가 필요
 - severside, clientside 에러를 구분해서 사용중이나 동일한 함수명으로 인한 휴먼 에러 발생 가능성이 높음
@@ -48,15 +46,15 @@ Sentry는 해당 이벤트 로그(=에러 로그)에 대한 다양한 정보를 
 
 ![utils/handledError 함수](./images/errorlog_system_with_sentry_0.webp)
 
-1) utils/handledError 함수
+utils/handledError 함수
 
 ![useErrorHandler](./images/errorlog_system_with_sentry_1.webp)
 
-2) useErrorHandler
+useErrorHandler
 
 ![error message - Path 주목](./images/errorlog_system_with_sentry_2.webp)
 
-3) error message - Path 주목
+error message - Path 주목
 
 
 1) 함수의 경우 페이지 내부 컴포넌트에서 발생하는 것이 아닌 에러 핸들링하는데 사용하는 것
@@ -129,7 +127,7 @@ useErrorHandler의 handleError를 사용해보자.
 
 정도가 필요하다고 생각된다.
 
-Sentry 동작 원리
+#### Sentry 동작 원리
 
 **Something Component**
 
@@ -145,7 +143,7 @@ sendErrorLog 함수는 Sentry에 captureException 메소드를 호출하여
 
 Sentry에 정보를 전달한다.
 
-**Sentry는 어떻게 에러를 감지할까?**
+#### Sentry는 어떻게 에러를 감지할까?
 
 사용자가 애플리케이션에 Sentry SDK를 설치하여 에러를 추적할 수 있다.
 
