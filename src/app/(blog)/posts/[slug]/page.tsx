@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Metadata } from 'next/types';
 import { notFound } from 'next/navigation';
-import { getPost } from '@/service/posts';
+import { getFeaturedPosts, getPost } from '@/service/posts';
 import MarkdownViewer from '@/components/post/detail/MarkdownViewer';
 import { getDateString } from '@/utils/date';
 import Sidebar from '@/components/post/detail/Sidebar';
@@ -25,11 +25,17 @@ export async function generateMetadata({
   }
 }
 
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map(({ meta: { path } }) => ({ slug: path }));
+}
+
 interface Props {
   params: { slug: string };
 }
 
 export default async function DetailPage({ params: { slug } }: Props) {
+  console.log('slug!!', slug);
   let post: PostDetail;
   try {
     post = await getPost(slug);
