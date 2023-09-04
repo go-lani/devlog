@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation';
 import { Toc } from '@/utils/generateTocTree';
 import ShortProfile from '@/components/common/profile/ShortProfile';
-import { prefix } from '@/utils/prefix';
 import TableOfContent from './TableOfContent';
 import Tags from './Tags';
 

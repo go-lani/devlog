@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ALL_POST } from '@/constants/post';
 import { Post } from '@/types/post';
 import { getDateString } from '@/utils/date';
-import { prefix } from '@/utils/prefix';
 
 const shareTechMono = localFont({
   src: [

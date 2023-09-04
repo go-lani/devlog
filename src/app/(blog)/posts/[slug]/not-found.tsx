@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import { headers } from 'next/headers';
 import { Metadata } from 'next/types';
-import { prefix } from '@/utils/prefix';
 
 export const metadata: Metadata = {
   title: 'Post Not Found',
