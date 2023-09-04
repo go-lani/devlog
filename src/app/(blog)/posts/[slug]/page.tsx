@@ -35,7 +35,6 @@ interface Props {
 }
 
 export default async function DetailPage({ params: { slug } }: Props) {
-  console.log('slug!!', slug);
   let post: PostDetail;
   try {
     post = await getPost(slug);
