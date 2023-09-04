@@ -26,7 +26,7 @@ Sentry는 해당 이벤트 로그(=에러 로그)에 대한 다양한 정보를 
 
 그룹화의 기준은 Stack Trace >Exception > Message 순으로 그룹핑해준다.
 
-## 진행
+## 개선사항 분석
 
 ### 현재 상황
 
@@ -56,10 +56,9 @@ useErrorHandler
 
 error message - Path 주목
 
+1. 함수의 경우 페이지 내부 컴포넌트에서 발생하는 것이 아닌 에러 핸들링하는데 사용하는 것
 
-1) 함수의 경우 페이지 내부 컴포넌트에서 발생하는 것이 아닌 에러 핸들링하는데 사용하는 것
-
-2) 페이지 내부 컴포넌트에서 발생하는 에러를 핸들링하는데 사용하는 것
+2. 페이지 내부 컴포넌트에서 발생하는 에러를 핸들링하는데 사용하는 것
 
 두 개를 분리한 이유는 message(유저정보 포함여부)와 pathname이 나뉘기 때문이라고 생각이 된다.
 
@@ -127,7 +126,9 @@ useErrorHandler의 handleError를 사용해보자.
 
 정도가 필요하다고 생각된다.
 
-#### Sentry 동작 원리
+## Sentry 도입
+
+### Sentry 동작 원리
 
 **Something Component**
 
@@ -143,7 +144,7 @@ sendErrorLog 함수는 Sentry에 captureException 메소드를 호출하여
 
 Sentry에 정보를 전달한다.
 
-#### Sentry는 어떻게 에러를 감지할까?
+### Sentry는 어떻게 에러를 감지할까?
 
 사용자가 애플리케이션에 Sentry SDK를 설치하여 에러를 추적할 수 있다.
 
@@ -199,7 +200,7 @@ axios의 error 객체가 들어가 있는 것을 확인할 수 있다.
 
 ![핸들링(catch)되지 않는 에러의 경우 ](./images/errorlog_system_with_sentry_22.webp)
 
-핸들링(catch)되지 않는 에러의 경우 
+핸들링(catch)되지 않는 에러의 경우
 
 1. API Call Error가 아닌 경우 - Error 객체가 들어가 있는 것을 확인할 수 있다.
 
@@ -229,12 +230,11 @@ event.exception에 예외에 대한 내용을 받는다.
 
 unhandledError의 경우
 
-> 💡 **exception의 속성 내용**
-> **type**: 예외 유형(예, ValueError 등)
+> 💡 **exception의 속성 내용** > **type**: 예외 유형(예, ValueError 등)
 > **value**: 예외에 해당하는 값(문자열)
 > module: 예외 유형이 있는 선택적 모듈 또는 패키지
 > thread_id: 쓰레드 인터페이스의 스레드를 참조하는 선택적 값
-> **mechanism**:  [메커니즘](https://develop.sentry.dev/sdk/event-payloads/exception/#exception-mechanism)을 설명하는 선택적 객체 예외
+> **mechanism**: [메커니즘](https://develop.sentry.dev/sdk/event-payloads/exception/#exception-mechanism)을 설명하는 선택적 객체 예외
 > **stacktrace**: 스택 추적 인터페이스에 대한다는 선택적 스택 추적 개체
 > …
 
@@ -272,7 +272,7 @@ API Call Error의 event.exception 내용네
 
 event에서도 텔레그램 알림에 사용할 수 있는 원하는 정확하고 일관성 있는 메시지를 만들기는 어려워보인다.
 
-그렇다면 
+그렇다면
 
 ![unhandledError의 경우](./images/errorlog_system_with_sentry_27.webp)
 
@@ -296,13 +296,14 @@ handled 속성을 별도 처리하게되면 Sentry의 필터기능을 활용하�
 
 이 handled 속성의 처리는 뒤에 어떻게 처리하는지 설명하겠다.
 
+### 에러 타입 메시지 정제
+
 에러 타입에 따른 메시지를 정제하기 위해 대안 2가지가 있다.
 
 1. Context를 활용
 2. Custom 에러를 활용하여 에러에 커스텀 속성 추가(타입 캐스팅 용이)
 
 **1.** **Context를 활용**
-
 
 > 💡 **Context란?**
 > 이벤트에 임의의 데이터를 연결할 수 있는 기능이다.
@@ -353,7 +354,6 @@ scope에 대한 타입 정의
 
 ![image](./images/errorlog_system_with_sentry_40.webp)
 
-
 > 💡 **Sentry에서 Scope란?**
 > Sentry는 scope 단위로 이벤트 데이터를 관리한다. scope는 해당 에러에 대한 스코프를 의미한다.
 > 스코프는 Sentry에 전달할 에러에 대한 정보를 포함한다.(예를들어 context와 breadcrums)
@@ -368,7 +368,7 @@ capureExpection이 호출되면 Sentry에 데이터를 전송된다.
 2. 위에서 언급했 듯 Sentry의 모든 에러의 handled 속성 값이 true로 보내진다고 얘기했는데 이 분기처리에서 handled에 false를 할당하여 로그를 보는 사용자에게 에러가 핸들링이 되지 않고 있는 것을 알릴 수 있게 된다.
 3. sendError를 통해 해당 event와 hint를 넘겨준다.
 
-**트러블슈팅**
+### 트러블슈팅
 
 Sentry SDK를 적용했을때 [Localhost](http://Localhost) 환경에서 외부 API를 호출하면 CORS 에러가 뜨는 것을 확인했다.
 
