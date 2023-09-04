@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { SeriesGroup } from '@/service/posts';
 import { getDateString } from '@/utils/date';
-import { prefix } from '@/utils/prefix';
 
 type Props = {
   seriesNames: string[];

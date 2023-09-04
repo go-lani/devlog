@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Post } from '@/types/post';
-import { prefix } from '@/utils/prefix';
 
 type Props = {
   prev: Post | null;

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Metadata } from 'next/types';
-import { prefix } from '@/utils/prefix';
 
 export const metadata: Metadata = {
   title: 'Not Found',

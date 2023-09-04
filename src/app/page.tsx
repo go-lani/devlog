@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
-import { prefix } from '@/utils/prefix';
 
 export default function App() {
   return (
