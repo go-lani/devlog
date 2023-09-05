@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://laniground.com/
+
+# Sitemaps
+Sitemap: https://laniground.com/sitemap.xml
