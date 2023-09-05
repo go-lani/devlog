@@ -1,0 +1,36 @@
+---
+title: Github에 잘못 올린 파일 및 커밋 히스토리 삭제하기
+description: github file history 제거
+date: 2023-09-05
+tags: github
+series: 메모
+featured: true
+---
+
+## 깃허브에 잘못 올린 파일 커밋 히스토리 삭제하기
+
+### 특정 파일 history 제거
+
+```bash
+git filter-branch --force --index-filter 'git rm -r  --cached --ignore-unmatch <filename>' --prune-empty --tag-name-filter cat -- --all
+```
+
+### 제거된 커밋 Push
+
+```bash
+git push --force --all
+```
+
+### 예시
+
+#### %programdata% 파일 삭제(전)
+
+![remove_git_file_history_1](./images/remove_git_file_history_1.webp)
+
+#### %programdata% 히스토리 제거
+
+![remove_git_file_history_2](./images/remove_git_file_history_2.webp)
+
+#### %programdata% 파일 삭제(후)
+
+![remove_git_file_history_3](./images/remove_git_file_history_3.webp)
