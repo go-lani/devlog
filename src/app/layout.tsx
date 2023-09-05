@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import Script from 'next/script';
 
 const spoqaSans = localFont({
   src: [
@@ -40,6 +41,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      {process.env.NODE_ENV !== 'development' && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA4_ID}`}
+          />
+          <Script
+            id="gtag-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA4_ID}', {
+                page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </>
+      )}
       <body className={`${spoqaSans.className} px-[20px]`}>
         <div id="main-root" className="mx-[-20px]">
           {children}
