@@ -79,7 +79,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
         <div className="content-layout border-style flex flex-col border-x">
           <div className="flex">
             <Sidebar toc={post.toc} tags={post.meta.tags} />
-            <div className="flex w-full flex-col bg-neutral-800">
+            <div className="flex w-full flex-col bg-neutral-800 lg:w-[742px]">
               <MarkdownViewer content={post.content} />
               {post.meta.series && (
                 <SeriesNavigator seriesName={post.meta.series} />
