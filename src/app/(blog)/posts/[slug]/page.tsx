@@ -90,7 +90,6 @@ export default async function DetailPage({ params: { slug } }: Props) {
               <Comments />
             </div>
           </div>
-          <div />
         </div>
       </section>
     </>
