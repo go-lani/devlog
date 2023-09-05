@@ -378,7 +378,7 @@ Sentry는 여러 서비스 관련 통합 및 NextJS 요청 중에 발생한 이�
 
 추적 헤더를 자동 생성한다고 했고, 선택에 따라 자동 생성된 정보를 전달할 수 있다고 했는데 Sentry.BrowserTracing의 tracePropagationTargets 속성을 통해 선택할 수 있다.
 
-tracePropagationTargets의 default 옵션은 **['localhost', /^\//]**이다.
+tracePropagationTargets의 default 옵션은 ['localhost', /^\//]이다.
 
 그러므로 테스트 환경인 [localhost](http://localhost) 환경에서 sentry-trace와 baggage를 자동 생성해서 외부 API 호출할때 Request Header에 전파하는 것이였다.
 
