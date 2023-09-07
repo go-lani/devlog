@@ -42,7 +42,7 @@ export default function MobileNavigation({ closeModal }: Props) {
           {MENU.map(({ href, title }) => (
             <li
               className="border-style mx-[-1rem] flex h-full items-center border-b last:border-0"
-              key="href"
+              key={href}
             >
               <span className="border-style flex w-full items-center px-4 text-lg">
                 <button

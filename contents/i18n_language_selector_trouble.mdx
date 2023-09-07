@@ -72,14 +72,8 @@ export function middleware(req: NextRequest) {
 
 1. '/' 경로로 접근 > fallback 언어 redirect 정상 작동 `(예: '/' -> '/en')`
 2. 루트 경로('/en') > 언어변경 정상 작동 `(예: '/en' -> '/th')`
-
-![i18n_language_selector_trouble](./images/i18n_language_selector_trouble.gif)
-
 3. 루트 경로 > about 페이지 이동 정상 작동 `(예: '/th' > '/th/about')`
 4. about 페이지 > 언어 변경 > 변경된 언어의 루트 이동 정상 작동 `(예: /{변경 언어})`
-
-![i18n_language_selector_trouble_2](./images/i18n_language_selector_trouble_2.gif)
-
 5. 루트 > about 페이지 이동 _**쿠키는 정상 작동, routing 오작동**_
 
 ![i18n_language_selector_trouble_3](./images/i18n_language_selector_trouble_3.gif)
