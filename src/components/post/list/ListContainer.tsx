@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 import Link from 'next/link';
+import { Fragment } from 'react';
 import { ALL_POST } from '@/constants/post';
 import { Post } from '@/types/post';
 import { getDateString } from '@/utils/date';
