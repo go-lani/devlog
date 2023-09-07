@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ALL_POST } from '@/constants/post';
 import { Post } from '@/types/post';
 import { getDateString } from '@/utils/date';
+import {Fragment} from "react";
 
 const shareTechMono = localFont({
   src: [
@@ -60,7 +61,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                   </p>
                   <div className="mt-2 flex items-center gap-2">
                     {post.meta.tags.map((tag, index) => (
-                      <>
+                      <Fragment key={tag}>
                         {index !== 0 && (
                           <span className="h-[3px] w-[3px] rounded bg-gray-500" />
                         )}
@@ -74,7 +75,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                         >
                           {tag}
                         </p>
-                      </>
+                      </Fragment>
                     ))}
                   </div>
                 </div>
