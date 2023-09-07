@@ -55,23 +55,28 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                   >
                     <h3>{post.meta.title}</h3>
                   </Link>
-                  <ul className="mt-2 flex gap-2">
-                    {post.meta.tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className={`text-xs md:text-sm ${
-                          selectedTag === ALL_POST || selectedTag === tag
-                            ? 'font-bold text-app-blue-green'
-                            : 'text-gray-500'
-                        }`}
-                      >
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
                   <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
                     {post.meta.description}
                   </p>
+                  <div className="mt-2 flex items-center gap-2">
+                    {post.meta.tags.map((tag, index) => (
+                      <>
+                        {index !== 0 && (
+                          <span className="h-[3px] w-[3px] rounded bg-gray-500" />
+                        )}
+                        <p
+                          key={tag}
+                          className={`text-xs md:text-sm ${
+                            selectedTag === ALL_POST || selectedTag === tag
+                              ? 'font-bold text-app-blue-green'
+                              : 'text-gray-500'
+                          }`}
+                        >
+                          {tag}
+                        </p>
+                      </>
+                    ))}
+                  </div>
                 </div>
               </li>
             ))
