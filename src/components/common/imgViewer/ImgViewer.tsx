@@ -1,32 +1,25 @@
-import { cloneElement, useMemo, useRef } from 'react';
+'use client';
+
+import OuterHandler from '../outerHandler/OuterHandler';
 
 type Props = {
-  children: JSX.Element;
-  props: {
-    [key: string]: unknown;
-  };
+  images: HTMLImageElement[];
+  onCloseImgViewer: () => void;
 };
 
-export default function ImgViewer({ children, props }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const Provider = useMemo(
-    () =>
-      ({
-        component,
-        ...props
-      }: {
-        component: JSX.Element;
-        [key: string]: unknown;
-      }) => {
-        return cloneElement(component, {
-          ...component.props,
-          ...props,
-          ref,
-        });
-      },
-    [],
+export default function ImgViewer({ images, onCloseImgViewer }: Props) {
+  return (
+    <div className="fixed left-0 top-0 z-10 h-full w-full bg-neutral-900/[.8]">
+      <OuterHandler onOutsideClick={onCloseImgViewer}>
+        <div className="absolute top-0 h-[300px] w-[300px] overflow-auto">
+          {images.length > 0 &&
+            images.map((image) => (
+              <div key={image.src}>
+                <img src={image.src} alt="" />
+              </div>
+            ))}
+        </div>
+      </OuterHandler>
+    </div>
   );
-
-  return <Provider {...props} component={children} />;
 }
