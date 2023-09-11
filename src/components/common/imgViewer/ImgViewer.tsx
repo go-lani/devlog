@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import OuterHandler from '../outerHandler/OuterHandler';
 
 type Props = {
@@ -15,19 +15,41 @@ export default function ImgViewer({
   onCloseImgViewer,
   ...props
 }: Props) {
+  const currentImage = useRef<HTMLImageElement | null>(null);
+  const [scale, setScale] = useState(0);
   const [activeIndex, setActiveIndex] = useState(currentIndex);
+  const onMouseWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (e.deltaY === 100) {
+      if (scale <= 0) return;
+
+      setScale(scale - e.deltaY / 100);
+    } else if (e.deltaY === -100) {
+      if (scale === 10) return;
+      setScale(scale + -e.deltaY / 100);
+    }
+  };
+
+  useEffect(() => {
+    if (!currentImage.current) return;
+
+    currentImage.current.style.transform = `translate(-50%, -50%) scale(${
+      1 + scale * 0.1
+    })`;
+  }, [scale]);
 
   return (
     <div
       className="fixed left-0 top-0 z-10 h-full w-full bg-neutral-900/[.8]"
+      onWheel={onMouseWheel}
       {...props}
     >
       <OuterHandler onOutsideClick={onCloseImgViewer}>
         <>
           <img
+            ref={currentImage}
             src={images[activeIndex].src}
             alt=""
-            className="absolute left-[50%] top-[50%] flex max-h-[50vh] max-w-full translate-x-[-50%] translate-y-[-50%] justify-center lg:w-[742px]"
+            className="absolute left-[50%] top-[50%] flex max-h-[100vh] max-w-full origin-center translate-x-[-50%] translate-y-[-50%] justify-center"
           />
           <div className="absolute bottom-0 mt-auto flex h-[20vh] w-full flex-col items-center justify-center py-2">
             <div>
