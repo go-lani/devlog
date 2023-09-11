@@ -2,48 +2,50 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import useScrollLock from '@/hooks/useScrollLock';
 import ImgViewer from './ImgViewer';
 
 type Props = {
   children: JSX.Element;
-};
+} & React.ComponentProps<'div'>;
 
-export default function ImgViewerProvider({ children }: Props) {
+export default function ImgViewerProvider({ children, ...props }: Props) {
+  const { onScrollLock, offScrollLock } = useScrollLock();
   const [isOpen, setIsOpen] = useState(false);
   const [modalRoot, setModalRoot] = useState<Element | null>(null);
-
-  const imgViewerProviderRef = useRef<HTMLDivElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
+  const [currentIndex, setCurrentIndex] = useState<number | undefined>();
+  const imgViewerProviderRef = useRef<HTMLDivElement>(null);
 
   const onCloseImgViewer = () => {
-    const $body = document.querySelector('body');
     setIsOpen(false);
-    $body!.style.overflowY = 'auto';
+    offScrollLock();
+  };
+
+  const openImageViewer = (e: MouseEvent, index?: number) => {
+    e.stopPropagation();
+
+    setIsOpen(true);
+    setCurrentIndex(index);
+    onScrollLock();
   };
 
   useEffect(() => {
-    const $body = document.querySelector('body');
-    if (!($body && imgViewerProviderRef.current)) return undefined;
+    if (!imgViewerProviderRef.current) return undefined;
 
-    const images = Array.from(
+    const $images = Array.from(
       imgViewerProviderRef.current.querySelectorAll('img'),
     );
 
-    const openViewer = (e: MouseEvent) => {
-      e.stopPropagation();
-      $body.style.overflowY = 'hidden';
-      setIsOpen(true);
-    };
-
-    images.forEach((img) => {
-      img.addEventListener('click', openViewer);
+    $images.forEach((img, index) => {
+      img.addEventListener('click', (e) => openImageViewer(e, index));
     });
 
-    setImages(images);
+    setImages($images);
 
     return () => {
-      images.forEach((img) => {
-        img.removeEventListener('click', openViewer);
+      $images.forEach((img) => {
+        img.removeEventListener('click', openImageViewer);
       });
     };
   }, []);
@@ -72,7 +74,12 @@ export default function ImgViewerProvider({ children }: Props) {
       {isOpen &&
         modalRoot &&
         createPortal(
-          <ImgViewer images={images} onCloseImgViewer={onCloseImgViewer} />,
+          <ImgViewer
+            {...props}
+            images={images}
+            currentIndex={currentIndex || 0}
+            onCloseImgViewer={onCloseImgViewer}
+          />,
           modalRoot,
         )}
     </>
