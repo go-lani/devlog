@@ -12,7 +12,10 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
     <ul>
       {seriesNames.length > 0 ? (
         seriesNames.map((aSeries) => (
-          <li className="border-style flex flex-row text-app-white last-of-type:mb-0">
+          <li
+            className="border-style flex flex-row text-app-white last-of-type:mb-0"
+            key={aSeries}
+          >
             <div className="border-style hidden w-[280px] shrink-0 flex-col border-r bg-zinc-800 px-4 py-[48px] md:flex">
               <p className="border-style mx-[-1rem] border-y bg-neutral-800 p-4 text-right text-base italic text-app-white">
                 Recent
@@ -29,7 +32,10 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
               </h2>
               <ul className="border-style border-t bg-neutral-800">
                 {seriesGroup[aSeries].map((post) => (
-                  <li className="border-style last-of-type:border-n flex gap-8 border-b px-8 py-6">
+                  <li
+                    className="border-style last-of-type:border-n flex gap-8 border-b px-8 py-6"
+                    key={post.meta.title}
+                  >
                     <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
                       {getDateString({
                         inputDate: post.meta.date,
