@@ -24,13 +24,11 @@ export default function ImgViewer({
     >
       <OuterHandler onOutsideClick={onCloseImgViewer}>
         <>
-          <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center lg:w-[742px]">
-            <img
-              src={images[activeIndex].src}
-              alt=""
-              className="max-h-[60vh] max-w-full"
-            />
-          </div>
+          <img
+            src={images[activeIndex].src}
+            alt=""
+            className="absolute left-[50%] top-[50%] flex max-h-[50vh] max-w-full translate-x-[-50%] translate-y-[-50%] justify-center lg:w-[742px]"
+          />
           <div className="absolute bottom-0 mt-auto flex h-[20vh] w-full flex-col items-center justify-center py-2">
             <div>
               <button
