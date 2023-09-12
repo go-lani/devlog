@@ -2,9 +2,9 @@ import { useRef } from 'react';
 
 export default function useScrollLock() {
   const scrollRef = useRef(0);
-  const $body = document.querySelector('body');
 
   const onScrollLock = () => {
+    const $body = document.querySelector('body');
     if ($body) {
       scrollRef.current = window.scrollY;
 
@@ -17,6 +17,7 @@ export default function useScrollLock() {
   };
 
   const offScrollLock = () => {
+    const $body = document.querySelector('body');
     if ($body) {
       $body.style.removeProperty('overflow-y');
       $body.style.removeProperty('position');
