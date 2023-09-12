@@ -41,7 +41,7 @@ export default function MarkdownViewer({ content }: IProps) {
                 <img
                   src={props.src!}
                   alt={props.alt || ''}
-                  className="drag-none max-w-full cursor-zoom-in"
+                  className="max-w-full cursor-zoom-in drag-none"
                 />
               );
             },

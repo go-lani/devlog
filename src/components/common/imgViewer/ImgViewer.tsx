@@ -182,7 +182,7 @@ export default function ImgViewer({
             src={images[activeIndex].src}
             {...dragHandlers}
             alt=""
-            className="drag-none absolute left-[50%] top-[50%] flex max-h-[100vh] max-w-full origin-center translate-x-[-50%] translate-y-[-50%] cursor-grabbing justify-center"
+            className="absolute left-[50%] top-[50%] flex max-h-[100vh] max-w-full origin-center translate-x-[-50%] translate-y-[-50%] cursor-grabbing justify-center drag-none"
           />
           <div className="absolute bottom-0 mt-auto flex h-[20vh] w-full flex-col items-center justify-center py-2">
             <div>
