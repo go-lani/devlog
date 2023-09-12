@@ -60,12 +60,11 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                   </p>
                   <div className="mt-2 flex items-center gap-2">
                     {post.meta.tags.map((tag, index) => (
-                      <>
+                      <div key={tag} className="flex items-center gap-2">
                         {index !== 0 && (
                           <span className="h-[3px] w-[3px] rounded bg-gray-500" />
                         )}
                         <p
-                          key={tag}
                           className={`text-xs md:text-sm ${
                             selectedTag === ALL_POST || selectedTag === tag
                               ? 'font-bold text-app-blue-green'
@@ -74,7 +73,7 @@ export default function ListContainer({ selectedTag, posts }: Props) {
                         >
                           {tag}
                         </p>
-                      </>
+                      </div>
                     ))}
                   </div>
                 </div>

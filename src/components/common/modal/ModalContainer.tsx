@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import useScrollLock from '@/hooks/useScrollLock';
 
 interface Props {
   hasDim: boolean;
@@ -13,15 +14,14 @@ export default function ModalContainer({
   closeModal,
   children,
 }: Props) {
+  const { onScrollLock, offScrollLock } = useScrollLock();
   const $modalContents = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const $body = document.querySelector('body');
-    if (!$body) return () => {};
 
-    $body.style.overflowY = 'hidden';
+  useEffect(() => {
+    onScrollLock();
 
     return () => {
-      $body.style.overflowY = 'auto';
+      offScrollLock();
     };
   }, []);
 
@@ -42,11 +42,11 @@ export default function ModalContainer({
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 flex h-full w-full justify-center overflow-y-auto ${
+      className={`fixed left-0 top-0 z-50 flex h-full w-full justify-center ${
         hasDim && 'bg-black bg-opacity-50'
       }`}
     >
-      <div ref={$modalContents} className="modal-contents">
+      <div ref={$modalContents} className="overflow-y-auto">
         {children}
       </div>
     </div>

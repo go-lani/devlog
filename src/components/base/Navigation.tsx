@@ -30,7 +30,7 @@ export default function Navigation() {
         {MENU.map(({ href, title }) => (
           <li
             className="border-style flex h-full items-center border-l"
-            key="href"
+            key={href}
           >
             <Link
               href={href}
