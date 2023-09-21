@@ -4,13 +4,23 @@ import ModalContainer from './ModalContainer';
 
 type Props = {
   hasDim?: boolean;
+  externalOpen?: boolean;
   trigger: JSX.Element;
   component: JSX.Element;
 };
 
-export default function Modal({ hasDim = false, trigger, component }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Modal({
+  hasDim = false,
+  externalOpen,
+  trigger,
+  component,
+}: Props) {
+  const [isOpen, setIsOpen] = useState(externalOpen);
   const [modalRoot, setModalRoot] = useState<Element | null>(null);
+
+  useEffect(() => {
+    setIsOpen(externalOpen);
+  }, [externalOpen]);
 
   const ClonedElement = useMemo(
     () =>
@@ -35,6 +45,7 @@ export default function Modal({ hasDim = false, trigger, component }: Props) {
 
   const closeModal = useCallback(() => {
     setIsOpen(false);
+    // externalOpen.current = false;
   }, []);
 
   useEffect(() => {

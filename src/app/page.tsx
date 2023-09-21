@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import { DiNpm } from 'react-icons/di';
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
 
@@ -132,6 +132,23 @@ export default function App() {
               </p>
               <ul className="mt-4">
                 <li className="flex gap-4">
+                  <p className="w-[150px] shrink-0">2023.09</p>
+                  <p>
+                    Creator. <br className="block md:hidden" />
+                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
+                      <i>
+                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <Link
+                        href="https://www.npmjs.com/package/@lani.ground/react-outside-click-handler"
+                        target="_blank"
+                      >
+                        @lani.ground/react-outside-click-handler
+                      </Link>
+                    </span>
+                  </p>
+                </li>
+                <li className="flex gap-4 md:mt-4">
                   <p className="w-[150px] shrink-0">2023.06</p>
                   <p>
                     Contributor. <br className="block md:hidden" />
