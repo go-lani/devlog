@@ -1,7 +1,7 @@
 ---
 title: 다국어 적용시 라우팅 관련 트러블슈팅
 description: i18n 작업 중 언어 변경시에 캐시로 인한 라우팅 오작동 문제 해결하기
-date: 2023-09-07
+date: 2023-09-08
 tags: i18n, trouble shotting
 series: 트러블슈팅
 featured: true
@@ -108,12 +108,90 @@ next의 앱 라우터는 라우팅 탐색에 대해 하이브리드 접근 방�
 
 ![i18n_language_selector_trouble_5](./images/i18n_language_selector_trouble_5.gif)
 
-### 결론
+### (변경) next-i18next > next-intl
 
-쿠키, routing 모두 동일하게 정상 작동한다.
+이유
+요구 사항의 변동
 
-하지만 `window.location.href`로 처리하는게 정답인지는 모르겠다.
+변경사항
+- (기존) '/' 접근시 fallback language에 맞춰 라우팅 변경
+- (변경) '/' 접근시 라우팅 변경없이 fallback language가 적용되야함
 
-만약 언어별 다른 도메인을 사용했다면 당연히 처리해야했지만 i18n 연동을 하여 동일한 도메인에 세그먼트만 동적으로 처리하다 보니 router.push로 당연히 될 줄 알았다.
+프로젝트 구조
+📦root
+ ┣ 📂app
+ ┃ ┗ 📂[language]
+ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┗ 📜layout.tsx
 
-언어 변경시에만 캐싱 처리를 회피하면서 next app router를 활용할 방안을 고민해야하는 숙제가 생겼다.
+next 특성상 dynamic 라우팅으로 묶여있어 fallback language 전용으로 따로 root의 page를 만들어 적용시킬 수 있지만 이렇게 된다면 같은 내용의 2벌의 파일이 생겨나게 된다.
+
+이런 경우 쉽게 해결해줄 수 있는 미들웨어를 제공해주는 라이브러리인 next-intl을 사용하기로 했다.([참고](https://next-intl-docs.vercel.app/docs/routing/middleware))
+
+
+###  next-intl
+- 2가지 미들웨어 전략 존재
+	- prefix 기반의 라우팅
+	- 도메인 기반의 라우팅
+
+#### prefix 기반의 라우팅
+- [language] 폴더 안에 중첩되어 있지만 기본 로케일에 대한 요청은 접두사 없이 내부적으로 작성됨
+	- / > /en
+	- /about > /en/about
+	- /de/about > /de/about
+-  accept-language 헤더 기반 locale 감지 > 쿠키에 해당 locale 저장 > 해당 locale에 맞게 redirection
+
+#### 도메인 기반의 라우팅
+- 요청이 가능한 도메인과 일치시키기 위해 host는 x-forwarded-host 헤더를 기반으로 감지하며 host로 대체된다.
+- 로케일은 경로에 로케일 접두어 감지 > 요청에 호스트가 domains에 구성되어 있다면 해당 도메인의 defaultLocale이 사용 > 없다면 접두사 기반 라우팅의 로케일 감지가 적용
+
+
+요구사항에 맞춰 next-intl의 **prefix 기반의 라우팅 전략**을 활용했다.
+
+#### next-intl 설정
+
+**서버 컴포넌트 설정**
+
+``` js title="next.config.js"
+const withNextIntl = require('next-intl/plugin')(
+  './src/i18n.ts',
+);
+```
+
+```ts title="i18n.ts"
+import { getRequestConfig } from 'next-intl/server';
+
+export default getRequestConfig(async ({ locale }) => ({
+  messages: (await import(`./i18n/locales/${locale}.json`)).default,
+}));
+```
+
+**미들웨어 설정**
+
+```ts title="i18n/config.ts"
+export const defaultLocale = 'en';
+
+export const locales = [defaultLocale, 'pt', 'zh-hans', 'zh-hant', 'th'];
+```
+
+```ts title="middleware.ts"
+import createMiddleware from 'next-intl/middleware';
+import { defaultLocale, locales } from './i18n/config';
+
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|images|fonts|videos|assets|favicon.ico|robots|sitemap|sw.js).*)',
+  ],
+};
+
+export default createMiddleware({
+  locales,
+  defaultLocale,
+  localeDetection: false,
+});
+
+```
+
+**결과 화면**
+
+![i18n_language_selector_trouble_6](./images/i18n_language_selector_trouble_6.webp)
