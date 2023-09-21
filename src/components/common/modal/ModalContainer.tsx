@@ -42,13 +42,11 @@ export default function ModalContainer({
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 flex h-full w-full justify-center ${
+      className={`fixed left-0 top-0 z-[99999] flex h-full w-full justify-center ${
         hasDim && 'bg-black bg-opacity-50'
       }`}
     >
-      <div ref={$modalContents} className="overflow-y-auto">
-        {children}
-      </div>
+      <div ref={$modalContents}>{children}</div>
     </div>
   );
 }
