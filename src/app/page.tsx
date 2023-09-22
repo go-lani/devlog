@@ -131,9 +131,9 @@ export default function App() {
                 Other Experience.
               </p>
               <ul className="mt-4">
-                <li className="flex gap-4">
+                <li className="flex flex-wrap gap-4">
                   <p className="w-[150px] shrink-0">2023.09</p>
-                  <p>
+                  <p className="shrink-1">
                     Creator. <br className="block md:hidden" />
                     <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
                       <i>
