@@ -142,6 +142,7 @@ export default function App() {
                       <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-outside-click-handler"
                         target="_blank"
+                        className="my-[7px]"
                       >
                         @lani.ground/react-outside-click-handler
                       </Link>
