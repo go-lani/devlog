@@ -17,7 +17,7 @@ export default function MarkdownViewer({ content }: IProps) {
     <ImgViewerProvider>
       <div className="markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5">
         <ReactMarkdown
-          children={content}
+          children={content.replace(/\n/g, '  \n')}
           remarkPlugins={[remarkGfm, remarkCodeTitle, transformImgSrc]}
           rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
           components={{
