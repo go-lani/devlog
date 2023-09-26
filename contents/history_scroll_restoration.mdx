@@ -1,6 +1,6 @@
 ---
 title: 브라우저 새로고침 시 스크롤 복원 막기
-description: github file history 제거
+description: hisotry api srcoll restoration
 date: 2023-09-20
 tags: browser, troubleshooting
 series: 메모
@@ -14,13 +14,14 @@ featured: true
 라우팅을 이동하거나 새로고침시 History API를 통해 이전 페이지의 스크롤 위치를 복원한다.
 
 ## History API - scrollRestoration
+
 History 인터페이스의 scrollRestoration 속성은 웹 애플리케이션이 기본 스크롤 복원 동작을 역사 탐색에 대해 명시적으로 설정할 수 있도록 한다.
 
 **Value**
 
-*auto* - 사용자가 스크롤한 페이지의 위치가 복원된다.
+_auto_ - 사용자가 스크롤한 페이지의 위치가 복원된다.
 
-*manual* - 페이지의 위치는 복원되지 않으며 사용자는 위치를 수동으로 스크롤해야 한다.
+_manual_ - 페이지의 위치는 복원되지 않으며 사용자는 위치를 수동으로 스크롤해야 한다.
 
 ## 새로고침했을 때 이전 스크롤 위치로 복원되지 않게 하는 방법
 
@@ -33,4 +34,5 @@ useEffect(() => {
 ```
 
 ### 참고
+
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration)
