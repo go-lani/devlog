@@ -99,12 +99,15 @@ export async function getNonFeaturedPosts(): Promise<Post[]> {
   );
 }
 
+export function getTags(posts: Post[]): string[] {
+  const allTags = posts.map((post) => post.meta.tags);
+  const flattenTags = allTags.flat();
+  return [ALL_POST, ...Array.from(new Set(flattenTags))];
+}
+
 export async function getAllPostTags(): Promise<string[]> {
-  return getFeaturedPosts().then((posts) => {
-    const allCategegories = posts.map((post) => post.meta.tags);
-    const flattenCategories = allCategegories.flat();
-    return [ALL_POST, ...Array.from(new Set(flattenCategories))];
-  });
+  const allPosts = await getFeaturedPosts();
+  return getTags(allPosts);
 }
 
 export type SeriesGroup = {
@@ -157,6 +160,22 @@ export async function getPost(fileName: string): Promise<PostDetail> {
   const index = posts.indexOf(post);
   const next = index > 0 ? posts[index - 1] : null;
   const prev = index < posts.length ? posts[index + 1] : null;
+
+  return { ...post, next, prev };
+}
+
+export async function getSnippetPost(fileName: string): Promise<PostDetail> {
+  const posts = await getFeaturedPosts();
+  const snippetPosts = posts.filter((post) => post.meta.series === 'snippet');
+  const post = snippetPosts.find((post) => post.meta.path === fileName);
+
+  if (!post) {
+    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
+  }
+
+  const index = snippetPosts.indexOf(post);
+  const next = index > 0 ? snippetPosts[index - 1] : null;
+  const prev = index < snippetPosts.length ? snippetPosts[index + 1] : null;
 
   return { ...post, next, prev };
 }

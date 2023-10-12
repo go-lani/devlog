@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Posts() {
-  const tags = await getAllPostTags();
   const posts = await getFeaturedPosts();
+  const tags = await getAllPostTags();
 
   return <ListPage tags={tags} posts={posts} />;
 }
