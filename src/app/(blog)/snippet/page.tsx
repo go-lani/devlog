@@ -3,8 +3,8 @@ import { getSeriesPosts, getTags } from '@/service/posts';
 import ListPage from '@/components/snippet/list/ListPage';
 
 export const metadata: Metadata = {
-  title: '메모',
-  description: '라니의 메모 목록',
+  title: '스니펫',
+  description: '라니의 스니펫 목록',
 };
 
 export default async function Snippet() {
