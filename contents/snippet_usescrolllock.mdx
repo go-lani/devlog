@@ -1,0 +1,72 @@
+---
+title: useScrollLock
+description: Scroll Lock - React Hook
+date: 2023-10-12
+tags: hooks
+series: snippet
+featured: true
+---
+
+## useScrollLock
+
+주로 모달과 같은 팝업이 뜰 때, 외부 영역 스크롤을 막아주는 훅으로 사용
+
+### Hooks
+
+```tsx
+import { useRef } from 'react';
+
+export default function useScrollLock() {
+  const scrollRef = useRef(0);
+
+  const onScrollLock = () => {
+    const $body = document.querySelector('body');
+    if ($body) {
+      scrollRef.current = window.scrollY;
+
+      $body.style.overflowY = 'hidden';
+      $body.style.position = 'fixed';
+      $body.style.top = `-${scrollRef.current}px`;
+      $body.style.left = '0';
+      $body.style.right = '0';
+    }
+  };
+
+  const offScrollLock = () => {
+    const $body = document.querySelector('body');
+    if ($body) {
+      $body.style.removeProperty('overflow-y');
+      $body.style.removeProperty('position');
+      $body.style.removeProperty('top');
+      $body.style.removeProperty('left');
+      $body.style.removeProperty('right');
+
+      window.scrollTo({ left: 0, top: scrollRef.current, behavior: 'instant' });
+    }
+  };
+
+  return {
+    onScrollLock,
+    offScrollLock,
+  };
+}
+```
+
+### Usage (Modal)
+
+```tsx
+export default function Modal() {
+  comst {onScrollLock, offScrollLock} = useScrollLock();
+
+  useEffect(() => {
+    onScrollLock();
+
+    return () => {
+      offScrollLock();
+    }
+  }, [])
+
+
+  return (<>...</>)
+}
+```
