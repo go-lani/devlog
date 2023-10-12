@@ -1,0 +1,64 @@
+---
+title: useVisibleOnScreen
+description: 스크롤시 해당 DOM 요소가 노출됬는지 여부 감지 - React Hook
+date: 2023-10-11
+tags: hooks
+series: snippet
+featured: true
+---
+
+## useScrollLock
+
+스크롤 시 해당 DOM 요소가 노출됬는지 여부 감지
+
+### Hooks
+
+```tsx
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+export default function useVisibleOnScreen<T extends HTMLElement>(): {
+  ref: React.RefObject<T>;
+  isVisible: boolean;
+} {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const ref = useRef<T>(null);
+
+  const checkVisibility = useCallback(() => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight - 300 && rect.bottom > 0) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('touchmove', checkVisibility);
+
+    checkVisibility();
+
+    return () => {
+      window.removeEventListener('scroll', checkVisibility);
+      window.removeEventListener('touchmove', checkVisibility);
+    };
+  }, [checkVisibility]);
+
+  return { ref, isVisible };
+}
+```
+
+### Usage
+
+```tsx
+import useVisibility from '@/hooks/useVisiblity';
+
+function Component() {
+  const { ref, isVisible } = useVisibility<HTMLDivElement>();
+
+  return <div ref={ref}>...</div>;
+}
+```
