@@ -4,7 +4,6 @@ import { sync } from 'glob';
 import { cache } from 'react';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
-import { notFound } from 'next/navigation';
 import { Post, PostDetail } from '@/types/post';
 import { ALL_POST } from '@/constants/post';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
@@ -87,9 +86,11 @@ export const getAllPosts = cache(async () => {
   return result.sort((acc, cur) => (acc.meta.date > cur.meta.date ? -1 : 1));
 });
 
-export async function getFeaturedPosts(): Promise<Post[]> {
+export async function getFeaturedPosts(
+  type: 'post' | 'snippet' = 'post',
+): Promise<Post[]> {
   return getAllPosts().then((posts) =>
-    posts.filter((post) => post.meta.featured),
+    posts.filter((post) => post.meta.featured && post.meta.type === type),
   );
 }
 
@@ -103,11 +104,6 @@ export function getTags(posts: Post[]): string[] {
   const allTags = posts.map((post) => post.meta.tags);
   const flattenTags = allTags.flat();
   return [ALL_POST, ...Array.from(new Set(flattenTags))];
-}
-
-export async function getAllPostTags(): Promise<string[]> {
-  const allPosts = await getFeaturedPosts();
-  return getTags(allPosts);
 }
 
 export type SeriesGroup = {
@@ -149,8 +145,12 @@ export async function getSeriesPosts(series: string): Promise<Post[]> {
   );
 }
 
-export async function getPost(fileName: string): Promise<PostDetail> {
-  const posts = await getFeaturedPosts();
+export async function getPost(
+  fileName: string,
+  type: 'post' | 'snippet' = 'post',
+): Promise<PostDetail> {
+  console.log('getPosts', fileName, type);
+  const posts = await getFeaturedPosts(type);
   const post = posts.find((post) => post.meta.path === fileName);
 
   if (!post) {
@@ -166,7 +166,7 @@ export async function getPost(fileName: string): Promise<PostDetail> {
 
 export async function getSnippetPost(fileName: string): Promise<PostDetail> {
   const posts = await getFeaturedPosts();
-  const snippetPosts = posts.filter((post) => post.meta.series === 'snippet');
+  const snippetPosts = posts.filter((post) => post.meta.type === 'snippet');
   const post = snippetPosts.find((post) => post.meta.path === fileName);
 
   if (!post) {

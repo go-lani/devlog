@@ -1,4 +1,5 @@
 export type Meta = {
+  type: string;
   title: string;
   description: string;
   date: string;
