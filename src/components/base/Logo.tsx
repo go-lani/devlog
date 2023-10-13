@@ -16,8 +16,8 @@ const shareTechMono = localFont({
 
 export default function Logo() {
   return (
-    <p className="border-style border-r bg-neutral-900 px-4 py-3 text-xl font-bold text-app-white transition-colors ease-in md:text-2xl">
-      <Link href="/">
+    <p className="border-style border-r bg-neutral-900 text-xl font-bold text-app-white transition-colors ease-in md:text-2xl">
+      <Link href="/" className="block px-4 py-3">
         <TypeAnimation
           preRenderFirstString
           sequence={['<Welcome! />', 1000, '<Lani.log />']}

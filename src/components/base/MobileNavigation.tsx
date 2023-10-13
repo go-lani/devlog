@@ -28,13 +28,15 @@ export default function MobileNavigation({ closeModal }: Props) {
           >
             &lt;Menu /&gt;
           </p>
-          <button
-            type="button"
-            className="border-style border-l"
-            onClick={closeModal}
-          >
-            <div className="border-[18px] border-b-neutral-900	border-l-neutral-700 border-r-neutral-700 border-t-neutral-900" />
-          </button>
+          <div className="border-style flex border-l">
+            <button
+              type="button"
+              className="h-full items-center rounded-3xl bg-neutral-700 px-4 text-base text-app-white transition-colors"
+              onClick={closeModal}
+            >
+              close
+            </button>
+          </div>
         </div>
       </div>
       <div className="border-style border-b px-4">

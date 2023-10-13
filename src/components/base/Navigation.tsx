@@ -15,11 +15,9 @@ export default function Navigation() {
           trigger={
             <button
               type="button"
-              className="relative h-[36px] w-[36px] before:absolute before:top-[-50%] before:block before:border-[18px] before:border-transparent before:border-b-neutral-900
-              after:absolute after:top-[50%] after:block after:border-[18px] after:border-transparent after:border-t-neutral-900
-              "
+              className="flex h-full items-center rounded-3xl bg-neutral-900 px-4 text-base text-app-white transition-colors"
             >
-              <span className="hidden-text">메뉴 열기</span>
+              menu
             </button>
           }
           component={<MobileNavigation />}
