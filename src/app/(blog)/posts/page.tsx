@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getAllPostTags, getFeaturedPosts } from '@/service/posts';
+import { getFeaturedPosts, getTags } from '@/service/posts';
 import ListPage from '@/components/post/list/ListPage';
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default async function Posts() {
   const posts = await getFeaturedPosts();
-  const tags = await getAllPostTags();
+  const tags = await getTags(posts);
 
   return <ListPage tags={tags} posts={posts} />;
 }

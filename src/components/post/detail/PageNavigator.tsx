@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { Post } from '@/types/post';
 
 type Props = {
-  type?: 'posts' | 'snippet';
+  type: 'post' | 'snippet';
   prev: Post | null;
   next: Post | null;
 };
 
-export default function PageNavigator({ type = 'posts', next, prev }: Props) {
+export default function PageNavigator({ type = 'post', next, prev }: Props) {
   return (
     <div className="flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white">
       <div className="border-style flex w-[50%] p-4">
