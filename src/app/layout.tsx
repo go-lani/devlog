@@ -24,13 +24,22 @@ const spoqaSans = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`${process.env.CLIENT_URL}`),
   title: {
     default: '라니.로그',
     template: '라니.로그 | %s',
   },
-  description: '프론트엔드 개발자 라니.로그',
+  description: '프론트엔드 개발자 라니의 로그기록',
+  openGraph: {
+    type: 'website',
+    title: '라니.로그',
+    description: '프론트엔드 개발자 라니의 로그기록',
+    images: '/og-image.jpg',
+  },
   icons: {
-    icon: '/favicon.ico',
+    shortcut: ['/icon/shortcut-icon.png'],
+    apple: ['/icon/shortcut-icon.png'],
+    icon: ['/favicon.ico'],
   },
 };
 
