@@ -1620,6 +1620,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lani.ground/react-modal@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-0.1.1.tgz#14e08d8030d85ab854aa8f448a09b4c86a1d959c"
+  integrity sha512-0QrsTtMxgckzA33yZekRBM6lYmYLqP3k5s5q9TIdIf3YuaSDh6UC5yxw7AddwkBbJIpurldEdqQjATuR8vB61A==
+  dependencies:
+    "@types/node" "^16.18.53"
+    "@types/react" "^18.2.22"
+    "@types/react-dom" "^18.2.7"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-scripts "5.0.1"
+
 "@lani.ground/react-outside-click-handler@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@lani.ground/react-outside-click-handler/-/react-outside-click-handler-0.0.1.tgz#13c4f52ecab6d6bfd8c9bebc598ea0743385cc55"
