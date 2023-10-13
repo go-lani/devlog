@@ -167,7 +167,7 @@
   .markdown-viewer pre,
   .markdown-viewer samp {
     font-family: monospace;
-    font-size: 1em;
+    font-size: 0.95em;
   }
 
   .markdown-viewer figure {
@@ -435,7 +435,7 @@
   .markdown-viewer pre {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 0.95em;
     word-wrap: normal;
   }
 
