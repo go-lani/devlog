@@ -149,7 +149,6 @@ export async function getPost(
   fileName: string,
   type: 'post' | 'snippet' = 'post',
 ): Promise<PostDetail> {
-  console.log('getPosts', fileName, type);
   const posts = await getFeaturedPosts(type);
   const post = posts.find((post) => post.meta.path === fileName);
 
