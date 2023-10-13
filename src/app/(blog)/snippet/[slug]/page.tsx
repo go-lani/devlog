@@ -22,7 +22,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const posts = await getFeaturedPosts();
+  const posts = await getFeaturedPosts('snippet');
   return posts.map(({ meta: { path } }) => ({ slug: path }));
 }
 
