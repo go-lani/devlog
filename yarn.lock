@@ -1620,10 +1620,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/react-modal@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-0.1.1.tgz#14e08d8030d85ab854aa8f448a09b4c86a1d959c"
-  integrity sha512-0QrsTtMxgckzA33yZekRBM6lYmYLqP3k5s5q9TIdIf3YuaSDh6UC5yxw7AddwkBbJIpurldEdqQjATuR8vB61A==
+"@lani.ground/react-modal@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-0.1.2.tgz#410c49fcda7855fdde76658da2842b68952d9151"
+  integrity sha512-eqzWhe45dAm6EUoPh4x8BgEyLBpLIAR4GUcm5HJHogxAv2Qa7HwAbVcs0UWeUbIHGwJ7CD9VjAZsBhgE/oCa1A==
   dependencies:
     "@types/node" "^16.18.53"
     "@types/react" "^18.2.22"
