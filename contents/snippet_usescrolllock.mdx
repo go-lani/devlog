@@ -41,7 +41,7 @@ export default function useScrollLock() {
     modifyBodyStyle({
       overflowY: 'hidden',
       position: 'fixed',
-      top: `-${scrollY}px`,
+      top: `-${scrollRef.current}px`,
       left: '0',
       right: '0',
     });
