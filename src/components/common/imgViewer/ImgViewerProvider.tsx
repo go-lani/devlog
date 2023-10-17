@@ -10,7 +10,7 @@ type Props = {
 } & React.ComponentProps<'div'>;
 
 export default function ImgViewerProvider({ children, ...props }: Props) {
-  const { onScrollLock, offScrollLock } = useScrollLock();
+  const { lockScroll, unlockScroll } = useScrollLock();
   const [isOpen, setIsOpen] = useState(false);
   const [modalRoot, setModalRoot] = useState<Element | null>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
@@ -19,7 +19,7 @@ export default function ImgViewerProvider({ children, ...props }: Props) {
 
   const onCloseImgViewer = () => {
     setIsOpen(false);
-    offScrollLock();
+    unlockScroll();
   };
 
   const openImageViewer = (e: MouseEvent, index?: number) => {
@@ -27,7 +27,7 @@ export default function ImgViewerProvider({ children, ...props }: Props) {
 
     setIsOpen(true);
     setCurrentIndex(index);
-    onScrollLock();
+    lockScroll();
   };
 
   useEffect(() => {

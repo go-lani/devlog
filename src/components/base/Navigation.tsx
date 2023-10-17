@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Modal } from '@lani.ground/react-modal';
 import { MENU } from '@/constants/app';
-import Modal from '../common/modal/Modal';
 import MobileNavigation from './MobileNavigation';
 
 export default function Navigation() {
@@ -20,8 +20,10 @@ export default function Navigation() {
               menu
             </button>
           }
-          component={<MobileNavigation />}
-          hasDim
+          component={(closeModal) => (
+            <MobileNavigation closeModal={closeModal} />
+          )}
+          dim="rgba(0, 0, 0, 0.8)"
         />
       </div>
       <ul className="hidden h-full md:flex">
