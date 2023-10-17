@@ -3,7 +3,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { MENU } from '@/constants/app';
 
 interface Props {
-  closeModal?: () => void;
+  closeModal: () => Promise<void>;
 }
 
 const shareTechMono = localFont({
@@ -52,9 +52,9 @@ export default function MobileNavigation({ closeModal }: Props) {
                   className={`${
                     pathname.includes(href) && 'bg-neutral-900'
                   } border-style w-full rounded-full border-x px-4 py-4 text-left text-sm text-app-white`}
-                  onClick={() => {
+                  onClick={async () => {
+                    closeModal();
                     router.push(href);
-                    closeModal!();
                   }}
                 >
                   {title}

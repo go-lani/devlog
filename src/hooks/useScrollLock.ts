@@ -1,35 +1,49 @@
-import { useRef } from 'react';
+import { useCallback, useRef } from 'react';
+
+type CSSProperties = {
+  [key: string]: string | number;
+};
 
 export default function useScrollLock() {
   const scrollRef = useRef(0);
+  const $body = document.querySelector('body');
 
-  const onScrollLock = () => {
-    const $body = document.querySelector('body');
-    if ($body) {
-      scrollRef.current = window.scrollY;
+  const modifyBodyStyle = useCallback(
+    (style: CSSProperties) => {
+      if ($body) {
+        Object.assign($body.style, style);
+      } else {
+        console.error('document.body is not defined');
+      }
+    },
+    [$body],
+  );
 
-      $body.style.overflowY = 'hidden';
-      $body.style.position = 'fixed';
-      $body.style.top = `-${scrollRef.current}px`;
-      $body.style.left = '0';
-      $body.style.right = '0';
-    }
+  const lockScroll = () => {
+    scrollRef.current = window.scrollY;
+    modifyBodyStyle({
+      overflowY: 'hidden',
+      position: 'fixed',
+      top: `-${scrollRef.current}px`,
+      left: '0',
+      right: '0',
+    });
   };
 
-  const offScrollLock = () => {
-    const $body = document.querySelector('body');
-    if ($body) {
-      $body.style.removeProperty('overflow-y');
-      $body.style.removeProperty('position');
-      $body.style.removeProperty('top');
-      $body.style.removeProperty('left');
-      $body.style.removeProperty('right');
-      window.scrollTo(0, scrollRef.current);
-    }
+  const unlockScroll = () => {
+    modifyBodyStyle({
+      overflowY: '',
+      position: '',
+      top: '',
+      left: '',
+      right: '',
+    });
+
+    window.scrollTo({ left: 0, top: scrollRef.current, behavior: 'instant' });
   };
 
   return {
-    onScrollLock,
-    offScrollLock,
+    lockScroll,
+    unlockScroll,
   };
 }
