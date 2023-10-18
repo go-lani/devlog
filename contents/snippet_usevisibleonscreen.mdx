@@ -2,8 +2,8 @@
 type: snippet
 title: useVisibleOnScreen
 description: 스크롤시 해당 DOM 요소가 노출됬는지 여부 감지
-date: 2023-10-11
-tags: hooks
+date: 2023-10-18
+tags: hooks, DOM API
 series: snippet
 featured: true
 ---
@@ -12,7 +12,7 @@ featured: true
 
 스크롤 시 해당 DOM 요소가 노출됬는지 여부 감지
 
-### Hooks
+### Hooks(Legacy)
 
 ```tsx
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -52,14 +52,103 @@ export default function useVisibleOnScreen<T extends HTMLElement>(): {
 }
 ```
 
+### Hooks(intersectionObserver API 사용)
+
+intersectionObserver API를 사용하며 Hook의 기능을 추가/변경했다.
+
+**Props**
+
+1. activeClass: 해당 요소가 노출될 때 추가할 클래스명
+2. key: 추적 요소의 고유 키값 부여
+
+**Return**
+
+1. ref: 추적할 요소를 가진 \*container(div tag)\*\*를 ref로 지정하기 위함
+2. activeKey: 현재 노출된 요소의 키값
+3. activeElement: 현재 노출된 Element 요소
+
+```tsx
+import { useEffect, useRef, useState } from 'react';
+
+interface Props {
+  key?: string;
+  activeClass?: string;
+}
+
+export default function useVisibleOnScreen(props?: Props) {
+  const { key = 'scroll-item', activeClass } = props || {};
+
+  const [activeKey, setActiveKey] = useState<string>('');
+  const [activeElement, setActiveElement] = useState<Element | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const callback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      const key = entry.target.getAttribute('data-key');
+
+      if (entry.isIntersecting) {
+        if (activeClass) {
+          entry.target.classList.add(activeClass);
+        }
+
+        setActiveKey(key || '');
+        setActiveElement(entry.target);
+      } else if (activeClass) {
+        entry.target.classList.remove(activeClass);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const intersectionObserver = new IntersectionObserver(callback);
+
+    const scrollItems = Array.from(ref.current?.children as HTMLCollection);
+
+    if (!scrollItems?.length) return () => {};
+
+    scrollItems.forEach((item, index) => {
+      item.setAttribute('data-key', `${key}-${index}`);
+      intersectionObserver.observe(item);
+    });
+
+    return () => {
+      intersectionObserver.disconnect();
+    };
+  }, []);
+
+  return {
+    ref,
+    activeKey,
+    activeElement,
+  };
+}
+```
+
 ### Usage
 
 ```tsx
-import useVisibility from '@/hooks/useVisiblity';
-
 function Component() {
-  const { ref, isVisible } = useVisibility<HTMLDivElement>();
+  const { ref, activeKey, activeElement } = useVisibleOnScreen({
+    activeClass: 'active',
+  });
+  console.log('activeKey', activeKey); // scroll-item-0
+  console.log('activeElement', activeElement); // <section class="h-[100vh] bg-orange-300 p-8 active" data-key="scroll-item-0"><p>section 1</p></section>
 
-  return <div ref={ref}>...</div>;
+  return (
+    <div ref={ref}>
+      <section>
+        <p>section 1</p>
+      </section>
+      <section>
+        <p>section 2</p>
+      </section>
+      <section>
+        <p>section 3</p>
+      </section>
+      <section>
+        <p>section 4</p>
+      </section>
+    </div>
+  );
 }
 ```
