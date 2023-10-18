@@ -6,18 +6,15 @@ type CSSProperties = {
 
 export default function useScrollLock() {
   const scrollRef = useRef(0);
-  const $body = document.querySelector('body');
 
-  const modifyBodyStyle = useCallback(
-    (style: CSSProperties) => {
-      if ($body) {
-        Object.assign($body.style, style);
-      } else {
-        console.error('document.body is not defined');
-      }
-    },
-    [$body],
-  );
+  const modifyBodyStyle = useCallback((style: CSSProperties) => {
+    const $body = document.querySelector('body');
+    if ($body) {
+      Object.assign($body.style, style);
+    } else {
+      console.error('document.body is not defined');
+    }
+  }, []);
 
   const lockScroll = () => {
     scrollRef.current = window.scrollY;
