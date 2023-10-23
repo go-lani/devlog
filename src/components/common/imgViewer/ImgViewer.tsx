@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { OutSideClickHandler } from '@lani.ground/react-outside-click-handler';
+import { OutsideClickHandler } from '@lani.ground/react-outside-click-handler';
 
 type Props = {
   currentIndex: number;
@@ -175,7 +175,7 @@ export default function ImgViewer({
       ref={imgViewer}
       {...props}
     >
-      <OutSideClickHandler onOutsideClick={onCloseImgViewer}>
+      <OutsideClickHandler onOutsideClick={onCloseImgViewer}>
         <>
           <img
             ref={currentImage}
@@ -234,7 +234,7 @@ export default function ImgViewer({
             </div>
           </div>
         </>
-      </OutSideClickHandler>
+      </OutsideClickHandler>
     </div>
   );
 }
