@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
-    "@lani.ground/react-modal": "^0.2.1",
+    "@lani.ground/react-modal": "^0.2.4",
     "@lani.ground/react-outside-click-handler": "^0.2.5",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",

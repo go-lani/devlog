@@ -126,10 +126,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/react-modal@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-0.2.1.tgz#f8d640bf4fc21350c969377ca91e3781bd264f5e"
-  integrity sha512-xZ/YCbHCd6uSZ7Lb1wn4VkrY9oaULQv24g8k2u8oj7BIhWaC9YLvUfHI8VDAnMcchy3dQcv7PwX9KWwUkBIjIA==
+"@lani.ground/react-modal@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-0.2.4.tgz#b4f05f8cf00129b41f50e026a2ec89ca5793d0c6"
+  integrity sha512-6WqxBrZNgRgfhhca3eJCfKev/osba8HQmJvVgqHCP0F3k6eh8G6nQhyQqJvWOBU4Hm9u+/Q79SGLC1ipQz7lag==
 
 "@lani.ground/react-outside-click-handler@^0.2.5":
   version "0.2.5"
