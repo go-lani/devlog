@@ -1,67 +1,22 @@
-1:HL["/_next/static/css/ea12a9107c8e25b6.css",{"as":"style"}]
-0:["kxbeU0QXCDeAH14qBVx92",[[["",{"children":["(blog)",{"children":["snippet",{"children":[["slug","snippet_usescrolllock","d"],{"children":["__PAGE__?{\"slug\":\"snippet_usescrolllock\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ea12a9107c8e25b6.css","precedence":"next"}]],"$L3"]]]]
+1:HL["/_next/static/css/c3511b61741fc66f.css",{"as":"style"}]
+0:["AMVx21SLZI08RjdZqJTwM",[[["",{"children":["(blog)",{"children":["snippet",{"children":[["slug","snippet_usescrolllock","d"],{"children":["__PAGE__?{\"slug\":\"snippet_usescrolllock\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c3511b61741fc66f.css","precedence":"next"}]],"$L3"]]]]
 4:HL["/_next/static/css/c9b2022872d5ba0f.css",{"as":"style"}]
-5:I{"id":83015,"chunks":["185:static/chunks/app/layout-3f39854bb3a46e9f.js"],"name":"","async":false}
-6:I{"id":47767,"chunks":["272:static/chunks/webpack-55a606c84442bd1e.js","971:static/chunks/fd9d1056-ef33cd78b8d8878c.js","596:static/chunks/596-6a9d4376673ce765.js"],"name":"default","async":false}
-7:I{"id":57920,"chunks":["272:static/chunks/webpack-55a606c84442bd1e.js","971:static/chunks/fd9d1056-ef33cd78b8d8878c.js","596:static/chunks/596-6a9d4376673ce765.js"],"name":"default","async":false}
-9:I{"id":73630,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","552:static/chunks/552-687d46b810cf5744.js","432:static/chunks/app/(blog)/layout-b751035e6d1234d2.js"],"name":"","async":false}
-a:I{"id":59192,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","552:static/chunks/552-687d46b810cf5744.js","432:static/chunks/app/(blog)/layout-b751035e6d1234d2.js"],"name":"","async":false}
+5:HL["/_next/static/css/39b185dfc6d10a59.css",{"as":"style"}]
+6:I{"id":83015,"chunks":["185:static/chunks/app/layout-3294142812ba7ce3.js"],"name":"","async":false}
+7:I{"id":47767,"chunks":["272:static/chunks/webpack-a170aab22739ca7d.js","971:static/chunks/fd9d1056-ef33cd78b8d8878c.js","596:static/chunks/596-6a9d4376673ce765.js"],"name":"default","async":false}
+8:I{"id":57920,"chunks":["272:static/chunks/webpack-a170aab22739ca7d.js","971:static/chunks/fd9d1056-ef33cd78b8d8878c.js","596:static/chunks/596-6a9d4376673ce765.js"],"name":"default","async":false}
+a:I{"id":73630,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","552:static/chunks/552-687d46b810cf5744.js","432:static/chunks/app/(blog)/layout-b751035e6d1234d2.js"],"name":"","async":false}
+b:I{"id":59192,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","552:static/chunks/552-687d46b810cf5744.js","432:static/chunks/app/(blog)/layout-b751035e6d1234d2.js"],"name":"","async":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"라니.로그 | useScrollLock"}],["$","meta","2",{"name":"description","content":"스크롤을 이벤트를 막아주는 훅"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","4",{"property":"og:title","content":"라니.로그"}],["$","meta","5",{"property":"og:description","content":"프론트엔드 개발자 라니의 로그기록"}],["$","meta","6",{"property":"og:image","content":"https://laniground.com/og-image.jpg"}],["$","meta","7",{"property":"og:type","content":"website"}],["$","meta","8",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","9",{"name":"twitter:title","content":"라니.로그"}],["$","meta","10",{"name":"twitter:description","content":"프론트엔드 개발자 라니의 로그기록"}],["$","meta","11",{"name":"twitter:image","content":"https://laniground.com/og-image.jpg"}],["$","link","12",{"rel":"shortcut icon","href":"/icon/shortcut-icon.png"}],["$","link","13",{"rel":"icon","href":"/favicon.ico"}],["$","link","14",{"rel":"apple-touch-icon","href":"/icon/shortcut-icon.png"}]]
-2:[null,["$","html",null,{"lang":"ko","children":[[["$","$L5",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-83PGP6B0HE"}],["$","$L5",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-83PGP6B0HE', {\n                page_path: window.location.pathname,\n            });\n          "}}]],["$","body",null,{"className":"__className_f8d089 px-[20px]","children":[["$","div",null,{"id":"main-root","className":"mx-[-20px]","children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":"$L8","notFoundStyles":[],"childProp":{"current":[null,[["$","header",null,{"className":"container-layout border-style flex justify-center border-y bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex items-center justify-between border-x","children":[["$","$L9",null,{}],["$","$La",null,{}]]}]}],["$","main",null,{"className":"flex min-h-screen flex-col","children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children",["slug","snippet_usescrolllock","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","notFound":"$Lb","notFoundStyles":[],"childProp":{"current":["$Lc","$Ld",null],"segment":"__PAGE__?{\"slug\":\"snippet_usescrolllock\"}"},"styles":[]}],"segment":["slug","snippet_usescrolllock","d"]},"styles":[]}],"segment":"snippet"},"styles":[]}]}],["$","footer",null,{"className":"__className_829659 container-layout border-style border-y bg-neutral-800","children":["$","div",null,{"className":"content-layout border-style border-x py-4","children":["$","p",null,{"className":"text-center text-xs font-bold text-app-white md:text-sm","children":"© 2023 Lani. All Rights Reserved."}]}]}]],null],"segment":"(blog)"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c9b2022872d5ba0f.css","precedence":"next"}]]}]}],["$","div",null,{"id":"modal-root"}]]}]]}],null]
-e:I{"id":46685,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","332:static/chunks/app/(blog)/snippet/[slug]/not-found-3653929c86b80cfb.js"],"name":"","async":false}
-f:I{"id":63222,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","689:static/chunks/689-c362d09a36554168.js","76:static/chunks/76-20912bfc89dc9803.js","360:static/chunks/app/(blog)/snippet/[slug]/page-2ebc6ba53cdbf787.js"],"name":"Image","async":false}
-10:I{"id":33429,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","689:static/chunks/689-c362d09a36554168.js","76:static/chunks/76-20912bfc89dc9803.js","360:static/chunks/app/(blog)/snippet/[slug]/page-2ebc6ba53cdbf787.js"],"name":"","async":false}
-11:I{"id":59944,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","689:static/chunks/689-c362d09a36554168.js","76:static/chunks/76-20912bfc89dc9803.js","360:static/chunks/app/(blog)/snippet/[slug]/page-2ebc6ba53cdbf787.js"],"name":"","async":false}
-12:I{"id":23758,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","689:static/chunks/689-c362d09a36554168.js","76:static/chunks/76-20912bfc89dc9803.js","360:static/chunks/app/(blog)/snippet/[slug]/page-2ebc6ba53cdbf787.js"],"name":"","async":false}
-15:I{"id":6832,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","689:static/chunks/689-c362d09a36554168.js","76:static/chunks/76-20912bfc89dc9803.js","360:static/chunks/app/(blog)/snippet/[slug]/page-2ebc6ba53cdbf787.js"],"name":"","async":false}
-8:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Le",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
-b:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Le",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
-13:T418,import { useCallback, useRef } from 'react';  
-  
-type CSSProperties = {  
-  [key: string]: string | number;  
-};  
-  
-export default function useScrollLock() {  
-  const scrollRef = useRef(0);  
-  
-  const modifyBodyStyle = useCallback((style: CSSProperties) => {  
-    const $body = document.querySelector('body');  
-    if ($body) {  
-      Object.assign($body.style, style);  
-    } else {  
-      console.error('document.body is not defined');  
-    }  
-  }, []);  
-  
-  const lockScroll = () => {  
-    scrollRef.current = window.scrollY;  
-    modifyBodyStyle({  
-      overflowY: 'hidden',  
-      position: 'fixed',  
-      top: `-${scrollRef.current}px`,  
-      left: '0',  
-      right: '0',  
-    });  
-  };  
-  
-  const unlockScroll = () => {  
-    modifyBodyStyle({  
-      overflowY: '',  
-      position: '',  
-      top: '',  
-      left: '',  
-      right: '',  
-    });  
-  
-    window.scrollTo({ left: 0, top: scrollRef.current, behavior: 'instant' });  
-  };  
-  
-  return {  
-    lockScroll,  
-    unlockScroll,  
-  };  
-}  
+2:[null,["$","html",null,{"lang":"ko","children":[[["$","$L6",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-83PGP6B0HE"}],["$","$L6",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-83PGP6B0HE', {\n                page_path: window.location.pathname,\n            });\n          "}}]],["$","body",null,{"className":"__className_f8d089 px-[20px]","children":[["$","div",null,{"id":"main-root","className":"mx-[-20px]","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$L9","notFoundStyles":[],"childProp":{"current":[null,[["$","header",null,{"className":"container-layout border-style flex justify-center border-y bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex items-center justify-between border-x","children":[["$","$La",null,{}],["$","$Lb",null,{}]]}]}],["$","main",null,{"className":"flex min-h-screen flex-col","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children",["slug","snippet_usescrolllock","d"],"children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$Lc","notFoundStyles":[],"childProp":{"current":["$Ld","$Le",null],"segment":"__PAGE__?{\"slug\":\"snippet_usescrolllock\"}"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/39b185dfc6d10a59.css","precedence":"next"}]]}],"segment":["slug","snippet_usescrolllock","d"]},"styles":[]}],"segment":"snippet"},"styles":[]}]}],["$","footer",null,{"className":"__className_829659 container-layout border-style border-y bg-neutral-800","children":["$","div",null,{"className":"content-layout border-style border-x py-4","children":["$","p",null,{"className":"text-center text-xs font-bold text-app-white md:text-sm","children":"© 2023 Lani. All Rights Reserved."}]}]}]],null],"segment":"(blog)"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c9b2022872d5ba0f.css","precedence":"next"}]]}]}],["$","div",null,{"id":"modal-root"}]]}]]}],null]
+f:I{"id":46685,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"","async":false}
+10:I{"id":63222,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"Image","async":false}
+11:I{"id":33429,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"","async":false}
+12:I{"id":10472,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"","async":false}
+13:I{"id":23758,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"","async":false}
+16:I{"id":6832,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","640:static/chunks/640-ff3bc69c8f8d38c6.js","360:static/chunks/app/(blog)/snippet/[slug]/page-048e2ca41b3e1dfb.js"],"name":"","async":false}
+9:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Lf",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
+c:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Lf",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
 14:T418,import { useCallback, useRef } from 'react';  
   
 type CSSProperties = {  
@@ -108,5 +63,51 @@ export default function useScrollLock() {
     unlockScroll,  
   };  
 }  
-d:[["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style relative justify-center border-x text-center text-app-white","children":["$","div",null,{"className":"flex flex-col justify-center px-4 py-16 md:px-5 md:py-20","children":[["$","p",null,{"className":"mb-3 text-sm","children":["snippet"," ","$undefined"]}],["$","h1",null,{"className":"text-xl md:text-4xl","children":"useScrollLock"}]]}]}]}],["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout","children":["$","div",null,{"className":"border-style align-center flex justify-center border-x text-app-white md:justify-start md:text-center","children":[["$","p",null,{"className":"border-style border-l p-5 text-sm md:border-l-0","children":"2023-10-12"}],["$","p",null,{"className":"border-style flex items-center justify-center gap-1 border-x p-5 text-sm","children":[["$","$Lf",null,{"src":"/assets/images/icons/timer.svg","width":21,"height":21,"alt":""}],"약 ",1,"분"]}]]}]}]}],["$","section",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex flex-col border-x","children":["$","div",null,{"className":"flex","children":[["$","$L10",null,{"toc":[{"level":2,"title":"useScrollLock","href":"#usescrolllock","children":[{"level":3,"title":"Hooks","href":"#hooks"},{"level":3,"title":"Usage (Modal)","href":"#usage-modal"}]}],"tags":["hooks"]}],["$","div",null,{"className":"flex w-full flex-col bg-neutral-800 lg:w-[742px]","children":[["$","$L11",null,{"children":["$","div",null,{"className":"markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5","children":[["$","h2","0",{"id":"usescrolllock","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#usescrolllock","children":[["$","span","0",{"className":"icon icon-link"}]]}],"useScrollLock"]}],"\n",["$","p","2",{"children":["주로 모달과 같은 팝업이 뜰 때 스크롤을 이벤트를 막아주는 훅으로 사용"]}],"\n",["$","h3","4",{"id":"hooks","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#hooks","children":[["$","span","0",{"className":"icon icon-link"}]]}],"Hooks"]}],"\n",["$","pre","6",{"children":[["$","$L12",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-tsx"]},"children":[{"type":"text","value":"$13"}],"position":{"start":{"line":8,"column":1,"offset":85},"end":{"line":55,"column":6,"offset":1147}}},"children":["$14"],"language":"tsx"}]]}],"\n",["$","h3","8",{"id":"usage-modal","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#usage-modal","children":[["$","span","0",{"className":"icon icon-link"}]]}],"Usage (Modal)"]}],"\n",["$","pre","10",{"children":[["$","$L12",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-tsx"]},"children":[{"type":"text","value":"export default function Modal() {  \n  comst {lockScroll, unlockScroll} = useScrollLock();  \n  \n  useEffect(() => {  \n    lockScroll();  \n  \n    return () => {  \n      unlockScroll();  \n    }  \n  }, [])  \n  \n  \n  return (<>...</>)  \n}  \n"}],"position":{"start":{"line":59,"column":1,"offset":1174},"end":{"line":74,"column":6,"offset":1424}}},"children":["export default function Modal() {  \n  comst {lockScroll, unlockScroll} = useScrollLock();  \n  \n  useEffect(() => {  \n    lockScroll();  \n  \n    return () => {  \n      unlockScroll();  \n    }  \n  }, [])  \n  \n  \n  return (<>...</>)  \n}  \n"],"language":"tsx"}]]}]]}]}],false,["$","div",null,{"className":"flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white","children":[["$","div",null,{"className":"border-style flex w-[50%] p-4","children":"$undefined"}],["$","div",null,{"className":"flex w-[50%] justify-end p-4","children":["$","$Le",null,{"href":"/snippet/snippet_usevisibleonscreen","className":"flex gap-4","children":[["$","div",null,{"className":"flex flex-col items-end gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"next"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 md:max-w-[200px]","children":["useVisibleOnScreen","useVisibleOnScreen","useVisibleOnScreen"]}]]}],["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}]]}]}]]}],["$","$L15",null,{}]]}]]}]}]}]]
-c:null
+15:T418,import { useCallback, useRef } from 'react';  
+  
+type CSSProperties = {  
+  [key: string]: string | number;  
+};  
+  
+export default function useScrollLock() {  
+  const scrollRef = useRef(0);  
+  
+  const modifyBodyStyle = useCallback((style: CSSProperties) => {  
+    const $body = document.querySelector('body');  
+    if ($body) {  
+      Object.assign($body.style, style);  
+    } else {  
+      console.error('document.body is not defined');  
+    }  
+  }, []);  
+  
+  const lockScroll = () => {  
+    scrollRef.current = window.scrollY;  
+    modifyBodyStyle({  
+      overflowY: 'hidden',  
+      position: 'fixed',  
+      top: `-${scrollRef.current}px`,  
+      left: '0',  
+      right: '0',  
+    });  
+  };  
+  
+  const unlockScroll = () => {  
+    modifyBodyStyle({  
+      overflowY: '',  
+      position: '',  
+      top: '',  
+      left: '',  
+      right: '',  
+    });  
+  
+    window.scrollTo({ left: 0, top: scrollRef.current, behavior: 'instant' });  
+  };  
+  
+  return {  
+    lockScroll,  
+    unlockScroll,  
+  };  
+}  
+e:[["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style relative justify-center border-x text-center text-app-white","children":["$","div",null,{"className":"flex flex-col justify-center px-4 py-16 md:px-5 md:py-20","children":[["$","p",null,{"className":"mb-3 text-sm","children":["snippet"," ","$undefined"]}],["$","h1",null,{"className":"text-xl md:text-4xl","children":"useScrollLock"}]]}]}]}],["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout","children":["$","div",null,{"className":"border-style align-center flex justify-center border-x text-app-white md:justify-start md:text-center","children":[["$","p",null,{"className":"border-style border-l p-5 text-sm md:border-l-0","children":"2023-10-12"}],["$","p",null,{"className":"border-style flex items-center justify-center gap-1 border-x p-5 text-sm","children":[["$","$L10",null,{"src":"/assets/images/icons/timer.svg","width":21,"height":21,"alt":""}],"약 ",1,"분"]}]]}]}]}],["$","section",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex flex-col border-x","children":["$","div",null,{"className":"flex","children":[["$","$L11",null,{"toc":[{"level":2,"title":"useScrollLock","href":"#usescrolllock","children":[{"level":3,"title":"Hooks","href":"#hooks"},{"level":3,"title":"Usage (Modal)","href":"#usage-modal"}]}],"tags":["hooks"]}],["$","div",null,{"className":"flex w-full flex-col bg-neutral-800 lg:w-[742px]","children":[["$","$L12",null,{"children":["$","$L12",null,{"children":["$","div",null,{"className":"markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5","children":[["$","h2","0",{"id":"usescrolllock","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#usescrolllock","children":[["$","span","0",{"className":"icon icon-link"}]]}],"useScrollLock"]}],"\n",["$","p","2",{"children":["주로 모달과 같은 팝업이 뜰 때 스크롤을 이벤트를 막아주는 훅으로 사용"]}],"\n",["$","h3","4",{"id":"hooks","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#hooks","children":[["$","span","0",{"className":"icon icon-link"}]]}],"Hooks"]}],"\n",["$","pre","6",{"children":[["$","$L13",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-tsx"]},"children":[{"type":"text","value":"$14"}],"position":{"start":{"line":8,"column":1,"offset":85},"end":{"line":55,"column":6,"offset":1147}}},"children":["$15"],"language":"tsx"}]]}],"\n",["$","h3","8",{"id":"usage-modal","children":[["$","a","0",{"aria-hidden":"true","tabIndex":-1,"href":"#usage-modal","children":[["$","span","0",{"className":"icon icon-link"}]]}],"Usage (Modal)"]}],"\n",["$","pre","10",{"children":[["$","$L13",null,{"node":{"type":"element","tagName":"code","properties":{"className":["language-tsx"]},"children":[{"type":"text","value":"export default function Modal() {  \n  comst {lockScroll, unlockScroll} = useScrollLock();  \n  \n  useEffect(() => {  \n    lockScroll();  \n  \n    return () => {  \n      unlockScroll();  \n    }  \n  }, [])  \n  \n  \n  return (<>...</>)  \n}  \n"}],"position":{"start":{"line":59,"column":1,"offset":1174},"end":{"line":74,"column":6,"offset":1424}}},"children":["export default function Modal() {  \n  comst {lockScroll, unlockScroll} = useScrollLock();  \n  \n  useEffect(() => {  \n    lockScroll();  \n  \n    return () => {  \n      unlockScroll();  \n    }  \n  }, [])  \n  \n  \n  return (<>...</>)  \n}  \n"],"language":"tsx"}]]}]]}]}]}],false,["$","div",null,{"className":"flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white","children":[["$","div",null,{"className":"border-style flex w-[50%] p-4","children":"$undefined"}],["$","div",null,{"className":"flex w-[50%] justify-end p-4","children":["$","$Lf",null,{"href":"/snippet/snippet_usevisibleonscreen","className":"flex gap-4","children":[["$","div",null,{"className":"flex flex-col items-end gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"next"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 md:max-w-[200px]","children":["useVisibleOnScreen","useVisibleOnScreen","useVisibleOnScreen"]}]]}],["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}]]}]}]]}],["$","$L16",null,{}]]}]]}]}]}]]
+d:null
