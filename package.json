@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
+    "@lani.ground/react-image-viewer": "^0.1.1",
     "@lani.ground/react-modal": "^0.2.4",
     "@lani.ground/react-outside-click-handler": "^0.2.5",
     "@types/node": "20.5.0",

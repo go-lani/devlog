@@ -140,6 +140,24 @@ export default function App() {
                         <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
                       </i>
                       <Link
+                        href="https://www.npmjs.com/package/@lani.ground/react-image-viewer"
+                        target="_blank"
+                        className="my-[7px]"
+                      >
+                        @lani.ground/react-image-viewer
+                      </Link>
+                    </span>
+                  </p>
+                </li>
+                <li className="flex flex-wrap gap-4">
+                  <p className="w-[150px] shrink-0">2023.10</p>
+                  <p className="shrink-1">
+                    Creator. <br className="block md:hidden" />
+                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
+                      <i>
+                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-modal"
                         target="_blank"
                         className="my-[7px]"

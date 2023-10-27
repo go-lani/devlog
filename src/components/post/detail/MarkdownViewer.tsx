@@ -4,9 +4,10 @@ import remarkCodeTitle from 'remark-code-title';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { ImageViewerProvider } from '@lani.ground/react-image-viewer';
 import transformImgSrc from '@/utils/transformImgSrc';
-import ImgViewerProvider from '@/components/common/imgViewer/ImgViewerProvider';
 import Syntax from './SyntaxHighlighter';
+import '@lani.ground/react-image-viewer/css';
 
 interface IProps {
   content: string;
@@ -14,7 +15,7 @@ interface IProps {
 
 export default function MarkdownViewer({ content }: IProps) {
   return (
-    <ImgViewerProvider>
+    <ImageViewerProvider>
       <div className="markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5">
         <ReactMarkdown
           children={content.replace(/\n/g, '  \n')}
@@ -48,6 +49,6 @@ export default function MarkdownViewer({ content }: IProps) {
           }}
         />
       </div>
-    </ImgViewerProvider>
+    </ImageViewerProvider>
   );
 }
