@@ -1,15 +1,13 @@
 'use client';
 
 import '@lani.ground/react-modal/css';
-import { ImageViewerProvider } from '@lani.ground/react-image-viewer';
-import '@lani.ground/react-image-viewer/css';
 
 export default function Ground() {
   return (
     <>
       <main className="flex flex-col text-white">
         <h1 className="p-20 text-2xl">playground</h1>
-        <ImageViewerProvider
+        {/* <ImageViewerProvider
           controller={{
             prev: (
               <button type="button">
@@ -212,7 +210,7 @@ export default function Ground() {
               </span>
             </p>
           </div>
-        </ImageViewerProvider>
+        </ImageViewerProvider> */}
       </main>
     </>
   );

@@ -71,7 +71,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
           </div>
         </div>
       </section>
-      <PostContent type="post" post={post} />
+      <PostContent type="posts" post={post} />
     </>
   );
 }

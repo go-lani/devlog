@@ -76,7 +76,6 @@ export default function RootLayout({
         <div id="main-root" className="mx-[-20px]">
           {children}
         </div>
-        <div id="modal-root" />
       </body>
     </html>
   );

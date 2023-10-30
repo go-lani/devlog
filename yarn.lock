@@ -126,10 +126,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/react-image-viewer@^0.1.1":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-0.1.2.tgz#9890eb72aac58ffd3ba3e179e8e45e1e1698be4f"
-  integrity sha512-tj31WCvkuumRogJEqOOYfkSwW62N0ndwp/PPqnul82e2Ac23/m+bpz4H2wC+weBiMdiywNGcqa4Sh+4XmNMbAw==
+"@lani.ground/react-image-viewer@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.0.0.tgz#b2056f8905b2faf86de731ce2363a3281a42021f"
+  integrity sha512-8WGI6ijz1hZQlMjGnAuNKysnfCdHlpXGJaGoFIr/mbYdAvlAdZ6oxNpFdvxhB09OP1ZPP/culu4peMTBe5/wdA==
 
 "@lani.ground/react-modal@^0.2.4":
   version "0.2.4"

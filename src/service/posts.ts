@@ -87,7 +87,7 @@ export const getAllPosts = cache(async () => {
 });
 
 export async function getFeaturedPosts(
-  type: 'post' | 'snippet' = 'post',
+  type: 'posts' | 'snippet' = 'posts',
 ): Promise<Post[]> {
   return getAllPosts().then((posts) =>
     posts.filter((post) => post.meta.featured && post.meta.type === type),
@@ -147,7 +147,7 @@ export async function getSeriesPosts(series: string): Promise<Post[]> {
 
 export async function getPost(
   fileName: string,
-  type: 'post' | 'snippet' = 'post',
+  type: 'posts' | 'snippet' = 'posts',
 ): Promise<PostDetail> {
   const posts = await getFeaturedPosts(type);
   const post = posts.find((post) => post.meta.path === fileName);
