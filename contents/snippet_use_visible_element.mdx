@@ -1,6 +1,6 @@
 ---
 type: snippet
-title: useVisibleOnScreen
+title: useVisibleElement
 description: 스크롤시 해당 DOM 요소가 노출됬는지 여부 감지
 date: 2023-10-18
 tags: hooks, DOM API
@@ -8,7 +8,7 @@ series: snippet
 featured: true
 ---
 
-## useVisibleOnScreen
+## useVisibleElement
 
 스크롤 시 해당 DOM 요소가 노출됬는지 여부 감지
 
@@ -17,7 +17,7 @@ featured: true
 ```tsx
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-export default function useVisibleOnScreen<T extends HTMLElement>(): {
+export default function useVisibleElement<T extends HTMLElement>(): {
   ref: React.RefObject<T>;
   isVisible: boolean;
 } {
@@ -75,8 +75,8 @@ interface Props {
   activeClass?: string;
 }
 
-export default function useVisibleOnScreen(props?: Props) {
-  const { key = 'scroll-item', activeClass } = props || {};
+export default function useVisibleElement(props?: Props) {
+  const { key = 'visible-element', activeClass } = props || {};
 
   const [activeKey, setActiveKey] = useState<string>('');
   const [activeElement, setActiveElement] = useState<Element | null>(null);
@@ -128,7 +128,7 @@ export default function useVisibleOnScreen(props?: Props) {
 
 ```tsx
 function Component() {
-  const { ref, activeKey, activeElement } = useVisibleOnScreen({
+  const { ref, activeKey, activeElement } = useVisibleElement({
     activeClass: 'active',
   });
   console.log('activeKey', activeKey); // scroll-item-0
