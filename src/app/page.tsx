@@ -84,7 +84,7 @@ export default function App() {
               <p className="text-base font-bold md:text-lg">Work Experience.</p>
               <ul className="mt-2 md:mt-4">
                 <li className="flex gap-4">
-                  <p className="w-[150px] shrink-0">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">
                     2023.07 - <span className="text-app-yellow">now</span>
                   </p>
                   <p>
@@ -95,7 +95,7 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">
                     2020.04 - 2023.07
                     <br />
                     <span className="text-sm text-neutral-400">
@@ -110,7 +110,7 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">
                     2017.06 - 2019.09
                     <br />
                     <span className="text-sm text-neutral-400">
@@ -132,17 +132,20 @@ export default function App() {
               </p>
               <ul className="mt-4">
                 <li className="flex gap-4">
-                  <p className="w-[150px] shrink-0">2023.11</p>
-                  <p className="shrink-1">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.11</p>
+                  <p className="shrink">
                     Creator. <br className="block md:hidden" />
                     <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i>
+                      <i className="hidden shrink-0 md:block">
                         <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <i className="mt-[5px] flex shrink-0 md:hidden">
+                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
                       </i>
                       <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-hooks"
                         target="_blank"
-                        className="my-[7px]"
+                        className="my-[7px] shrink break-all"
                       >
                         @lani.ground/react-hooks
                       </Link>
@@ -150,29 +153,35 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">2023.10</p>
-                  <p className="shrink-1">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.10</p>
+                  <p className="shrink">
                     Creator. <br className="block md:hidden" />
                     <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i>
+                      <i className="hidden shrink-0 md:block">
                         <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <i className="mt-[5px] flex shrink-0 md:hidden">
+                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
                       </i>
                       <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-image-viewer"
                         target="_blank"
-                        className="my-[7px]"
+                        className="my-[7px] shrink break-all"
                       >
                         @lani.ground/react-image-viewer
                       </Link>
                     </span>
                     <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i>
+                      <i className="hidden shrink-0 md:block">
                         <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <i className="mt-[5px] flex shrink-0 md:hidden">
+                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
                       </i>
                       <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-modal"
                         target="_blank"
-                        className="my-[7px]"
+                        className="my-[7px] shrink break-all"
                       >
                         @lani.ground/react-modal
                       </Link>
@@ -180,17 +189,20 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">2023.09</p>
-                  <p className="shrink-1">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.09</p>
+                  <p className="shrink">
                     Creator. <br className="block md:hidden" />
                     <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i>
+                      <i className="hidden shrink-0 md:block">
                         <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                      </i>
+                      <i className="mt-[5px] flex shrink-0 md:hidden">
+                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
                       </i>
                       <Link
                         href="https://www.npmjs.com/package/@lani.ground/react-outside-click-handler"
                         target="_blank"
-                        className="my-[7px]"
+                        className="my-[7px] shrink break-all"
                       >
                         @lani.ground/react-outside-click-handler
                       </Link>
@@ -198,7 +210,7 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">2023.06</p>
+                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.06</p>
                   <p>
                     Contributor. <br className="block md:hidden" />
                     <span className="text-xs text-neutral-500 md:text-sm">
@@ -207,7 +219,7 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">
+                  <p className="w-[130px] shrink-0 md:w-[150px]">
                     2022.04 - <span className="text-app-yellow">now</span>
                   </p>
                   <p>
@@ -218,7 +230,9 @@ export default function App() {
                   </p>
                 </li>
                 <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[150px] shrink-0">2021.05 - 2021.06</p>
+                  <p className="w-[130px] shrink-0 md:w-[150px]">
+                    2021.05 - 2021.06
+                  </p>
                   <p>
                     베타 리더. <br className="block md:hidden" />
                     <span className="text-xs text-neutral-500 md:text-sm">
@@ -228,6 +242,9 @@ export default function App() {
                 </li>
               </ul>
             </div>
+            <p className="mt-36 text-center text-xs italic text-neutral-600 md:text-sm">
+              Last Updated on 7th, November, 2023
+            </p>
           </div>
         </section>
       </main>
