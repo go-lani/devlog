@@ -28,10 +28,12 @@ export default function Lnb() {
   return (
     <div className="md:border-style relative md:sticky md:top-0 md:border-b">
       <div
-        className={`absolute top-[-4rem] flex h-[4rem] w-full items-center bg-neutral-900 ${shareTechMono.className} px-4 py-2 text-xl`}
+        className={`absolute top-[-4rem] w-full bg-neutral-900 ${shareTechMono.className} text-xl`}
       >
-        <DiNpm size="3rem" color="rgb(203 3 3 / 80%)" />
-        <p className="ml-4">@lani.ground</p>
+        <Link href="/playground" className="flex items-center px-4 py-2">
+          <DiNpm size="3rem" color="rgb(203 3 3 / 80%)" />
+          <p className="ml-4">@lani.ground</p>
+        </Link>
       </div>
       <ul className="flex flex-col gap-2">
         {PLAYGROUND_LIST.map((list) => {
