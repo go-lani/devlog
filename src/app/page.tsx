@@ -2,8 +2,10 @@ import Link from 'next/link';
 import { DiNpm } from 'react-icons/di';
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
+import { getExperiencies } from '@/service/experiencies';
 
-export default function App() {
+export default async function App() {
+  const { work, other } = await getExperiencies();
   return (
     <>
       <Header />
@@ -82,164 +84,88 @@ export default function App() {
             </div>
             <div className="mt-10 break-keep text-sm md:mt-16 md:text-base">
               <p className="text-base font-bold md:text-lg">Work Experience.</p>
-              <ul className="mt-2 md:mt-4">
-                <li className="flex gap-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">
-                    2023.07 - <span className="text-app-yellow">now</span>
-                  </p>
-                  <p>
-                    Wemade. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      Front-end Developer
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">
-                    2020.04 - 2023.07
-                    <br />
-                    <span className="text-sm text-neutral-400">
-                      (3년 3개월)
-                    </span>
-                  </p>
-                  <p>
-                    Openknowl. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      Front-end Developer, Tech Lead
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">
-                    2017.06 - 2019.09
-                    <br />
-                    <span className="text-sm text-neutral-400">
-                      (2년 3개월)
-                    </span>
-                  </p>
-                  <p>
-                    Newriver. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      UI Developer
-                    </span>
-                  </p>
-                </li>
+              <ul className="mt-2 flex flex-col gap-4 md:mt-4">
+                {work.map((w) => (
+                  <li className="flex gap-4" key={w.id}>
+                    <p className="w-[130px] shrink-0 md:w-[150px]">
+                      {w.period}
+                      {w.inProgress ? (
+                        <>
+                          {' '}
+                          - <span className="text-app-yellow">now</span>
+                        </>
+                      ) : (
+                        <>
+                          <br />
+                          <span className="text-sm text-neutral-400">
+                            {w.tenureDuration}
+                          </span>
+                        </>
+                      )}
+                    </p>
+                    <p>
+                      {w.company} <br className="block md:hidden" />
+                      <span className="text-xs text-neutral-500 md:text-sm">
+                        {w.tenureDetails}
+                      </span>
+                    </p>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="mt-10 break-keep text-sm md:mt-16 md:text-base">
               <p className="text-base font-bold md:text-lg">
                 Other Experience.
               </p>
-              <ul className="mt-4">
-                <li className="flex gap-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.11</p>
-                  <p className="shrink">
-                    Creator. <br className="block md:hidden" />
-                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i className="hidden shrink-0 md:block">
-                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <i className="mt-[5px] flex shrink-0 md:hidden">
-                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <Link
-                        href="https://www.npmjs.com/package/@lani.ground/react-hooks"
-                        target="_blank"
-                        className="my-[7px] shrink break-all"
-                      >
-                        @lani.ground/react-hooks
-                      </Link>
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.10</p>
-                  <p className="shrink">
-                    Creator. <br className="block md:hidden" />
-                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i className="hidden shrink-0 md:block">
-                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <i className="mt-[5px] flex shrink-0 md:hidden">
-                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <Link
-                        href="https://www.npmjs.com/package/@lani.ground/react-image-viewer"
-                        target="_blank"
-                        className="my-[7px] shrink break-all"
-                      >
-                        @lani.ground/react-image-viewer
-                      </Link>
-                    </span>
-                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i className="hidden shrink-0 md:block">
-                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <i className="mt-[5px] flex shrink-0 md:hidden">
-                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <Link
-                        href="https://www.npmjs.com/package/@lani.ground/react-modal"
-                        target="_blank"
-                        className="my-[7px] shrink break-all"
-                      >
-                        @lani.ground/react-modal
-                      </Link>
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.09</p>
-                  <p className="shrink">
-                    Creator. <br className="block md:hidden" />
-                    <span className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm">
-                      <i className="hidden shrink-0 md:block">
-                        <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <i className="mt-[5px] flex shrink-0 md:hidden">
-                        <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
-                      </i>
-                      <Link
-                        href="https://www.npmjs.com/package/@lani.ground/react-outside-click-handler"
-                        target="_blank"
-                        className="my-[7px] shrink break-all"
-                      >
-                        @lani.ground/react-outside-click-handler
-                      </Link>
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">2023.06</p>
-                  <p>
-                    Contributor. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      Next.js 13 번역
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">
-                    2022.04 - <span className="text-app-yellow">now</span>
-                  </p>
-                  <p>
-                    Team101. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      Side Project Team, Front-end Developer
-                    </span>
-                  </p>
-                </li>
-                <li className="mt-2 flex gap-4 md:mt-4">
-                  <p className="w-[130px] shrink-0 md:w-[150px]">
-                    2021.05 - 2021.06
-                  </p>
-                  <p>
-                    베타 리더. <br className="block md:hidden" />
-                    <span className="text-xs text-neutral-500 md:text-sm">
-                      리액트 네이티브를 다루는 기술
-                    </span>
-                  </p>
-                </li>
+              <ul className="mt-4 flex flex-col gap-4">
+                {other.map((o) => (
+                  <li className="flex gap-4" key={o.id}>
+                    <p className="w-[130px] shrink-0 md:w-[150px]">
+                      {o.period}
+                      {o.inProgress && (
+                        <>
+                          {' '}
+                          - <span className="text-app-yellow">now</span>
+                        </>
+                      )}
+                    </p>
+                    <p className="shrink">
+                      {o.role} <br className="block md:hidden" />
+                      {o.projects ? (
+                        o.projects.map((p) => (
+                          <span
+                            className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm"
+                            key={p.name}
+                          >
+                            <i className="hidden shrink-0 md:block">
+                              <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
+                            </i>
+                            <i className="mt-[5px] flex shrink-0 md:hidden">
+                              <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
+                            </i>
+                            <Link
+                              href={p.link}
+                              target="_blank"
+                              className="my-[7px] shrink break-all"
+                            >
+                              {p.name}
+                            </Link>
+                            <Link
+                              href={p.docs}
+                              className="my-[7px] shrink italic text-cyan-700"
+                            >
+                              example
+                            </Link>
+                          </span>
+                        ))
+                      ) : (
+                        <span className="text-xs text-neutral-500 md:text-sm">
+                          {o.details}
+                        </span>
+                      )}
+                    </p>
+                  </li>
+                ))}
               </ul>
             </div>
             <p className="mt-36 text-center text-xs italic text-neutral-600 md:text-sm">

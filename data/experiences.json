@@ -1,0 +1,94 @@
+{
+  "work": [
+    {
+      "id": 3,
+      "period": "2023.07",
+      "company": "Wemade.",
+      "tenureDetails": "Front-end Developer",
+      "inProgress": true
+    },
+    {
+      "id": 2,
+      "period": "2020.04 - 2023.07",
+      "company": "Openknowl.",
+      "tenureDetails": "Front-end Developer, Tech Lead",
+      "tenureDuration": "(3년 3개월)",
+      "inProgress": false
+    },
+    {
+      "id": 1,
+      "period": "2017.06 - 2019.09",
+      "company": "Newriver.",
+      "tenureDetails": "UI Developer",
+      "tenureDuration": "(2년 3개월)",
+      "inProgress": false
+    }
+  ],
+  "other": [
+    {
+      "id": 6,
+      "period": "2023.11",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/react-hooks",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-hooks",
+          "docs": "https://laniground.com/playground/react-hooks"
+        }
+      ],
+      "inProgress": true
+    },
+    {
+      "id": 5,
+      "period": "2023.10",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/react-image-viewer",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-image-viewer",
+          "docs": "https://laniground.com/playground/react-image-viewer"
+        },
+        {
+          "name": "@lani.ground/react-modal",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-modal",
+          "docs": "https://laniground.com/playground/react-modal"
+        }
+      ],
+      "inProgress": true
+    },
+    {
+      "id": 4,
+      "period": "2023.09",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/react-outside-click-handler",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-outside-click-handler",
+          "docs": "https://laniground.com/playground/react-outside-click-handler"
+        }
+      ],
+      "inProgress": true
+    },
+    {
+      "id": 3,
+      "period": "2023.06",
+      "role": "Contributor.",
+      "details": "Next.js 13 번역",
+      "inProgress": false
+    },
+    {
+      "id": 2,
+      "period": "2022.04",
+      "role": "Team101.",
+      "details": "Side Project Team, Front-end Developer",
+      "inProgress": true
+    },
+    {
+      "id": 1,
+      "period": "2021.05 - 2021.06",
+      "role": "베타 리더.",
+      "details": "리액트 네이티브를 다루는 기술",
+      "inProgress": false
+    }
+  ]
+}

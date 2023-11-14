@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '@lani.ground',
+  title: {
+    absolute: '@lani.ground',
+  },
   description: '@lani.ground playground',
 };
 

@@ -2,7 +2,9 @@ import { Metadata } from 'next';
 import HooksPage from '@/components/playground/Hooks';
 
 export const metadata: Metadata = {
-  title: '@lani.ground/react-hooks',
+  title: {
+    absolute: '@lani.ground/react-hooks',
+  },
   description: '@lani.ground/react-hooks playground',
 };
 
