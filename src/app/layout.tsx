@@ -26,14 +26,14 @@ const spoqaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.CLIENT_URL}`),
   title: {
-    default: '라니.로그',
-    template: '라니.로그 | %s',
+    default: 'Lani.log',
+    template: 'Lani.log | %s',
   },
-  description: '프론트엔드 개발자 라니의 로그기록',
+  description: "Developer Lani's log",
   openGraph: {
     type: 'website',
-    title: '라니.로그',
-    description: '프론트엔드 개발자 라니의 로그기록',
+    title: 'Lani.log',
+    description: "Developer Lani's log",
     images: '/og-image.jpg',
   },
   icons: {

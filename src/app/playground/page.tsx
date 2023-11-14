@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '@lani.ground',
+  description: '@lani.ground playground',
+};
+
 export default function Playground() {
   return (
     <>

@@ -3,8 +3,8 @@ import { getFeaturedPosts, getTags } from '@/service/posts';
 import ListPage from '@/components/post/list/ListPage';
 
 export const metadata: Metadata = {
-  title: '포스트',
-  description: '라니의 포스트 목록',
+  title: 'Post',
+  description: "Lani's devlog posts",
 };
 
 export default async function Posts() {
