@@ -11,7 +11,9 @@ export default function PlaygroundLayout({
         <nav className="border-style relative w-full shrink-0 justify-self-start border-b pt-16 md:mr-14 md:max-w-[300px] md:border-x md:py-16">
           <Lnb />
         </nav>
-        <div className="mx-auto w-full p-8 md:w-[800px]">{children}</div>
+        <div className="border-style mx-auto w-full border-x p-8 md:max-w-[1024px]">
+          {children}
+        </div>
       </div>
     </main>
   );

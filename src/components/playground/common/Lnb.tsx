@@ -39,7 +39,7 @@ export default function Lnb() {
             <li key={list}>
               <Link
                 href={`/playground/${list}`}
-                className={`block ${
+                className={`block text-sm md:text-base ${
                   pathname.includes(list) ? 'bg-[#A70707]' : ''
                 } p-4`}
               >

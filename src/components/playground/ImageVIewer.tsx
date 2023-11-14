@@ -8,7 +8,7 @@ export default function ImageViewerPage() {
   return (
     <ContentLayout packageName="react-image-viewer">
       <ImageViewerProvider>
-        <div>
+        <div className="flex flex-col gap-4 text-sm md:text-base">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum
             eu lectus sit amet elementum. Maecenas dictum imperdiet ipsum, sit
