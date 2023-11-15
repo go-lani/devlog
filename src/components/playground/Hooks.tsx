@@ -27,7 +27,10 @@ export default function HooksPage() {
     console.log('hasTest', hasTest); // true | false
   };
 
-  const cookie = useMemo(() => getCookie('test'), [flag]);
+  const cookie = useMemo(() => {
+    if (typeof window === 'undefined') return;
+    getCookie('test');
+  }, [flag]);
 
   return (
     <ContentLayout packageName="react-hooks">
