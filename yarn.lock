@@ -126,10 +126,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/react-hooks@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-hooks/-/react-hooks-0.3.0.tgz#b6c290bd0b229831387f44d5552c70aa8b28425e"
-  integrity sha512-afCZZXawBDEI9uMsoe+r/4Wdvm1mGv1nEFhpgyF7Cm+pX0i+eOguuA3yCjjHYdTXBeYxg6vrMMBRnljO8GpeCw==
+"@lani.ground/react-hooks@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-hooks/-/react-hooks-0.3.2.tgz#ae932b767c60a09b9f8a6e679fff4793f746b648"
+  integrity sha512-kCWA/AHTgY13wMOJbQpV6PTImQZAx+JpDf6UwdZPC9dXCFi3L9Tdj4qXAHoQOHHMw5WStqcIklmah5rda+1AVg==
   dependencies:
     "@types/jest" "^27.5.2"
     "@types/node" "^16.18.59"
@@ -138,10 +138,10 @@
     react "^18.2.0"
     typescript "^4.9.5"
 
-"@lani.ground/react-image-viewer@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.0.6.tgz#fad88438ac07933aff3d53eedc85a51ea8ae97dc"
-  integrity sha512-06ma5iLEba4YEPLJgVuRgGDs16Fm9wApyFaNyoNPtsr/8PqmQG0xYm5F1YaJSUI9Ah65XmYDGHP23QwBhbbm7g==
+"@lani.ground/react-image-viewer@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.0.8.tgz#58227599fdfa2037e255fd1f69686d50124b6efb"
+  integrity sha512-GtQkPytZu0gakjmGMT8QHgUXDt4hLJ/E/mYD+EKjOlVZ9ghefCH/nuGlBLtVhgKDlJAgHjDeIcY6B0MB5Ur8oA==
 
 "@lani.ground/react-modal@^1.1.1":
   version "1.1.1"
