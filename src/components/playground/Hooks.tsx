@@ -42,14 +42,14 @@ export default function HooksPage() {
               className="rounded bg-green-500 px-4 py-2"
               onClick={() => checkCookie()}
             >
-              hasCookie("test")
+              hasCookie(&quot;test&quot;)
             </button>
             <button
               type="button"
               className="rounded bg-blue-500 px-4 py-2"
               onClick={() => setTestCookie()}
             >
-              Set Cookie("test": "true")
+              Set Cookie(&quot;test&quot;: &quot;true&quot;)
             </button>
             <button
               type="button"
@@ -59,9 +59,9 @@ export default function HooksPage() {
                 setFlag(!flag);
               }}
             >
-              Delete Cookie("test")
+              Delete Cookie(&quot;test&quot;)
             </button>
-            <p>getCookie("test"): {String(cookie)}</p>
+            <p>getCookie(&quot;test&quot;): {String(cookie)}</p>
           </div>
         </div>
         <div className="rounded-lg bg-neutral-700 px-6 py-4 text-lg">
