@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { getFeaturedPosts, getPost } from '@/service/posts';
 import { getDateString } from '@/utils/date';
 import { PostDetail } from '@/types/post';
-import PostContent from '@/components/post/detail/PostContent';
+import PostContent from '@/components/detail/PostContent';
 
 export async function generateMetadata({
   params: { slug },

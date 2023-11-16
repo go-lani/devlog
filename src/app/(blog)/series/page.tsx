@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getAllPostSeries } from '@/service/posts';
-import ListPage from '@/components/series/list/ListPage';
+import ListPage from '@/components/list/series/ListPage';
 
 export const metadata: Metadata = {
   title: 'Series',

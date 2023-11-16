@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "postcss.config.js"
+    "postcss.config.js",
+    "src/utils/transformImgSrc.ts"
   ],
   "exclude": ["node_modules"]
 }

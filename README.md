@@ -15,7 +15,9 @@ lani의 개발 블로그
 
 - [x] glob
 - [x] gray-matter
-- [x] react-markdown
+- [x] @next/mdx
+- [x] @mdx-js/loader
+- [x] @mdx-js/react
 - [x] react-syntax-highlighter
 
 ## 규칙

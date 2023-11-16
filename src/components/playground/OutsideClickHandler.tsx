@@ -2,13 +2,12 @@
 
 import { OutsideClickHandler } from '@lani.ground/react-outside-click-handler';
 import { useState } from 'react';
-import ContentLayout from './common/ContentLayout';
 
 export default function OutsideClickHandlerPage() {
   const [number, setNumber] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <ContentLayout packageName="react-outside-click-handler">
+    <>
       <div className="relative">
         <button
           type="button"
@@ -91,6 +90,6 @@ export default function OutsideClickHandlerPage() {
         )}
       </div>
       <p>current number : {number}</p>
-    </ContentLayout>
+    </>
   );
 }

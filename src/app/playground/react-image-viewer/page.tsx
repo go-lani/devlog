@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import { getPackage } from '@/service/package';
 import ImageViewerPage from '@/components/playground/ImageVIewer';
+import MdxViewer from '@/components/common/MDXViewer';
+import ContentLayout from '@/components/playground/common/ContentLayout';
 
 export const metadata: Metadata = {
   title: {
@@ -8,6 +11,16 @@ export const metadata: Metadata = {
   description: '@lani.ground/react-image-viewer playground',
 };
 
-export default function ReactImageViewer() {
-  return <ImageViewerPage />;
+export default async function ReactImageViewer() {
+  const content = await getPackage('react-image-viewer');
+
+  return (
+    <ContentLayout packageName="react-image-viewer">
+      <MdxViewer
+        serialized={content}
+        components={{ ImageViewerPage }}
+        isPackage
+      />
+    </ContentLayout>
+  );
 }

@@ -9,10 +9,10 @@ type Image = {
   alt: string;
 };
 
-const BASE_PATH = './contents';
-
-export default function transformImgSrc() {
+export default function transformImgSrc(category: 'posts' | 'packages') {
   return (tree: Node) => {
+    const BASE_PATH = `./${category}`;
+
     visit(tree, 'paragraph', (node: Parent) => {
       const image = node.children.find(
         (child) => child.type === 'image',

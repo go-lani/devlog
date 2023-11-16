@@ -1,6 +1,6 @@
 import { PostDetail } from '@/types/post';
+import MDXViewer from '@/components/common/MDXViewer';
 import Sidebar from './Sidebar';
-import MarkdownViewer from './MarkdownViewer';
 import SeriesNavigator from './SeriesNavigator';
 import PageNavigator from './PageNavigator';
 import Comments from './Comments';
@@ -17,7 +17,7 @@ export default function PostContent({ type, post }: Props) {
         <div className="flex">
           <Sidebar toc={post.toc} tags={post.meta.tags} />
           <div className="flex w-full flex-col bg-neutral-800 lg:w-[742px]">
-            <MarkdownViewer content={post.content} />
+            <MDXViewer serialized={post.content} />
             {post.meta.series && type === 'posts' && (
               <SeriesNavigator seriesName={post.meta.series} />
             )}

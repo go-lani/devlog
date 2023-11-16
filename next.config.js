@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const withMDX = require('@next/mdx')({});
+
 const nextConfig = {
   output: 'export',
   images: {
@@ -15,6 +17,7 @@ const nextConfig = {
   env: {
     CLIENT_URL: process.env.CLIENT_URL,
   },
+  pageExtensions: ['ts', 'tsx', 'mdx'],
 };
 
-module.exports = nextConfig;
+module.exports = withMDX(nextConfig);

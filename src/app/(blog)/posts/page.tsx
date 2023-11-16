@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getFeaturedPosts, getTags } from '@/service/posts';
-import ListPage from '@/components/post/list/ListPage';
+import ListPage from '@/components/list/post/ListPage';
 
 export const metadata: Metadata = {
   title: 'Post',

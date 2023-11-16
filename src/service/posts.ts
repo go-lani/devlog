@@ -4,11 +4,12 @@ import { sync } from 'glob';
 import { cache } from 'react';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
-import { Post, PostDetail } from '@/types/post';
-import { ALL_POST } from '@/constants/post';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
+import { ALL_POST } from '@/constants/post';
+import { Post, PostDetail } from '@/types/post';
+import { serializeMDX } from '@/utils/serialize';
 
-const POSTS_PATH = 'contents';
+const POSTS_PATH = 'posts';
 
 const getThumnailBase64 = (
   thumbnailPath = path.join(POSTS_PATH, 'images', 'default_thumbnail.webp'),
@@ -55,13 +56,14 @@ const getThumbnail = (filePath: string) => {
   }
 };
 
-const parsePost = async (filePath: string): Promise<Post> => {
+export const parsePost = async (filePath: string): Promise<Post> => {
   const thumbnail = getThumbnail(filePath);
   const slug = path.basename(filePath).replace(path.extname(filePath), '');
 
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
   const headings = await getHeadingTree(content);
+  const serialized = await serializeMDX({ content, category: 'posts' });
   const toc = await generateTocTree(headings);
 
   return {
@@ -74,7 +76,7 @@ const parsePost = async (filePath: string): Promise<Post> => {
       wordCount: content.split(/\s+/gu).length,
     },
     toc,
-    content,
+    content: serialized,
   } as Post;
 };
 

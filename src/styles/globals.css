@@ -1084,6 +1084,10 @@
   .markdown-viewer ::-webkit-calendar-picker-indicator {
     filter: invert(50%);
   }
+
+  .markdown-viewer + .playground-viewer {
+    margin-top: 20px;
+  }
 }
 
 .sample-modal__enter {

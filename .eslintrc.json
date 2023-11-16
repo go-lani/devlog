@@ -20,7 +20,7 @@
   "ignorePatterns": [
     "node_modules/",
     "helpers/*",
-    "next.config.js",
+    "next.config.mjs",
     "tailwind.config.js",
     "postcss.config.js"
   ],
