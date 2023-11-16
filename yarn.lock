@@ -126,10 +126,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/react-hooks@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-hooks/-/react-hooks-0.3.2.tgz#ae932b767c60a09b9f8a6e679fff4793f746b648"
-  integrity sha512-kCWA/AHTgY13wMOJbQpV6PTImQZAx+JpDf6UwdZPC9dXCFi3L9Tdj4qXAHoQOHHMw5WStqcIklmah5rda+1AVg==
+"@lani.ground/react-hooks@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-hooks/-/react-hooks-0.3.3.tgz#adeefcedf0ee1f4ce68a26003c0c17c6d04882e1"
+  integrity sha512-J2B8H99xG5uQNZY4RZ+Ec7fkmfKFBJUWo6k/n6sBoHLI5UodeQs02uSkC2ku4D9JvsVdsGBDtxgg+gmNPcgU3A==
   dependencies:
     "@types/jest" "^27.5.2"
     "@types/node" "^16.18.59"
