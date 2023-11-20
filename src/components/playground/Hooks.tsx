@@ -7,7 +7,6 @@ import {
   useVisibleElement,
   useWindowScroll,
 } from '@lani.ground/react-hooks';
-import ContentLayout from './common/ContentLayout';
 
 export default function HooksPage() {
   const { ellipsis } = useString();

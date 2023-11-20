@@ -9,7 +9,7 @@ export default function DummyComponent({
   closeModal: () => Promise<void>;
 }) {
   return (
-    <div className="sample-modal text-white">
+    <div className="sample-modal-inner text-white">
       <div className="relative max-w-[500px] py-[80px]">
         <Modal
           name="inner-modal"
@@ -22,7 +22,7 @@ export default function DummyComponent({
             </button>
           }
           component={(closeModal) => (
-            <div className="text-sienna relative w-[300px] py-[80px]">
+            <div className="sample-modal-inner2 text-sienna relative w-[300px] py-[80px]">
               <button
                 type="button"
                 onClick={closeModal}
@@ -55,7 +55,7 @@ export default function DummyComponent({
           dim="rgba(0,0,0,0.8)"
           animation={{
             duration: 500,
-            className: 'sample-modal',
+            className: 'sample2',
           }}
         />
         <button
