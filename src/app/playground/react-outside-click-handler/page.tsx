@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function ReactOutsideClickHandler() {
   const content = await getPackage('react-outside-click-handler');
   return (
-    <ContentLayout packageName="react-modal">
+    <ContentLayout packageName="react-outside-click-handler">
       <MDXViewer
         serialized={content}
         components={{ OutsideClickHandlerPage }}
