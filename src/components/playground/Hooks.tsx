@@ -14,6 +14,7 @@ export default function HooksPage() {
   const { lockScroll, unlockScroll } = useWindowScroll();
   const { ref, activeElement, activeKey } = useVisibleElement();
   const [flag, setFlag] = useState(false);
+
   const setTestCookie = () => {
     const day = new Date();
     day.setMinutes(day.getMinutes() + 1);
@@ -27,8 +28,9 @@ export default function HooksPage() {
   };
 
   const cookie = useMemo(() => {
-    if (typeof window === 'undefined') return;
-    getCookie('test');
+    if (typeof window === 'undefined') return 'undefined';
+    const result = getCookie('test');
+    return result;
   }, [flag]);
 
   return (
