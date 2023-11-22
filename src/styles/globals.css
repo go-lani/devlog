@@ -1106,7 +1106,7 @@
 .react-modal__container__exit.sample,
 .react-modal__container__exit .sample-modal-inner {
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 
 .react-modal__container__enter .sample-modal-inner,
