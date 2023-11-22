@@ -138,10 +138,10 @@
     react "^18.2.0"
     typescript "^4.9.5"
 
-"@lani.ground/react-image-viewer@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.0.8.tgz#58227599fdfa2037e255fd1f69686d50124b6efb"
-  integrity sha512-GtQkPytZu0gakjmGMT8QHgUXDt4hLJ/E/mYD+EKjOlVZ9ghefCH/nuGlBLtVhgKDlJAgHjDeIcY6B0MB5Ur8oA==
+"@lani.ground/react-image-viewer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.1.0.tgz#0439158fda54ebc1055e3dc64ba86243b56bcad0"
+  integrity sha512-E3559kutWVkcaJdW143/eSWUs2leqL9/SxjLKgYHOgHOlMCOvBqVWyNlWgsFopUkjbH7Vrl53eacnrl0HtW7kA==
 
 "@lani.ground/react-modal@^1.1.9":
   version "1.1.9"
