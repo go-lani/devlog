@@ -33,7 +33,7 @@
         {
           "name": "@lani.ground/react-hooks",
           "link": "https://www.npmjs.com/package/@lani.ground/react-hooks",
-          "docs": "https://laniground.com/playground/react-hooks"
+          "docs": "/playground/react-hooks"
         }
       ],
       "inProgress": true
@@ -46,12 +46,12 @@
         {
           "name": "@lani.ground/react-image-viewer",
           "link": "https://www.npmjs.com/package/@lani.ground/react-image-viewer",
-          "docs": "https://laniground.com/playground/react-image-viewer"
+          "docs": "/playground/react-image-viewer"
         },
         {
           "name": "@lani.ground/react-modal",
           "link": "https://www.npmjs.com/package/@lani.ground/react-modal",
-          "docs": "https://laniground.com/playground/react-modal"
+          "docs": "/playground/react-modal"
         }
       ],
       "inProgress": true
@@ -64,7 +64,7 @@
         {
           "name": "@lani.ground/react-outside-click-handler",
           "link": "https://www.npmjs.com/package/@lani.ground/react-outside-click-handler",
-          "docs": "https://laniground.com/playground/react-outside-click-handler"
+          "docs": "/playground/react-outside-click-handler"
         }
       ],
       "inProgress": true

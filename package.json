@@ -19,7 +19,7 @@
   "dependencies": {
     "@giscus/react": "^2.3.0",
     "@lani.ground/react-hooks": "^0.3.3",
-    "@lani.ground/react-image-viewer": "^1.1.0",
+    "@lani.ground/react-image-viewer": "^1.1.2",
     "@lani.ground/react-modal": "^1.1.9",
     "@lani.ground/react-outside-click-handler": "^1.1.2",
     "@mdx-js/loader": "^3.0.0",
