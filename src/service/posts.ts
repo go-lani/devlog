@@ -1,7 +1,6 @@
 import path from 'path';
 import { readFileSync, readdirSync } from 'fs';
 import { sync } from 'glob';
-import { cache } from 'react';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
@@ -56,10 +55,26 @@ const getThumbnail = (filePath: string) => {
   }
 };
 
-export const parsePost = async (filePath: string): Promise<Post> => {
+export async function generateMeta(filePath: string): Promise<Meta> {
   const thumbnail = getThumbnail(filePath);
   const slug = path.basename(filePath).replace(path.extname(filePath), '');
 
+  const file = readFileSync(filePath, 'utf-8');
+  const { data: meta, content } = matter(file);
+  const result = {
+    ...meta,
+    tags: meta.tags.split(',').map((tag: string) => tag.trim()),
+    thumbnail,
+    path: slug,
+    readingMinutes: Math.ceil(readingTime(content).minutes),
+    wordCount: content.split(/\s+/gu).length,
+  };
+  return result as Meta;
+}
+
+export const parsePost = async (filePath: string): Promise<Post> => {
+  const thumbnail = getThumbnail(filePath);
+  const slug = path.basename(filePath).replace(path.extname(filePath), '');
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
   const headings = await getHeadingTree(content);
@@ -80,68 +95,33 @@ export const parsePost = async (filePath: string): Promise<Post> => {
   } as Post;
 };
 
-export async function generateMeta(filePath: string): Promise<Meta> {
-  const thumbnail = getThumbnail(filePath);
-  const slug = path.basename(filePath).replace(path.extname(filePath), '');
-
-  const file = readFileSync(filePath, 'utf-8');
-  const { data: meta, content } = matter(file);
-  const result = {
-    ...meta,
-    tags: meta.tags.split(',').map((tag: string) => tag.trim()),
-    thumbnail,
-    path: slug,
-    readingMinutes: Math.ceil(readingTime(content).minutes),
-    wordCount: content.split(/\s+/gu).length,
-  };
-  return result as Meta;
+async function generateAllMeta() {
+  const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
+  const postMetas = await Promise.all(files.map(generateMeta));
+  return postMetas;
 }
 
-export async function getPostList(type: 'posts' | 'snippet' = 'posts') {
-  const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
+export async function getPostMetaList(type: 'Posts' | 'Snippet' = 'Posts') {
+  const postMetas = await generateAllMeta();
 
-  const metas = await Promise.all(files.map(generateMeta));
-
-  return metas
+  return postMetas
     .filter((meta) => meta.featured && meta.type === type)
     .sort((acc, cur) => (acc.date > cur.date ? -1 : 1));
 }
 
-export const getAllPosts = cache(async () => {
-  const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
-
-  const result = await Promise.all(files.map(parsePost));
-
-  return result.sort((acc, cur) => (acc.meta.date > cur.meta.date ? -1 : 1));
-});
-
-export async function getFeaturedPosts(
-  type: 'posts' | 'snippet' = 'posts',
-): Promise<Post[]> {
-  return getAllPosts().then((posts) =>
-    posts.filter((post) => post.meta.featured && post.meta.type === type),
-  );
-}
-
-export async function getNonFeaturedPosts(): Promise<Post[]> {
-  return getAllPosts().then((posts) =>
-    posts.filter((post) => !post.meta.featured),
-  );
-}
-
-export function getTags(posts: Post[]): string[] {
-  const allTags = posts.map((post) => post.meta.tags);
+export function getTags(postMetas: Meta[]): string[] {
+  const allTags = postMetas.map(({ tags }) => tags);
   const flattenTags = allTags.flat();
   return [ALL_POST, ...Array.from(new Set(flattenTags))];
 }
 
 export type SeriesGroup = {
-  [key: string]: Post[];
+  [key: string]: Meta[];
 };
 
-function groupBySeries(posts: Post[]) {
-  return posts.reduce((acc: SeriesGroup, cur: Post) => {
-    const seriesKey = cur.meta.series;
+function groupBySeries(postMetas: Meta[]) {
+  return postMetas.reduce((acc: SeriesGroup, cur: Meta) => {
+    const seriesKey = cur.series;
     if (!seriesKey) return acc;
 
     if (!acc[seriesKey]) {
@@ -152,39 +132,41 @@ function groupBySeries(posts: Post[]) {
   }, {});
 }
 
-export async function getAllPostSeries(): Promise<{
+export async function getSeriesList(): Promise<{
   seriesNames: string[];
   seriesGroup: SeriesGroup;
 }> {
-  return getFeaturedPosts().then((posts) => {
-    const postWithSeries = Array.from(
-      new Set(posts.filter((post) => post.meta.series)),
-    );
-    const seriesNames = Array.from(
-      new Set(postWithSeries.map((post) => post.meta.series!)),
-    );
-    const seriesGroup = groupBySeries(postWithSeries);
-    return { seriesNames, seriesGroup };
-  });
+  const postMetas = await generateAllMeta();
+  const postWithSeries = postMetas.filter((meta) => meta.series);
+  const seriesNames = Array.from(
+    new Set(postWithSeries.map((meta) => meta.series as string)),
+  );
+  const seriesGroup = groupBySeries(postWithSeries);
+
+  return { seriesNames, seriesGroup };
 }
 
-export async function getSeriesPosts(series: string): Promise<Post[]> {
-  return getFeaturedPosts().then((posts) =>
-    posts.filter((post) => post.meta.series === decodeURI(series)),
-  );
+export async function getPostSlugs(type: 'Posts' | 'Snippet' = 'Posts') {
+  const postMetas = await getPostMetaList(type);
+  return postMetas.map((meta) => ({ slug: meta.path }));
+}
+
+export async function getSeriesPosts(series: string): Promise<Meta[]> {
+  const postMetas = await getPostMetaList();
+  return postMetas.filter((meta) => meta.series === decodeURI(series));
 }
 
 export async function getPost(
   fileName: string,
-  type: 'posts' | 'snippet' = 'posts',
+  type: 'Posts' | 'Snippet' = 'Posts',
 ): Promise<PostDetail> {
   const filePath = path.join(POSTS_PATH, `${fileName}.mdx`);
   const post = await parsePost(filePath);
-  const list = await getPostList(type);
+  const metaList = await getPostMetaList(type);
 
-  const index = list.findIndex((post) => post.path === fileName);
-  const next = index > 0 ? list[index - 1] : null;
-  const prev = index < list.length ? list[index + 1] : null;
+  const index = metaList.findIndex((post) => post.path === fileName);
+  const next = index > 0 ? metaList[index - 1] : null;
+  const prev = index < metaList.length ? metaList[index + 1] : null;
 
   return { ...post, next, prev };
 }

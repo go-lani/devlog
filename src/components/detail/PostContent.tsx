@@ -6,7 +6,7 @@ import PageNavigator from './PageNavigator';
 import Comments from './Comments';
 
 interface Props {
-  type: 'posts' | 'snippet';
+  type: 'Posts' | 'Snippet';
   post: PostDetail;
 }
 
@@ -18,7 +18,7 @@ export default function PostContent({ type, post }: Props) {
           <Sidebar toc={post.toc} tags={post.meta.tags} />
           <div className="flex w-full flex-col bg-neutral-800 lg:w-[742px]">
             <MDXViewer serialized={post.content} />
-            {post.meta.series && type === 'posts' && (
+            {post.meta.series && type === 'Posts' && (
               <SeriesNavigator seriesName={post.meta.series} />
             )}
             {(post.next || post.prev) && (

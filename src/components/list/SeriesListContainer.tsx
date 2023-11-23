@@ -7,7 +7,10 @@ type Props = {
   seriesGroup: SeriesGroup;
 };
 
-export default function ListContainer({ seriesNames, seriesGroup }: Props) {
+export default function SeriesListContainer({
+  seriesNames,
+  seriesGroup,
+}: Props) {
   return (
     <ul>
       {seriesNames.length > 0 ? (
@@ -31,26 +34,26 @@ export default function ListContainer({ seriesNames, seriesGroup }: Props) {
                 </span>
               </h2>
               <ul className="border-style border-t bg-neutral-800">
-                {seriesGroup[aSeries].map((post) => (
+                {seriesGroup[aSeries].map((meta) => (
                   <li
                     className="border-style last-of-type:border-n flex gap-8 border-b px-8 py-6"
-                    key={post.meta.title}
+                    key={meta.title}
                   >
                     <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
                       {getDateString({
-                        inputDate: post.meta.date,
+                        inputDate: meta.date,
                         separator: '.',
                       })}
                     </p>
                     <div>
                       <Link
-                        href={`/posts/${post.meta.path}`}
+                        href={`/posts/${meta.path}`}
                         className="break-keep text-xl font-semibold md:text-2xl"
                       >
-                        <h3>{post.meta.title}</h3>
+                        <h3>{meta.title}</h3>
                       </Link>
                       <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
-                        {post.meta.description}
+                        {meta.description}
                       </p>
                     </div>
                   </li>

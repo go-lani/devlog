@@ -6,11 +6,7 @@ interface Props {
   tags: string[];
 }
 
-export default function Categories({
-  tags,
-  selectedTag,
-  setSelectedTag,
-}: Props) {
+export default function Tags({ tags, selectedTag, setSelectedTag }: Props) {
   return (
     <div className="flex flex-col justify-center p-4 md:p-5">
       <ul className="flex flex-wrap gap-x-4 gap-y-0 md:gap-5">

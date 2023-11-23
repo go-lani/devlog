@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
-import { getFeaturedPosts, getTags } from '@/service/posts';
-import ListPage from '@/components/list/snippet/ListPage';
+import { getPostMetaList, getTags } from '@/service/posts';
+import ListPage from '@/components/list/ListPage';
 
 export const metadata: Metadata = {
   title: 'Snippet',
-  description: "Lani's Snippet",
+  description: `Lani's Snippet`,
 };
 
 export default async function Snippet() {
-  const posts = await getFeaturedPosts('snippet');
-  const tags = await getTags(posts);
-  return <ListPage posts={posts} tags={tags} />;
+  const postMetas = await getPostMetaList('Snippet');
+  const tags = await getTags(postMetas);
+  return <ListPage category="Snippet" postMetas={postMetas} tags={tags} />;
 }

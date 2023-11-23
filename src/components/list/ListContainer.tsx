@@ -1,13 +1,13 @@
 import localFont from 'next/font/local';
 import Link from 'next/link';
 import { ALL_POST } from '@/constants/post';
-import { Post } from '@/types/post';
+import { Meta } from '@/types/post';
 import { getDateString } from '@/utils/date';
 
 const shareTechMono = localFont({
   src: [
     {
-      path: '../../../../public/assets/fonts/ShareTechMono-Regular.woff2',
+      path: '../../../public/assets/fonts/ShareTechMono-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
@@ -16,10 +16,10 @@ const shareTechMono = localFont({
 
 interface Props {
   selectedTag: string;
-  posts: Post[];
+  postMetas: Meta[];
 }
 
-export default function ListContainer({ selectedTag, posts }: Props) {
+export default function ListContainer({ selectedTag, postMetas }: Props) {
   return (
     <>
       <div className="border-style hidden w-[280px] shrink-0 flex-col border-r bg-zinc-800 px-4 py-[56px] md:flex">
@@ -36,30 +36,30 @@ export default function ListContainer({ selectedTag, posts }: Props) {
           </span>
         </h2>
         <ul className="md:border-style flex flex-col bg-neutral-800 text-app-white md:border-t">
-          {posts.length > 0 ? (
-            posts.map((post) => (
+          {postMetas.length > 0 ? (
+            postMetas.map((meta) => (
               <li
                 className="border-style flex gap-4 border-b px-4 py-5"
-                key={post.meta.path}
+                key={meta.path}
               >
                 <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
                   {getDateString({
-                    inputDate: post.meta.date,
+                    inputDate: meta.date,
                     separator: '.',
                   })}
                 </p>
                 <div>
                   <Link
-                    href={`/snippet/${post.meta.path}`}
+                    href={`/${meta.type.toLocaleLowerCase()}/${meta.path}`}
                     className="break-keep text-xl font-semibold md:text-2xl"
                   >
-                    <h3>{post.meta.title}</h3>
+                    <h3>{meta.title}</h3>
                   </Link>
                   <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
-                    {post.meta.description}
+                    {meta.description}
                   </p>
                   <div className="mt-2 flex items-center gap-2">
-                    {post.meta.tags.map((tag, index) => (
+                    {meta.tags.map((tag, index) => (
                       <div key={tag} className="flex items-center gap-2">
                         {index !== 0 && (
                           <span className="h-[3px] w-[3px] rounded bg-gray-500" />

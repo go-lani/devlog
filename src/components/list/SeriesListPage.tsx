@@ -1,5 +1,5 @@
 import { SeriesGroup } from '@/service/posts';
-import ListContainer from './ListContainer';
+import SeriesListContainer from './SeriesListContainer';
 
 interface Props {
   series: {
@@ -8,7 +8,7 @@ interface Props {
   };
 }
 
-export default function ListPage({
+export default function SeriesListPage({
   series: { seriesNames, seriesGroup },
 }: Props) {
   return (
@@ -27,7 +27,10 @@ export default function ListPage({
       </section>
       <section className="container-layout border-style bg-zinc-800">
         <div className="content-layout border-style border-x">
-          <ListContainer seriesNames={seriesNames} seriesGroup={seriesGroup} />
+          <SeriesListContainer
+            seriesNames={seriesNames}
+            seriesGroup={seriesGroup}
+          />
         </div>
       </section>
     </>

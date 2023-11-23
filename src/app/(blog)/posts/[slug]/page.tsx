@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Metadata } from 'next/types';
 import { notFound } from 'next/navigation';
-import { getFeaturedPosts, getPost } from '@/service/posts';
+import { getPost, getPostSlugs } from '@/service/posts';
 import { getDateString } from '@/utils/date';
 import { PostDetail } from '@/types/post';
 import PostContent from '@/components/detail/PostContent';
@@ -12,7 +12,7 @@ export async function generateMetadata({
   try {
     const {
       meta: { title, description },
-    } = await getPost(slug);
+    } = await getPost(slug, 'Posts');
 
     return { title, description };
   } catch (err) {
@@ -22,8 +22,8 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const posts = await getFeaturedPosts();
-  return posts.map(({ meta: { path } }) => ({ slug: path }));
+  const slugs = await getPostSlugs('Posts');
+  return slugs;
 }
 
 interface Props {
@@ -33,7 +33,7 @@ interface Props {
 export default async function DetailPage({ params: { slug } }: Props) {
   let post: PostDetail;
   try {
-    post = await getPost(slug);
+    post = await getPost(slug, 'Posts');
   } catch (err) {
     notFound();
   }
@@ -71,7 +71,7 @@ export default async function DetailPage({ params: { slug } }: Props) {
           </div>
         </div>
       </section>
-      <PostContent type="posts" post={post} />
+      <PostContent type="Posts" post={post} />
     </>
   );
 }

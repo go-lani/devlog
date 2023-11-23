@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { getAllPostSeries } from '@/service/posts';
-import ListPage from '@/components/list/series/ListPage';
+import { getSeriesList } from '@/service/posts';
+import SeriesListPage from '@/components/list/SeriesListPage';
 
 export const metadata: Metadata = {
   title: 'Series',
@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Series() {
-  const series = await getAllPostSeries();
-  return <ListPage series={series} />;
+  const series = await getSeriesList();
+  return <SeriesListPage series={series} />;
 }
