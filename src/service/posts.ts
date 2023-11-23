@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import readingTime from 'reading-time';
 import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
 import { ALL_POST } from '@/constants/post';
-import { Post, PostDetail } from '@/types/post';
+import { Meta, Post, PostDetail } from '@/types/post';
 import { serializeMDX } from '@/utils/serialize';
 
 const POSTS_PATH = 'posts';
@@ -63,8 +63,8 @@ export const parsePost = async (filePath: string): Promise<Post> => {
   const file = readFileSync(filePath, 'utf-8');
   const { data: meta, content } = matter(file);
   const headings = await getHeadingTree(content);
-  const serialized = await serializeMDX({ content, category: 'posts' });
   const toc = await generateTocTree(headings);
+  const serialized = await serializeMDX({ content, category: 'posts' });
 
   return {
     meta: {
@@ -79,6 +79,33 @@ export const parsePost = async (filePath: string): Promise<Post> => {
     content: serialized,
   } as Post;
 };
+
+export async function generateMeta(filePath: string): Promise<Meta> {
+  const thumbnail = getThumbnail(filePath);
+  const slug = path.basename(filePath).replace(path.extname(filePath), '');
+
+  const file = readFileSync(filePath, 'utf-8');
+  const { data: meta, content } = matter(file);
+  const result = {
+    ...meta,
+    tags: meta.tags.split(',').map((tag: string) => tag.trim()),
+    thumbnail,
+    path: slug,
+    readingMinutes: Math.ceil(readingTime(content).minutes),
+    wordCount: content.split(/\s+/gu).length,
+  };
+  return result as Meta;
+}
+
+export async function getPostList(type: 'posts' | 'snippet' = 'posts') {
+  const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
+
+  const metas = await Promise.all(files.map(generateMeta));
+
+  return metas
+    .filter((meta) => meta.featured && meta.type === type)
+    .sort((acc, cur) => (acc.date > cur.date ? -1 : 1));
+}
 
 export const getAllPosts = cache(async () => {
   const files = sync(`./${POSTS_PATH}/**/*.{md,mdx}`);
@@ -151,32 +178,13 @@ export async function getPost(
   fileName: string,
   type: 'posts' | 'snippet' = 'posts',
 ): Promise<PostDetail> {
-  const posts = await getFeaturedPosts(type);
-  const post = posts.find((post) => post.meta.path === fileName);
+  const filePath = path.join(POSTS_PATH, `${fileName}.mdx`);
+  const post = await parsePost(filePath);
+  const list = await getPostList(type);
 
-  if (!post) {
-    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
-  }
-
-  const index = posts.indexOf(post);
-  const next = index > 0 ? posts[index - 1] : null;
-  const prev = index < posts.length ? posts[index + 1] : null;
-
-  return { ...post, next, prev };
-}
-
-export async function getSnippetPost(fileName: string): Promise<PostDetail> {
-  const posts = await getFeaturedPosts();
-  const snippetPosts = posts.filter((post) => post.meta.type === 'snippet');
-  const post = snippetPosts.find((post) => post.meta.path === fileName);
-
-  if (!post) {
-    throw new Error(`${fileName}에 해당하는 포스트를 찾을 수 없음`);
-  }
-
-  const index = snippetPosts.indexOf(post);
-  const next = index > 0 ? snippetPosts[index - 1] : null;
-  const prev = index < snippetPosts.length ? snippetPosts[index + 1] : null;
+  const index = list.findIndex((post) => post.path === fileName);
+  const next = index > 0 ? list[index - 1] : null;
+  const prev = index < list.length ? list[index + 1] : null;
 
   return { ...post, next, prev };
 }

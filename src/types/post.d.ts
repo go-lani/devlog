@@ -20,6 +20,6 @@ export type Post = {
 };
 
 export type PostDetail = Post & {
-  next: Post | null;
-  prev: Post | null;
+  next: Meta | null;
+  prev: Meta | null;
 };
