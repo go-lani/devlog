@@ -1,5 +1,5 @@
 1:HL["/_next/static/css/f7e374631845b586.css",{"as":"style"}]
-0:["In96RK7mXer_Q80Gfm8dH",[[["",{"children":["(blog)",{"children":["posts",{"children":[["slug","refactoring_seo","d"],{"children":["__PAGE__?{\"slug\":\"refactoring_seo\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f7e374631845b586.css","precedence":"next"}]],"$L3"]]]]
+0:["KO7SxS74WLd8Nj4-WWhgn",[[["",{"children":["(blog)",{"children":["posts",{"children":[["slug","refactoring_seo","d"],{"children":["__PAGE__?{\"slug\":\"refactoring_seo\"}",{}]}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f7e374631845b586.css","precedence":"next"}]],"$L3"]]]]
 4:HL["/_next/static/css/5f2eed321cbbd6dc.css",{"as":"style"}]
 5:HL["/_next/static/css/1cb67a06baa301ca.css",{"as":"style"}]
 6:I{"id":83015,"chunks":["185:static/chunks/app/layout-84b46f6938dba629.js"],"name":"","async":false}
@@ -16,7 +16,7 @@ f:I{"id":46685,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","925:static
 15:I{"id":68460,"chunks":["685:static/chunks/685-4f0f72178562bcc6.js","198:static/chunks/198-8c2cf5bf62daad06.js","202:static/chunks/202-c250e0e494a0d45e.js","231:static/chunks/app/(blog)/posts/[slug]/page-4078fb2ac34a849d.js"],"name":"","async":false}
 9:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Lf",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
 c:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Lf",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
-13:T3ade3d,/*@jsxRuntime automatic @jsxImportSource react*/
+13:T3ade42,/*@jsxRuntime automatic @jsxImportSource react*/
 const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
 const {useMDXComponents: _provideComponents} = arguments[0];
 function _createMdxContent(props) {
@@ -158,7 +158,7 @@ function _createMdxContent(props) {
     }), "\n", _jsx(_components.p, {
       children: "미니인턴 서비스의 헤딩 태그를 점검해보자!"
     }), "\n", _jsx(_components.p, {
-      children: "헤딩 태그를 잘 써야되는 이유는 간단하다. 웹 브라우저에 노출되는 ‘페이지’는 말그대로 문서이다.\n우리가 글을 읽을때 목차를 확인하고, 내용을 읽기 전 제목을 읽을때 명확한 제목이라면 뒤에 나오는 내용을 어느정도 추측할 수 있게 된다. 마크업을 글쓰기라고 생각한다면 글쓰기와 같이 작성해야된다고 생각한다. 그러므로 각각의 영역마다 주어지는 영역 타이틀이 있어야하며 강조 또는 대표하는 문구 또는 단어가 존재해야한다."
+      children: "헤딩 태그를 잘 써야되는 이유는 간단하다. 웹 브라우저에 노출되는 ‘페이지’는 말그대로 문서이다.\n우리가 글을 읽을 때 목차를 확인하고, 내용을 읽기 전 제목을 읽을 때 명확한 제목이라면 뒤에 나오는 내용을 어느정도 추측할 수 있게 된다. 마크업을 글쓰기라고 생각한다면 글쓰기와 같이 작성해야된다고 생각한다. 그러므로 각각의 영역마다 주어지는 영역 타이틀이 있어야하며 강조 또는 대표하는 문구 또는 단어가 존재해야한다."
     }), "\n", _jsx(_components.p, {
       children: "헤딩 태그를 적절히 사용하여 의미를 담은 html 문서를 만들어 SEO 최적화를 진행하자."
     }), "\n", _jsx(_components.p, {
@@ -276,7 +276,7 @@ function _createMdxContent(props) {
         alt: "refactoring_seo_7"
       })
     }), "\n", _jsx(_components.p, {
-      children: "화면상으로는 변하는 것이 없다.\n하지만 문서로 봤을때는 많이 깔끔해지고 명확해졌다."
+      children: "화면상으로는 변하는 것이 없다.\n하지만 문서로 봤을 때는 많이 깔끔해지고 명확해졌다."
     }), "\n", _jsx(_components.p, {
       children: "문서의 명확성이 올라감으로써 웹 크롤러는 우리 서비스를 조금 더 명확하게 파악하고 검색에 조금 더 좋은 효과를 가져줄 것이라 생각한다."
     }), "\n", _jsx(_components.p, {
@@ -309,7 +309,7 @@ function _createMdxContent(props) {
     }), "\n", _jsx(_components.p, {
       children: "document.tsx에 고정적으로 작성되어 있어 모든 페이지가 miniintern.com으로 작성된다."
     }), "\n", _jsx(_components.p, {
-      children: "그렇다면 어떻게 유연하게 사용할 수 있을까? 우리 서비스는 Nextjs를 사용하고 있다. 페이지별 수정한다고 가정하면 추후에 페이지 만들때마다 head 태그에 매번 작성해야하는 번거로움이 예상된다."
+      children: "그렇다면 어떻게 유연하게 사용할 수 있을까? 우리 서비스는 Nextjs를 사용하고 있다. 페이지별 수정한다고 가정하면 추후에 페이지 만들 때마다 head 태그에 매번 작성해야하는 번거로움이 예상된다."
     }), "\n", _jsx(_components.p, {
       children: "그렇다면 유연하게 하기위해 공용 컴포넌트를 만들어버리자!"
     }), "\n", _jsx(_components.pre, {
@@ -318,7 +318,7 @@ function _createMdxContent(props) {
         children: "interface IProps {\n\t...\n\ttitle: string;\n\tdescription: string;\n  pageHeadingTitle: string;\n}\n\nconst WithHead: React.FC<IProps> = ({\n  ...\n\ttitle,\n\tdescription,\n  pageHeadingTitle,\n}) => {\n  const { pathname, asPath } = useRouter();\n  const CURRENT_URL = `${process.env.CLIENT_URL}${asPath}`;\n\n  return (\n    <>\n      <Head>\n        ...\n\t\t\t\t<title>{title}</title>\n\t\t\t\t<meta name=\"description\" content={description} key=\"description\" />\n        <link rel=\"canonical\" href={CURRENT_URL} />\n\t\t\t\t...\n      </Head>\n      <h1 className=\"hidden-title\">미니인턴 | 2주만에 실무 경험을 만드세요</h1>\n      <h2 className=\"hidden-title\">{pageHeadingTitle}</h2>\n    </>\n  );\n};\n\nexport default WithHead;\n"
       })
     }), "\n", _jsx(_components.p, {
-      children: "페이지를 만들때마다 작성해야하는 것은 동일하지만 페이지 title과 description, 상세 페이지에 대한 내용 등 만 넘겨주면 canonical tag와 h1을 신경 쓸 필요가 없어져서 상세 페이지 타이틀에 대한 내용만 신경써주면 된다."
+      children: "페이지를 만들 때마다 작성해야하는 것은 동일하지만 페이지 title과 description, 상세 페이지에 대한 내용 등 만 넘겨주면 canonical tag와 h1을 신경 쓸 필요가 없어져서 상세 페이지 타이틀에 대한 내용만 신경써주면 된다."
     }), "\n", _jsx(_components.p, {
       children: "비로소 WithHead 컴포넌트를 활용해서 Canonical link에 대한 대응 뿐만 아니라 <h1>(서비스 소개 문구)와 <h2>pageHeadingTitle(해당 페이지에 대한 상세 타이틀)을 유연하게 대응할 수 있게 됐다."
     })]
