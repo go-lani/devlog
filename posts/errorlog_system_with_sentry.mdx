@@ -17,7 +17,7 @@ featured: true
 Sentry는 해당 이벤트 로그(=에러 로그)에 대한 다양한 정보를 제공해준다.
 
 - Device: 이벤트 발생 장비 정보
-- OS: 이벤트 발생 OS wjdqh
+- OS: 이벤트 발생 OS 정보
 - Browser 이벤트 발생 브라우저 정보
 - Exception & Message: 이벤트 로그 메시지와 코드 정보 등을 제공(source map을 설정해야함. @sentry/nextjs는 sourcemap을 자동으로 생성하여 업로드한다.)
 - **Breadcrumbs**: 이벤트 발생 과정(= 유저의 행동 데이터)
@@ -65,7 +65,7 @@ error message - Path 주목
 
 useErrorHandler의 경우 유저정보를 포함할 수 있고, Server Side에서의 에러는 유저정보(Client Side에서 호출)를 사용할 수 없기 때문에 유저정보를 불러오지 못하므로 별도의 내용물을 전달해야한다.
 
-이렇게 처리하더라도 클라이언트, 즉 컴포넌트 내부에서 Error가 발생하였을때 useErrorHandler를 활용하더라도 componentDidMount에서 handleError를 처리했을 경우에 유저정보를 받아오지 못하는 것은 매한가지다.(회원정보를 클라이언트 사이드에서 호출하기 때문에)
+이렇게 처리하더라도 클라이언트, 즉 컴포넌트 내부에서 Error가 발생 했을 때 useErrorHandler를 활용하더라도 componentDidMount에서 handleError를 처리했을 경우에 유저정보를 받아오지 못하는 것은 매한가지다.(회원정보를 클라이언트 사이드에서 호출하기 때문에)
 
 ![image](./images/errorlog_system_with_sentry_3.webp)
 
@@ -135,7 +135,7 @@ useErrorHandler의 handleError를 사용해보자.
 
 ![image](./images/errorlog_system_with_sentry_12.webp)
 
-해당 함수를 실행했을때
+해당 함수를 실행했을 때
 
 **sendErrorLog 함수**
 
@@ -371,7 +371,7 @@ capureExpection이 호출되면 Sentry에 데이터를 전송된다.
 
 ### 트러블슈팅
 
-Sentry SDK를 적용했을때 [Localhost](http://Localhost) 환경에서 외부 API를 호출하면 CORS 에러가 뜨는 것을 확인했다.
+Sentry SDK를 적용했을 때 [Localhost](http://Localhost) 환경에서 외부 API를 호출하면 CORS 에러가 뜨는 것을 확인했다.
 
 ![image](./images/errorlog_system_with_sentry_42.webp)
 
@@ -381,7 +381,7 @@ Sentry는 여러 서비스 관련 통합 및 NextJS 요청 중에 발생한 이�
 
 tracePropagationTargets의 default 옵션은 ['localhost', /^\//]이다.
 
-그러므로 테스트 환경인 [localhost](http://localhost) 환경에서 sentry-trace와 baggage를 자동 생성해서 외부 API 호출할때 Request Header에 전파하는 것이였다.
+그러므로 테스트 환경인 [localhost](http://localhost) 환경에서 sentry-trace와 baggage를 자동 생성해서 외부 API 호출할 때 Request Header에 전파하는 것이였다.
 
 그래서 [localhost](http://localhost) 환경의 경우 공식문서에 따르면 API - Access-Control-Allow-Headers: **sentry-trace, baggage**를 추가해줘야한다고 한다.
 
@@ -430,7 +430,7 @@ sendErrorToSentry 함수의 역할
 1. API 에러인지 Client 에러인지 구분
 2. 커스터마이징된 값을 Context에 넣어 Sentry에 알린다
 
-위에 로직과 같이 API 에러인지 Client 에러인지 판단해야되는 건 변함이 없지만,
+위에 로직과 같이 API 에러인지 Client 에러인지 판단해야 되는 건 변함이 없지만,
 
 name(= type)과 message를 커스텀할 필요 없이(2번 사항) 커스텀 에러에서 내려주는 name과 mesage만 받아서 전달해주면 끝이므로 sendErrorToSentry의 역할이 명확해진다.
 
@@ -442,7 +442,7 @@ name(= type)과 message를 커스텀할 필요 없이(2번 사항) 커스텀 에
 
 문제는 REQUSET_URL에 대한 분기처리이다.
 
-REQUSET_URL은 API 호출시 에러 발생했을때만 존재하므로 분기처리를 해줄 필요성이 있다.
+REQUSET_URL은 API 호출시 에러 발생했을 때만 존재하므로 분기처리를 해 줄 필요성이 있다.
 
 하지만 이때 context의 error type으로 구분을 하더라도 hint.originalException이 ApiError인지 알 수가 없어 옵셔널 체이닝을 하거나 as를 활용하여 강제로 타입 지정해줘야된다.
 
