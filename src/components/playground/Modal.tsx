@@ -2,11 +2,32 @@
 
 import { Modal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
+import { useState } from 'react';
 import DummyComponent from './mock/DummyComponent';
 
 export default function ModalPage() {
+  const [isVaild, setIsValid] = useState<boolean>(false);
   return (
     <>
+      <Modal
+        name="modal-default"
+        trigger={
+          <button
+            type="button"
+            className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
+            onClick={() => {
+              setIsValid(!!Math.round(Math.random())); // random boolean
+            }}
+          >
+            Click Me!
+          </button>
+        }
+        component={(closeModal) => {
+          if (isVaild) return <div className="text-blue-500">Vaild!</div>;
+          return <div className="text-red-500">Not vaild!</div>;
+        }}
+        dim="rgba(0, 0, 0, 0.8)"
+      />
       <Modal
         name="modal-default"
         trigger={
