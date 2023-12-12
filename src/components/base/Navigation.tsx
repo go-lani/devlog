@@ -6,25 +6,27 @@ import { Modal } from '@lani.ground/react-modal';
 import { MENU } from '@/constants/app';
 import MobileNavigation from './MobileNavigation';
 import '@lani.ground/react-modal/css';
+import { useState } from 'react';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <>
       <div className="border-style flex h-full items-center border-l md:hidden">
+        <button
+          type="button"
+          className="flex h-full items-center rounded-3xl bg-neutral-900 px-4 text-base text-app-white transition-colors"
+          onClick={() => setIsMenuOpen(true)}
+        >
+          menu
+        </button>
         <Modal
-          trigger={
-            <button
-              type="button"
-              className="flex h-full items-center rounded-3xl bg-neutral-900 px-4 text-base text-app-white transition-colors"
-            >
-              menu
-            </button>
-          }
+          onClose={() => setIsMenuOpen(false)}
           component={(closeModal) => (
             <MobileNavigation closeModal={closeModal} />
           )}
-          dim="rgba(0, 0, 0, 0.8)"
+          isOpen={isMenuOpen}
         />
       </div>
       <ul className="hidden h-full md:flex">
