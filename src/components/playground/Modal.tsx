@@ -2,60 +2,71 @@
 
 import { Modal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DummyComponent from './mock/DummyComponent';
 
 export default function ModalPage() {
   const [isVaild, setIsValid] = useState<boolean>(false);
+  const [isOpen2, setIsOpen2] = useState<boolean>(false);
+  const [isOpen3, setIsOpen3] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsValid(!!Math.round(Math.random()));
+  }, []);
+
   return (
     <>
       <Modal
-        name="modal-default"
-        trigger={
-          <button
-            type="button"
-            className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
-            onClick={() => {
-              setIsValid(!!Math.round(Math.random())); // random boolean
-            }}
-          >
-            Click Me!
+        component={(closeModal) => (
+          <button type="button" className="bg-white" onClick={closeModal}>
+            Direct Modal
           </button>
-        }
+        )}
+        onClose={() => {
+          console.log('close');
+        }}
+        animation={{
+          className: 'sample',
+          duration: 300,
+        }}
+        dim="rgba(0, 0, 0, 0.8)"
+        isOpen
+        centerMode
+      />
+
+      <button
+        type="button"
+        className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
+        onClick={() => {
+          setIsValid(!!Math.round(Math.random())); // random boolean
+          setIsOpen2(true);
+        }}
+      >
+        Click Me!
+      </button>
+      <Modal
         component={(closeModal) => {
           if (isVaild) return <div className="text-blue-500">Vaild!</div>;
           return <div className="text-red-500">Not vaild!</div>;
         }}
+        onClose={() => {
+          setIsOpen2(false);
+        }}
         dim="rgba(0, 0, 0, 0.8)"
-      />
-      <Modal
-        name="modal-default"
-        trigger={
-          <button
-            type="button"
-            className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
-          >
-            Click Me!
-          </button>
-        }
-        component={(closeModal) => <DummyComponent closeModal={closeModal} />}
-        dim="rgba(0, 0, 0, 0.8)"
+        isOpen={isOpen2}
       />
       <div className="h-[100vh] bg-red-200">section 1</div>
+      <button
+        type="button"
+        className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
+        onClick={() => setIsOpen3(true)}
+      >
+        Click Me!
+      </button>
       <Modal
-        name="modal"
-        trigger={
-          <button
-            type="button"
-            className="rounded bg-green-500 px-4 py-2 text-lg font-bold text-white"
-          >
-            Click Me!
-          </button>
-        }
         component={(closeModal) => <DummyComponent closeModal={closeModal} />}
-        onAfterClose={() => {
-          // callback here
-          // console.log('callback');
+        onClose={() => {
+          setIsOpen3(false);
         }}
         dim="rgba(0, 0, 0, 0.8)"
         animation={{
@@ -63,6 +74,7 @@ export default function ModalPage() {
           duration: 300,
         }}
         centerMode
+        isOpen={isOpen3}
       />
       <div className="h-[100vh] bg-red-300">section 2</div>
       <div className="h-[100vh] bg-red-400">section 3</div>
