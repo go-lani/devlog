@@ -143,10 +143,10 @@
   resolved "https://registry.yarnpkg.com/@lani.ground/react-image-viewer/-/react-image-viewer-1.1.2.tgz#dabef810ebbad854ebe0fe03f92fcb4c898dee8c"
   integrity sha512-57AA34F5LpZuwBnE6zqgjgGS1ZYs3B8HFKmb9uGTLFe9Bm70iJXV8Hu96svfPoxvT0FqudxL+BBEa6yRsRFUBQ==
 
-"@lani.ground/react-modal@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-2.0.0.tgz#bc186c89ad4132c051e34e67b7fca9cafa71e754"
-  integrity sha512-m1kU9M81sP0JfMzzVFTj8Ml2amRsdK+l2S5s4LRnH93JDldHex0z4/7BqRdiUPiNXLvo+bXEJ/DvDXgfq16Qgg==
+"@lani.ground/react-modal@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-modal/-/react-modal-2.1.1.tgz#2183a72553983ee166e34b5a6e41f18d3974ae68"
+  integrity sha512-rjw3Bby29UtZ42ouPAAb5RWUaqE1R4uZ0vrf/qGRtfr98PjU7tb0S66THtQnmc+oMEdAnc5rKpzOBQSxG6L2gw==
 
 "@lani.ground/react-outside-click-handler@^1.1.2":
   version "1.1.2"
