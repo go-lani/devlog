@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { visit } from 'unist-util-visit';
+
 import { Node, Parent } from 'unist';
+import { visit } from 'unist-util-visit';
 
 type Image = {
   type: string;

@@ -1,5 +1,6 @@
 import { remark } from 'remark';
 import remarkToc from 'remark-toc';
+
 import { toKebabCase } from './string';
 
 export type Toc = {

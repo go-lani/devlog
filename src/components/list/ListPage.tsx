@@ -1,10 +1,12 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+
 import { ALL_POST } from '@/constants/post';
 import { Meta } from '@/types/post';
-import Tags from './Tags';
+
 import ListContainer from './ListContainer';
+import Tags from './Tags';
 
 interface Props {
   category: 'Posts' | 'Snippet';

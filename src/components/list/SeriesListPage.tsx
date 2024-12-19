@@ -1,4 +1,5 @@
 import { SeriesGroup } from '@/service/posts';
+
 import SeriesListContainer from './SeriesListContainer';
 
 interface Props {

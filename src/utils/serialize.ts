@@ -1,8 +1,9 @@
 import { serialize } from 'next-mdx-remote/serialize';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 import remarkCodeTitle from 'remark-code-title';
 import remarkGfm from 'remark-gfm';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+
 import transformImgSrc from './transformImgSrc';
 
 export async function serializeMDX({

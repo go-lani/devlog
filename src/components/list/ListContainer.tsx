@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 import Link from 'next/link';
+
 import { ALL_POST } from '@/constants/post';
 import { Meta } from '@/types/post';
 import { getDateString } from '@/utils/date';

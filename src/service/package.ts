@@ -1,7 +1,9 @@
-import path from 'path';
 import { readFileSync } from 'fs';
+import path from 'path';
+
 import matter from 'gray-matter';
 import { cache } from 'react';
+
 import { serializeMDX } from '@/utils/serialize';
 
 export const getPackage = cache(async (name: string) => {

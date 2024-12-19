@@ -1,11 +1,13 @@
-import path from 'path';
 import { readFileSync, readdirSync } from 'fs';
+import path from 'path';
+
 import { sync } from 'glob';
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
-import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
+
 import { ALL_POST } from '@/constants/post';
 import { Meta, Post, PostDetail } from '@/types/post';
+import { generateTocTree, getHeadingTree } from '@/utils/generateTocTree';
 import { serializeMDX } from '@/utils/serialize';
 
 const POSTS_PATH = 'posts';
