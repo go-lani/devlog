@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
-import { getPackage } from '@/service/package';
-import ImageViewerPage from '@/components/playground/ImageVIewer';
+
 import MdxViewer from '@/components/common/MDXViewer';
 import ContentLayout from '@/components/playground/common/ContentLayout';
+import ImageViewerPage from '@/components/playground/ImageVIewer';
+import { getPackage } from '@/service/package';
 
 export const metadata: Metadata = {
   title: {

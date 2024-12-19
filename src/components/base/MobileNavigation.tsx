@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 import { usePathname, useRouter } from 'next/navigation';
+
 import { MENU } from '@/constants/app';
 
 interface Props {

@@ -3,6 +3,7 @@
 import { Modal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
 import { useEffect, useState } from 'react';
+
 import DummyComponent from './mock/DummyComponent';
 
 export default function ModalPage() {

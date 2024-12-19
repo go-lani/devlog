@@ -1,5 +1,5 @@
-import path from 'path';
 import { promises as fs } from 'fs';
+import path from 'path';
 
 export interface Experiences {
   work: Work[];
@@ -28,6 +28,8 @@ export type Project = {
   name: string;
   link: string;
   docs: string;
+  type: string;
+  logo?: string;
 };
 
 export async function getExperiencies(): Promise<Experiences> {

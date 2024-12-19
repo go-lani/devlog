@@ -1,8 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Toc } from '@/utils/generateTocTree';
+
 import ShortProfile from '@/components/common/profile/ShortProfile';
+import { Toc } from '@/utils/generateTocTree';
+
 import TableOfContent from './TableOfContent';
 import Tags from './Tags';
 

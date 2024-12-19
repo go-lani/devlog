@@ -1,6 +1,6 @@
-import localFont from 'next/font/local';
-import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import Script from 'next/script';
 
 const spoqaSans = localFont({

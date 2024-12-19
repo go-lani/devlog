@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+
+import MDXViewer from '@/components/common/MDXViewer';
+import ContentLayout from '@/components/playground/common/ContentLayout';
 import OutsideClickHandlerPage from '@/components/playground/OutsideClickHandler';
 import { getPackage } from '@/service/package';
-import ContentLayout from '@/components/playground/common/ContentLayout';
-import MDXViewer from '@/components/common/MDXViewer';
 
 export const metadata: Metadata = {
   title: {

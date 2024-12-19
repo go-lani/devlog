@@ -1,12 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { Modal } from '@lani.ground/react-modal';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Modal } from '@lani.ground/react-modal';
+import { useState } from 'react';
+
 import { MENU } from '@/constants/app';
-import MobileNavigation from './MobileNavigation';
+
 import '@lani.ground/react-modal/css';
+import MobileNavigation from './MobileNavigation';
 
 export default function Navigation() {
   const pathname = usePathname();

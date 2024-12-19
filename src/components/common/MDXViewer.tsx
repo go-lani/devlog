@@ -1,7 +1,8 @@
 'use client';
 
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { ImageViewerProvider } from '@lani.ground/react-image-viewer';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+
 import '@lani.ground/react-image-viewer/css';
 import Syntax from '../detail/SyntaxHighlighter';
 

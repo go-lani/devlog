@@ -26,6 +26,20 @@
   ],
   "other": [
     {
+      "id": 7,
+      "period": "2024.12",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "크롬 확장 프로그램 - 지금이니?",
+          "link": "https://chromewebstore.google.com/detail/%EC%A7%80%EA%B8%88%EC%9D%B4%EB%8B%88/fpainogijchhjgacnnimlpblbfjfhoad?hl=ko",
+          "type": "extension",
+          "logo": "scheduler.svg"
+        }
+      ],
+      "inProgress": true
+    },
+    {
       "id": 6,
       "period": "2023.11",
       "role": "Creator.",
@@ -33,7 +47,8 @@
         {
           "name": "@lani.ground/react-hooks",
           "link": "https://www.npmjs.com/package/@lani.ground/react-hooks",
-          "docs": "/playground/react-hooks"
+          "docs": "/playground/react-hooks",
+          "type": "npm"
         }
       ],
       "inProgress": true
@@ -46,12 +61,14 @@
         {
           "name": "@lani.ground/react-image-viewer",
           "link": "https://www.npmjs.com/package/@lani.ground/react-image-viewer",
-          "docs": "/playground/react-image-viewer"
+          "docs": "/playground/react-image-viewer",
+          "type": "npm"
         },
         {
           "name": "@lani.ground/react-modal",
           "link": "https://www.npmjs.com/package/@lani.ground/react-modal",
-          "docs": "/playground/react-modal"
+          "docs": "/playground/react-modal",
+          "type": "npm"
         }
       ],
       "inProgress": true
@@ -64,7 +81,8 @@
         {
           "name": "@lani.ground/react-outside-click-handler",
           "link": "https://www.npmjs.com/package/@lani.ground/react-outside-click-handler",
-          "docs": "/playground/react-outside-click-handler"
+          "docs": "/playground/react-outside-click-handler",
+          "type": "npm"
         }
       ],
       "inProgress": true

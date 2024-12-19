@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { getSeriesPosts } from '@/service/posts';
 import { getDateString } from '@/utils/date';
 

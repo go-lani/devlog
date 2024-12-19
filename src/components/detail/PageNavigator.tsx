@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Meta } from '@/types/post';
 
 type Props = {

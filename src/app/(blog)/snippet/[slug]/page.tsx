@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { Metadata } from 'next/types';
 import { notFound } from 'next/navigation';
-import { getPost, getPostSlugs } from '@/service/posts';
-import { getDateString } from '@/utils/date';
-import { PostDetail } from '@/types/post';
+import { Metadata } from 'next/types';
+
 import PostContent from '@/components/detail/PostContent';
+import { getPost, getPostSlugs } from '@/service/posts';
+import { PostDetail } from '@/types/post';
+import { getDateString } from '@/utils/date';
 
 export async function generateMetadata({
   params: { slug },

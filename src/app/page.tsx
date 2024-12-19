@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DiNpm } from 'react-icons/di';
+
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
 import { getExperiencies } from '@/service/experiencies';
@@ -78,7 +79,7 @@ export default async function App() {
                 <span className="text-app-blue-green">클린 코드</span>에 관심이
                 있고, 개발 지식이 없는 사람도 제 코드를 보고{' '}
                 <br className="hidden md:block" />
-                어떤 기능을 하는지 알 수 있는 코드를 작성하는 것을 목표 하고
+                어떤 기능을 하는지 알 수 있는 코드를 ���성하는 것을 목표 하고
                 있습니다.
               </p>
             </div>
@@ -119,7 +120,10 @@ export default async function App() {
               </p>
               <ul className="mt-4 flex flex-col gap-4">
                 {other.map((o) => (
-                  <li className="flex gap-4" key={o.id}>
+                  <li
+                    className="flex flex-col gap-1 md:flex-row md:gap-4"
+                    key={o.id}
+                  >
                     <p className="w-[130px] shrink-0 md:w-[150px]">
                       {o.period}
                       {o.inProgress && (
@@ -129,7 +133,7 @@ export default async function App() {
                         </>
                       )}
                     </p>
-                    <p className="shrink">
+                    <div className="shrink">
                       {o.role} <br className="block md:hidden" />
                       {o.projects ? (
                         o.projects.map((p) => (
@@ -137,25 +141,51 @@ export default async function App() {
                             className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm"
                             key={p.name}
                           >
-                            <i className="hidden shrink-0 md:block">
-                              <DiNpm size="2rem" color="rgb(203 3 3 / 80%)" />
-                            </i>
-                            <i className="mt-[5px] flex shrink-0 md:hidden">
-                              <DiNpm size="1.5rem" color="rgb(203 3 3 / 80%)" />
-                            </i>
+                            {p.type === 'extension' && (
+                              <img
+                                src="/assets/images/icons/extension.svg"
+                                alt="chrome extension"
+                                className="h-[16px] w-[16px] self-center md:h-[22px] md:w-[22px]"
+                              />
+                            )}
+                            {p.type === 'npm' && (
+                              <>
+                                <i className="hidden shrink-0 md:block">
+                                  <DiNpm
+                                    size="2rem"
+                                    color="rgb(203 3 3 / 80%)"
+                                  />
+                                </i>
+                                <i className="mt-[5px] flex shrink-0 md:hidden">
+                                  <DiNpm
+                                    size="1.5rem"
+                                    color="rgb(203 3 3 / 80%)"
+                                  />
+                                </i>
+                              </>
+                            )}
                             <Link
                               href={p.link}
                               target="_blank"
-                              className="my-[7px] shrink break-all"
+                              className="my-[7px] flex shrink  items-center gap-1 break-all"
                             >
                               {p.name}
+                              {p.type === 'extension' && (
+                                <img
+                                  src={`/assets/images/icons/${p.logo}`}
+                                  alt="chrome extension"
+                                  className="h-[16px] w-[16px] md:h-[20px] md:w-[20px]"
+                                />
+                              )}
                             </Link>
-                            <Link
-                              href={p.docs}
-                              className="my-[7px] shrink italic text-cyan-700"
-                            >
-                              example
-                            </Link>
+                            {p.type === 'npm' && (
+                              <Link
+                                href={p.docs}
+                                className="my-[7px] shrink italic text-cyan-700"
+                              >
+                                example
+                              </Link>
+                            )}
                           </span>
                         ))
                       ) : (
@@ -163,13 +193,13 @@ export default async function App() {
                           {o.details}
                         </span>
                       )}
-                    </p>
+                    </div>
                   </li>
                 ))}
               </ul>
             </div>
             <p className="mt-36 text-center text-xs italic text-neutral-600 md:text-sm">
-              Last Updated on 7th, November, 2023
+              Last Updated on 19th, March, 2024
             </p>
           </div>
         </section>

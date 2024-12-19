@@ -1,9 +1,10 @@
-import { PostDetail } from '@/types/post';
 import MDXViewer from '@/components/common/MDXViewer';
-import Sidebar from './Sidebar';
-import SeriesNavigator from './SeriesNavigator';
-import PageNavigator from './PageNavigator';
+import { PostDetail } from '@/types/post';
+
 import Comments from './Comments';
+import PageNavigator from './PageNavigator';
+import SeriesNavigator from './SeriesNavigator';
+import Sidebar from './Sidebar';
 
 interface Props {
   type: 'Posts' | 'Snippet';
