@@ -79,7 +79,7 @@ export default async function App() {
                 <span className="text-app-blue-green">클린 코드</span>에 관심이
                 있고, 개발 지식이 없는 사람도 제 코드를 보고{' '}
                 <br className="hidden md:block" />
-                어떤 기능을 하는지 알 수 있는 코드를 ���성하는 것을 목표 하고
+                어떤 기능을 하는지 알 수 있는 코드를 작성하는 것을 목표 하고
                 있습니다.
               </p>
             </div>
