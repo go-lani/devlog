@@ -1,3 +1,7 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+
 import Lnb from '@/components/playground/common/Lnb';
 
 export default function PlaygroundLayout({
@@ -5,16 +9,13 @@ export default function PlaygroundLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   return (
-    <main className="flex h-full justify-center text-white">
-      <div className="flex min-h-[100dvh] w-full flex-col md:flex-row">
-        <nav className="border-style relative w-full shrink-0 justify-self-start border-b pt-16 md:mr-14 md:max-w-[300px] md:border-x md:py-16">
-          <Lnb />
-        </nav>
-        <div className="border-style mx-auto w-full border-x p-8 md:max-w-[1024px]">
-          {children}
-        </div>
-      </div>
+    <main className="relative flex min-h-[100dvh] flex-col gap-[20px] bg-neutral-900 p-4 text-white md:flex-row md:items-start md:justify-center md:p-8">
+      <nav className="mb-14 w-full md:sticky md:top-8 md:mb-0 md:mr-auto md:max-w-[320px]">
+        <Lnb />
+      </nav>
+      <div className="mr-auto w-full md:max-w-[800px]">{children}</div>
     </main>
   );
 }
