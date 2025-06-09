@@ -1,7 +1,7 @@
 'use client';
 
 import { cookieKit } from '@lani.ground/kits';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Syntax from '@/components/detail/SyntaxHighlighter';
 
@@ -13,6 +13,7 @@ export default function CookieKitPage() {
   const [cookieValue, setCookieValue] = useState('testValue');
   const [checkCookieName, setCheckCookieName] = useState('testCookie');
   const [forceUpdate, setForceUpdate] = useState(0); // 강제 리렌더링용 상태
+  const [isClient, setIsClient] = useState(false);
 
   // 쿠키 설정 후 리렌더링
   const handleSetCookie = () => {
@@ -25,6 +26,12 @@ export default function CookieKitPage() {
     cookieKit.deleteCookie(checkCookieName);
     setForceUpdate((prev) => prev + 1); // 리렌더링 트리거
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+    }
+  }, []);
 
   const examples = [
     {
@@ -60,7 +67,9 @@ export default function CookieKitPage() {
       onInputChange: setCheckCookieName,
       placeholder: '확인할 쿠키 이름',
       code: `cookieKit.getCookie('${checkCookieName}')`,
-      result: cookieKit.getCookie(checkCookieName) || '쿠키가 없습니다',
+      result: !isClient
+        ? '쿠키가 없습니다'
+        : cookieKit.getCookie(checkCookieName) || '쿠키가 없습니다',
     },
     {
       title: 'hasCookie - 쿠키 존재 확인',
@@ -71,9 +80,9 @@ export default function CookieKitPage() {
       borderColor: 'border-emerald-500/20',
       interactive: false,
       code: `cookieKit.hasCookie('${checkCookieName}')`,
-      result: `${checkCookieName}: ${
-        cookieKit.hasCookie(checkCookieName) ? '존재함 ✅' : '존재하지 않음 ❌'
-      }`,
+      result: !isClient
+        ? `${checkCookieName}: 서버에서는 확인할 수 없습니다`
+        : `${checkCookieName}: ${cookieKit.hasCookie(checkCookieName) ? '존재함 ✅' : '존재하지 않음 ❌'}`,
     },
     {
       title: 'deleteCookie - 쿠키 삭제',

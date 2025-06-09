@@ -199,7 +199,7 @@ export default async function App() {
               </ul>
             </div>
             <p className="mt-36 text-center text-xs italic text-neutral-600 lg:text-sm">
-              Last Updated on 19th, March, 2024
+              Last Updated on 9th, June, 2025
             </p>
           </div>
         </section>

@@ -35,7 +35,12 @@ export default function HooksPage() {
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const cookie = useMemo(() => getCookie('test'), [flag]);
+  const cookie = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return getCookie('test');
+    }
+    return undefined;
+  }, [flag]);
 
   const examples = [
     {

@@ -121,10 +121,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/kits@^1.0.0-alpha.3":
-  version "1.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@lani.ground/kits/-/kits-1.0.0-alpha.3.tgz#daba00c6e88c134f25b4d50360ca2103027d73fb"
-  integrity sha512-faSx6dSCDnsJr0vQ97E7wkdz6S6mLFwHsif4CfHKw8pJ1Jt1P2ooxAGvbGXQKv9kBtCCW84PVUnvDXByVsO9cQ==
+"@lani.ground/kits@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@lani.ground/kits/-/kits-1.0.0-alpha.4.tgz#b61e768d4cc54cea196e5cfdef25087ed2d012f2"
+  integrity sha512-nKlvULi8zvqim2V/5gt01Fq2gsElv06d4lsO5b6DJeWeCGWPYBaT6s8J29DEaWWlB6KFt99kt/F+1N++JE496g==
 
 "@lani.ground/react-hooks@^0.3.3":
   version "0.3.3"
