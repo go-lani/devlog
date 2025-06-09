@@ -5,6 +5,8 @@ import { DatePicker } from '@lani.ground/react-picker';
 import '@lani.ground/react-picker/styles/DatePicker.css';
 import { useState } from 'react';
 
+import Syntax from '@/components/detail/SyntaxHighlighter';
+
 import ContentLayout from '../common/ContentLayout';
 import ExampleSection from '../common/ExampleSection';
 
@@ -79,6 +81,208 @@ export default function DatePickerPage() {
 
   return (
     <ContentLayout packageName="react-picker">
+      <ExampleSection title="Preview">
+        <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4 sm:rounded-xl sm:p-6">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="min-w-0 flex-1">
+              <h3 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-base font-bold leading-tight text-transparent sm:text-lg">
+                Props 정의
+              </h3>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Name
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Type
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Required
+                      </th>
+                      <th className="py-2 text-left font-medium text-gray-300">
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        date
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date | null</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">선택된 날짜</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        onChange
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`(date: Date) => void`}</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">날짜 변경 시 호출되는 콜백</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        isOpen
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">달력 열림/닫힘 상태</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        onOpenChange
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`(isOpen: boolean) => void`}</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">달력 열림/닫힘 상태 변경 콜백</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        calendarType
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        &apos;default&apos; | &apos;multiple&apos; |
+                        &apos;scroll&apos;
+                      </td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        달력 표시 형태 (기본값: &apos;default&apos;)
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        minDate
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">선택 가능한 최소 날짜</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        maxDate
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">선택 가능한 최대 날짜</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        weekDays
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string[]</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        요일 표시 형태 (기본값: [&apos;일&apos;, &apos;월&apos;,
+                        &apos;화&apos;, &apos;수&apos;, &apos;목&apos;,
+                        &apos;금&apos;, &apos;토&apos;])
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        weekendColor
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">주말 날짜 색상</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        holidayColor
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">휴일 날짜 색상</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        holidays
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date[]</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">휴일 날짜 목록</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        disabled
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">비활성화 여부 (기본값: false)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        autoClose
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        날짜 선택 시 자동으로 달력을 닫을지 여부 (기본값: false)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        className
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">추가 CSS 클래스명</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4 sm:rounded-xl sm:p-6">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="min-w-0 flex-1">
+              <h3 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-base font-bold leading-tight text-transparent sm:text-lg">
+                Usage
+              </h3>
+              <div className="mt-3 w-full">
+                <Syntax
+                  language="tsx"
+                  children={`import { dateKit } from '@lani.ground/kits';
+import { DatePicker } from '@lani.ground/react-picker';
+import '@lani.ground/react-picker/styles/DatePicker.css';
+
+
+const { formatDate } = dateKit;
+const [basicDate, setBasicDate] = useState<Date | null>(null);
+const [basicDateOpen, setBasicDateOpen] = useState(false);
+
+<div>
+  <span>선택된 날짜:</span>
+  <button onClick={() => setBasicDateOpen(true)}>
+    {formatDate(basicDate, 'YYYY년 MM월 DD일 (ddd)') || '날짜를 선택해주세요'}
+  </button>
+</div>
+
+<DatePicker
+  date={basicDate}
+  calendarType="default"
+  onChange={setBasicDate}
+  isOpen={basicDateOpen}
+  holidays={[
+    new Date('2025-01-01'), // 신정
+    new Date('2025-02-09'), // 설날
+    new Date('2025-03-01'), // 삼일절
+    new Date('2025-05-05'), // 어린이날
+  ]}
+  weekendColor="#6B8EFF"
+  holidayColor="#FF8B8B"
+  onOpenChange={(open) => setBasicDateOpen}
+/>`}
+                  isPlayground
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExampleSection>
       <ExampleSection title="DatePicker Examples">
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-1 lg:gap-8">
           {examples.map((example) => (

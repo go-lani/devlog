@@ -15,7 +15,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <>
-      <div className="border-style flex h-full items-center border-l md:hidden">
+      <div className="border-style flex h-full items-center border-l lg:hidden">
         <button
           type="button"
           className="flex h-full items-center rounded-3xl bg-neutral-900 px-4 text-base text-app-white transition-colors"
@@ -31,7 +31,7 @@ export default function Navigation() {
           isOpen={isMenuOpen}
         />
       </div>
-      <ul className="hidden h-full md:flex">
+      <ul className="hidden h-full lg:flex">
         {MENU.map(({ href, title }) => (
           <li
             className="border-style flex h-full items-center border-l"

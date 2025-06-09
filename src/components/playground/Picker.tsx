@@ -55,7 +55,7 @@ export default function PickerPage() {
 
   return (
     <ExampleSection title="React Picker Components">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-2 lg:grid-cols-3">
         {pickerPages.map((picker) => (
           <Link
             key={picker.path}

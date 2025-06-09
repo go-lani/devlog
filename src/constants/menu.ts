@@ -34,4 +34,11 @@ export const PACKAGES_CONFIG = {
     hoverColor: 'hover:bg-blue-500/20',
     activeColor: 'bg-blue-600',
   },
+  '/kits': {
+    icon: '🧰',
+    color: 'from-amber-500 to-yellow-500',
+    bgColor: 'bg-amber-500/10',
+    hoverColor: 'hover:bg-amber-500/20',
+    activeColor: 'bg-amber-600',
+  },
 };

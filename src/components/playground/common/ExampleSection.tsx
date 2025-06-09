@@ -24,7 +24,7 @@ export function ExampleSection({ title, children }: ExampleSectionProps) {
       </div>
 
       {/* 컨텐츠 섹션 */}
-      <div className="p-4 md:p-6">
+      <div className="p-4 lg:p-6">
         <div className="space-y-6">{children}</div>
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function ContentLayout({ packageName, children }: Props) {
   return (
     <section className="w-full">
       {/* 헤더 섹션 */}
-      <div className="mb-4 rounded-lg border border-neutral-700/50 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 p-4 backdrop-blur-sm sm:mb-6 sm:rounded-xl sm:p-6 lg:mb-8 lg:rounded-2xl lg:p-8">
+      <div className="mb-4 rounded-lg border border-neutral-700/50 bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 p-4 backdrop-blur-sm sm:mb-6 sm:rounded-xl sm:p-6 xl:mb-8 xl:rounded-2xl xl:p-8">
         {/* 배경 패턴 */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
         <div className="absolute inset-0 opacity-30">
@@ -18,7 +18,7 @@ export default function ContentLayout({ packageName, children }: Props) {
 
         <div className="relative">
           <div className="mb-3 flex items-start gap-2 sm:mb-4 sm:items-center sm:gap-3">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 text-lg font-bold text-white shadow-lg sm:h-12 sm:w-12 sm:rounded-xl sm:text-xl lg:h-14 lg:w-14 lg:text-2xl">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 text-lg font-bold text-white shadow-lg sm:h-12 sm:w-12 sm:rounded-xl sm:text-xl xl:h-14 xl:w-14 xl:text-2xl">
               {
                 PACKAGES_CONFIG[
                   `/${packageName}` as keyof typeof PACKAGES_CONFIG
@@ -26,7 +26,7 @@ export default function ContentLayout({ packageName, children }: Props) {
               }
             </div>
             <div className="min-w-0 flex-1">
-              <h1 className="break-words bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-xl font-bold leading-tight text-transparent sm:text-2xl/snug lg:text-3xl/snug">
+              <h1 className="break-words bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-xl font-bold leading-tight text-transparent sm:text-2xl/snug xl:text-3xl/snug">
                 @lani.ground/{packageName}
               </h1>
               <p className="mt-1 text-xs text-gray-400 sm:text-sm">
@@ -37,14 +37,14 @@ export default function ContentLayout({ packageName, children }: Props) {
 
           {/* NPM 배지 */}
           <div className="flex flex-wrap gap-2 sm:gap-3">
-            <div className="flex items-center gap-1 rounded-full bg-neutral-800/70 px-2 py-1.5 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 lg:px-4">
+            <div className="flex items-center gap-1 rounded-full bg-neutral-800/70 px-2 py-1.5 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 xl:px-4">
               <img
                 src={`https://img.shields.io/npm/v/%40lani.ground/${packageName}`}
                 alt="NPM Version"
                 className="h-4 sm:h-5"
               />
             </div>
-            <div className="flex items-center gap-1 rounded-full bg-green-500/10 px-2 py-1.5 text-green-400 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 lg:px-4">
+            <div className="flex items-center gap-1 rounded-full bg-green-500/10 px-2 py-1.5 text-green-400 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 xl:px-4">
               <svg
                 className="h-3 w-3 flex-shrink-0 sm:h-4 sm:w-4"
                 fill="currentColor"
@@ -60,7 +60,7 @@ export default function ContentLayout({ packageName, children }: Props) {
                 Production Ready
               </span>
             </div>
-            <div className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-1.5 text-blue-400 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 lg:px-4">
+            <div className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-1.5 text-blue-400 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 xl:px-4">
               <svg
                 className="h-3 w-3 flex-shrink-0 sm:h-4 sm:w-4"
                 fill="currentColor"

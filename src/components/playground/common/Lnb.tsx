@@ -3,9 +3,7 @@
 import localFont from 'next/font/local';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useMemo, useState } from 'react';
-
-import { PACKAGES_CONFIG } from '@/constants/menu';
+import { useEffect, useMemo, useState } from 'react';
 
 const shareTechMono = localFont({
   src: [
@@ -17,66 +15,164 @@ const shareTechMono = localFont({
   ],
 });
 
-// 네비게이션을 위한 경로 정의
-const NAVIGATION_PATHS = [
-  '/react-image-viewer',
-  '/react-outside-click-handler',
-  '/react-hooks',
-  '/react-modal',
-  '/react-picker',
-  '/react-picker/date',
-  '/react-picker/range',
-  '/react-picker/datetime',
-  '/react-picker/time',
-  '/react-picker/custom',
-];
+const NAVIGATION_CONFIG = {
+  '/react-image-viewer': {
+    icon: '🖼️',
+    color: 'from-orange-500 to-red-500',
+    bgColor: 'bg-orange-500/10',
+    hoverColor: 'hover:bg-orange-500/20',
+    activeColor: 'bg-orange-600',
+    children: [],
+  },
+  '/react-outside-click-handler': {
+    icon: '👆',
+    color: 'from-violet-500 to-indigo-500',
+    bgColor: 'bg-violet-500/10',
+    hoverColor: 'hover:bg-violet-500/20',
+    activeColor: 'bg-violet-600',
+    children: [],
+  },
+  '/react-hooks': {
+    icon: '🎣',
+    color: 'from-emerald-500 to-teal-500',
+    bgColor: 'bg-emerald-500/10',
+    hoverColor: 'hover:bg-emerald-500/20',
+    activeColor: 'bg-emerald-600',
+    children: [],
+  },
+  '/react-modal': {
+    icon: '🪟',
+    color: 'from-purple-500 to-pink-500',
+    bgColor: 'bg-purple-500/10',
+    hoverColor: 'hover:bg-purple-500/20',
+    activeColor: 'bg-purple-600',
+    children: [],
+  },
+  '/react-picker': {
+    icon: '📅',
+    color: 'from-blue-500 to-cyan-500',
+    bgColor: 'bg-blue-500/10',
+    hoverColor: 'hover:bg-blue-500/20',
+    activeColor: 'bg-blue-600',
+    children: [
+      '/react-picker/date',
+      '/react-picker/range',
+      '/react-picker/datetime',
+      '/react-picker/time',
+      '/react-picker/custom',
+    ],
+  },
+  '/kits': {
+    icon: '🧰',
+    color: 'from-amber-500 to-yellow-500',
+    bgColor: 'bg-amber-500/10',
+    hoverColor: 'hover:bg-amber-500/20',
+    activeColor: 'bg-amber-600',
+    children: [
+      '/kits/date',
+      '/kits/number',
+      '/kits/string',
+      '/kits/object',
+      '/kits/validate',
+      '/kits/cookie',
+    ],
+  },
+} as const;
 
 interface ComponentItem {
   path: string;
-  children?: ComponentItem[];
+  children: ComponentItem[];
+  icon: string;
+  color: string;
+  bgColor: string;
+  hoverColor: string;
+  activeColor: string;
 }
 
 export default function Lnb() {
   const pathname = usePathname();
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(
-    new Set(['/playground/react-picker']),
+
+  const getInitialExpandedItems = () => {
+    const expandedSet = new Set<string>();
+
+    Object.entries(NAVIGATION_CONFIG).forEach(([path, config]) => {
+      config.children.forEach((childPath) => {
+        const fullChildPath = `/playground${childPath}`;
+        if (pathname === fullChildPath) {
+          expandedSet.add(`/playground${path}`);
+        }
+      });
+    });
+
+    // 기본적으로 확장할 항목들 제거 - 모든 메뉴가 기본적으로 닫혀있음
+    // expandedSet.add('/playground/react-picker');
+    // expandedSet.add('/playground/kits');
+
+    return expandedSet;
+  };
+
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(() => {
+    return getInitialExpandedItems();
+  });
+
+  // 사용자가 수동으로 접은 항목들을 추적
+  const [manuallyCollapsed, setManuallyCollapsed] = useState<Set<string>>(
+    new Set(),
   );
 
-  // 패키지별 색상과 아이콘 매핑
+  const toggleExpanded = (path: string) => {
+    const fullPath = `/playground${path}`;
+    const newExpanded = new Set(expandedItems);
+    const newCollapsed = new Set(manuallyCollapsed);
+
+    if (newExpanded.has(fullPath)) {
+      newExpanded.delete(fullPath);
+      newCollapsed.add(fullPath); // 수동으로 접은 것으로 기록
+    } else {
+      newExpanded.add(fullPath);
+      newCollapsed.delete(fullPath); // 수동으로 접은 기록 제거
+    }
+
+    setExpandedItems(newExpanded);
+    setManuallyCollapsed(newCollapsed);
+  };
+
+  useEffect(() => {
+    // 현재 pathname에 해당하는 부모를 찾아서 확장 상태에 추가
+    setExpandedItems((prev) => {
+      const newExpanded = new Set(prev);
+
+      Object.entries(NAVIGATION_CONFIG).forEach(([path, config]) => {
+        config.children.forEach((childPath) => {
+          const fullChildPath = `/playground${childPath}`;
+          if (pathname === fullChildPath) {
+            newExpanded.add(`/playground${path}`);
+          }
+        });
+      });
+
+      return newExpanded;
+    });
+  }, [pathname]);
 
   const organizedComponents = useMemo(() => {
-    const organized: ComponentItem[] = [];
-    const childrenMap: { [key: string]: ComponentItem[] } = {};
-
-    // 먼저 모든 컴포넌트를 분류
-    NAVIGATION_PATHS.forEach((path) => {
-      const pathParts = path.split('/');
-      if (pathParts.length === 2) {
-        // 메인 패키지 (예: /react-picker)
-        organized.push({
-          path,
-          children: [],
-        });
-      } else if (pathParts.length === 3) {
-        // 하위 페이지 (예: /react-picker/date)
-        const parentPath = `/${pathParts[1]}`;
-        if (!childrenMap[parentPath]) {
-          childrenMap[parentPath] = [];
-        }
-        childrenMap[parentPath].push({
-          path,
-        });
-      }
-    });
-
-    // 자식들을 부모에게 연결
-    organized.forEach((parent) => {
-      if (childrenMap[parent.path]) {
-        parent.children = childrenMap[parent.path];
-      }
-    });
-
-    return organized;
+    return Object.entries(NAVIGATION_CONFIG).map(([path, config]) => ({
+      path,
+      children: config.children.map((childPath) => ({
+        path: childPath,
+        children: [],
+        icon: config.icon,
+        color: config.color,
+        bgColor: config.bgColor,
+        hoverColor: config.hoverColor,
+        activeColor: config.activeColor,
+      })),
+      icon: config.icon,
+      color: config.color,
+      bgColor: config.bgColor,
+      hoverColor: config.hoverColor,
+      activeColor: config.activeColor,
+    }));
   }, []);
 
   const isActive = (path: string) => pathname === `/playground${path}`;
@@ -84,15 +180,8 @@ export default function Lnb() {
     return children.some((child) => pathname === `/playground${child.path}`);
   };
 
-  const getPackageStyle = (path: string) => {
-    return (
-      PACKAGES_CONFIG[path as keyof typeof PACKAGES_CONFIG] ||
-      PACKAGES_CONFIG['/react-picker']
-    );
-  };
-
   return (
-    <div className="md:border-style relative md:sticky">
+    <div className="lg:border-style relative lg:sticky">
       <div
         className={`w-full bg-neutral-900 ${shareTechMono.className} text-xl`}
       >
@@ -100,11 +189,13 @@ export default function Lnb() {
           href="/playground"
           className="mb-6 flex items-center rounded-xl border border-neutral-700/50 bg-gradient-to-br from-neutral-800/30 to-neutral-900/50 p-4 backdrop-blur-sm"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-red-600 to-red-800">
-            <span className="text-2xl">📦</span>
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg ">
+            <span className="text-2xl">
+              <img src="/assets/images/character.webp" alt="lani" />
+            </span>
           </div>
           <div className="ml-4">
-            <p className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-lg font-bold text-transparent">
+            <p className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-lg font-bold text-transparent">
               @lani.ground
             </p>
             <p className="text-xs text-gray-400">컴포넌트 라이브러리</p>
@@ -112,19 +203,19 @@ export default function Lnb() {
         </Link>
       </div>
 
-      {/* 네비게이션 목록 */}
       <div className="space-y-2">
         <ul className="space-y-2">
           {organizedComponents.map((component) => {
             const hasChildren =
               component.children && component.children.length > 0;
-            const isExpanded = expandedItems.has(
-              `/playground${component.path}`,
-            );
+            const fullPath = `/playground${component.path}`;
+            const isExpanded =
+              expandedItems.has(fullPath) ||
+              (isActive(component.path) &&
+                hasChildren &&
+                !manuallyCollapsed.has(fullPath)); // 수동으로 접은 항목은 자동 확장 안함
             const isParentActiveState =
-              hasChildren &&
-              isParentActive(component.path, component.children!);
-            const packageStyle = getPackageStyle(component.path);
+              hasChildren && isParentActive(component.path, component.children);
 
             return (
               <li key={component.path}>
@@ -133,12 +224,12 @@ export default function Lnb() {
                     href={`/playground${component.path}`}
                     className={`group flex flex-1 items-center gap-3 rounded-xl border border-transparent px-3 py-3 transition-all duration-200 ${(() => {
                       if (isActive(component.path)) {
-                        return `${packageStyle.activeColor} border-neutral-600 text-white shadow-lg`;
+                        return `border-neutral-600 ${component.activeColor} text-white shadow-lg`;
                       }
                       if (isParentActiveState) {
-                        return `${packageStyle.bgColor} border-neutral-700/50 text-white`;
+                        return `${component.bgColor} border-neutral-700/50 text-white`;
                       }
-                      return `hover:border-neutral-700/50 ${packageStyle.hoverColor} text-gray-300 hover:text-white`;
+                      return `hover:border-neutral-700/50 ${component.hoverColor} text-gray-300 hover:text-white`;
                     })()}`}
                   >
                     {/* 아이콘 */}
@@ -149,7 +240,7 @@ export default function Lnb() {
                           : 'bg-neutral-800/50'
                       }`}
                     >
-                      {packageStyle.icon}
+                      {component.icon}
                     </div>
 
                     {/* 패키지명 */}
@@ -162,24 +253,47 @@ export default function Lnb() {
                     {/* 활성 상태 표시 */}
                     {(isActive(component.path) || isParentActiveState) && (
                       <div
-                        className={`h-2 w-2 rounded-full bg-gradient-to-r ${packageStyle.color}`}
+                        className={`h-2 w-2 rounded-full bg-gradient-to-r ${component.color}`}
                       />
                     )}
                   </Link>
+                  {/* 확장/축소 버튼 */}
+                  {hasChildren && (
+                    <button
+                      type="button"
+                      onClick={() => toggleExpanded(component.path)}
+                      className="ml-2 rounded-lg p-2 text-gray-400 transition-colors hover:bg-neutral-700/50 hover:text-white"
+                    >
+                      <svg
+                        className={`h-4 w-4 transition-transform ${
+                          isExpanded ? 'rotate-90' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  )}
                 </div>
 
                 {hasChildren && isExpanded && (
                   <ul className="ml-4 mt-2 space-y-1">
-                    {component.children!.map((child) => {
-                      const childStyle = getPackageStyle(component.path);
+                    {component.children.map((child) => {
                       return (
                         <li key={child.path}>
                           <Link
                             href={`/playground${child.path}`}
                             className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm transition-all duration-200 ${
                               isActive(child.path)
-                                ? `${childStyle.activeColor} text-white`
-                                : `text-gray-400 hover:text-white ${childStyle.hoverColor}`
+                                ? `${component.activeColor} text-white`
+                                : `text-gray-400 hover:text-white ${component.hoverColor}`
                             }`}
                           >
                             <span className="text-gray-500">└</span>
@@ -188,7 +302,7 @@ export default function Lnb() {
                             </span>
                             {isActive(child.path) && (
                               <div
-                                className={`ml-auto h-1.5 w-1.5 rounded-full bg-gradient-to-r ${childStyle.color}`}
+                                className={`ml-auto h-1.5 w-1.5 rounded-full bg-gradient-to-r ${component.color}`}
                               />
                             )}
                           </Link>

@@ -43,21 +43,21 @@ export default async function DetailPage({ params: { slug } }: Props) {
     <>
       <section className="container-layout border-style grow-0 border-b bg-zinc-800">
         <div className="content-layout border-style relative justify-center border-x text-center text-app-white">
-          <div className="flex flex-col justify-center px-4 py-16 md:px-5 md:py-20">
+          <div className="flex flex-col justify-center px-4 py-16 lg:px-5 lg:py-20">
             {post.meta.series && (
               <p className="mb-3 text-sm">
                 {post.meta.series}{' '}
                 {post.meta.series_number && `- ${post.meta.series_number}`}
               </p>
             )}
-            <h1 className="text-xl md:text-4xl">{post.meta.title}</h1>
+            <h1 className="text-xl lg:text-4xl">{post.meta.title}</h1>
           </div>
         </div>
       </section>
       <section className="container-layout border-style grow-0 border-b bg-zinc-800">
         <div className="content-layout">
-          <div className="border-style align-center flex justify-center border-x text-app-white md:justify-start md:text-center">
-            <p className="border-style border-l p-5 text-sm md:border-l-0">
+          <div className="border-style align-center flex justify-center border-x text-app-white lg:justify-start lg:text-center">
+            <p className="border-style border-l p-5 text-sm lg:border-l-0">
               {getDateString({ inputDate: post.meta.date })}
             </p>
             <p className="border-style flex items-center justify-center gap-1 border-x p-5 text-sm">

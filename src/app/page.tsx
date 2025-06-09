@@ -12,10 +12,10 @@ export default async function App() {
       <Header />
       <main className="flex flex-col">
         <section className="container-layout flex min-h-screen w-full justify-center bg-zinc-800">
-          <div className="content-layout border-style border-x bg-neutral-800 p-8 text-app-white md:p-16">
+          <div className="content-layout border-style border-x bg-neutral-800 p-8 text-app-white lg:p-16">
             <h1 className="hidden-text">이철환(Lani) 프로필</h1>
-            <div className="mb-14 break-keep text-xs text-neutral-400 md:mb-8 md:text-base">
-              <p className="text-center md:text-right">
+            <div className="mb-14 break-keep text-xs text-neutral-400 lg:mb-8 lg:text-base">
+              <p className="text-center lg:text-right">
                 &quot;코드를 읽으면서 짐작했던 기능을 각 루틴이 그대로
                 수행한다면
                 <br />
@@ -25,21 +25,21 @@ export default async function App() {
                 <br />
                 아름다운 코드라 불러도 되겠다.&quot;
               </p>
-              <p className="mt-2 text-center md:text-right">
+              <p className="mt-2 text-center lg:text-right">
                 - 워드 커닝햄(Ward Cunningham)
               </p>
             </div>
             <div>
-              <p className="text-xl md:text-3xl">이철환 · Lani</p>
+              <p className="text-xl lg:text-3xl">이철환 · Lani</p>
               <div className="mt-10">
-                <p className="text-base font-bold md:text-lg">Channel.</p>
-                <ul className="mt-2 flex items-center gap-2 md:mt-2">
+                <p className="text-base font-bold lg:text-lg">Channel.</p>
+                <ul className="mt-2 flex items-center gap-2 lg:mt-2">
                   <li>
                     <Link href="https://github.com/go-lani" target="_black">
                       <img
                         src="/assets/images/icons/github.svg"
                         alt="github"
-                        className="h-[16px] w-[16px] md:h-[18px] md:w-[18px]"
+                        className="h-[16px] w-[16px] lg:h-[18px] lg:w-[18px]"
                       />
                     </Link>
                   </li>
@@ -51,7 +51,7 @@ export default async function App() {
                       <img
                         src="/assets/images/icons/resume.svg"
                         alt="mail"
-                        className="h-[18px] w-[18px] md:h-[22px] md:w-[22px]"
+                        className="h-[18px] w-[18px] lg:h-[22px] lg:w-[22px]"
                       />
                     </Link>
                   </li>
@@ -60,35 +60,35 @@ export default async function App() {
                       <img
                         src="/assets/images/icons/mail.svg"
                         alt="mail"
-                        className="h-[24px] w-[24px] md:h-[22px] md:w-[22px]"
+                        className="h-[24px] w-[24px] lg:h-[22px] lg:w-[22px]"
                       />
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="mt-6 break-keep text-sm md:mt-16 md:text-base">
-              <p className="text-base font-bold md:text-lg">Introduce.</p>
-              <p className="mt-2 md:mt-4">
+            <div className="mt-6 break-keep text-sm lg:mt-16 lg:text-base">
+              <p className="text-base font-bold lg:text-lg">Introduce.</p>
+              <p className="mt-2 lg:mt-4">
                 사용자 중심에서 생각하는 것을 좋아하며, 사용자 행동을 고려한{' '}
-                <br className="hidden md:block" />
+                <br className="hidden lg:block" />
                 <span className="text-app-blue-green">사용자 경험(UX)</span>을
                 개선에 관심이 있습니다.
               </p>
-              <p className="mt-2 md:mt-4">
+              <p className="mt-2 lg:mt-4">
                 <span className="text-app-blue-green">클린 코드</span>에 관심이
                 있고, 개발 지식이 없는 사람도 제 코드를 보고{' '}
-                <br className="hidden md:block" />
+                <br className="hidden lg:block" />
                 어떤 기능을 하는지 알 수 있는 코드를 작성하는 것을 목표 하고
                 있습니다.
               </p>
             </div>
-            <div className="mt-10 break-keep text-sm md:mt-16 md:text-base">
-              <p className="text-base font-bold md:text-lg">Work Experience.</p>
-              <ul className="mt-2 flex flex-col gap-4 md:mt-4">
+            <div className="mt-10 break-keep text-sm lg:mt-16 lg:text-base">
+              <p className="text-base font-bold lg:text-lg">Work Experience.</p>
+              <ul className="mt-2 flex flex-col gap-4 lg:mt-4">
                 {work.map((w) => (
                   <li className="flex gap-4" key={w.id}>
-                    <p className="w-[130px] shrink-0 md:w-[150px]">
+                    <p className="w-[130px] shrink-0 lg:w-[150px]">
                       {w.period}
                       {w.inProgress ? (
                         <>
@@ -105,8 +105,8 @@ export default async function App() {
                       )}
                     </p>
                     <p>
-                      {w.company} <br className="block md:hidden" />
-                      <span className="text-xs text-neutral-500 md:text-sm">
+                      {w.company} <br className="block lg:hidden" />
+                      <span className="text-xs text-neutral-500 lg:text-sm">
                         {w.tenureDetails}
                       </span>
                     </p>
@@ -114,17 +114,17 @@ export default async function App() {
                 ))}
               </ul>
             </div>
-            <div className="mt-10 break-keep text-sm md:mt-16 md:text-base">
-              <p className="text-base font-bold md:text-lg">
+            <div className="mt-10 break-keep text-sm lg:mt-16 lg:text-base">
+              <p className="text-base font-bold lg:text-lg">
                 Other Experience.
               </p>
               <ul className="mt-4 flex flex-col gap-4">
                 {other.map((o) => (
                   <li
-                    className="flex flex-col gap-1 md:flex-row md:gap-4"
+                    className="flex flex-col gap-1 lg:flex-row lg:gap-4"
                     key={o.id}
                   >
-                    <p className="w-[130px] shrink-0 md:w-[150px]">
+                    <p className="w-[130px] shrink-0 lg:w-[150px]">
                       {o.period}
                       {o.inProgress && (
                         <>
@@ -134,29 +134,29 @@ export default async function App() {
                       )}
                     </p>
                     <div className="shrink">
-                      {o.role} <br className="block md:hidden" />
+                      {o.role} <br className="block lg:hidden" />
                       {o.projects ? (
                         o.projects.map((p) => (
                           <span
-                            className="flex gap-2 text-xs text-neutral-500 md:items-center md:text-sm"
+                            className="flex gap-2 text-xs text-neutral-500 lg:items-center lg:text-sm"
                             key={p.name}
                           >
                             {p.type === 'extension' && (
                               <img
                                 src="/assets/images/icons/extension.svg"
                                 alt="chrome extension"
-                                className="h-[16px] w-[16px] self-center md:h-[22px] md:w-[22px]"
+                                className="h-[16px] w-[16px] self-center lg:h-[22px] lg:w-[22px]"
                               />
                             )}
                             {p.type === 'npm' && (
                               <>
-                                <i className="hidden shrink-0 md:block">
+                                <i className="hidden shrink-0 lg:block">
                                   <DiNpm
                                     size="2rem"
                                     color="rgb(203 3 3 / 80%)"
                                   />
                                 </i>
-                                <i className="mt-[5px] flex shrink-0 md:hidden">
+                                <i className="mt-[5px] flex shrink-0 lg:hidden">
                                   <DiNpm
                                     size="1.5rem"
                                     color="rgb(203 3 3 / 80%)"
@@ -174,7 +174,7 @@ export default async function App() {
                                 <img
                                   src={`/assets/images/icons/${p.logo}`}
                                   alt="chrome extension"
-                                  className="h-[16px] w-[16px] md:h-[20px] md:w-[20px]"
+                                  className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px]"
                                 />
                               )}
                             </Link>
@@ -189,7 +189,7 @@ export default async function App() {
                           </span>
                         ))
                       ) : (
-                        <span className="text-xs text-neutral-500 md:text-sm">
+                        <span className="text-xs text-neutral-500 lg:text-sm">
                           {o.details}
                         </span>
                       )}
@@ -198,7 +198,7 @@ export default async function App() {
                 ))}
               </ul>
             </div>
-            <p className="mt-36 text-center text-xs italic text-neutral-600 md:text-sm">
+            <p className="mt-36 text-center text-xs italic text-neutral-600 lg:text-sm">
               Last Updated on 19th, March, 2024
             </p>
           </div>

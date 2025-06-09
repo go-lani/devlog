@@ -24,7 +24,7 @@ export default function PageNavigator({ type = 'Posts', next, prev }: Props) {
             </span>
             <div className="flex flex-col items-start gap-1">
               <p className="text-sm text-neutral-500">prev</p>
-              <p className="max-w-[120px] truncate text-neutral-300 md:max-w-[200px]">
+              <p className="max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]">
                 {prev.title}
                 {prev.title}
                 {prev.title}
@@ -38,7 +38,7 @@ export default function PageNavigator({ type = 'Posts', next, prev }: Props) {
           <Link href={`/${typePath}/${next.path}`} className="flex gap-4">
             <div className="flex flex-col items-end gap-1">
               <p className="text-sm text-neutral-500">next</p>
-              <p className="max-w-[120px] truncate text-neutral-300 md:max-w-[200px]">
+              <p className="max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]">
                 {next.title}
                 {next.title}
                 {next.title}

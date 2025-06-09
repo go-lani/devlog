@@ -5,6 +5,8 @@ import { RangePicker } from '@lani.ground/react-picker';
 import '@lani.ground/react-picker/styles/RangePicker.css';
 import { useState } from 'react';
 
+import Syntax from '@/components/detail/SyntaxHighlighter';
+
 import ContentLayout from '../common/ContentLayout';
 import ExampleSection from '../common/ExampleSection';
 
@@ -121,6 +123,268 @@ export default function RangePickerPage() {
 
   return (
     <ContentLayout packageName="react-picker">
+      <ExampleSection title="Preview">
+        <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4 sm:rounded-xl sm:p-6">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="min-w-0 flex-1">
+              <h3 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-base font-bold leading-tight text-transparent sm:text-lg">
+                Props 정의
+              </h3>
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Name
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Type
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Required
+                      </th>
+                      <th className="py-2 text-left font-medium text-gray-300">
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        range
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        [Date | null, Date | null]
+                      </td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">
+                        선택된 날짜 범위 [시작일, 종료일]
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        onChange
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`(range: [Date | null, Date | null]) => void`}</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">범위 변경 시 호출되는 콜백</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        isOpen
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">달력 열림/닫힘 상태</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        onOpenChange
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`(isOpen: boolean) => void`}</td>
+                      <td className="py-2 pr-4 text-red-400">Required</td>
+                      <td className="py-2">달력 열림/닫힘 상태 변경 콜백</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        calendarType
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        &apos;default&apos; | &apos;multiple&apos; |
+                        &apos;scroll&apos;
+                      </td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        달력 표시 형태 (기본값: &apos;default&apos;)
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        activeInput
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        &apos;start&apos; | &apos;end&apos; | null
+                      </td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">현재 활성화된 입력 필드</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        onActiveInputChange
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`(activeInput: 'start' | 'end' | null) => void`}</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">활성 입력 필드 변경 콜백</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        quickSelectOptions
+                      </td>
+                      <td className="py-2 pr-4 font-mono">{`{ label: string; days: number }[]`}</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">빠른 선택 옵션 목록</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        enableReset
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">범위 초기화 버튼 표시 여부</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        minDate
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">선택 가능한 최소 날짜</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        maxDate
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">선택 가능한 최대 날짜</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        weekDays
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string[]</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        요일 표시 형태 (기본값: [&apos;일&apos;, &apos;월&apos;,
+                        &apos;화&apos;, &apos;수&apos;, &apos;목&apos;,
+                        &apos;금&apos;, &apos;토&apos;])
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        weekendColor
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">주말 날짜 색상</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        holidayColor
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">휴일 날짜 색상</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        holidays
+                      </td>
+                      <td className="py-2 pr-4 font-mono">Date[]</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">휴일 날짜 목록</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        autoClose
+                      </td>
+                      <td className="py-2 pr-4 font-mono">boolean</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">
+                        날짜 선택 시 자동으로 달력을 닫을지 여부 (기본값: false)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-blue-400">
+                        className
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2 pr-4 text-gray-500">Optional</td>
+                      <td className="py-2">추가 CSS 클래스명</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4 sm:rounded-xl sm:p-6">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="min-w-0 flex-1">
+              <h3 className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-base font-bold leading-tight text-transparent sm:text-lg">
+                Usage
+              </h3>
+              <div className="mt-3 w-full">
+                <Syntax
+                  language="tsx"
+                  children={`import { dateKit } from '@lani.ground/kits';
+import { RangePicker } from '@lani.ground/react-picker';
+import '@lani.ground/react-picker/styles/RangePicker.css';
+
+
+const { formatDate } = dateKit;
+const [quickSelectRange, setQuickSelectRange] = useState<[Date | null, Date | null]>([null, null]);
+const [quickSelectRangeOpen, setQuickSelectRangeOpen] = useState(false);
+const [quickSelectRangeActiveInput, setQuickSelectRangeActiveInput] = useState<'start' | 'end' | null>(null);
+
+<div>
+  <span>선택된 기간:</span>
+  <div>
+    <button
+      onClick={() => {
+        setQuickSelectRangeOpen(true);
+        setQuickSelectRangeActiveInput('start');
+      }}
+      className={quickSelectRangeActiveInput === 'start' ? 'active' : ''}
+    >
+      {formatDate(quickSelectRange[0], 'YYYY.MM.DD') || '시작일'}
+    </button>
+    <span>
+      ~
+    </span>
+    <button
+      onClick={() => {
+        setQuickSelectRangeOpen(true);
+        setQuickSelectRangeActiveInput('end');
+      }}
+      className={quickSelectRangeActiveInput === 'end' ? 'active' : ''}
+    >
+      {formatDate(quickSelectRange[1], 'YYYY.MM.DD') || '종료일'}
+    </button>
+  </div>
+</div>
+
+<RangePicker
+  calendarType="default"
+  range={quickSelectRange}
+  onChange={setQuickSelectRange}
+  isOpen={quickSelectRangeOpen}
+  onOpenChange={setQuickSelectRangeOpen}
+  activeInput={quickSelectRangeActiveInput}
+  onActiveInputChange={setQuickSelectRangeActiveInput}
+  weekendColor="#6B8EFF"
+  holidayColor="#FF8B8B"
+  quickSelectOptions={[
+    { label: '7일', days: 7 },
+    { label: '14일', days: 14 },
+    { label: '28일', days: 28 },
+    { label: '3개월', days: 90 },
+  ]}
+  holidays={[
+    new Date('2025-01-01'), // 신정
+    new Date('2025-02-09'), // 설날
+    new Date('2025-03-01'), // 삼일절
+    new Date('2025-05-05'), // 어린이날
+  ]}
+  enableReset
+/>`}
+                  isPlayground
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </ExampleSection>
       <ExampleSection title="RangePicker Examples">
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-1 lg:gap-8">
           {examples.map((example) => (
@@ -147,11 +411,11 @@ export default function RangePickerPage() {
 
               {/* 인터랙션 영역 */}
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex flex-col gap-2">
+                <div className="inline-flex flex-col justify-center gap-2">
                   <span className="text-xs font-medium text-gray-300 sm:text-sm">
                     선택된 기간:
                   </span>
-                  <div className="xs:flex-row xs:items-center flex flex-col items-stretch gap-2">
+                  <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
                     <button
                       type="button"
                       onClick={example.onStartClick}
@@ -159,13 +423,13 @@ export default function RangePickerPage() {
                         example.activeInput === 'start'
                           ? 'border-blue-500 ring-2 ring-blue-500/20'
                           : example.borderColor
-                      } xs:flex-initial min-w-0 flex-1 bg-neutral-800/30 px-3 py-2 text-center text-xs transition-all duration-200 hover:border-opacity-60 hover:bg-neutral-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:text-sm`}
+                      } min-w-0 flex-1 bg-neutral-800/30 px-3 py-2 text-center text-xs transition-all duration-200 hover:border-opacity-60 hover:bg-neutral-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:text-sm`}
                     >
                       <span className="block truncate">
                         {formatDate(example.range[0], 'YYYY.MM.DD') || '시작일'}
                       </span>
                     </button>
-                    <span className="xs:text-left flex-shrink-0 text-center text-xs text-gray-400 sm:text-sm">
+                    <span className="flex-shrink-0 text-center text-xs text-gray-400 sm:text-left sm:text-sm">
                       ~
                     </span>
                     <button
@@ -175,7 +439,7 @@ export default function RangePickerPage() {
                         example.activeInput === 'end'
                           ? 'border-blue-500 ring-2 ring-blue-500/20'
                           : example.borderColor
-                      } xs:flex-initial min-w-0 flex-1 bg-neutral-800/30 px-3 py-2 text-center text-xs transition-all duration-200 hover:border-opacity-60 hover:bg-neutral-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:text-sm`}
+                      } min-w-0 flex-1 bg-neutral-800/30 px-3 py-2 text-center text-xs transition-all duration-200 hover:border-opacity-60 hover:bg-neutral-700/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:text-sm`}
                     >
                       <span className="block truncate">
                         {formatDate(example.range[1], 'YYYY.MM.DD') || '종료일'}

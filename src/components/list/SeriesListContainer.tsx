@@ -20,7 +20,7 @@ export default function SeriesListContainer({
             className="border-style flex flex-row text-app-white last-of-type:mb-0"
             key={aSeries}
           >
-            <div className="border-style hidden w-[280px] shrink-0 flex-col border-r bg-zinc-800 px-4 py-[48px] md:flex">
+            <div className="border-style hidden w-[280px] shrink-0 flex-col border-r bg-zinc-800 px-4 py-[48px] lg:flex">
               <p className="border-style mx-[-1rem] border-y bg-neutral-800 p-4 text-right text-base italic text-app-white">
                 Recent
               </p>
@@ -40,7 +40,7 @@ export default function SeriesListContainer({
                     className="border-style last-of-type:border-n flex gap-8 border-b px-8 py-6"
                     key={meta.title}
                   >
-                    <p className="text-xs leading-7 text-gray-500 md:text-base md:leading-8">
+                    <p className="text-xs leading-7 text-gray-500 lg:text-base lg:leading-8">
                       {getDateString({
                         inputDate: meta.date,
                         separator: '.',
@@ -49,11 +49,11 @@ export default function SeriesListContainer({
                     <div>
                       <Link
                         href={`/posts/${meta.path}`}
-                        className="break-keep text-xl font-semibold md:text-2xl"
+                        className="break-keep text-xl font-semibold lg:text-2xl"
                       >
                         <h3>{meta.title}</h3>
                       </Link>
-                      <p className="mt-2 break-keep text-sm text-gray-400 md:text-base">
+                      <p className="mt-2 break-keep text-sm text-gray-400 lg:text-base">
                         {meta.description}
                       </p>
                     </div>
@@ -70,10 +70,10 @@ export default function SeriesListContainer({
             className="h-[80px] w-[80px]"
             alt="series is empty"
           />
-          <p className="mt-8 flex items-center text-base text-app-white md:text-lg">
+          <p className="mt-8 flex items-center text-base text-app-white lg:text-lg">
             아직 작성된 시리즈가 없습니다
           </p>
-          <p className="flex items-center gap-1 text-sm text-app-white md:text-base">
+          <p className="flex items-center gap-1 text-sm text-app-white lg:text-base">
             조금만 기다려주세요.
           </p>
         </li>

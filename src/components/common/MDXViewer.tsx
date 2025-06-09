@@ -21,7 +21,7 @@ export default function MDXViewer({
     serialized &&
     (!isPackage ? (
       <ImageViewerProvider>
-        <div className="markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white md:p-5">
+        <div className="markdown-viewer box-border w-full bg-neutral-800 p-4 text-app-white lg:p-5">
           <MDXRemote
             {...serialized}
             components={{

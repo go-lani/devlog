@@ -2,21 +2,21 @@ import { Metadata } from 'next';
 
 import MDXViewer from '@/components/common/MDXViewer';
 import ContentLayout from '@/components/playground/common/ContentLayout';
-import PickerPage from '@/components/playground/Picker';
+import KitPage from '@/components/playground/Kit';
 import { getPackage } from '@/service/package';
 
 export const metadata: Metadata = {
   title: {
-    absolute: '@lani.ground/react-picker',
+    absolute: '@lani.ground/kits',
   },
-  description: '@lani.ground/react-picker playground',
+  description: '@lani.ground/kits playground',
 };
 
 export default async function ReactPicker() {
-  const content = await getPackage('react-picker');
+  const content = await getPackage('kits');
   return (
-    <ContentLayout packageName="react-picker">
-      <MDXViewer serialized={content} components={{ PickerPage }} isPackage />
+    <ContentLayout packageName="kits">
+      <MDXViewer serialized={content} components={{ KitPage }} isPackage />
     </ContentLayout>
   );
 }

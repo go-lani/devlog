@@ -8,13 +8,18 @@ import {
 } from '@lani.ground/react-hooks';
 import { useMemo, useState } from 'react';
 
+import Syntax from '../detail/SyntaxHighlighter';
+
 import ExampleSection from './common/ExampleSection';
 
 export default function HooksPage() {
   const { ellipsis } = useString();
   const { getCookie, setCookie, hasCookie, deleteCookie } = useCookies();
   const { lockScroll, unlockScroll } = useWindowScroll();
-  const { ref, activeElement, activeKey } = useVisibleElement();
+  const { ref, activeElement, activeKey } = useVisibleElement({
+    key: 'test-element',
+    activeClass: 'here',
+  });
   const [flag, setFlag] = useState(false);
 
   const setTestCookie = () => {
@@ -42,43 +47,118 @@ export default function HooksPage() {
       bgColor: 'bg-emerald-500/5',
       borderColor: 'border-emerald-500/20',
       content: (
-        <div className="space-y-3 sm:space-y-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-            <span className="flex-shrink-0 text-xs font-medium text-gray-300 sm:text-sm">
-              현재 쿠키(key: test) 값:
-            </span>
-            <div className="w-full rounded-lg border border-emerald-500/20 bg-neutral-800/30 px-3 py-2 text-xs sm:w-auto sm:text-sm">
-              {String(cookie) || 'undefined'}
+        <>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+              <span className="flex-shrink-0 text-xs font-medium text-gray-300 sm:text-sm">
+                현재 쿠키(key: test) 값:
+              </span>
+              <div className="w-full rounded-lg border border-emerald-500/20 bg-neutral-800/30 px-3 py-2 text-xs sm:w-auto sm:text-sm">
+                {String(cookie) || 'undefined'}
+              </div>
+            </div>
+
+            <div className="xs:grid-cols-3 grid grid-cols-1 gap-2 sm:gap-3">
+              <button
+                type="button"
+                className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-400 transition-colors hover:bg-emerald-500/20 sm:px-4 sm:text-sm"
+                onClick={() => checkCookie()}
+              >
+                🔍 쿠키 확인
+              </button>
+              <button
+                type="button"
+                className="rounded-lg border border-blue-500/20 bg-blue-500/10 px-3 py-2 text-xs text-blue-400 transition-colors hover:bg-blue-500/20 sm:px-4 sm:text-sm"
+                onClick={() => setTestCookie()}
+              >
+                ✅ 쿠키 설정
+              </button>
+              <button
+                type="button"
+                className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400 transition-colors hover:bg-red-500/20 sm:px-4 sm:text-sm"
+                onClick={() => {
+                  deleteCookie('test');
+                  setFlag(!flag);
+                }}
+              >
+                🗑️ 쿠키 삭제
+              </button>
             </div>
           </div>
-
-          <div className="xs:grid-cols-3 grid grid-cols-1 gap-2 sm:gap-3">
-            <button
-              type="button"
-              className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-400 transition-colors hover:bg-emerald-500/20 sm:px-4 sm:text-sm"
-              onClick={() => checkCookie()}
-            >
-              🔍 쿠키 확인
-            </button>
-            <button
-              type="button"
-              className="rounded-lg border border-blue-500/20 bg-blue-500/10 px-3 py-2 text-xs text-blue-400 transition-colors hover:bg-blue-500/20 sm:px-4 sm:text-sm"
-              onClick={() => setTestCookie()}
-            >
-              ✅ 쿠키 설정
-            </button>
-            <button
-              type="button"
-              className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400 transition-colors hover:bg-red-500/20 sm:px-4 sm:text-sm"
-              onClick={() => {
-                deleteCookie('test');
-                setFlag(!flag);
-              }}
-            >
-              🗑️ 쿠키 삭제
-            </button>
+          <div className="mt-3 rounded-lg bg-neutral-800/30 p-3 sm:mt-4 sm:p-4">
+            <div className="mb-8">
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                Methods
+              </h4>
+              <Syntax
+                language="typescript"
+                children={`{
+  setCookie: (name: string, value: string, options?: CookieOptions) => void,
+  getCookie: (name: string) => string | undefined,
+  hasCookie: (name: string) => boolean,
+  deleteCookie: (name: string) => void
+}`}
+                isPlayground
+              />
+            </div>
+            <div>
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                CookieOptions:
+              </h4>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Property
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Type
+                      </th>
+                      <th className="py-2 text-left font-medium text-gray-300">
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-amber-400">
+                        path
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2">
+                        쿠키 경로 (기본값: &apos;/&apos;)
+                      </td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-amber-400">
+                        expires
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        Date | string | &apos;today&apos;
+                      </td>
+                      <td className="py-2">만료일</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-amber-400">
+                        maxAge
+                      </td>
+                      <td className="py-2 pr-4 font-mono">number</td>
+                      <td className="py-2">최대 수명 (초)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-amber-400">
+                        domain
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2">쿠키 도메인</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       ),
       features: [
         '쿠키 설정/조회/삭제',
@@ -96,47 +176,114 @@ export default function HooksPage() {
       bgColor: 'bg-purple-500/5',
       borderColor: 'border-purple-500/20',
       content: (
-        <div className="space-y-3 sm:space-y-4">
-          <div className="rounded-lg bg-neutral-800/30 p-3 sm:p-4">
-            <h4 className="mb-2 text-xs font-medium text-gray-300 sm:mb-3 sm:text-sm">
-              텍스트 생략 예시
-            </h4>
-            <div className="space-y-2 text-xs sm:text-sm">
-              <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
-                <span className="flex-shrink-0 text-gray-400">원본:</span>
-                <span className="break-all font-mono">
-                  &quot;안녕하세요 세상!&quot;
-                </span>
-              </div>
-              <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
-                <span className="flex-shrink-0 text-gray-400">왼쪽 생략:</span>
-                <span className="break-all font-mono text-purple-400">
-                  &quot;
-                  {ellipsis({
-                    value: '안녕하세요 세상!',
-                    length: 6,
-                    dir: 'left',
-                  })}
-                  &quot;
-                </span>
-              </div>
-              <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
-                <span className="flex-shrink-0 text-gray-400">
-                  오른쪽 생략:
-                </span>
-                <span className="break-all font-mono text-purple-400">
-                  &quot;
-                  {ellipsis({
-                    value: '안녕하세요 세상!',
-                    length: 6,
-                    dir: 'right',
-                  })}
-                  &quot;
-                </span>
+        <>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="rounded-lg bg-neutral-800/30 p-3 sm:p-4">
+              <h4 className="mb-2 text-xs font-medium text-gray-300 sm:mb-3 sm:text-sm">
+                텍스트 생략 예시
+              </h4>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
+                  <span className="flex-shrink-0 text-gray-400">원본:</span>
+                  <span className="break-all font-mono">
+                    &quot;안녕하세요 세상!&quot;
+                  </span>
+                </div>
+                <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
+                  <span className="flex-shrink-0 text-gray-400">
+                    왼쪽 생략:
+                  </span>
+                  <span className="break-all font-mono text-purple-400">
+                    &quot;
+                    {ellipsis({
+                      value: '안녕하세요 세상!',
+                      length: 6,
+                      dir: 'left',
+                    })}
+                    &quot;
+                  </span>
+                </div>
+                <div className="xs:flex-row xs:justify-between xs:gap-2 flex flex-col gap-1">
+                  <span className="flex-shrink-0 text-gray-400">
+                    오른쪽 생략:
+                  </span>
+                  <span className="break-all font-mono text-purple-400">
+                    &quot;
+                    {ellipsis({
+                      value: '안녕하세요 세상!',
+                      length: 6,
+                      dir: 'right',
+                    })}
+                    &quot;
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <div className="mt-3 rounded-lg bg-neutral-800/30 p-3 sm:mt-4 sm:p-4">
+            <div className="mb-8">
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                Methods
+              </h4>
+              <Syntax
+                language="typescript"
+                children={`{
+  ellipsis: ({ value, length, dir? }: EllipsisOptions) => string
+}`}
+                isPlayground
+              />
+            </div>
+            <div>
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                EllipsisOptions:
+              </h4>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Property
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Type
+                      </th>
+                      <th className="py-2 text-left font-medium text-gray-300">
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-purple-400">
+                        value
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2">원본 문자열</td>
+                    </tr>
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-purple-400">
+                        length
+                      </td>
+                      <td className="py-2 pr-4 font-mono">number</td>
+                      <td className="py-2">자를 길이</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-purple-400">
+                        dir
+                      </td>
+                      <td className="py-2 pr-4 font-mono">
+                        &apos;right&apos; | &apos;left&apos;
+                      </td>
+                      <td className="py-2">
+                        자르는 방향 (기본값: &apos;right&apos;)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </>
       ),
       features: [
         '문자열 생략',
@@ -154,29 +301,46 @@ export default function HooksPage() {
       bgColor: 'bg-blue-500/5',
       borderColor: 'border-blue-500/20',
       content: (
-        <div className="space-y-3 sm:space-y-4">
-          <div className="text-xs leading-relaxed text-gray-400 sm:text-sm">
-            페이지 스크롤을 잠그거나 해제할 수 있습니다. 모달이나 팝업에서
-            유용합니다.
-          </div>
+        <>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="text-xs leading-relaxed text-gray-400 sm:text-sm">
+              페이지 스크롤을 잠그거나 해제할 수 있습니다. 모달이나 팝업에서
+              유용합니다.
+            </div>
 
-          <div className="xs:grid-cols-2 grid grid-cols-1 gap-2 sm:gap-3">
-            <button
-              type="button"
-              className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400 transition-colors hover:bg-red-500/20 sm:px-4 sm:text-sm"
-              onClick={lockScroll}
-            >
-              🔒 스크롤 잠금
-            </button>
-            <button
-              type="button"
-              className="rounded-lg border border-green-500/20 bg-green-500/10 px-3 py-2 text-xs text-green-400 transition-colors hover:bg-green-500/20 sm:px-4 sm:text-sm"
-              onClick={unlockScroll}
-            >
-              🔓 스크롤 해제
-            </button>
+            <div className="xs:grid-cols-2 grid grid-cols-1 gap-2 sm:gap-3">
+              <button
+                type="button"
+                className="rounded-lg border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400 transition-colors hover:bg-red-500/20 sm:px-4 sm:text-sm"
+                onClick={lockScroll}
+              >
+                🔒 스크롤 잠금
+              </button>
+              <button
+                type="button"
+                className="rounded-lg border border-green-500/20 bg-green-500/10 px-3 py-2 text-xs text-green-400 transition-colors hover:bg-green-500/20 sm:px-4 sm:text-sm"
+                onClick={unlockScroll}
+              >
+                🔓 스크롤 해제
+              </button>
+            </div>
           </div>
-        </div>
+          <div className="mt-3 rounded-lg bg-neutral-800/30 p-3 sm:mt-4 sm:p-4">
+            <div className="mb-8">
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                Methods
+              </h4>
+              <Syntax
+                language="typescript"
+                children={`{
+  lockScroll: () => void,
+  unlockScroll: () => void
+}`}
+                isPlayground
+              />
+            </div>
+          </div>
+        </>
       ),
       features: [
         '스크롤 잠금/해제',
@@ -194,50 +358,121 @@ export default function HooksPage() {
       bgColor: 'bg-orange-500/5',
       borderColor: 'border-orange-500/20',
       content: (
-        <div className="space-y-3 sm:space-y-4">
-          <div className="sticky top-0 rounded-lg border border-yellow-500/20 bg-yellow-500/10 p-3 sm:p-4">
-            <h4 className="mb-2 text-xs font-medium text-yellow-400 sm:text-sm">
-              현재 보이는 요소
-            </h4>
-            <div className="space-y-1 text-xs sm:text-sm">
-              <div className="xs:flex-row xs:items-center xs:gap-2 flex flex-col gap-1">
-                <span className="flex-shrink-0 text-gray-400">Active Key:</span>
-                <span className="break-all font-mono text-yellow-400">
-                  {activeKey || 'none'}
-                </span>
-              </div>
-              <div className="xs:flex-row xs:items-center xs:gap-2 flex flex-col gap-1">
-                <span className="flex-shrink-0 text-gray-400">Element:</span>
-                <span className="break-all font-mono text-xs text-yellow-400">
-                  {activeElement?.tagName || 'none'}
-                </span>
+        <>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="sticky top-0 rounded-lg border border-yellow-500/20 bg-yellow-500/10 p-3 sm:p-4">
+              <h4 className="mb-2 text-xs font-medium text-yellow-400 sm:text-sm">
+                현재 보이는 요소
+              </h4>
+              <div className="space-y-1 text-xs sm:text-sm">
+                <div className="xs:flex-row xs:items-center xs:gap-2 flex flex-col gap-1">
+                  <span className="flex-shrink-0 text-gray-400">
+                    Active Key:
+                  </span>
+                  <span className="break-all font-mono text-yellow-400">
+                    {activeKey || 'none'}
+                  </span>
+                </div>
+                <div className="xs:flex-row xs:items-center xs:gap-2 flex flex-col gap-1">
+                  <span className="flex-shrink-0 text-gray-400">Element:</span>
+                  <span className="break-all font-mono text-xs text-yellow-400">
+                    {activeElement?.tagName || 'none'}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div ref={ref} className="space-y-3 sm:space-y-4">
-            <div className="flex h-[30vh] items-center justify-center rounded-lg border border-red-500/20 bg-gradient-to-br from-red-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl lg:h-[50vh]">
-              <h3 className="text-lg font-bold text-red-400 sm:text-xl">
-                Section 1
-              </h3>
-            </div>
-            <div className="flex h-[30vh] items-center justify-center rounded-lg border border-green-500/20 bg-gradient-to-br from-green-500/20 to-emerald-500/20 sm:h-[40vh] sm:rounded-xl lg:h-[50vh]">
-              <h3 className="text-lg font-bold text-green-400 sm:text-xl">
-                Section 2
-              </h3>
-            </div>
-            <div className="flex h-[30vh] items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 sm:h-[40vh] sm:rounded-xl lg:h-[50vh]">
-              <h3 className="text-lg font-bold text-blue-400 sm:text-xl">
-                Section 3
-              </h3>
-            </div>
-            <div className="flex h-[30vh] items-center justify-center rounded-lg border border-purple-500/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl lg:h-[50vh]">
-              <h3 className="text-lg font-bold text-purple-400 sm:text-xl">
-                Section 4
-              </h3>
+            <div ref={ref} className="space-y-3 sm:space-y-4">
+              <div className="flex h-[30vh] items-center justify-center rounded-lg border border-red-500/20 bg-gradient-to-br from-red-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
+                <h3 className="text-lg font-bold text-red-400 sm:text-xl">
+                  Section 1
+                </h3>
+              </div>
+              <div className="flex h-[30vh] items-center justify-center rounded-lg border border-green-500/20 bg-gradient-to-br from-green-500/20 to-emerald-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
+                <h3 className="text-lg font-bold text-green-400 sm:text-xl">
+                  Section 2
+                </h3>
+              </div>
+              <div className="flex h-[30vh] items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
+                <h3 className="text-lg font-bold text-blue-400 sm:text-xl">
+                  Section 3
+                </h3>
+              </div>
+              <div className="flex h-[30vh] items-center justify-center rounded-lg border border-purple-500/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
+                <h3 className="text-lg font-bold text-purple-400 sm:text-xl">
+                  Section 4
+                </h3>
+              </div>
             </div>
           </div>
-        </div>
+          <div className="mt-3 rounded-lg bg-neutral-800/30 p-3 sm:mt-4 sm:p-4">
+            <div className="flex items-start gap-2 overflow-hidden sm:gap-3">
+              <div className="w-full">
+                <h4 className="mb-2 text-sm font-medium text-gray-300">
+                  Usage
+                </h4>
+                <div className="mt-3 w-full">
+                  <Syntax
+                    language="tsx"
+                    children={`import { useVisibleElement } from '@lani.ground/react-hooks';
+
+const { ref, activeElement, activeKey } = useVisibleElement({
+  key: 'test-element',
+  activeClass: 'here',
+});
+
+<div ref={ref}>
+  <div>...</div>
+  <div>...</div>
+  <div>...</div>
+</div>`}
+                    isPlayground
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-3">
+              <h4 className="mb-2 text-sm font-medium text-gray-300">
+                Properties:
+              </h4>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Property
+                      </th>
+                      <th className="py-2 pr-4 text-left font-medium text-gray-300">
+                        Type
+                      </th>
+                      <th className="py-2 text-left font-medium text-gray-300">
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    <tr className="border-b border-neutral-800">
+                      <td className="py-2 pr-4 font-mono text-orange-400">
+                        key
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2">
+                        요소 식별 키 (기본값: &apos;visible-element&apos;)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 pr-4 font-mono text-orange-400">
+                        activeClass
+                      </td>
+                      <td className="py-2 pr-4 font-mono">string</td>
+                      <td className="py-2">가시 요소에 추가할 CSS 클래스</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </>
       ),
       features: [
         'Intersection Observer',
@@ -250,11 +485,11 @@ export default function HooksPage() {
 
   return (
     <ExampleSection title="Hooks Examples">
-      <div className="grid gap-4 sm:gap-6 lg:grid-cols-1 lg:gap-8">
+      <div className="grid gap-4 sm:gap-6 xl:grid-cols-1 xl:gap-8">
         {examples.map((example) => (
           <div
             key={example.title}
-            className={`rounded-lg border sm:rounded-xl ${example.borderColor} ${example.bgColor} p-4 transition-all duration-300 hover:shadow-lg sm:p-6`}
+            className={`rounded-lg border sm:rounded-xl ${example.borderColor} ${example.bgColor} w-full overflow-hidden p-4 transition-all duration-300 hover:shadow-lg sm:p-6`}
           >
             {/* 헤더 */}
             <div className="mb-3 flex items-start gap-2 sm:mb-4 sm:items-center sm:gap-3">

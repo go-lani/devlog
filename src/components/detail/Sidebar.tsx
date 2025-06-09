@@ -16,7 +16,7 @@ type Props = {
 export default function Sidebar({ toc, tags }: Props) {
   const router = useRouter();
   return (
-    <div className="border-style relative hidden w-[280px] shrink-0 border-r bg-zinc-800 lg:block">
+    <div className="border-style relative hidden w-[280px] shrink-0 border-r bg-zinc-800 xl:block">
       <div className="sticky top-0 bg-zinc-800">
         <div className="border-style px-4">
           <ShortProfile />
