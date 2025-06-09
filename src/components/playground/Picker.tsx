@@ -37,7 +37,7 @@ export default function PickerPage() {
       title: 'TimePicker',
       description: '시간 선택을 위한 전용 picker',
       path: '/playground/react-picker/time',
-      features: ['기본 시간 선택', '패널 모드', '15분 단위 스냅'],
+      features: ['기본 시간 선택', '패널 모드', '스냅 기능'],
       icon: '⏰',
       color: 'from-orange-500 to-red-500',
       bgColor: 'bg-gradient-to-br from-orange-500/10 to-red-500/10',

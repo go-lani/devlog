@@ -121,10 +121,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lani.ground/kits@^1.0.0-alpha.1":
-  version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@lani.ground/kits/-/kits-1.0.0-alpha.1.tgz#fd9d9498e1a9ab9e18eeac972427894807d06f32"
-  integrity sha512-F1VGWZ9EdR92WcAv3jmxeecZvmvfV9vWbCSHzmg9/yKckagvI8FuiMlixHq8rstOfb9AvMSfRdx02t2PlbBNZg==
+"@lani.ground/kits@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@lani.ground/kits/-/kits-1.0.0-alpha.3.tgz#daba00c6e88c134f25b4d50360ca2103027d73fb"
+  integrity sha512-faSx6dSCDnsJr0vQ97E7wkdz6S6mLFwHsif4CfHKw8pJ1Jt1P2ooxAGvbGXQKv9kBtCCW84PVUnvDXByVsO9cQ==
 
 "@lani.ground/react-hooks@^0.3.3":
   version "0.3.3"
@@ -153,10 +153,10 @@
   resolved "https://registry.yarnpkg.com/@lani.ground/react-outside-click-handler/-/react-outside-click-handler-1.1.2.tgz#649365f954f22f9c6565c21d497fcc2ed422296b"
   integrity sha512-R3sZyAGlYBwM2gnjHBGydnVxVxLlpGKNaWCDVi582SVPzNG2MJPa/ccQcNedNbqBnWbRRluZZ2xhZc2VtIIxTA==
 
-"@lani.ground/react-picker@^1.0.0-alpha.1":
-  version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-picker/-/react-picker-1.0.0-alpha.1.tgz#4e1760d4a29e11cb6437152177fd677455a60baf"
-  integrity sha512-dND2p2NV8oDHd36gowKpH8osriZs+z1HTaO3ze7qX7wjNf2L0r+Wh3wwXc7bxow+ZvwAAHZebv180vg5u2lnTA==
+"@lani.ground/react-picker@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-picker/-/react-picker-1.0.0-alpha.2.tgz#c360f9eb10ea3b3c17db94fba5c9a31df7336b2d"
+  integrity sha512-Fcxd51NUtGiW7fICR1nKQ2Zn6g7PsQk8Q16RwDymBJWXMl2ULVaJgBlIcmt69Fe7H546J25aIpVXUnX0dVBXng==
 
 "@lit-labs/ssr-dom-shim@^1.2.0":
   version "1.2.1"

@@ -26,6 +26,34 @@
   ],
   "other": [
     {
+      "id": 9,
+      "period": "2025.05",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/react-picker",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-picker",
+          "docs": "/playground/react-picker",
+          "type": "npm"
+        }
+      ],
+      "inProgress": true
+    },
+    {
+      "id": 8,
+      "period": "2025.05",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/kits",
+          "link": "https://www.npmjs.com/package/@lani.ground/kits",
+          "docs": "/playground/kits",
+          "type": "npm"
+        }
+      ],
+      "inProgress": true
+    },
+    {
       "id": 7,
       "period": "2024.12",
       "role": "Creator.",
