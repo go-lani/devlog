@@ -183,15 +183,15 @@ export default function Lnb() {
   return (
     <div className="lg:border-style relative lg:sticky">
       <div
-        className={`w-full bg-neutral-900 ${shareTechMono.className} text-xl`}
+        className={`w-full bg-neutral-900 ${shareTechMono.className} space-y-4 text-xl`}
       >
         <Link
           href="/playground"
           className="mb-6 flex items-center rounded-xl border border-neutral-700/50 bg-gradient-to-br from-neutral-800/30 to-neutral-900/50 p-4 backdrop-blur-sm"
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-lg ">
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg">
             <span className="text-2xl">
-              <img src="/assets/images/character.webp" alt="lani" />
+              <img src="/assets/images/character.webp" alt="lani" width={38} />
             </span>
           </div>
           <div className="ml-4">
@@ -316,6 +316,23 @@ export default function Lnb() {
           })}
         </ul>
       </div>
+
+      <Link
+        href="/"
+        className="mt-4 flex items-center rounded-xl border border-neutral-700/50 bg-gradient-to-br from-neutral-800/30 to-neutral-900/50 p-4 backdrop-blur-sm transition-all duration-200 hover:border-neutral-600/50"
+      >
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-gray-700 to-gray-800">
+          <span className="text-lg">
+            <img src="/assets/images/icons/transition.svg" alt="" />
+          </span>
+        </div>
+        <div className="ml-6">
+          <p className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-lg font-bold text-transparent">
+            &lt;Lani.log/&gt;
+          </p>
+          <p className="text-xs text-gray-400">바로가기</p>
+        </div>
+      </Link>
     </div>
   );
 }

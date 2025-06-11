@@ -60,7 +60,7 @@ export default function PickerPage() {
           <Link
             key={picker.path}
             href={picker.path}
-            className={`group relative overflow-hidden rounded-xl border border-neutral-700/50 ${picker.bgColor} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-neutral-600 hover:shadow-2xl hover:shadow-neutral-900/50`}
+            className={`group relative overflow-hidden rounded-xl border border-neutral-700/50 ${picker.bgColor} break-all backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-neutral-600 hover:shadow-2xl hover:shadow-neutral-900/50`}
           >
             {/* 글래스모피즘 효과를 위한 배경 */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

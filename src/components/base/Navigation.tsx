@@ -10,6 +10,18 @@ import { MENU } from '@/constants/app';
 import '@lani.ground/react-modal/css';
 import MobileNavigation from './MobileNavigation';
 
+import localFont from 'next/font/local';
+
+const shareTechMono = localFont({
+  src: [
+    {
+      path: '../../../public/assets/fonts/ShareTechMono-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+});
+
 export default function Navigation() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -47,6 +59,15 @@ export default function Navigation() {
             </Link>
           </li>
         ))}
+        <li className="border-style flex h-full items-center border-l">
+          <Link
+            href="/playground"
+            className={`${shareTechMono.className} flex h-full items-center gap-2 px-4 text-base font-bold text-app-white ease-in`}
+          >
+            <img src="/assets/images/icons/transition.svg" alt="" width={16} />
+            @lani.ground
+          </Link>
+        </li>
       </ul>
     </>
   );

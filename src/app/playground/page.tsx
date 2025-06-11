@@ -53,16 +53,6 @@ export default function Playground() {
             </svg>
             <span className="text-sm font-medium">모듈형 디자인</span>
           </div>
-          <div className="flex items-center gap-2 rounded-full bg-green-500/10 px-4 py-2 text-green-400 backdrop-blur-sm">
-            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="text-sm font-medium">테스트 완료</span>
-          </div>
           <div className="flex items-center gap-2 rounded-full bg-orange-500/10 px-4 py-2 text-orange-400 backdrop-blur-sm">
             <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
               <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" />
