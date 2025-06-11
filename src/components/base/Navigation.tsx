@@ -1,6 +1,7 @@
 'use client';
 
 import { Modal } from '@lani.ground/react-modal';
+import localFont from 'next/font/local';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -9,8 +10,6 @@ import { MENU } from '@/constants/app';
 
 import '@lani.ground/react-modal/css';
 import MobileNavigation from './MobileNavigation';
-
-import localFont from 'next/font/local';
 
 const shareTechMono = localFont({
   src: [
