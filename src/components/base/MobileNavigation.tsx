@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
 import { MENU } from '@/constants/app';
@@ -63,6 +64,19 @@ export default function MobileNavigation({ closeModal }: Props) {
               </span>
             </li>
           ))}
+          <li className="border-style flex h-full items-center border-l">
+            <Link
+              href="/playground"
+              className={`${shareTechMono.className} border-style flex h-full w-full items-center gap-2 rounded-full border-x px-4 py-3 text-base font-bold text-app-white ease-in`}
+            >
+              <img
+                src="/assets/images/icons/transition.svg"
+                alt=""
+                width={16}
+              />
+              @lani.ground
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -16,10 +16,10 @@ export default function Playground() {
       <div className="relative text-center">
         {/* 메인 타이틀 */}
         <div className="mb-6 flex items-center justify-center gap-4">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-3xl font-bold text-white shadow-xl">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-2xl font-bold text-white shadow-xl md:h-16 md:w-16 md:text-3xl md:text-3xl">
             🚀
           </div>
-          <h1 className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-5xl font-bold text-transparent">
+          <h1 className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-2xl font-bold text-transparent md:text-4xl">
             @lani.ground
           </h1>
         </div>
@@ -59,13 +59,6 @@ export default function Playground() {
             </svg>
             <span className="text-sm font-medium">반응형</span>
           </div>
-        </div>
-
-        {/* 시작 안내 */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">
-            ← 왼쪽 메뉴에서 원하는 패키지를 선택해서 시작하세요
-          </p>
         </div>
       </div>
     </div>
