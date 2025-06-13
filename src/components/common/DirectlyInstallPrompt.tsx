@@ -1,25 +1,55 @@
 'use client';
 
+import { cookieKit } from '@lani.ground/kits';
 import { useEffect, useState } from 'react';
 
-export default function InstallPrompt({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) {
+const HIDE_UNTIL_KEY = 'install-prompt-hide-until';
+
+export default function DirectlyInstallPrompt() {
   const [isIOS, setIsIOS] = useState(false);
+  const [isStandalone, setIsStandalone] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const { getCookie, setCookie, deleteCookie } = cookieKit;
 
   useEffect(() => {
     const checkIOS =
       /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
     setIsIOS(checkIOS);
 
+    // 설치여부 판단
+    const checkStandalone = window.matchMedia(
+      '(display-mode: standalone)',
+    ).matches;
+    setIsStandalone(checkStandalone);
+
+    if (checkStandalone) {
+      setIsVisible(false);
+      return;
+    }
+
+    const hideUntil = getCookie(HIDE_UNTIL_KEY);
+    if (hideUntil) {
+      const decodedValue = decodeURIComponent(hideUntil);
+      const hideUntilDate = new Date(decodedValue);
+      const now = new Date();
+      if (hideUntilDate > now) {
+        setIsVisible(false);
+        return;
+      }
+      deleteCookie(HIDE_UNTIL_KEY);
+    }
+
+    // iOS 환경에서는 standalone 체크를 하지 않고 바로 프롬프트를 보여줌
+    if (checkIOS) {
+      setIsVisible(true);
+      return;
+    }
+
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e);
+      setIsVisible(true);
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -44,15 +74,36 @@ export default function InstallPrompt({
     }
 
     setDeferredPrompt(null);
-    onClose();
+    setIsVisible(false);
   };
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  const handleHideForToday = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+
+    setCookie(HIDE_UNTIL_KEY, tomorrow.toISOString(), {
+      expires: tomorrow,
+    });
+    setIsVisible(false);
+  };
+
+  if (isStandalone) {
+    return null;
+  }
 
   return (
     <>
-      {isOpen && <div className="fixed inset-0 z-[9998]" onClick={onClose} />}
+      {isVisible && (
+        <div className="fixed inset-0 z-[9998]" onClick={handleClose} />
+      )}
       <div
         className={`fixed left-1/2 top-4 w-full max-w-sm -translate-x-1/2 transform rounded-2xl border border-gray-900 bg-black/95 p-5 shadow-[0_8px_30px_rgb(0,0,0,0.4)] backdrop-blur-sm transition-all duration-300 ease-in-out ${
-          isOpen
+          isVisible
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-4 opacity-0'
         } z-[9999]`}
@@ -171,7 +222,14 @@ export default function InstallPrompt({
         <div className="absolute right-4 top-4 flex gap-2">
           <button
             type="button"
-            onClick={onClose}
+            onClick={handleHideForToday}
+            className="rounded-full bg-gray-900 px-3 py-1.5 text-xs text-gray-400 transition-colors hover:bg-gray-800 hover:text-gray-300"
+          >
+            오늘 하루 보지 않기
+          </button>
+          <button
+            type="button"
+            onClick={handleClose}
             className="rounded-full bg-gray-900 p-1.5 text-gray-500 transition-colors hover:bg-gray-800 hover:text-gray-300"
           >
             <svg

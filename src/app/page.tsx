@@ -3,12 +3,14 @@ import { DiNpm } from 'react-icons/di';
 
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
+import DirectlyInstallPrompt from '@/components/common/DirectlyInstallPrompt';
 import { getExperiencies } from '@/service/experiencies';
 
 export default async function App() {
   const { work, other } = await getExperiencies();
   return (
     <>
+      <DirectlyInstallPrompt />
       <Header />
       <main className="flex flex-col">
         <section className="container-layout flex min-h-screen w-full justify-center bg-zinc-800">
