@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fplayground\u002Fkits\u002F[slug]","\u002Fplayground\u002Freact-picker\u002F[slug]","\u002Fposts\u002F[slug]","\u002Fsnippet\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
