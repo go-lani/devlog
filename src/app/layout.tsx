@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 
+import InstallPrompt from '@/components/common/InstallPrompt';
+
 const spoqaSans = localFont({
   src: [
     {
@@ -50,6 +52,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <Script
+        id="register-sw"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(
+                  function(registration) {
+                    console.log('ServiceWorker registration successful');
+                  },
+                  function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                  }
+                );
+              });
+            }
+          `,
+        }}
+      />
       {process.env.NODE_ENV !== 'development' && (
         <>
           <Script
@@ -74,6 +96,7 @@ export default function RootLayout({
       )}
       <body className={`${spoqaSans.className} px-[20px]`}>
         <div id="main-root" className="mx-[-20px]">
+          <InstallPrompt />
           {children}
         </div>
       </body>

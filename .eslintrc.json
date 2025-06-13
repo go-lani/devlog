@@ -22,7 +22,8 @@
     "helpers/*",
     "next.config.mjs",
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "public/sw.js"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
