@@ -30,6 +30,14 @@ export default function Navigation() {
   const [isStandalone, setIsStandalone] = useState<boolean>(true);
 
   useEffect(() => {
+    const checkIOS =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+
+    if (checkIOS) {
+      setIsStandalone(false);
+      return;
+    }
+
     const checkStandalone = window.matchMedia(
       '(display-mode: standalone)',
     ).matches;
@@ -58,6 +66,7 @@ export default function Navigation() {
   return (
     <>
       <div className="flex h-full items-center gap-2">
+        {/* //! IOS 동작 이상 무조건 떠야함!!!! */}
         {!isStandalone && (
           <button
             type="button"
