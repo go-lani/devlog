@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 
+import { splashScreens } from '@/config/splash-screens';
+
 const spoqaSans = localFont({
   src: [
     {
@@ -37,9 +39,16 @@ export const metadata: Metadata = {
     images: '/og-image.jpg',
   },
   icons: {
-    shortcut: ['/icon/shortcut-icon.png'],
-    apple: ['/icon/shortcut-icon.png'],
+    shortcut: ['/assets/images/icons/icon.png'],
+    apple: ['/assets/images/icons/icon.png'],
     icon: ['/favicon.ico'],
+  },
+  manifest: '/manifest.ts',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Lani.log',
+    startupImage: splashScreens,
   },
 };
 
