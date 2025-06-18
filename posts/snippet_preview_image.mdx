@@ -1,0 +1,127 @@
+---
+type: Snippet
+title: 이미지 업로드 시 미리보기 기능 만들기
+description: 파일 업로드 시 사용자가 선택한 이미지를 즉시 미리보기할 수 있는 기능 구현
+date: 2024-09-27
+tags: Image, File, FileReader, React
+featured: true
+---
+
+## 개요
+
+`FileReader` API를 사용하여 선택된 파일을 Data URL로 변환하고, 이를 이미지 요소의 `src` 속성에 할당하여 미리보기를 할 수 있다.
+
+## 주요 기능
+
+- **즉시 미리보기**: 파일 선택과 동시에 이미지 미리보기 제공
+- **파일 유효성 검사**: 이미지 파일만 허용
+- **에러 처리**: 파일 읽기 실패 시 적절한 에러 메시지 표시
+- **메모리 효율성**: Data URL을 사용하여 별도의 서버 요청 없이 미리보기
+
+## 구현 방법
+
+### 1. FileReader를 사용한 파일 읽기
+
+`FileReader` API의 `readAsDataURL()` 메서드를 사용하여 파일을 Base64 인코딩된 Data URL로 변환한다.
+
+### 2. 비동기 처리
+
+파일 읽기는 비동기 작업이므로 Promise를 사용하여 처리한다.
+
+### 3. 상태 관리
+
+React의 `useState`를 사용하여 미리보기 이미지 URL을 관리한다.
+
+## Usage
+
+```tsx
+import React, { useState } from 'react';
+
+const readFileAsDataURL = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (event) => resolve(event.target?.result as string);
+    reader.onerror = () => reject(new Error('파일을 불러오는데 실패했습니다.'));
+    reader.readAsDataURL(file);
+  });
+};
+
+export default function ImageUploader() {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files && e.target.files[0];
+
+    if (!file) return;
+
+    // 파일 타입 검증
+    if (!file.type.startsWith('image/')) {
+      setError('이미지 파일만 업로드 가능함.');
+      return;
+    }
+
+    // 파일 크기 검증 (5MB 제한)
+    if (file.size > 5 * 1024 * 1024) {
+      setError('파일 크기는 5MB 이하여야함.');
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const dataUrl = await readFileAsDataURL(file);
+      setImageUrl(dataUrl);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '알 수 없는 오류 발생');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleRemove = () => {
+    setImageUrl(null);
+    setError(null);
+    // input 값 초기화
+    const fileInput = document.querySelector(
+      'input[type="file"]',
+    ) as HTMLInputElement;
+    if (fileInput) fileInput.value = '';
+  };
+
+  return (
+    <div className="image-uploader">
+      <div className="upload-section">
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleUpload}
+          disabled={isLoading}
+        />
+        {isLoading && <p>이미지를 불러오는 중...</p>}
+        {error && <p className="error">{error}</p>}
+      </div>
+
+      {imageUrl && (
+        <div className="preview-section">
+          <img
+            src={imageUrl}
+            alt="미리보기"
+            style={{ maxWidth: '100%', maxHeight: '300px' }}
+          />
+          <button onClick={handleRemove}>제거</button>
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+## 주의사항
+
+1. **메모리 사용량**: 큰 이미지 파일의 경우 Data URL이 메모리를 많이 사용할 수 있다.
+2. **파일 크기 제한**: 적절한 파일 크기 제한을 설정하는 것이 좋다.
+3. **브라우저 호환성**: `FileReader` API는 모든 모던 브라우저에서 지원된다.
+4. **보안**: Data URL은 민감한 정보를 포함할 수 있으므로 주의가 필요하다.
