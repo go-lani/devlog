@@ -1,0 +1,188 @@
+3:I[5613,[],""]
+5:I[31778,[],""]
+7:I[45748,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+8:I[47742,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+9:I[85935,["185","static/chunks/app/layout-5297c4d4cea67fac.js"],""]
+4:["slug","snippet_preview_image","d"]
+0:["KL8zxY-C-P-jg4Xmsxk3q",[[["",{"children":["(blog)",{"children":["snippet",{"children":[["slug","snippet_preview_image","d"],{"children":["__PAGE__?{\"slug\":\"snippet_preview_image\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["(blog)",{"children":["snippet",{"children":[["slug","snippet_preview_image","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$L6","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd736c728ec2597b.css","precedence":"next","crossOrigin":""}]]}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","snippet","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,[["$","header",null,{"className":"container-layout border-style flex justify-center border-y bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex items-center justify-between border-x","children":[["$","$L7",null,{}],["$","$L8",null,{}]]}]}],["$","main",null,{"className":"flex min-h-screen flex-col","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]}],["$","footer",null,{"className":"__className_5899e0 container-layout border-style border-y bg-neutral-800","children":["$","div",null,{"className":"content-layout border-style border-x py-4","children":["$","p",null,{"className":"text-center text-xs font-bold text-app-white lg:text-sm","children":"© 2023 Lani. All Rights Reserved."}]}]}]],null]]},[null,["$","html",null,{"lang":"ko","children":[["$","$L9",null,{"id":"register-sw","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            if ('serviceWorker' in navigator) {\n              window.addEventListener('load', function() {\n                navigator.serviceWorker.register('/sw.js').then(\n                  function(registration) {\n                    console.log('ServiceWorker registration successful');\n                  },\n                  function(err) {\n                    console.log('ServiceWorker registration failed: ', err);\n                  }\n                );\n              });\n            }\n          "}}],[["$","$L9",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-83PGP6B0HE"}],["$","$L9",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-83PGP6B0HE', {\n                page_path: window.location.pathname,\n            });\n          "}}]],["$","body",null,{"className":"__className_f8d089 px-[20px]","children":["$","div",null,{"id":"main-root","className":"mx-[-20px]","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$La","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e191e9a994fc38cb.css","precedence":"next","crossOrigin":""}]]}]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4cf457cf7deb1219.css","precedence":"next","crossOrigin":""}]],"$Lb"]]]]
+c:I[25250,["250","static/chunks/250-9901ce03240cd556.js","332","static/chunks/app/(blog)/snippet/%5Bslug%5D/not-found-fade393f4b7d277c.js"],""]
+d:I[81749,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","360","static/chunks/app/(blog)/snippet/%5Bslug%5D/page-69070b25f1e40a7f.js"],"Image"]
+e:I[97569,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","360","static/chunks/app/(blog)/snippet/%5Bslug%5D/page-69070b25f1e40a7f.js"],""]
+f:I[15790,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","360","static/chunks/app/(blog)/snippet/%5Bslug%5D/page-69070b25f1e40a7f.js"],""]
+11:I[47365,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","360","static/chunks/app/(blog)/snippet/%5Bslug%5D/page-69070b25f1e40a7f.js"],""]
+6:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
+a:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
+10:T21e1,/*@jsxRuntime automatic @jsxImportSource react*/
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    a: "a",
+    span: "span",
+    p: "p",
+    code: "code",
+    ul: "ul",
+    li: "li",
+    strong: "strong",
+    h3: "h3",
+    pre: "pre",
+    ol: "ol"
+  }, _provideComponents(), props.components);
+  return _jsxs(_Fragment, {
+    children: [_jsxs(_components.h2, {
+      id: "개요",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개요",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개요"]
+    }), "\n", _jsxs(_components.p, {
+      children: [_jsx(_components.code, {
+        children: "FileReader"
+      }), " API를 사용하여 선택된 파일을 Data URL로 변환하고, 이를 이미지 요소의 ", _jsx(_components.code, {
+        children: "src"
+      }), " 속성에 할당하여 미리보기를 할 수 있다."]
+    }), "\n", _jsxs(_components.h2, {
+      id: "주요-기능",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#주요-기능",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "주요 기능"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "즉시 미리보기"
+        }), ": 파일 선택과 동시에 이미지 미리보기 제공"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "파일 유효성 검사"
+        }), ": 이미지 파일만 허용"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "에러 처리"
+        }), ": 파일 읽기 실패 시 적절한 에러 메시지 표시"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "메모리 효율성"
+        }), ": Data URL을 사용하여 별도의 서버 요청 없이 미리보기"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "구현-방법",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#구현-방법",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "구현 방법"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "1-filereader를-사용한-파일-읽기",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#1-filereader를-사용한-파일-읽기",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "1. FileReader를 사용한 파일 읽기"]
+    }), "\n", _jsxs(_components.p, {
+      children: [_jsx(_components.code, {
+        children: "FileReader"
+      }), " API의 ", _jsx(_components.code, {
+        children: "readAsDataURL()"
+      }), " 메서드를 사용하여 파일을 Base64 인코딩된 Data URL로 변환한다."]
+    }), "\n", _jsxs(_components.h3, {
+      id: "2-비동기-처리",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#2-비동기-처리",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "2. 비동기 처리"]
+    }), "\n", _jsx(_components.p, {
+      children: "파일 읽기는 비동기 작업이므로 Promise를 사용하여 처리한다."
+    }), "\n", _jsxs(_components.h3, {
+      id: "3-상태-관리",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#3-상태-관리",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "3. 상태 관리"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["React의 ", _jsx(_components.code, {
+        children: "useState"
+      }), "를 사용하여 미리보기 이미지 URL을 관리한다."]
+    }), "\n", _jsxs(_components.h2, {
+      id: "usage",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#usage",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "Usage"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-tsx",
+        children: "import React, { useState } from 'react';\n\nconst readFileAsDataURL = (file: File): Promise<string> => {\n  return new Promise((resolve, reject) => {\n    const reader = new FileReader();\n    reader.onload = (event) => resolve(event.target?.result as string);\n    reader.onerror = () => reject(new Error('파일을 불러오는데 실패했습니다.'));\n    reader.readAsDataURL(file);\n  });\n};\n\nexport default function ImageUploader() {\n  const [imageUrl, setImageUrl] = useState<string | null>(null);\n  const [isLoading, setIsLoading] = useState(false);\n  const [error, setError] = useState<string | null>(null);\n\n  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {\n    const file = e.target.files && e.target.files[0];\n\n    if (!file) return;\n\n    // 파일 타입 검증\n    if (!file.type.startsWith('image/')) {\n      setError('이미지 파일만 업로드 가능함.');\n      return;\n    }\n\n    // 파일 크기 검증 (5MB 제한)\n    if (file.size > 5 * 1024 * 1024) {\n      setError('파일 크기는 5MB 이하여야함.');\n      return;\n    }\n\n    setIsLoading(true);\n    setError(null);\n\n    try {\n      const dataUrl = await readFileAsDataURL(file);\n      setImageUrl(dataUrl);\n    } catch (err) {\n      setError(err instanceof Error ? err.message : '알 수 없는 오류 발생');\n    } finally {\n      setIsLoading(false);\n    }\n  };\n\n  const handleRemove = () => {\n    setImageUrl(null);\n    setError(null);\n    // input 값 초기화\n    const fileInput = document.querySelector(\n      'input[type=\"file\"]',\n    ) as HTMLInputElement;\n    if (fileInput) fileInput.value = '';\n  };\n\n  return (\n    <div className=\"image-uploader\">\n      <div className=\"upload-section\">\n        <input\n          type=\"file\"\n          accept=\"image/*\"\n          onChange={handleUpload}\n          disabled={isLoading}\n        />\n        {isLoading && <p>이미지를 불러오는 중...</p>}\n        {error && <p className=\"error\">{error}</p>}\n      </div>\n\n      {imageUrl && (\n        <div className=\"preview-section\">\n          <img\n            src={imageUrl}\n            alt=\"미리보기\"\n            style={{ maxWidth: '100%', maxHeight: '300px' }}\n          />\n          <button onClick={handleRemove}>제거</button>\n        </div>\n      )}\n    </div>\n  );\n}\n"
+      })
+    }), "\n", _jsxs(_components.h2, {
+      id: "주의사항",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#주의사항",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "주의사항"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "메모리 사용량"
+        }), ": 큰 이미지 파일의 경우 Data URL이 메모리를 많이 사용할 수 있다."]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "파일 크기 제한"
+        }), ": 적절한 파일 크기 제한을 설정하는 것이 좋다."]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "브라우저 호환성"
+        }), ": ", _jsx(_components.code, {
+          children: "FileReader"
+        }), " API는 모든 모던 브라우저에서 지원된다."]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "보안"
+        }), ": Data URL은 민감한 정보를 포함할 수 있으므로 주의가 필요하다."]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = Object.assign({}, _provideComponents(), props.components);
+  return MDXLayout ? _jsx(MDXLayout, Object.assign({}, props, {
+    children: _jsx(_createMdxContent, props)
+  })) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+2:[["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style relative justify-center border-x text-center text-app-white","children":["$","div",null,{"className":"flex flex-col justify-center px-4 py-16 lg:px-5 lg:py-20","children":["$undefined",["$","h1",null,{"className":"text-xl lg:text-4xl","children":"이미지 업로드 시 미리보기 기능 만들기"}]]}]}]}],["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout","children":["$","div",null,{"className":"border-style align-center flex justify-center border-x text-app-white lg:justify-start lg:text-center","children":[["$","p",null,{"className":"border-style border-l p-5 text-sm lg:border-l-0","children":"2024-09-27"}],["$","p",null,{"className":"border-style flex items-center justify-center gap-1 border-x p-5 text-sm","children":[["$","$Ld",null,{"src":"/assets/images/icons/timer.svg","width":21,"height":21,"alt":""}],"약 ",4,"분"]}]]}]}]}],["$","section",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex flex-col border-x","children":["$","div",null,{"className":"flex","children":[["$","$Le",null,{"toc":[{"level":2,"title":"개요","href":"#개요"},{"level":2,"title":"주요 기능","href":"#주요-기능"},{"level":2,"title":"구현 방법","href":"#구현-방법","children":[{"level":3,"title":"1. FileReader를 사용한 파일 읽기","href":"#1-filereader를-사용한-파일-읽기"},{"level":3,"title":"2. 비동기 처리","href":"#2-비동기-처리"},{"level":3,"title":"3. 상태 관리","href":"#3-상태-관리"}]},{"level":2,"title":"Usage","href":"#usage"},{"level":2,"title":"주의사항","href":"#주의사항"}],"tags":["Image","File","FileReader","React"]}],["$","div",null,{"className":"flex w-full flex-col bg-neutral-800 xl:w-[742px]","children":[["$","$Lf",null,{"serialized":{"compiledSource":"$10","frontmatter":{},"scope":{}}}],"$undefined",["$","div",null,{"className":"flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white","children":[["$","div",null,{"className":"border-style flex w-[50%] p-4","children":["$","$Lc",null,{"href":"/snippet/snippet_use_visible_element","className":"flex gap-4","children":[["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/left-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}],["$","div",null,{"className":"flex flex-col items-start gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"prev"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]","children":["useVisibleElement","useVisibleElement","useVisibleElement"]}]]}]]}]}],["$","div",null,{"className":"flex w-[50%] justify-end p-4","children":null}]]}],["$","$L11",null,{}]]}]]}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Lani.log | 이미지 업로드 시 미리보기 기능 만들기"}],["$","meta","3",{"name":"description","content":"파일 업로드 시 사용자가 선택한 이미지를 즉시 미리보기할 수 있는 기능 구현"}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","5",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","6",{"name":"apple-mobile-web-app-title","content":"Lani.log"}],["$","link","7",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_landscape.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","8",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_portrait.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","9",{"href":"/assets/images/splash_screens/iPhone_16_Pro_landscape.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","10",{"href":"/assets/images/splash_screens/iPhone_16_Pro_portrait.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","11",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","12",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","13",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","14",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","15",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","16",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","17",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","18",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","19",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","20",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","21",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","22",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","23",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","24",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","25",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","26",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","27",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","28",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","29",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","30",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","31",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","32",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","33",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_landscape.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","34",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_portrait.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","35",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","36",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","37",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","38",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","39",{"href":"/assets/images/splash_screens/10.9__iPad_Air_landscape.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","40",{"href":"/assets/images/splash_screens/10.9__iPad_Air_portrait.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","41",{"href":"/assets/images/splash_screens/10.5__iPad_Air_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","42",{"href":"/assets/images/splash_screens/10.5__iPad_Air_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","43",{"href":"/assets/images/splash_screens/10.2__iPad_landscape.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","44",{"href":"/assets/images/splash_screens/10.2__iPad_portrait.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","45",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","46",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","47",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_landscape.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","48",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_portrait.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","meta","49",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","50",{"property":"og:title","content":"Lani.log"}],["$","meta","51",{"property":"og:description","content":"Developer Lani's log"}],["$","meta","52",{"property":"og:image","content":"https://laniground.com/og-image.jpg"}],["$","meta","53",{"property":"og:type","content":"website"}],["$","meta","54",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","55",{"name":"twitter:title","content":"Lani.log"}],["$","meta","56",{"name":"twitter:description","content":"Developer Lani's log"}],["$","meta","57",{"name":"twitter:image","content":"https://laniground.com/og-image.jpg"}],["$","link","58",{"rel":"shortcut icon","href":"/assets/images/icons/icon.png"}],["$","link","59",{"rel":"icon","href":"/favicon.ico"}],["$","link","60",{"rel":"apple-touch-icon","href":"/assets/images/icons/icon.png"}]]
+1:null
