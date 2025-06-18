@@ -74,15 +74,24 @@ export default async function App() {
               <p className="mt-2 lg:mt-4">
                 사용자 중심에서 생각하는 것을 좋아하며, 사용자 행동을 고려한{' '}
                 <br className="hidden lg:block" />
-                <span className="text-app-blue-green">사용자 경험(UX)</span>을
-                개선에 관심이 있습니다.
+                <span className="text-app-blue-green">
+                  사용자 경험(UX)
+                </span>{' '}
+                개선에 깊은 관심을 가지고 있습니다.
               </p>
               <p className="mt-2 lg:mt-4">
-                <span className="text-app-blue-green">클린 코드</span>에 관심이
-                있고, 개발 지식이 없는 사람도 제 코드를 보고{' '}
+                <span className="text-app-blue-green">클린 코드</span>에 대한
+                열정이 있으며, 개발 지식이 없는 사람도 제 코드를 보고{' '}
                 <br className="hidden lg:block" />
-                어떤 기능을 하는지 알 수 있는 코드를 작성하는 것을 목표 하고
-                있습니다.
+                어떤 기능을 하는지 직관적으로 이해할 수 있는 코드를 작성하는
+                것을 목표로 하고 있습니다.
+              </p>
+              <p className="mt-2 lg:mt-4">
+                또한 협업을 통해 문제를 해결하고,{' '}
+                <span className="text-app-blue-green">더 나은 결과물</span>을
+                만들어내는 것에 재미를 느끼고,{' '}
+                <br className="hidden lg:block" />
+                지속적인 학습과 성장을 추구합니다.
               </p>
             </div>
             <div className="mt-10 break-keep text-sm lg:mt-16 lg:text-base">
@@ -201,7 +210,7 @@ export default async function App() {
               </ul>
             </div>
             <p className="mt-36 text-center text-xs italic text-neutral-600 lg:text-sm">
-              Last Updated on 9th, June, 2025
+              Last Updated on 18th, June, 2025
             </p>
           </div>
         </section>
