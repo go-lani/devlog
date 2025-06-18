@@ -1,0 +1,419 @@
+3:I[5613,[],""]
+5:I[31778,[],""]
+7:I[45748,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+8:I[47742,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+9:I[85935,["185","static/chunks/app/layout-5297c4d4cea67fac.js"],""]
+4:["slug","real-time-health-check-with-sse","d"]
+0:["Eno8DQ4cJt9tgm6wEuFqH",[[["",{"children":["(blog)",{"children":["posts",{"children":[["slug","real-time-health-check-with-sse","d"],{"children":["__PAGE__?{\"slug\":\"real-time-health-check-with-sse\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["(blog)",{"children":["posts",{"children":[["slug","real-time-health-check-with-sse","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$L6","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd736c728ec2597b.css","precedence":"next","crossOrigin":""}]]}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,[["$","header",null,{"className":"container-layout border-style flex justify-center border-y bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex items-center justify-between border-x","children":[["$","$L7",null,{}],["$","$L8",null,{}]]}]}],["$","main",null,{"className":"flex min-h-screen flex-col","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]}],["$","footer",null,{"className":"__className_5899e0 container-layout border-style border-y bg-neutral-800","children":["$","div",null,{"className":"content-layout border-style border-x py-4","children":["$","p",null,{"className":"text-center text-xs font-bold text-app-white lg:text-sm","children":"© 2023 Lani. All Rights Reserved."}]}]}]],null]]},[null,["$","html",null,{"lang":"ko","children":[["$","$L9",null,{"id":"register-sw","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            if ('serviceWorker' in navigator) {\n              window.addEventListener('load', function() {\n                navigator.serviceWorker.register('/sw.js').then(\n                  function(registration) {\n                    console.log('ServiceWorker registration successful');\n                  },\n                  function(err) {\n                    console.log('ServiceWorker registration failed: ', err);\n                  }\n                );\n              });\n            }\n          "}}],[["$","$L9",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-83PGP6B0HE"}],["$","$L9",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-83PGP6B0HE', {\n                page_path: window.location.pathname,\n            });\n          "}}]],["$","body",null,{"className":"__className_f8d089 px-[20px]","children":["$","div",null,{"id":"main-root","className":"mx-[-20px]","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$La","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e191e9a994fc38cb.css","precedence":"next","crossOrigin":""}]]}]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4cf457cf7deb1219.css","precedence":"next","crossOrigin":""}]],"$Lb"]]]]
+c:I[25250,["250","static/chunks/250-9901ce03240cd556.js","925","static/chunks/app/(blog)/posts/%5Bslug%5D/not-found-f3ad8ba5c7d2115c.js"],""]
+d:I[81749,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","940","static/chunks/940-7cf8f47bf1d4cf55.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-5c31b5e886df4aa5.js"],"Image"]
+e:I[97569,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","940","static/chunks/940-7cf8f47bf1d4cf55.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-5c31b5e886df4aa5.js"],""]
+f:I[15790,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","940","static/chunks/940-7cf8f47bf1d4cf55.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-5c31b5e886df4aa5.js"],""]
+12:I[47365,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","940","static/chunks/940-7cf8f47bf1d4cf55.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-5c31b5e886df4aa5.js"],""]
+6:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
+a:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
+10:Taade,/*@jsxRuntime automatic @jsxImportSource react*/
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    a: "a",
+    span: "span",
+    p: "p",
+    img: "img",
+    h3: "h3",
+    ol: "ol",
+    li: "li",
+    strong: "strong",
+    ul: "ul",
+    h4: "h4",
+    table: "table",
+    thead: "thead",
+    tr: "tr",
+    th: "th",
+    tbody: "tbody",
+    td: "td"
+  }, _provideComponents(), props.components);
+  return _jsxs(_Fragment, {
+    children: [_jsxs(_components.h2, {
+      id: "배경",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#배경",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "배경"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["서비스 특성상 빈번한 점검이 필요한 웹 애플리케이션 및 인게임 환경에서, 멀티 플랫폼의 각 게임 및 서비스별 헬스체크 요구사항이 증가하고 있음.", _jsx("br", {}), "\r\n기존의 정적 방식으로는 실시간 상태 파악과 즉각적인 대응이 어려운 상황이라 해당 요구사항을 적용하기 위한 검증이 필요했음"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "현재-시스템-as-is",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#현재-시스템-as-is",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "현재 시스템 (AS-IS)"]
+    }), "\n", _jsx(_components.p, {
+      children: "기존 시스템은 CDN에 JSON 파일을 업로드 및 갱신하며 점검 정보를 관리하는 방식이었음"
+    }), "\n", _jsx(_components.p, {
+      children: _jsx(_components.img, {
+        src: "data:image/real_time_health_check_with_sse_0;base64,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",
+        alt: "real_time_health_check_with_sse-0"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "기존-시스템-동작-흐름",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#기존-시스템-동작-흐름",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "기존 시스템 동작 흐름"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "웹 사이트 접근"
+        }), ": 사용자가 웹사이트에 접속"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "미들웨어에서 CDN JSON 확인"
+        }), ": 서버 미들웨어가 CDN의 JSON 정보를 확인"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "라우팅 처리"
+        }), ": JSON 정보에 따른 적절한 라우팅 처리"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "기존-시스템의-한계점",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#기존-시스템의-한계점",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "기존 시스템의 한계점"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "페이지 이동 시에만 작동"
+        }), ": 실시간 점검 상태 파악이 어려워 답답했음"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "이벤트 의존적"
+        }), ": 특정 이벤트가 발생해야만 추가 헬스체크가 가능했음"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "네트워크 오버헤드"
+        }), ": 잦은 네트워크 통신으로 성능이 떨어질 수 있었음"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "실시간 제어 한계"
+        }), ": CDN 기반이라 실시간 제어가 어려웠음"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "개선-요구사항",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개선-요구사항",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개선 요구사항"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "실시간 헬스체크"
+        }), ": 사용자가 뭘 하지 않아도 실시간으로 상태 확인이 가능해야 함"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "자동 반영"
+        }), ": 헬스체크 결과에 따라 자동으로 변화가 반영되어야 함"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "해결-방법-sse-server-sent-events-도입",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#해결-방법-sse-server-sent-events-도입",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "해결 방법: SSE (Server-Sent Events) 도입"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "sse란",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#sse란",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "SSE란?"]
+    }), "\n", _jsxs(_components.p, {
+      children: [_jsx(_components.a, {
+        href: "https://developer.mozilla.org/ko/docs/Web/API/Server-sent_events/Using_server-sent_events",
+        children: "Server-Sent Events(SSE)"
+      }), "는 서버에서 클라이언트로 단방향 실시간 데이터 스트림을 제공하는 웹 기술"]
+    }), "\n", _jsxs(_components.h4, {
+      id: "작동-방식",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#작동-방식",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "작동 방식"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "연결 설정"
+        }), ": 클라이언트가 HTTP 연결을 통해 서버에 SSE 요청"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "지속적 연결"
+        }), ": 서버는 연결을 열어두고 필요할 때마다 데이터 전송"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "실시간 수신"
+        }), ": 클라이언트는 이벤트 리스너를 통해 서버 메시지를 실시간 수신"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h4, {
+      id: "주요-특징",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#주요-특징",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "주요 특징"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "자동 재연결"
+        }), ": 연결이 끊어져도 자동으로 다시 연결을 시도함"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "표준 프로토콜"
+        }), ": HTTP/HTTPS를 사용해서 추가 프로토콜이 필요 없음"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "간단한 구현"
+        }), ": 가벼운 API로 쉽게 구현할 수 있음"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "sse-vs-websocket-비교",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#sse-vs-websocket-비교",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "SSE vs WebSocket 비교"]
+    }), "\n", _jsx(_components.p, {
+      children: "실시간 데이터 통신을 위한 기술로 WebSocket과 SSE가 자주 비교되는데, 한번 비교해보자."
+    }), "\n", _jsxs(_components.table, {
+      children: [_jsx(_components.thead, {
+        children: _jsxs(_components.tr, {
+          children: [_jsx(_components.th, {
+            children: "특성"
+          }), _jsx(_components.th, {
+            children: "WebSocket"
+          }), _jsx(_components.th, {
+            children: "SSE (Server-Sent Events)"
+          })]
+        })
+      }), _jsxs(_components.tbody, {
+        children: [_jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "통신 방향"
+          }), _jsx(_components.td, {
+            children: "양방향"
+          }), _jsx(_components.td, {
+            children: "단방향 (서버 → 클라이언트)"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "프로토콜"
+          }), _jsx(_components.td, {
+            children: "ws:// 또는 wss://"
+          }), _jsx(_components.td, {
+            children: "HTTP/HTTPS"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "연결 유지"
+          }), _jsx(_components.td, {
+            children: "지속적"
+          }), _jsx(_components.td, {
+            children: "자동 재연결"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "구현 복잡성"
+          }), _jsx(_components.td, {
+            children: "상대적으로 복잡"
+          }), _jsx(_components.td, {
+            children: "비교적 간단"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "데이터 형식"
+          }), _jsx(_components.td, {
+            children: "모든 형식"
+          }), _jsx(_components.td, {
+            children: "주로 텍스트 (JSON)"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "서버 부하"
+          }), _jsx(_components.td, {
+            children: "다수 연결 시 증가 가능"
+          }), _jsx(_components.td, {
+            children: "일반적으로 낮음"
+          })]
+        }), _jsxs(_components.tr, {
+          children: [_jsx(_components.td, {
+            children: "방화벽 친화성"
+          }), _jsx(_components.td, {
+            children: "일부 제한 가능"
+          }), _jsx(_components.td, {
+            children: "대부분 허용"
+          })]
+        })]
+      })]
+    }), "\n", _jsxs(_components.h3, {
+      id: "sse-선택-이유",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#sse-선택-이유",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "SSE 선택 이유"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "단방향 통신 충분"
+        }), ": 서버에서 클라이언트로 정보만 전달하면 되기 때문임"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "구현 간소화"
+        }), ": 복잡한 양방향 통신을 구현할 필요가 없음"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "지속적 연결"
+        }), ": 실시간 업데이트에 최적화된 연결 방식임"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "브라우저 호환성"
+        }), ": 대부분의 현대 브라우저에서 지원함"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "개선된-시스템-to-be",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개선된-시스템-to-be",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개선된 시스템 (TO-BE)"]
+    }), "\n", _jsx(_components.p, {
+      children: _jsx(_components.img, {
+        src: "data:image/real_time_health_check_with_sse_1;base64,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",
+        alt: "real_time_health_check_with_sse-1"
+      })
+    }), "\n", _jsx(_components.p, {
+      children: "SSE를 도입한 새로운 시스템은 다음과 같이 개선되었음:"
+    }), "\n", _jsxs(_components.h3, {
+      id: "새로운-시스템-동작-흐름",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#새로운-시스템-동작-흐름",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "새로운 시스템 동작 흐름"]
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "SSE 연결 설정"
+        }), ": 클라이언트가 서버와 SSE 연결을 수립"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "실시간 모니터링"
+        }), ": 서버에서 헬스체크 상태를 실시간으로 전송"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "자동 상태 반영"
+        }), ": 클라이언트에서 수신된 정보에 따라 UI가 자동으로 업데이트"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "개선-효과",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개선-효과",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개선 효과"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "실시간성"
+        }), ": 페이지 새로고침 없이도 상태 변화가 즉시 반영됨"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "효율성"
+        }), ": 불필요한 네트워크 요청이 줄어듦"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "사용자 경험"
+        }), ": 점검 상태에 따라 자연스럽게 UI가 전환됨"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "확장성"
+        }), ": 다양한 서비스와 게임에 대한 통합 헬스체크가 가능함"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "결론",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#결론",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "결론"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["SSE를 활용한 실시간 헬스체크 시스템으로 전환함으로써, 기존의 정적 JSON 방식의 한계를 극복할 수 있었음. 사용자에게 더 나은 서비스 경험을 제공할 수 있게 되었고,", _jsx("br", {}), "\r\n특히 멀티 플랫폼 환경에서의 실시간 상태 관리와 즉각적인 대응이 가능해져서 서비스의 안정성과 신뢰성이 크게 향상될 것을 기대하게됨"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = Object.assign({}, _provideComponents(), props.components);
+  return MDXLayout ? _jsx(MDXLayout, Object.assign({}, props, {
+    children: _jsx(_createMdxContent, props)
+  })) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+2:[["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style relative justify-center border-x text-center text-app-white","children":["$","div",null,{"className":"flex flex-col justify-center px-4 py-16 lg:px-5 lg:py-20","children":[["$","p",null,{"className":"mb-3 text-sm","children":["개선 시리즈"," ","$undefined"]}],["$","h1",null,{"className":"text-xl lg:text-4xl","children":"SSE를 활용한 실시간 헬스체크 시스템 개선"}]]}]}]}],["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout","children":["$","div",null,{"className":"border-style align-center flex justify-center border-x text-app-white lg:justify-start lg:text-center","children":[["$","p",null,{"className":"border-style border-l p-5 text-sm lg:border-l-0","children":"2024-08-21"}],["$","p",null,{"className":"border-style flex items-center justify-center gap-1 border-x p-5 text-sm","children":[["$","$Ld",null,{"src":"/assets/images/icons/timer.svg","width":21,"height":21,"alt":""}],"약 ",7,"분"]}]]}]}]}],["$","section",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex flex-col border-x","children":["$","div",null,{"className":"flex","children":[["$","$Le",null,{"toc":[{"level":2,"title":"배경","href":"#배경"},{"level":2,"title":"현재 시스템 (AS-IS)","href":"#현재-시스템-as-is","children":[{"level":3,"title":"기존 시스템 동작 흐름","href":"#기존-시스템-동작-흐름"},{"level":3,"title":"기존 시스템의 한계점","href":"#기존-시스템의-한계점"}]},{"level":2,"title":"개선 요구사항","href":"#개선-요구사항"},{"level":2,"title":"해결 방법: SSE (Server-Sent Events) 도입","href":"#해결-방법-sse-server-sent-events-도입","children":[{"level":3,"title":"SSE란?","href":"#sse란","children":[{"level":4,"title":"작동 방식","href":"#작동-방식"},{"level":4,"title":"주요 특징","href":"#주요-특징"}]},{"level":3,"title":"SSE vs WebSocket 비교","href":"#sse-vs-websocket-비교"},{"level":3,"title":"SSE 선택 이유","href":"#sse-선택-이유"}]},{"level":2,"title":"개선된 시스템 (TO-BE)","href":"#개선된-시스템-to-be","children":[{"level":3,"title":"새로운 시스템 동작 흐름","href":"#새로운-시스템-동작-흐름"},{"level":3,"title":"개선 효과","href":"#개선-효과"}]},{"level":2,"title":"결론","href":"#결론"}],"tags":["Web API","trouble shooting"]}],["$","div",null,{"className":"flex w-full flex-col bg-neutral-800 xl:w-[742px]","children":[["$","$Lf",null,{"serialized":{"compiledSource":"$10","frontmatter":{},"scope":{}}}],"$L11",["$","div",null,{"className":"flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white","children":[["$","div",null,{"className":"border-style flex w-[50%] p-4","children":["$","$Lc",null,{"href":"/posts/history_scroll_restoration","className":"flex gap-4","children":[["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/left-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}],["$","div",null,{"className":"flex flex-col items-start gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"prev"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]","children":["브라우저 새로고침 시 스크롤 복원 막기","브라우저 새로고침 시 스크롤 복원 막기","브라우저 새로고침 시 스크롤 복원 막기"]}]]}]]}]}],["$","div",null,{"className":"flex w-[50%] justify-end p-4","children":null}]]}],["$","$L12",null,{}]]}]]}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Lani.log | SSE를 활용한 실시간 헬스체크 시스템 개선"}],["$","meta","3",{"name":"description","content":"CDN 기반 정적 JSON 방식에서 Server-Sent Events를 활용한 실시간 헬스체크 시스템으로 전환해보기"}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","5",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","6",{"name":"apple-mobile-web-app-title","content":"Lani.log"}],["$","link","7",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_landscape.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","8",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_portrait.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","9",{"href":"/assets/images/splash_screens/iPhone_16_Pro_landscape.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","10",{"href":"/assets/images/splash_screens/iPhone_16_Pro_portrait.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","11",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","12",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","13",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","14",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","15",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","16",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","17",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","18",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","19",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","20",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","21",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","22",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","23",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","24",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","25",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","26",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","27",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","28",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","29",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","30",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","31",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","32",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","33",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_landscape.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","34",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_portrait.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","35",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","36",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","37",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","38",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","39",{"href":"/assets/images/splash_screens/10.9__iPad_Air_landscape.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","40",{"href":"/assets/images/splash_screens/10.9__iPad_Air_portrait.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","41",{"href":"/assets/images/splash_screens/10.5__iPad_Air_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","42",{"href":"/assets/images/splash_screens/10.5__iPad_Air_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","43",{"href":"/assets/images/splash_screens/10.2__iPad_landscape.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","44",{"href":"/assets/images/splash_screens/10.2__iPad_portrait.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","45",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","46",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","47",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_landscape.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","48",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_portrait.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","meta","49",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","50",{"property":"og:title","content":"Lani.log"}],["$","meta","51",{"property":"og:description","content":"Developer Lani's log"}],["$","meta","52",{"property":"og:image","content":"https://laniground.com/og-image.jpg"}],["$","meta","53",{"property":"og:type","content":"website"}],["$","meta","54",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","55",{"name":"twitter:title","content":"Lani.log"}],["$","meta","56",{"name":"twitter:description","content":"Developer Lani's log"}],["$","meta","57",{"name":"twitter:image","content":"https://laniground.com/og-image.jpg"}],["$","link","58",{"rel":"shortcut icon","href":"/assets/images/icons/icon.png"}],["$","link","59",{"rel":"icon","href":"/favicon.ico"}],["$","link","60",{"rel":"apple-touch-icon","href":"/assets/images/icons/icon.png"}]]
+1:null
+11:["$","div",null,{"className":"border-style mt-auto flex flex-col border-t p-4 text-app-white","children":[["$","p",null,{"className":"text-base text-app-blue-green","children":["$","span",null,{"className":"border-style inline-block border-x border-t bg-zinc-800 px-4 py-2","children":["See more \"","개선 시리즈","\""]}]}],["$","ul",null,{"className":"border-style border bg-zinc-800","children":[["$","li","SSE를 활용한 실시간 헬스체크 시스템 개선",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":1}],["$","$Lc",null,{"href":"/posts/real-time-health-check-with-sse","children":"SSE를 활용한 실시간 헬스체크 시스템 개선"}],["$","p",null,{"className":"ml-auto","children":"2024.08.21"}]]}],["$","li","에러로그시스템 도입기(with. Sentry)",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":2}],["$","$Lc",null,{"href":"/posts/errorlog_system_with_sentry","children":"에러로그시스템 도입기(with. Sentry)"}],["$","p",null,{"className":"ml-auto","children":"2023.03.12"}]]}],["$","li","마크업 개선을 통해 SEO 최적화하기",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":3}],["$","$Lc",null,{"href":"/posts/refactoring_seo","children":"마크업 개선을 통해 SEO 최적화하기"}],["$","p",null,{"className":"ml-auto","children":"2022.08.15"}]]}]]}]]}]
