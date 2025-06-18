@@ -12,8 +12,6 @@ export default function DirectlyInstallPrompt() {
   const [isVisible, setIsVisible] = useState(false);
   const { getCookie, setCookie, deleteCookie } = cookieKit;
 
-  //! IOS 동작 이상 무조건 떠야함!!!!
-
   useEffect(() => {
     const checkIOS =
       /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
