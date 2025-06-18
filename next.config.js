@@ -3,6 +3,9 @@
 const withMDX = require('@next/mdx')({});
 
 const nextConfig = {
+  experimental: {
+    trace: false,
+  },
   async headers() {
     return [
       {
