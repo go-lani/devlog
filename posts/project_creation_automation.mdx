@@ -1,0 +1,367 @@
+---
+type: Posts
+title: 모노레포 프로젝트 생성 자동화로 휴먼 에러 제거하기
+description: 하드코딩된 환경변수로 인한 휴먼 에러를 제거하고 프로젝트 생성을 자동화한 경험을 공유합니다.
+date: 2024-05-13
+tags: Monorepo, 생산성, 자동화
+series: 개선 시리즈
+featured: true
+---
+
+## 배경
+
+### 기존 프로젝트 생성 방식의 문제점
+
+현재 우리 팀은 모노레포 환경에서 여러 프로젝트를 워크스페이스로 관리하고 있다.<br />각 프로젝트는 고유한 ID 값을 가지며, 이를 통해 프로젝트별 처리를 한다.
+
+기존에는 다음과 같은 방식으로 프로젝트를 생성했다:
+
+1. **매번 새로 프로젝트 제작**: 프로젝트 생성 시마다 처음부터 모든 설정을 다시 구성
+2. **정형화된 UI 구조**: 대부분의 프로젝트가 비슷한 UI 구조를 가짐
+3. **복사 후 초기화 방식**: 이전 프로젝트를 복사해서 초기화한 후 새로운 프로젝트 설정 진행
+
+### 발생했던 휴먼 에러들
+
+이런 방식으로 작업하다 보니 다음과 같은 휴먼 에러가 자주 발생했다:
+
+- **고유 ID 미변경**: 복사한 프로젝트의 고유 ID를 변경하지 않아 CDN 에셋 덮어쓰기
+- **URL 중복**: 동일한 URL 경로로 인한 라우팅 충돌
+- **환경변수 누락**: `.env` 파일의 프로젝트별 설정값 변경 실패
+- **워크스페이스 중복**: 루트 `package.json`의 workspaces 배열에 중복 등록
+
+## 개선 방향
+
+### 1. 하드코딩 제거
+
+기존에 `.env` 파일로 하드코딩하여 사용하던 고유 ID를 제거하여 휴먼 에러를 근본적으로 해결하고자 했다.
+
+### 2. 자동화된 프로젝트 생성
+
+모노레포 루트에서 npm script를 사용하여 프로젝트 타입(국내/글로벌)에 맞는 보일러플레이트로 프로젝트를 자동 생성한다.
+
+### 3. 파라미터 기반 설정
+
+생성 시 워크스페이스 설정값과 고유 ID값을 파라미터로 전달받아 다음을 검증한다:
+
+- 고유 ID의 중복 여부
+- 워크스페이스 설정값 중복 여부 (예: `groupName/name` 구조)
+
+### 4. 관심사 분리
+
+- **환경변수**: 앱 구동 시 필요한 환경변수 관리
+- **package.json**: 앱 설정 관련 내용 관리 (name 필드 활용)
+- **다국어 지원**: 다국어 프로젝트의 경우 csv 관리
+
+## 구현된 프로젝트 생성 스크립트
+
+### 스크립트 구조
+
+```javascript
+const fs = require('fs');
+const path = require('path');
+
+function copyFolderRecursiveSync(source, target) {
+  if (!fs.existsSync(target)) {
+    fs.mkdirSync(target);
+  }
+
+  const files = fs.readdirSync(source);
+
+  files.forEach((file) => {
+    const sourceFilePath = path.join(source, file);
+    const targetFilePath = path.join(target, file);
+
+    if (fs.lstatSync(sourceFilePath).isDirectory()) {
+      copyFolderRecursiveSync(sourceFilePath, targetFilePath);
+    } else {
+      fs.copyFileSync(sourceFilePath, targetFilePath);
+    }
+  });
+}
+```
+
+### 파라미터 검증
+
+```javascript
+// 목표로 하는 폴더와 프로젝트 이름을 명령줄에서 입력받기
+const templateType = process.argv[2]; // 'gl' (글로벌) 또는 'kr' (국내)
+const groupName = process.argv[3];
+const name = process.argv[4];
+const templateLangType = templateType === 'gl' ? '[다국어]' : '[국문]';
+
+// 프로젝트 그룹과 프로젝트 이름이 제대로 입력되었는지 확인
+if (!groupName) {
+  console.error('🚫 - 프로젝트 그룹을 입력해주세요.');
+  process.exit(1);
+}
+
+if (!name) {
+  console.error('🚫 - 프로젝트 이름을 입력해주세요.');
+  process.exit(1);
+}
+```
+
+### 중복 검사 및 폴더 생성
+
+```javascript
+// 프로젝트 그룹 폴더 존재여부 체크 없으면 생성
+if (!fs.existsSync(groupName)) {
+  console.error(
+    `🚀 - 해당 프로젝트 그룹이 존재하지 않습니다. 프로젝트 그룹에 대한 폴더를 생성하고 ${templateType} 템플릿을 복사합니다.`,
+  );
+  fs.mkdirSync(groupName, { recursive: true });
+}
+
+// 프로젝트 폴더 존재여부 체크
+const projectFolderPath = path.join(groupName, name);
+
+if (fs.existsSync(projectFolderPath)) {
+  console.error('🚫 - 이미 해당 프로젝트가 존재합니다.');
+  process.exit(1);
+}
+```
+
+### 템플릿 복사 및 설정
+
+```javascript
+// Template 폴더 경로
+const templatePath = `./boilerplate/${templateType}`;
+
+// Template 폴더 존재여부 체크
+if (!fs.existsSync(templatePath)) {
+  console.error(`🚫 - ${templateLangType} 템플릿이 존재하지 않습니다.`);
+  process.exit(1);
+}
+
+// 프로젝트 폴더 생성
+fs.mkdirSync(projectFolderPath);
+
+// 템플릿을 프로젝트 폴더로 복사
+console.log(`🕐 - ${templateLangType} 템플릿 복사 시작`);
+copyFolderRecursiveSync(templatePath, projectFolderPath);
+console.log(`✅ - ${templateLangType} 템플릿 복사 완료`);
+console.log(`🕐 - ${templateLangType} 프로젝트 세팅 시작`);
+
+// 번역.csv 파일명 변경
+if (templateType === 'gl') {
+  const oldFileName = path.join(projectFolderPath, 'translation.csv');
+  const newFileName = path.join(projectFolderPath, `${name}.csv`);
+  fs.renameSync(oldFileName, newFileName);
+}
+```
+
+### package.json 설정
+
+```javascript
+// package.json name 키 값 세팅
+const packageJsonPath = path.join(projectFolderPath, 'package.json');
+
+if (fs.existsSync(packageJsonPath)) {
+  const packageJsonData = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  packageJsonData.name = name;
+
+  // 만약 Global 프로젝트라면 번역 관련 로직이 추가되어야함
+  if (templateType === 'gl') {
+    packageJsonData.scripts.translate = `run-func translation.js convertCsvToJson ${name}`;
+  }
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
+}
+
+console.log(`✅ - ${templateLangType} 프로젝트 세팅 완료`);
+```
+
+### 워크스페이스 등록
+
+```javascript
+const workspacePath = `${groupName}/${name}`;
+
+// 중복 추가를 방지하기 위해 이미 존재하는지 확인
+if (!packageJsonData.workspaces.includes(workspacePath)) {
+  // workspaces 배열에 새로운 경로 추가하는 로직
+  // 코드 생략...
+  console.timeEnd(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);
+} else {
+  console.error(
+    `🚨 - 이미 [${workspacePath}] 워크스페이스가 존재합니다. 루트의 package.json을 확인해주세요.`,
+  );
+}
+```
+
+### 전체 코드
+
+```javascript
+const fs = require('fs');
+const path = require('path');
+
+function copyFolderRecursiveSync(source, target) {
+  if (!fs.existsSync(target)) {
+    fs.mkdirSync(target);
+  }
+
+  const files = fs.readdirSync(source);
+
+  files.forEach((file) => {
+    const sourceFilePath = path.join(source, file);
+    const targetFilePath = path.join(target, file);
+
+    if (fs.lstatSync(sourceFilePath).isDirectory()) {
+      // 폴더인 경우 재귀적으로 내부의 파일 및 폴더를 복사합니다.
+      copyFolderRecursiveSync(sourceFilePath, targetFilePath);
+    } else {
+      // 파일인 경우 바로 복사합니다.
+      fs.copyFileSync(sourceFilePath, targetFilePath);
+    }
+  });
+}
+
+// 목표로 하는 폴더와 프로젝트 이름을 명령줄에서 입력받기
+const templateType = process.argv[2];
+const groupName = process.argv[3];
+const name = process.argv[4];
+const templateLangType = templateType === 'gl' ? '[다국어]' : '[국문]';
+
+console.time(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);
+
+// 프로젝트 그룹과 프로젝트 이름이 제대로 입력되었는지 확인
+if (!groupName) {
+  console.error('🚫 - 프로젝트 그룹을 입력해주세요.');
+  process.exit(1);
+}
+
+if (!name) {
+  console.error('🚫 - 프로젝트 이름을 입력해주세요.');
+  process.exit(1);
+}
+
+// 프로젝트 그룹 폴더 존재여부 체크 없으면 생성
+if (!fs.existsSync(groupName)) {
+  console.error(
+    `🚀 - 해당 프로젝트 그룹이 존재하지 않습니다. 프로젝트 그룹에 대한 폴더를 생성하고 ${templateType} 템플릿을 복사합니다.`,
+  );
+  fs.mkdirSync(groupName, { recursive: true });
+}
+
+// 프로젝트 폴더 존재여부 체크
+const projectFolderPath = path.join(groupName, name);
+
+if (fs.existsSync(projectFolderPath)) {
+  console.error('🚫 - 이미 해당 프로젝트가 존재합니다.');
+  process.exit(1);
+}
+
+// Template 폴더 경로
+const templatePath = `./boilerplate/${templateType}`;
+
+// Template 폴더 존재여부 체크
+if (!fs.existsSync(templatePath)) {
+  console.error(`🚫 - ${templateLangType} 템플릿이 존재하지 않습니다.`);
+  process.exit(1);
+}
+
+// 프로젝트 폴더 생성
+fs.mkdirSync(projectFolderPath);
+
+// 템플릿을 프로젝트 폴더로 복사
+console.log(`🕐 - ${templateLangType} 템플릿 복사 시작`);
+copyFolderRecursiveSync(templatePath, projectFolderPath);
+console.log(`✅ - ${templateLangType} 템플릿 복사 완료`);
+console.log(`🕐 - ${templateLangType} 프로젝트 세팅 시작`);
+
+// 번역.csv 파일명 변경
+if (templateType === 'gl') {
+  const oldFileName = path.join(projectFolderPath, 'translation.csv');
+  const newFileName = path.join(projectFolderPath, `${name}.csv`);
+  fs.renameSync(oldFileName, newFileName);
+}
+
+// package.json name 키 값 세팅
+const packageJsonPath = path.join(projectFolderPath, 'package.json');
+
+if (fs.existsSync(packageJsonPath)) {
+  const packageJsonData = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  packageJsonData.name = name;
+
+  // 만약 Global 프로젝트라면 번역 관련 로직이 추가되어야함
+  if (templateType === 'gl') {
+    packageJsonData.scripts.translate = `run-func translation.js convertCsvToJson ${name}`;
+  }
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));
+}
+
+console.log(`✅ - ${templateLangType} 프로젝트 세팅 완료`);
+
+const workspacePath = `${groupName}/${name}`;
+
+// 중복 추가를 방지하기 위해 이미 존재하는지 확인
+if (!packageJsonData.workspaces.includes(workspacePath)) {
+  // workspaces 배열에 새로운 경로 추가하는 로직
+  // 코드 생략...
+  console.timeEnd(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);
+} else {
+  console.error(
+    `🚨 - 이미 [${workspacePath}] 워크스페이스가 존재합니다. 루트의 package.json을 확인해주세요.`,
+  );
+}
+```
+
+## 사용 방법
+
+### npm script 등록
+
+루트 `package.json`에 다음 스크립트를 추가한다:
+
+```json
+{
+  "scripts": {
+    "create:kr": "node scripts/create-project.js kr",
+    "create:gl": "node scripts/create-project.js gl"
+  }
+}
+```
+
+### 프로젝트 생성 명령어
+
+```bash
+# 국내 프로젝트 생성
+npm run create:kr [그룹명] [프로젝트명]
+
+# 글로벌 프로젝트 생성
+npm run create:gl [그룹명] [프로젝트명]
+
+# 예시
+npm run create:kr landing landing-kr
+npm run create:gl landing landing-gl
+```
+
+### 사용 영상
+
+<video
+  src="/video/project_creation_automation.mp4"
+  controls
+  className="w-full max-w-full rounded-lg shadow-lg"
+/>
+
+## 개선 효과
+
+### 1. 휴먼 에러 제거
+
+- **고유 ID 중복 방지**: 자동으로 중복 검사 후 생성
+- **워크스페이스 중복 방지**: 기존 워크스페이스와 중복 시 에러 메시지 출력
+- **하드코딩 제거**: 환경변수에 의존하던 고유 ID를 package.json으로 통일
+
+### 2. 개발 생산성 향상
+
+- **원클릭 생성**: 명령어 한 줄로 프로젝트 생성 완료
+- **표준화**: 모든 프로젝트가 동일한 구조로 생성
+- **자동화**: 수동 설정 과정 제거
+
+### 3. 관심사 분리
+
+- **환경변수**: 앱 구동 시 필요한 환경변수만 관리
+- **package.json**: 프로젝트 설정 관련 내용 통합 관리
+
+## 결론
+
+이번 개선을 통해 프로젝트 생성 과정에서 발생하던 휴먼 에러를 대폭 줄일 수 있었다. 특히 하드코딩된 환경변수를 제거하고 package.json을 통한 명확한 관심사 분리는 코드의 유지보수성을 크게 향상시켰다.
+
+앞으로도 개발 과정에서 반복되는 작업들은 자동화를 통해 휴먼 에러를 줄이고 개발 생산성을 높이는 방향으로 개선해 나갈 예정이다.
