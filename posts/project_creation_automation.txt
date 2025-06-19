@@ -1,0 +1,465 @@
+3:I[5613,[],""]
+5:I[31778,[],""]
+7:I[45748,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+8:I[47742,["250","static/chunks/250-9901ce03240cd556.js","597","static/chunks/597-bf6cacace1185e39.js","485","static/chunks/485-8d0f2eeba0bebbcf.js","432","static/chunks/app/(blog)/layout-8d4c3bfd60e716b4.js"],""]
+9:I[85935,["185","static/chunks/app/layout-e1c60a257b6ab2d9.js"],""]
+4:["slug","project_creation_automation","d"]
+0:["MiGLzhIgDEv2h_2I5jc1G",[[["",{"children":["(blog)",{"children":["posts",{"children":[["slug","project_creation_automation","d"],{"children":["__PAGE__?{\"slug\":\"project_creation_automation\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":["(blog)",{"children":["posts",{"children":[["slug","project_creation_automation","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","posts","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$L6","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd736c728ec2597b.css","precedence":"next","crossOrigin":""}]]}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children","posts","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,[["$","header",null,{"className":"container-layout border-style flex justify-center border-y bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex items-center justify-between border-x","children":[["$","$L7",null,{}],["$","$L8",null,{}]]}]}],["$","main",null,{"className":"flex min-h-screen flex-col","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","(blog)","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]}],["$","footer",null,{"className":"__className_5899e0 container-layout border-style border-y bg-neutral-800","children":["$","div",null,{"className":"content-layout border-style border-x py-4","children":["$","p",null,{"className":"text-center text-xs font-bold text-app-white lg:text-sm","children":"© 2023 Lani. All Rights Reserved."}]}]}]],null]]},[null,["$","html",null,{"lang":"ko","children":[["$","$L9",null,{"id":"register-sw","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            if ('serviceWorker' in navigator) {\n              window.addEventListener('load', function() {\n                navigator.serviceWorker.register('/sw.js').then(\n                  function(registration) {\n                    console.log('ServiceWorker registration successful');\n                  },\n                  function(err) {\n                    console.log('ServiceWorker registration failed: ', err);\n                  }\n                );\n              });\n            }\n          "}}],[["$","$L9",null,{"strategy":"afterInteractive","src":"https://www.googletagmanager.com/gtag/js?id=G-83PGP6B0HE"}],["$","$L9",null,{"id":"gtag-init","strategy":"afterInteractive","dangerouslySetInnerHTML":{"__html":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-83PGP6B0HE', {\n                page_path: window.location.pathname,\n            });\n          "}}]],["$","body",null,{"className":"__className_f8d089 px-[20px]","children":["$","div",null,{"id":"main-root","className":"mx-[-20px]","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$La","notFoundStyles":[],"styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/e191e9a994fc38cb.css","precedence":"next","crossOrigin":""}]]}]}]}]]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8831946ba60bd6e5.css","precedence":"next","crossOrigin":""}]],"$Lb"]]]]
+c:I[25250,["250","static/chunks/250-9901ce03240cd556.js","925","static/chunks/app/(blog)/posts/%5Bslug%5D/not-found-f3ad8ba5c7d2115c.js"],""]
+d:I[81749,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-969e42344764682a.js"],"Image"]
+e:I[97569,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-969e42344764682a.js"],""]
+f:I[15790,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-969e42344764682a.js"],""]
+12:I[47365,["250","static/chunks/250-9901ce03240cd556.js","150","static/chunks/150-55743e6bbb9feb9a.js","255","static/chunks/255-2eec5b2650f4ad96.js","290","static/chunks/290-4ea7557918fe7bd5.js","231","static/chunks/app/(blog)/posts/%5Bslug%5D/page-969e42344764682a.js"],""]
+6:["$","div",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout bg-neutral-800 text-app-white","children":["$","div",null,{"className":"flex flex-col items-center justify-center py-32","children":[["$","img",null,{"src":"/assets/images/icons/not.svg","className":"h-[80px] w-[80px]","alt":"series is empty"}],["$","p",null,{"className":"mt-6","children":"해당 포스트를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/posts","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"다른 포스트 보러가기"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to posts","className":"h-[18px] w-[18px]"}]]}]]}]}]}]
+a:["$","div",null,{"className":"flex h-screen flex-col items-center justify-center bg-zinc-800 text-app-white","children":[["$","img",null,{"src":"/assets/images/icons/not-found.svg","alt":"page not found","className":"h-[128px] w-[128px]"}],["$","p",null,{"className":"mt-8 text-2xl","children":"페이지를 찾을 수 없어요"}],["$","$Lc",null,{"href":"/","className":"mt-2 flex items-center gap-2","children":[["$","p",null,{"children":"홈으로"}],["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"move to home","className":"h-[18px] w-[18px]"}]]}]]}]
+10:T64ba,/*@jsxRuntime automatic @jsxImportSource react*/
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    a: "a",
+    span: "span",
+    h3: "h3",
+    p: "p",
+    ol: "ol",
+    li: "li",
+    strong: "strong",
+    ul: "ul",
+    code: "code",
+    pre: "pre"
+  }, _provideComponents(), props.components);
+  return _jsxs(_Fragment, {
+    children: [_jsxs(_components.h2, {
+      id: "배경",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#배경",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "배경"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "기존-프로젝트-생성-방식의-문제점",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#기존-프로젝트-생성-방식의-문제점",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "기존 프로젝트 생성 방식의 문제점"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["현재 우리 팀은 모노레포 환경에서 여러 프로젝트를 워크스페이스로 관리하고 있다.", _jsx("br", {}), "각 프로젝트는 고유한 ID 값을 가지며, 이를 통해 프로젝트별 처리를 한다."]
+    }), "\n", _jsx(_components.p, {
+      children: "기존에는 다음과 같은 방식으로 프로젝트를 생성했다:"
+    }), "\n", _jsxs(_components.ol, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "매번 새로 프로젝트 제작"
+        }), ": 프로젝트 생성 시마다 처음부터 모든 설정을 다시 구성"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "정형화된 UI 구조"
+        }), ": 대부분의 프로젝트가 비슷한 UI 구조를 가짐"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "복사 후 초기화 방식"
+        }), ": 이전 프로젝트를 복사해서 초기화한 후 새로운 프로젝트 설정 진행"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "발생했던-휴먼-에러들",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#발생했던-휴먼-에러들",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "발생했던 휴먼 에러들"]
+    }), "\n", _jsx(_components.p, {
+      children: "이런 방식으로 작업하다 보니 다음과 같은 휴먼 에러가 자주 발생했다:"
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "고유 ID 미변경"
+        }), ": 복사한 프로젝트의 고유 ID를 변경하지 않아 CDN 에셋 덮어쓰기"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "URL 중복"
+        }), ": 동일한 URL 경로로 인한 라우팅 충돌"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "환경변수 누락"
+        }), ": ", _jsx(_components.code, {
+          children: ".env"
+        }), " 파일의 프로젝트별 설정값 변경 실패"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "워크스페이스 중복"
+        }), ": 루트 ", _jsx(_components.code, {
+          children: "package.json"
+        }), "의 workspaces 배열에 중복 등록"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "개선-방향",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개선-방향",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개선 방향"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "1-하드코딩-제거",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#1-하드코딩-제거",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "1. 하드코딩 제거"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["기존에 ", _jsx(_components.code, {
+        children: ".env"
+      }), " 파일로 하드코딩하여 사용하던 고유 ID를 제거하여 휴먼 에러를 근본적으로 해결하고자 했다."]
+    }), "\n", _jsxs(_components.h3, {
+      id: "2-자동화된-프로젝트-생성",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#2-자동화된-프로젝트-생성",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "2. 자동화된 프로젝트 생성"]
+    }), "\n", _jsx(_components.p, {
+      children: "모노레포 루트에서 npm script를 사용하여 프로젝트 타입(국내/글로벌)에 맞는 보일러플레이트로 프로젝트를 자동 생성한다."
+    }), "\n", _jsxs(_components.h3, {
+      id: "3-파라미터-기반-설정",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#3-파라미터-기반-설정",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "3. 파라미터 기반 설정"]
+    }), "\n", _jsx(_components.p, {
+      children: "생성 시 워크스페이스 설정값과 고유 ID값을 파라미터로 전달받아 다음을 검증한다:"
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsx(_components.li, {
+        children: "고유 ID의 중복 여부"
+      }), "\n", _jsxs(_components.li, {
+        children: ["워크스페이스 설정값 중복 여부 (예: ", _jsx(_components.code, {
+          children: "groupName/name"
+        }), " 구조)"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "4-관심사-분리",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#4-관심사-분리",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "4. 관심사 분리"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "환경변수"
+        }), ": 앱 구동 시 필요한 환경변수 관리"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "package.json"
+        }), ": 앱 설정 관련 내용 관리 (name 필드 활용)"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "다국어 지원"
+        }), ": 다국어 프로젝트의 경우 csv 관리"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "구현된-프로젝트-생성-스크립트",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#구현된-프로젝트-생성-스크립트",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "구현된 프로젝트 생성 스크립트"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "스크립트-구조",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#스크립트-구조",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "스크립트 구조"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "const fs = require('fs');\r\nconst path = require('path');\r\n\r\nfunction copyFolderRecursiveSync(source, target) {\r\n  if (!fs.existsSync(target)) {\r\n    fs.mkdirSync(target);\r\n  }\r\n\r\n  const files = fs.readdirSync(source);\r\n\r\n  files.forEach((file) => {\r\n    const sourceFilePath = path.join(source, file);\r\n    const targetFilePath = path.join(target, file);\r\n\r\n    if (fs.lstatSync(sourceFilePath).isDirectory()) {\r\n      copyFolderRecursiveSync(sourceFilePath, targetFilePath);\r\n    } else {\r\n      fs.copyFileSync(sourceFilePath, targetFilePath);\r\n    }\r\n  });\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "파라미터-검증",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#파라미터-검증",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "파라미터 검증"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "// 목표로 하는 폴더와 프로젝트 이름을 명령줄에서 입력받기\r\nconst templateType = process.argv[2]; // 'gl' (글로벌) 또는 'kr' (국내)\r\nconst groupName = process.argv[3];\r\nconst name = process.argv[4];\r\nconst templateLangType = templateType === 'gl' ? '[다국어]' : '[국문]';\r\n\r\n// 프로젝트 그룹과 프로젝트 이름이 제대로 입력되었는지 확인\r\nif (!groupName) {\r\n  console.error('🚫 - 프로젝트 그룹을 입력해주세요.');\r\n  process.exit(1);\r\n}\r\n\r\nif (!name) {\r\n  console.error('🚫 - 프로젝트 이름을 입력해주세요.');\r\n  process.exit(1);\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "중복-검사-및-폴더-생성",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#중복-검사-및-폴더-생성",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "중복 검사 및 폴더 생성"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "// 프로젝트 그룹 폴더 존재여부 체크 없으면 생성\r\nif (!fs.existsSync(groupName)) {\r\n  console.error(\r\n    `🚀 - 해당 프로젝트 그룹이 존재하지 않습니다. 프로젝트 그룹에 대한 폴더를 생성하고 ${templateType} 템플릿을 복사합니다.`,\r\n  );\r\n  fs.mkdirSync(groupName, { recursive: true });\r\n}\r\n\r\n// 프로젝트 폴더 존재여부 체크\r\nconst projectFolderPath = path.join(groupName, name);\r\n\r\nif (fs.existsSync(projectFolderPath)) {\r\n  console.error('🚫 - 이미 해당 프로젝트가 존재합니다.');\r\n  process.exit(1);\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "템플릿-복사-및-설정",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#템플릿-복사-및-설정",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "템플릿 복사 및 설정"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "// Template 폴더 경로\r\nconst templatePath = `./boilerplate/${templateType}`;\r\n\r\n// Template 폴더 존재여부 체크\r\nif (!fs.existsSync(templatePath)) {\r\n  console.error(`🚫 - ${templateLangType} 템플릿이 존재하지 않습니다.`);\r\n  process.exit(1);\r\n}\r\n\r\n// 프로젝트 폴더 생성\r\nfs.mkdirSync(projectFolderPath);\r\n\r\n// 템플릿을 프로젝트 폴더로 복사\r\nconsole.log(`🕐 - ${templateLangType} 템플릿 복사 시작`);\r\ncopyFolderRecursiveSync(templatePath, projectFolderPath);\r\nconsole.log(`✅ - ${templateLangType} 템플릿 복사 완료`);\r\nconsole.log(`🕐 - ${templateLangType} 프로젝트 세팅 시작`);\r\n\r\n// 번역.csv 파일명 변경\r\nif (templateType === 'gl') {\r\n  const oldFileName = path.join(projectFolderPath, 'translation.csv');\r\n  const newFileName = path.join(projectFolderPath, `${name}.csv`);\r\n  fs.renameSync(oldFileName, newFileName);\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "packagejson-설정",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#packagejson-설정",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "package.json 설정"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "// package.json name 키 값 세팅\r\nconst packageJsonPath = path.join(projectFolderPath, 'package.json');\r\n\r\nif (fs.existsSync(packageJsonPath)) {\r\n  const packageJsonData = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));\r\n  packageJsonData.name = name;\r\n\r\n  // 만약 Global 프로젝트라면 번역 관련 로직이 추가되어야함\r\n  if (templateType === 'gl') {\r\n    packageJsonData.scripts.translate = `run-func translation.js convertCsvToJson ${name}`;\r\n  }\r\n  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));\r\n}\r\n\r\nconsole.log(`✅ - ${templateLangType} 프로젝트 세팅 완료`);\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "워크스페이스-등록",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#워크스페이스-등록",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "워크스페이스 등록"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "const workspacePath = `${groupName}/${name}`;\r\n\r\n// 중복 추가를 방지하기 위해 이미 존재하는지 확인\r\nif (!packageJsonData.workspaces.includes(workspacePath)) {\r\n  // workspaces 배열에 새로운 경로 추가하는 로직\r\n  // 코드 생략...\r\n  console.timeEnd(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);\r\n} else {\r\n  console.error(\r\n    `🚨 - 이미 [${workspacePath}] 워크스페이스가 존재합니다. 루트의 package.json을 확인해주세요.`,\r\n  );\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "전체-코드",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#전체-코드",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "전체 코드"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-javascript",
+        children: "const fs = require('fs');\r\nconst path = require('path');\r\n\r\nfunction copyFolderRecursiveSync(source, target) {\r\n  if (!fs.existsSync(target)) {\r\n    fs.mkdirSync(target);\r\n  }\r\n\r\n  const files = fs.readdirSync(source);\r\n\r\n  files.forEach((file) => {\r\n    const sourceFilePath = path.join(source, file);\r\n    const targetFilePath = path.join(target, file);\r\n\r\n    if (fs.lstatSync(sourceFilePath).isDirectory()) {\r\n      // 폴더인 경우 재귀적으로 내부의 파일 및 폴더를 복사합니다.\r\n      copyFolderRecursiveSync(sourceFilePath, targetFilePath);\r\n    } else {\r\n      // 파일인 경우 바로 복사합니다.\r\n      fs.copyFileSync(sourceFilePath, targetFilePath);\r\n    }\r\n  });\r\n}\r\n\r\n// 목표로 하는 폴더와 프로젝트 이름을 명령줄에서 입력받기\r\nconst templateType = process.argv[2];\r\nconst groupName = process.argv[3];\r\nconst name = process.argv[4];\r\nconst templateLangType = templateType === 'gl' ? '[다국어]' : '[국문]';\r\n\r\nconsole.time(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);\r\n\r\n// 프로젝트 그룹과 프로젝트 이름이 제대로 입력되었는지 확인\r\nif (!groupName) {\r\n  console.error('🚫 - 프로젝트 그룹을 입력해주세요.');\r\n  process.exit(1);\r\n}\r\n\r\nif (!name) {\r\n  console.error('🚫 - 프로젝트 이름을 입력해주세요.');\r\n  process.exit(1);\r\n}\r\n\r\n// 프로젝트 그룹 폴더 존재여부 체크 없으면 생성\r\nif (!fs.existsSync(groupName)) {\r\n  console.error(\r\n    `🚀 - 해당 프로젝트 그룹이 존재하지 않습니다. 프로젝트 그룹에 대한 폴더를 생성하고 ${templateType} 템플릿을 복사합니다.`,\r\n  );\r\n  fs.mkdirSync(groupName, { recursive: true });\r\n}\r\n\r\n// 프로젝트 폴더 존재여부 체크\r\nconst projectFolderPath = path.join(groupName, name);\r\n\r\nif (fs.existsSync(projectFolderPath)) {\r\n  console.error('🚫 - 이미 해당 프로젝트가 존재합니다.');\r\n  process.exit(1);\r\n}\r\n\r\n// Template 폴더 경로\r\nconst templatePath = `./boilerplate/${templateType}`;\r\n\r\n// Template 폴더 존재여부 체크\r\nif (!fs.existsSync(templatePath)) {\r\n  console.error(`🚫 - ${templateLangType} 템플릿이 존재하지 않습니다.`);\r\n  process.exit(1);\r\n}\r\n\r\n// 프로젝트 폴더 생성\r\nfs.mkdirSync(projectFolderPath);\r\n\r\n// 템플릿을 프로젝트 폴더로 복사\r\nconsole.log(`🕐 - ${templateLangType} 템플릿 복사 시작`);\r\ncopyFolderRecursiveSync(templatePath, projectFolderPath);\r\nconsole.log(`✅ - ${templateLangType} 템플릿 복사 완료`);\r\nconsole.log(`🕐 - ${templateLangType} 프로젝트 세팅 시작`);\r\n\r\n// 번역.csv 파일명 변경\r\nif (templateType === 'gl') {\r\n  const oldFileName = path.join(projectFolderPath, 'translation.csv');\r\n  const newFileName = path.join(projectFolderPath, `${name}.csv`);\r\n  fs.renameSync(oldFileName, newFileName);\r\n}\r\n\r\n// package.json name 키 값 세팅\r\nconst packageJsonPath = path.join(projectFolderPath, 'package.json');\r\n\r\nif (fs.existsSync(packageJsonPath)) {\r\n  const packageJsonData = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));\r\n  packageJsonData.name = name;\r\n\r\n  // 만약 Global 프로젝트라면 번역 관련 로직이 추가되어야함\r\n  if (templateType === 'gl') {\r\n    packageJsonData.scripts.translate = `run-func translation.js convertCsvToJson ${name}`;\r\n  }\r\n  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJsonData, null, 2));\r\n}\r\n\r\nconsole.log(`✅ - ${templateLangType} 프로젝트 세팅 완료`);\r\n\r\nconst workspacePath = `${groupName}/${name}`;\r\n\r\n// 중복 추가를 방지하기 위해 이미 존재하는지 확인\r\nif (!packageJsonData.workspaces.includes(workspacePath)) {\r\n  // workspaces 배열에 새로운 경로 추가하는 로직\r\n  // 코드 생략...\r\n  console.timeEnd(`🎉 - [${groupName}/${name}] 프로젝트 생성 완료`);\r\n} else {\r\n  console.error(\r\n    `🚨 - 이미 [${workspacePath}] 워크스페이스가 존재합니다. 루트의 package.json을 확인해주세요.`,\r\n  );\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h2, {
+      id: "사용-방법",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#사용-방법",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "사용 방법"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "npm-script-등록",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#npm-script-등록",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "npm script 등록"]
+    }), "\n", _jsxs(_components.p, {
+      children: ["루트 ", _jsx(_components.code, {
+        children: "package.json"
+      }), "에 다음 스크립트를 추가한다:"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-json",
+        children: "{\r\n  \"scripts\": {\r\n    \"create:kr\": \"node scripts/create-project.js kr\",\r\n    \"create:gl\": \"node scripts/create-project.js gl\"\r\n  }\r\n}\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "프로젝트-생성-명령어",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#프로젝트-생성-명령어",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "프로젝트 생성 명령어"]
+    }), "\n", _jsx(_components.pre, {
+      children: _jsx(_components.code, {
+        className: "language-bash",
+        children: "# 국내 프로젝트 생성\r\nnpm run create:kr [그룹명] [프로젝트명]\r\n\r\n# 글로벌 프로젝트 생성\r\nnpm run create:gl [그룹명] [프로젝트명]\r\n\r\n# 예시\r\nnpm run create:kr landing landing-kr\r\nnpm run create:gl landing landing-gl\n"
+      })
+    }), "\n", _jsxs(_components.h3, {
+      id: "사용-영상",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#사용-영상",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "사용 영상"]
+    }), "\n", _jsx("video", {
+      src: "/video/project_creation_automation.mp4",
+      controls: true,
+      className: "w-full max-w-full rounded-lg shadow-lg"
+    }), "\n", _jsxs(_components.h2, {
+      id: "개선-효과",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#개선-효과",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "개선 효과"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "1-휴먼-에러-제거",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#1-휴먼-에러-제거",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "1. 휴먼 에러 제거"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "고유 ID 중복 방지"
+        }), ": 자동으로 중복 검사 후 생성"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "워크스페이스 중복 방지"
+        }), ": 기존 워크스페이스와 중복 시 에러 메시지 출력"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "하드코딩 제거"
+        }), ": 환경변수에 의존하던 고유 ID를 package.json으로 통일"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "2-개발-생산성-향상",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#2-개발-생산성-향상",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "2. 개발 생산성 향상"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "원클릭 생성"
+        }), ": 명령어 한 줄로 프로젝트 생성 완료"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "표준화"
+        }), ": 모든 프로젝트가 동일한 구조로 생성"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "자동화"
+        }), ": 수동 설정 과정 제거"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h3, {
+      id: "3-관심사-분리",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#3-관심사-분리",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "3. 관심사 분리"]
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "환경변수"
+        }), ": 앱 구동 시 필요한 환경변수만 관리"]
+      }), "\n", _jsxs(_components.li, {
+        children: [_jsx(_components.strong, {
+          children: "package.json"
+        }), ": 프로젝트 설정 관련 내용 통합 관리"]
+      }), "\n"]
+    }), "\n", _jsxs(_components.h2, {
+      id: "결론",
+      children: [_jsx(_components.a, {
+        "aria-hidden": "true",
+        tabIndex: "-1",
+        href: "#결론",
+        children: _jsx(_components.span, {
+          className: "icon icon-link"
+        })
+      }), "결론"]
+    }), "\n", _jsx(_components.p, {
+      children: "이번 개선을 통해 프로젝트 생성 과정에서 발생하던 휴먼 에러를 대폭 줄일 수 있었다. 특히 하드코딩된 환경변수를 제거하고 package.json을 통한 명확한 관심사 분리는 코드의 유지보수성을 크게 향상시켰다."
+    }), "\n", _jsx(_components.p, {
+      children: "앞으로도 개발 과정에서 반복되는 작업들은 자동화를 통해 휴먼 에러를 줄이고 개발 생산성을 높이는 방향으로 개선해 나갈 예정이다."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = Object.assign({}, _provideComponents(), props.components);
+  return MDXLayout ? _jsx(MDXLayout, Object.assign({}, props, {
+    children: _jsx(_createMdxContent, props)
+  })) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+2:[["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style relative justify-center border-x text-center text-app-white","children":["$","div",null,{"className":"flex flex-col justify-center px-4 py-16 lg:px-5 lg:py-20","children":[["$","p",null,{"className":"mb-3 text-sm","children":["개선 시리즈"," ","$undefined"]}],["$","h1",null,{"className":"text-xl lg:text-4xl","children":"모노레포 프로젝트 생성 자동화로 휴먼 에러 제거하기"}]]}]}]}],["$","section",null,{"className":"container-layout border-style grow-0 border-b bg-zinc-800","children":["$","div",null,{"className":"content-layout","children":["$","div",null,{"className":"border-style align-center flex justify-center border-x text-app-white lg:justify-start lg:text-center","children":[["$","p",null,{"className":"border-style border-l p-5 text-sm lg:border-l-0","children":"2024-05-13"}],["$","p",null,{"className":"border-style flex items-center justify-center gap-1 border-x p-5 text-sm","children":[["$","$Ld",null,{"src":"/assets/images/icons/timer.svg","width":21,"height":21,"alt":""}],"약 ",12,"분"]}]]}]}]}],["$","section",null,{"className":"container-layout bg-zinc-800","children":["$","div",null,{"className":"content-layout border-style flex flex-col border-x","children":["$","div",null,{"className":"flex","children":[["$","$Le",null,{"toc":[{"level":2,"title":"배경","href":"#배경","children":[{"level":3,"title":"기존 프로젝트 생성 방식의 문제점","href":"#기존-프로젝트-생성-방식의-문제점"},{"level":3,"title":"발생했던 휴먼 에러들","href":"#발생했던-휴먼-에러들"}]},{"level":2,"title":"개선 방향","href":"#개선-방향","children":[{"level":3,"title":"1. 하드코딩 제거","href":"#1-하드코딩-제거"},{"level":3,"title":"2. 자동화된 프로젝트 생성","href":"#2-자동화된-프로젝트-생성"},{"level":3,"title":"3. 파라미터 기반 설정","href":"#3-파라미터-기반-설정"},{"level":3,"title":"4. 관심사 분리","href":"#4-관심사-분리"}]},{"level":2,"title":"구현된 프로젝트 생성 스크립트","href":"#구현된-프로젝트-생성-스크립트","children":[{"level":3,"title":"스크립트 구조","href":"#스크립트-구조"},{"level":3,"title":"파라미터 검증","href":"#파라미터-검증"},{"level":3,"title":"중복 검사 및 폴더 생성","href":"#중복-검사-및-폴더-생성"},{"level":3,"title":"템플릿 복사 및 설정","href":"#템플릿-복사-및-설정"},{"level":3,"title":"package.json 설정","href":"#packagejson-설정"},{"level":3,"title":"워크스페이스 등록","href":"#워크스페이스-등록"},{"level":3,"title":"전체 코드","href":"#전체-코드"}]},{"level":2,"title":"사용 방법","href":"#사용-방법","children":[{"level":3,"title":"npm script 등록","href":"#npm-script-등록"},{"level":3,"title":"프로젝트 생성 명령어","href":"#프로젝트-생성-명령어"},{"level":3,"title":"사용 영상","href":"#사용-영상"}]},{"level":2,"title":"개선 효과","href":"#개선-효과","children":[{"level":3,"title":"1. 휴먼 에러 제거","href":"#1-휴먼-에러-제거"},{"level":3,"title":"2. 개발 생산성 향상","href":"#2-개발-생산성-향상"},{"level":3,"title":"3. 관심사 분리","href":"#3-관심사-분리"}]},{"level":2,"title":"결론","href":"#결론"}],"tags":["Monorepo","생산성","자동화"]}],["$","div",null,{"className":"flex w-full flex-col bg-neutral-800 xl:w-[742px]","children":[["$","$Lf",null,{"serialized":{"compiledSource":"$10","frontmatter":{},"scope":{}}}],"$L11",["$","div",null,{"className":"flex-between border-style mt-auto flex border-t bg-zinc-800 text-app-white","children":[["$","div",null,{"className":"border-style flex w-[50%] p-4","children":["$","$Lc",null,{"href":"/posts/history_scroll_restoration","className":"flex gap-4","children":[["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/left-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}],["$","div",null,{"className":"flex flex-col items-start gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"prev"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]","children":["브라우저 새로고침 시 스크롤 복원 막기","브라우저 새로고침 시 스크롤 복원 막기","브라우저 새로고침 시 스크롤 복원 막기"]}]]}]]}]}],["$","div",null,{"className":"flex w-[50%] justify-end p-4","children":["$","$Lc",null,{"href":"/posts/real-time-health-check-with-sse","className":"flex gap-4","children":[["$","div",null,{"className":"flex flex-col items-end gap-1","children":[["$","p",null,{"className":"text-sm text-neutral-500","children":"next"}],["$","p",null,{"className":"max-w-[120px] truncate text-neutral-300 lg:max-w-[200px]","children":["SSE를 활용한 실시간 헬스체크 시스템 개선","SSE를 활용한 실시간 헬스체크 시스템 개선","SSE를 활용한 실시간 헬스체크 시스템 개선"]}]]}],["$","span",null,{"children":["$","img",null,{"src":"/assets/images/icons/right-arrow.svg","alt":"prev","className":"h-[18px] w-[18px]"}]}]]}]}]]}],["$","$L12",null,{}]]}]]}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Lani.log | 모노레포 프로젝트 생성 자동화로 휴먼 에러 제거하기"}],["$","meta","3",{"name":"description","content":"하드코딩된 환경변수로 인한 휴먼 에러를 제거하고 프로젝트 생성을 자동화한 경험을 공유합니다."}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","meta","5",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","6",{"name":"apple-mobile-web-app-title","content":"Lani.log"}],["$","link","7",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_landscape.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","8",{"href":"/assets/images/splash_screens/iPhone_16_Pro_Max_portrait.png","media":"screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","9",{"href":"/assets/images/splash_screens/iPhone_16_Pro_landscape.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","10",{"href":"/assets/images/splash_screens/iPhone_16_Pro_portrait.png","media":"screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","11",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","12",{"href":"/assets/images/splash_screens/iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png","media":"screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","13",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","14",{"href":"/assets/images/splash_screens/iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png","media":"screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","15",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","16",{"href":"/assets/images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png","media":"screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","17",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","18",{"href":"/assets/images/splash_screens/iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png","media":"screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","19",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","20",{"href":"/assets/images/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png","media":"screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","21",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","22",{"href":"/assets/images/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","23",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_landscape.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","24",{"href":"/assets/images/splash_screens/iPhone_11__iPhone_XR_portrait.png","media":"screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","25",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","26",{"href":"/assets/images/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png","media":"screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","27",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","28",{"href":"/assets/images/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png","media":"screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","29",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","30",{"href":"/assets/images/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png","media":"screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","31",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","32",{"href":"/assets/images/splash_screens/13__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","33",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_landscape.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","34",{"href":"/assets/images/splash_screens/12.9__iPad_Pro_portrait.png","media":"screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","35",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","36",{"href":"/assets/images/splash_screens/11__iPad_Pro_M4_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","37",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","38",{"href":"/assets/images/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","39",{"href":"/assets/images/splash_screens/10.9__iPad_Air_landscape.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","40",{"href":"/assets/images/splash_screens/10.9__iPad_Air_portrait.png","media":"screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","41",{"href":"/assets/images/splash_screens/10.5__iPad_Air_landscape.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","42",{"href":"/assets/images/splash_screens/10.5__iPad_Air_portrait.png","media":"screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","43",{"href":"/assets/images/splash_screens/10.2__iPad_landscape.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","44",{"href":"/assets/images/splash_screens/10.2__iPad_portrait.png","media":"screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","45",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","46",{"href":"/assets/images/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png","media":"screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","link","47",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_landscape.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)","rel":"apple-touch-startup-image"}],["$","link","48",{"href":"/assets/images/splash_screens/8.3__iPad_Mini_portrait.png","media":"screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)","rel":"apple-touch-startup-image"}],["$","meta","49",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","50",{"property":"og:title","content":"Lani.log"}],["$","meta","51",{"property":"og:description","content":"Developer Lani's log"}],["$","meta","52",{"property":"og:image","content":"https://laniground.com/og-image.jpg"}],["$","meta","53",{"property":"og:type","content":"website"}],["$","meta","54",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","55",{"name":"twitter:title","content":"Lani.log"}],["$","meta","56",{"name":"twitter:description","content":"Developer Lani's log"}],["$","meta","57",{"name":"twitter:image","content":"https://laniground.com/og-image.jpg"}],["$","link","58",{"rel":"shortcut icon","href":"/assets/images/icons/icon.png"}],["$","link","59",{"rel":"icon","href":"/favicon.ico"}],["$","link","60",{"rel":"apple-touch-icon","href":"/assets/images/icons/icon.png"}]]
+1:null
+11:["$","div",null,{"className":"border-style mt-auto flex flex-col border-t p-4 text-app-white","children":[["$","p",null,{"className":"text-base text-app-blue-green","children":["$","span",null,{"className":"border-style inline-block border-x border-t bg-zinc-800 px-4 py-2","children":["See more \"","개선 시리즈","\""]}]}],["$","ul",null,{"className":"border-style border bg-zinc-800","children":[["$","li","SSE를 활용한 실시간 헬스체크 시스템 개선",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":1}],["$","$Lc",null,{"href":"/posts/real-time-health-check-with-sse","children":"SSE를 활용한 실시간 헬스체크 시스템 개선"}],["$","p",null,{"className":"ml-auto","children":"2024.08.21"}]]}],["$","li","모노레포 프로젝트 생성 자동화로 휴먼 에러 제거하기",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":2}],["$","$Lc",null,{"href":"/posts/project_creation_automation","children":"모노레포 프로젝트 생성 자동화로 휴먼 에러 제거하기"}],["$","p",null,{"className":"ml-auto","children":"2024.05.13"}]]}],["$","li","에러로그시스템 도입기(with. Sentry)",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":3}],["$","$Lc",null,{"href":"/posts/errorlog_system_with_sentry","children":"에러로그시스템 도입기(with. Sentry)"}],["$","p",null,{"className":"ml-auto","children":"2023.03.12"}]]}],["$","li","마크업 개선을 통해 SEO 최적화하기",{"className":"border-style flex gap-4 border-b p-4 text-sm last-of-type:border-b-0","children":[["$","p",null,{"children":4}],["$","$Lc",null,{"href":"/posts/refactoring_seo","children":"마크업 개선을 통해 SEO 최적화하기"}],["$","p",null,{"className":"ml-auto","children":"2022.08.15"}]]}]]}]]}]
