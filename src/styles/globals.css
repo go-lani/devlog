@@ -36,6 +36,44 @@
     clip: unset;
     white-space: normal;
   }
+
+  /* 스크롤바 커스터마이징 */
+  /* Webkit 브라우저 (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(64, 64, 64, 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #52525b, #71717a);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #71717a, #a1a1aa);
+    transform: scale(1.05);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(135deg, #a1a1aa, #d4d4d8);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: rgba(64, 64, 64, 0.3);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #71717a rgba(64, 64, 64, 0.3);
+  }
 }
 
 @layer components {
