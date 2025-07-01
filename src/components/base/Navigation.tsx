@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from '@lani.ground/react-modal';
+import { useModal } from '@lani.ground/react-modal';
 import localFont from 'next/font/local';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -25,9 +25,13 @@ const shareTechMono = localFont({
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { open, close, isOpen } = useModal();
   const [showInstallPrompt, setShowInstallPrompt] = useState<boolean>(false);
   const [isStandalone, setIsStandalone] = useState<boolean>(true);
+
+  const MODAL_NAMES = {
+    MOBILE_MENU: 'mobile-menu',
+  };
 
   useEffect(() => {
     const checkIOS =
@@ -63,6 +67,13 @@ export default function Navigation() {
     };
   }, []);
 
+  const openMobileMenu = () => {
+    open({
+      name: MODAL_NAMES.MOBILE_MENU,
+      component: (closeModal) => <MobileNavigation closeModal={closeModal} />,
+    });
+  };
+
   return (
     <>
       <div className="flex h-full items-center gap-2">
@@ -96,17 +107,10 @@ export default function Navigation() {
           <button
             type="button"
             className="flex h-full items-center rounded-3xl bg-neutral-900 px-4 text-base text-app-white transition-colors"
-            onClick={() => setIsMenuOpen(true)}
+            onClick={openMobileMenu}
           >
             menu
           </button>
-          <Modal
-            onClose={() => setIsMenuOpen(false)}
-            component={(closeModal) => (
-              <MobileNavigation closeModal={closeModal} />
-            )}
-            isOpen={isMenuOpen}
-          />
         </div>
         <ul className="hidden h-full lg:flex">
           {MENU.map(({ href, title }) => (

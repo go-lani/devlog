@@ -1,7 +1,7 @@
 'use client';
 
 import { dateKit } from '@lani.ground/kits';
-import { Modal } from '@lani.ground/react-modal';
+import { useModal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
 import { useState } from 'react';
 
@@ -13,11 +13,29 @@ import CustomPickerModal from '../components/picker/CustomPickerModal';
 
 export default function CustomPickerPage() {
   const { formatDate } = dateKit;
+  const { open } = useModal();
 
   // Custom Picker
-  const [isCustomCalendarOpen, setIsCustomCalendarOpen] = useState(false);
   const customState = useState<[Date | null, Date | null]>([null, null]);
   const [range] = customState;
+
+  const MODAL_NAMES = {
+    CUSTOM_PICKER: 'custom-picker',
+  };
+
+  const openCustomPicker = () => {
+    open({
+      name: MODAL_NAMES.CUSTOM_PICKER,
+      component: (closeModal) => (
+        <CustomPickerModal rangeState={customState} closeModal={closeModal} />
+      ),
+      animation: {
+        className: 'sample',
+        duration: 300,
+      },
+      centerMode: true,
+    });
+  };
 
   const examples = [
     {
@@ -28,9 +46,7 @@ export default function CustomPickerPage() {
       color: 'from-violet-500 to-indigo-500',
       bgColor: 'bg-violet-500/5',
       borderColor: 'border-violet-500/20',
-      isOpen: isCustomCalendarOpen,
-      onToggle: () => setIsCustomCalendarOpen(true),
-      onClose: () => setIsCustomCalendarOpen(false),
+      onToggle: openCustomPicker,
       range,
       customState,
       placeholder: '날짜 범위를 선택하세요',
@@ -504,23 +520,7 @@ const getCurrentTimeValue = () => {
                   </button>
                 </div>
 
-                {/* 모달 컴포넌트 */}
-                <Modal
-                  name="custom-picker"
-                  component={(closeModal) => (
-                    <CustomPickerModal
-                      rangeState={example.customState}
-                      closeModal={closeModal}
-                    />
-                  )}
-                  onClose={example.onClose}
-                  animation={{
-                    className: 'sample',
-                    duration: 300,
-                  }}
-                  isOpen={example.isOpen}
-                  centerMode
-                />
+                {/* 모달은 useModal 훅으로 관리됩니다 */}
 
                 {/* 기능 설명 */}
                 <div className="mt-3 rounded-lg bg-neutral-800/30 p-3 sm:mt-4 sm:p-4">
