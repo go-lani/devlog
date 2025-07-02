@@ -72,26 +72,23 @@ export default async function App() {
             <div className="mt-6 break-keep text-sm lg:mt-16 lg:text-base">
               <p className="text-base font-bold lg:text-lg">Introduce.</p>
               <p className="mt-2 lg:mt-4">
-                사용자 중심에서 생각하는 것을 좋아하며, 사용자 행동을 고려한{' '}
-                <br className="hidden lg:block" />
-                <span className="text-app-blue-green">
-                  사용자 경험(UX)
-                </span>{' '}
-                개선에 깊은 관심을 가지고 있습니다.
+                사용자 중심의 사고를 바탕으로{' '}
+                <span className="text-app-blue-green">UX 개선</span>에 관심을
+                가지고 있으며, <br className="hidden lg:block" />
+                개발 지식이 없는 사람도 직관적으로 이해할 수 있는{' '}
+                <span className="text-app-blue-green">클린 코드</span> 작성을
+                추구합니다.
               </p>
               <p className="mt-2 lg:mt-4">
-                <span className="text-app-blue-green">클린 코드</span>에 대한
-                열정이 있으며, 개발 지식이 없는 사람도 제 코드를 보고{' '}
-                <br className="hidden lg:block" />
-                어떤 기능을 하는지 직관적으로 이해할 수 있는 코드를 작성하는
-                것을 목표로 하고 있습니다.
-              </p>
-              <p className="mt-2 lg:mt-4">
-                또한 협업을 통해 문제를 해결하고,{' '}
-                <span className="text-app-blue-green">더 나은 결과물</span>을
-                만들어내는 것에 재미를 느끼고,{' '}
-                <br className="hidden lg:block" />
-                지속적인 학습과 성장을 추구합니다.
+                <span className="text-app-blue-green">협업</span>을 통해 문제를
+                해결하는 과정에서 재미를 느끼고,{' '}
+                <br className="hidden lg:block" />더 나은 결과물을 위한{' '}
+                <span className="text-app-blue-green">아이디어 제안</span>과{' '}
+                <span className="text-app-blue-green">토론</span>
+                을 즐기며
+                <br />
+                <span className="text-app-blue-green">지속적인 학습</span>을
+                통해 더 나은 개발자가 되기 위해 노력하고 있습니다.
               </p>
             </div>
             <div className="mt-10 break-keep text-sm lg:mt-16 lg:text-base">

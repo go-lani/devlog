@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { PACKAGES_CONFIG } from '@/constants/menu';
 
 interface Props {
@@ -38,11 +40,16 @@ export default function ContentLayout({ packageName, children }: Props) {
           {/* NPM 배지 */}
           <div className="flex flex-wrap gap-2 sm:gap-3">
             <div className="flex items-center gap-1 rounded-full bg-neutral-800/70 px-2 py-1.5 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 xl:px-4">
-              <img
-                src={`https://img.shields.io/npm/v/%40lani.ground/${packageName}`}
-                alt="NPM Version"
-                className="h-4 sm:h-5"
-              />
+              <Link
+                href={`https://www.npmjs.com/package/@lani.ground/${packageName}`}
+                target="_blank"
+              >
+                <img
+                  src={`https://img.shields.io/npm/v/%40lani.ground/${packageName}`}
+                  alt="NPM Version"
+                  className="h-4 sm:h-5"
+                />
+              </Link>
             </div>
             <div className="flex items-center gap-1 rounded-full bg-green-500/10 px-2 py-1.5 text-green-400 backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-2 xl:px-4">
               <svg
