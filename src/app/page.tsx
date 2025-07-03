@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { DiNpm } from 'react-icons/di';
+import { FaAppStore, FaGooglePlay, FaMobileAlt } from 'react-icons/fa';
 
 import Footer from '@/components/base/Footer';
 import Header from '@/components/base/Header';
@@ -126,85 +127,165 @@ export default async function App() {
               <p className="text-base font-bold lg:text-lg">
                 Other Experience.
               </p>
-              <ul className="mt-4 flex flex-col gap-4">
-                {other.map((o) => (
-                  <li
-                    className="flex flex-col gap-1 lg:flex-row lg:gap-4"
-                    key={o.id}
-                  >
-                    <p className="w-[130px] shrink-0 lg:w-[150px]">
-                      {o.period}
-                      {o.inProgress && (
-                        <>
-                          {' '}
-                          - <span className="text-app-yellow">now</span>
-                        </>
-                      )}
-                    </p>
-                    <div className="shrink">
-                      {o.role} <br className="block lg:hidden" />
-                      {o.projects ? (
-                        o.projects.map((p) => (
-                          <span
-                            className="flex gap-2 text-xs text-neutral-500 lg:items-center lg:text-sm"
-                            key={p.name}
-                          >
-                            {p.type === 'extension' && (
-                              <img
-                                src="/assets/images/icons/extension.svg"
-                                alt="chrome extension"
-                                className="h-[16px] w-[16px] self-center lg:h-[22px] lg:w-[22px]"
-                              />
-                            )}
-                            {p.type === 'npm' && (
+              <div className="mt-4 flex flex-col gap-8">
+                {/* Creator 그룹 */}
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-500 lg:text-base">
+                    Creator
+                  </h3>
+                  <ul className="mt-2 flex flex-col gap-3">
+                    {other
+                      .filter((o) => o.role === 'Creator.')
+                      .map((o) => (
+                        <li
+                          className="flex flex-col gap-1 lg:flex-row lg:gap-4"
+                          key={o.id}
+                        >
+                          <p className="flex w-[130px] shrink-0 items-center gap-1 lg:w-[150px]">
+                            {o.period}
+                            {o.inProgress && (
                               <>
-                                <i className="hidden shrink-0 lg:block">
-                                  <DiNpm
-                                    size="2rem"
-                                    color="rgb(203 3 3 / 80%)"
-                                  />
-                                </i>
-                                <i className="mt-[5px] flex shrink-0 lg:hidden">
-                                  <DiNpm
-                                    size="1.5rem"
-                                    color="rgb(203 3 3 / 80%)"
-                                  />
-                                </i>
+                                {' '}
+                                - <span className="text-app-yellow">now</span>
                               </>
                             )}
-                            <Link
-                              href={p.link}
-                              target="_blank"
-                              className="my-[7px] flex shrink  items-center gap-1 break-all"
-                            >
-                              {p.name}
-                              {p.type === 'extension' && (
-                                <img
-                                  src={`/assets/images/icons/${p.logo}`}
-                                  alt="chrome extension"
-                                  className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px]"
-                                />
-                              )}
-                            </Link>
-                            {p.type === 'npm' && (
-                              <Link
-                                href={p.docs}
-                                className="my-[7px] shrink italic text-cyan-700"
-                              >
-                                example
-                              </Link>
+                          </p>
+                          <div className="shrink">
+                            {o.projects ? (
+                              o.projects.map((p) => (
+                                <span
+                                  className="flex gap-2 text-xs text-neutral-500 lg:items-center lg:text-sm"
+                                  key={p.name}
+                                >
+                                  {p.type === 'extension' && (
+                                    <img
+                                      src="/assets/images/icons/extension.svg"
+                                      alt="chrome extension"
+                                      className="h-[16px] w-[16px] self-center lg:h-[22px] lg:w-[22px]"
+                                    />
+                                  )}
+                                  {p.type === 'npm' && (
+                                    <>
+                                      <i className="hidden shrink-0 lg:block">
+                                        <DiNpm
+                                          size="2rem"
+                                          color="rgb(203 3 3 / 80%)"
+                                        />
+                                      </i>
+                                      <i className="mt-[5px] flex shrink-0 lg:hidden">
+                                        <DiNpm
+                                          size="1.5rem"
+                                          color="rgb(203 3 3 / 80%)"
+                                        />
+                                      </i>
+                                    </>
+                                  )}
+                                  {p.type === 'app' ? (
+                                    <div className="flex flex-col gap-1 lg:flex-row lg:gap-2">
+                                      <span className="my-[7px] flex items-center gap-1 break-all text-xs text-neutral-500 lg:text-sm">
+                                        <FaMobileAlt
+                                          size="0.9rem"
+                                          className="text-neutral-400"
+                                        />
+                                        {p.name}
+                                      </span>
+                                      <div className="flex gap-2">
+                                        {p.appstoreLink && (
+                                          <Link
+                                            href={p.appstoreLink}
+                                            target="_blank"
+                                            className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 lg:text-sm"
+                                          >
+                                            <FaAppStore size="0.8rem" />
+                                            App Store
+                                          </Link>
+                                        )}
+                                        {p.googlePlayLink && (
+                                          <Link
+                                            href={p.googlePlayLink}
+                                            target="_blank"
+                                            className="flex items-center gap-1 text-xs text-green-400 hover:text-green-300 lg:text-sm"
+                                          >
+                                            <FaGooglePlay size="0.8rem" />
+                                            Google Play
+                                          </Link>
+                                        )}
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <div className="flex flex-col lg:flex-row lg:gap-2">
+                                      {p.link && (
+                                        <Link
+                                          href={p.link}
+                                          target="_blank"
+                                          className="my-[7px] flex shrink items-center gap-1 break-all"
+                                        >
+                                          {p.name}
+                                          {p.type === 'extension' && p.logo && (
+                                            <img
+                                              src={`/assets/images/icons/${p.logo}`}
+                                              alt="chrome extension"
+                                              className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px]"
+                                            />
+                                          )}
+                                        </Link>
+                                      )}
+                                      {p.type === 'npm' && p.docs && (
+                                        <Link
+                                          href={p.docs}
+                                          className="my-[7px] shrink italic text-cyan-700"
+                                        >
+                                          example
+                                        </Link>
+                                      )}
+                                    </div>
+                                  )}
+                                </span>
+                              ))
+                            ) : (
+                              <span className="text-xs text-neutral-500 lg:text-sm">
+                                {o.details}
+                              </span>
                             )}
-                          </span>
-                        ))
-                      ) : (
-                        <span className="text-xs text-neutral-500 lg:text-sm">
-                          {o.details}
-                        </span>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                          </div>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+
+                {/* Other Roles 그룹 */}
+                <div>
+                  <h3 className="text-sm font-semibold text-neutral-500 lg:text-base">
+                    Other Roles
+                  </h3>
+                  <ul className="mt-2 flex flex-col gap-3">
+                    {other
+                      .filter((o) => o.role !== 'Creator.')
+                      .map((o) => (
+                        <li
+                          className="flex flex-col gap-1 lg:flex-row lg:gap-4"
+                          key={o.id}
+                        >
+                          <p className="flex w-[130px] shrink-0 items-center gap-1 lg:w-[150px]">
+                            {o.period}
+                            {o.inProgress && (
+                              <>
+                                {' '}
+                                - <span className="text-app-yellow">now</span>
+                              </>
+                            )}
+                          </p>
+                          <div className="shrink">
+                            {o.role}{' '}
+                            <span className="text-xs text-neutral-500 lg:text-sm">
+                              {o.details}
+                            </span>
+                          </div>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
             </div>
             <p className="mt-36 text-center text-xs italic text-neutral-600 lg:text-sm">
               Last Updated on 18th, June, 2025

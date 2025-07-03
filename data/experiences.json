@@ -26,6 +26,20 @@
   ],
   "other": [
     {
+      "id": 10,
+      "period": "2025.07",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "@lani.ground/react-device-detector",
+          "link": "https://www.npmjs.com/package/@lani.ground/react-device-detector",
+          "docs": "/playground/react-device-detector",
+          "type": "npm"
+        }
+      ],
+      "inProgress": true
+    },
+    {
       "id": 9,
       "period": "2025.05",
       "role": "Creator.",
@@ -114,6 +128,20 @@
         }
       ],
       "inProgress": true
+    },
+    {
+      "id": 11,
+      "period": "2022.08 - 2023.09",
+      "role": "Creator.",
+      "projects": [
+        {
+          "name": "한잔만",
+          "appstoreLink": "https://apps.apple.com/kr/app/%ED%95%9C%EC%9E%94%EB%A7%8C/id1632177287",
+          "googlePlayLink": "https://play.google.com/store/apps/details?id=com.teamwannaone.oos",
+          "type": "app"
+        }
+      ],
+      "inProgress": false
     },
     {
       "id": 3,

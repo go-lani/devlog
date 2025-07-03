@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import { DeviceDetectorProvider } from '@lani.ground/react-device-detector';
 import { ModalProvider } from '@lani.ground/react-modal';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -104,7 +105,9 @@ export default function RootLayout({
       )}
       <body className={`${spoqaSans.className} px-[20px]`}>
         <div id="main-root" className="mx-[-20px]">
-          <ModalProvider>{children}</ModalProvider>
+          <DeviceDetectorProvider>
+            <ModalProvider>{children}</ModalProvider>
+          </DeviceDetectorProvider>
         </div>
       </body>
     </html>

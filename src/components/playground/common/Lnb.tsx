@@ -77,6 +77,14 @@ const NAVIGATION_CONFIG = {
       '/kits/cookie',
     ],
   },
+  '/react-device-detector': {
+    icon: '📱',
+    color: 'from-green-500 to-lime-500',
+    bgColor: 'bg-green-500/10',
+    hoverColor: 'hover:bg-green-500/20',
+    activeColor: 'bg-green-600',
+    children: [],
+  },
 } as const;
 
 interface ComponentItem {

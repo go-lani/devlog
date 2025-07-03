@@ -41,4 +41,11 @@ export const PACKAGES_CONFIG = {
     hoverColor: 'hover:bg-amber-500/20',
     activeColor: 'bg-amber-600',
   },
+  '/react-device-detector': {
+    icon: '📱',
+    color: 'from-green-500 to-lime-500',
+    bgColor: 'bg-green-500/10',
+    hoverColor: 'hover:bg-green-500/20',
+    activeColor: 'bg-green-600',
+  },
 };

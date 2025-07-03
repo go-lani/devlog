@@ -39,11 +39,11 @@ const subPageInfo = {
 };
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
 
   if (!validSubPages.includes(slug)) {
     return {
@@ -61,8 +61,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ReactPickerSubPage({ params }: Props) {
-  const { slug } = params;
+export default async function ReactPickerSubPage({ params }: Props) {
+  const { slug } = await params;
 
   // 유효하지 않은 slug인 경우 404 처리
   if (!validSubPages.includes(slug)) {

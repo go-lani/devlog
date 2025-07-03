@@ -26,10 +26,12 @@ export type Other = {
 
 export type Project = {
   name: string;
-  link: string;
-  docs: string;
+  link?: string;
+  docs?: string;
   type: string;
   logo?: string;
+  appstoreLink?: string;
+  googlePlayLink?: string;
 };
 
 export async function getExperiencies(): Promise<Experiences> {

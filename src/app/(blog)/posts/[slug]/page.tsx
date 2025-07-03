@@ -7,9 +7,8 @@ import { getPost, getPostSlugs } from '@/service/posts';
 import { PostDetail } from '@/types/post';
 import { getDateString } from '@/utils/date';
 
-export async function generateMetadata({
-  params: { slug },
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   try {
     const {
       meta: { title, description },
@@ -28,10 +27,11 @@ export async function generateStaticParams() {
 }
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default async function DetailPage({ params: { slug } }: Props) {
+export default async function DetailPage({ params }: Props) {
+  const { slug } = await params;
   let post: PostDetail;
   try {
     post = await getPost(slug, 'Posts');
