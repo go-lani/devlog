@@ -140,10 +140,10 @@
   resolved "https://registry.yarnpkg.com/@lani.ground/kits/-/kits-1.0.0-alpha.4.tgz#b61e768d4cc54cea196e5cfdef25087ed2d012f2"
   integrity sha512-nKlvULi8zvqim2V/5gt01Fq2gsElv06d4lsO5b6DJeWeCGWPYBaT6s8J29DEaWWlB6KFt99kt/F+1N++JE496g==
 
-"@lani.ground/react-device-detector@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@lani.ground/react-device-detector/-/react-device-detector-1.0.0.tgz#69295689dee7c9ff51a2ffa17734e44d41c28551"
-  integrity sha512-uTnTgy1Jbi0xOC7clfFYLGTjGUSzO9/pgk8eA7wBsp9L3Cblyw05vPp1ZGiMHZoND4vPesl+fs87FCHQ2JzO1A==
+"@lani.ground/react-device-detector@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@lani.ground/react-device-detector/-/react-device-detector-1.0.3.tgz#47e97481df993310f5924dae699986e7cb530a97"
+  integrity sha512-0+pG+dVqu3dOLyRaPcHzrrA7+Y1j8Aq8oAeXeotTLFu93QAA+8+N8em74XoDBWwX122tOPXj9nBFsR/q4dObZQ==
 
 "@lani.ground/react-hooks@^0.3.3":
   version "0.3.4"

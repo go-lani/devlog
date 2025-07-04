@@ -21,7 +21,7 @@
   "dependencies": {
     "@giscus/react": "^3.1.0",
     "@lani.ground/kits": "^1.0.0-alpha.4",
-    "@lani.ground/react-device-detector": "^1.0.0",
+    "@lani.ground/react-device-detector": "^1.0.3",
     "@lani.ground/react-hooks": "^0.3.3",
     "@lani.ground/react-image-viewer": "^1.2.1",
     "@lani.ground/react-modal": "^3.0.0",
