@@ -2,7 +2,7 @@ Lani의 개발 블로그
 
 ## Base 스택
 
-- [x] Next@15.1.8(App Router)
+- [x] Next(App Router)
 - [x] Typescript
 - [x] Tailwindcss
 - [x] react-icons
