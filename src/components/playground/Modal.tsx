@@ -4,7 +4,7 @@ import { useModal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
 import { useEffect, useState } from 'react';
 
-import Syntax from '../detail/SyntaxHighlighter';
+import SyntaxHighlighter from '../detail/SyntaxHighlighter';
 
 import ExampleSection from './common/ExampleSection';
 import DummyComponent from './mock/DummyComponent';
@@ -158,7 +158,7 @@ export default function ModalPage() {
                 Usage
               </h3>
               <div className="mt-3 w-full">
-                <Syntax
+                <SyntaxHighlighter
                   language="tsx"
                   children={`import { useModal } from '@lani.ground/react-modal';
 import '@lani.ground/react-modal/css';
@@ -474,17 +474,15 @@ const openMyModal = () => {
         <ExampleSection title="사용 예제">
           <div className="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-4 sm:rounded-xl sm:p-6">
             <div className="flex items-start gap-2 sm:gap-3">
-              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-neutral-800/50 text-lg sm:h-10 sm:w-10 sm:text-xl">
-                📝
-              </div>
               <div className="min-w-0 flex-1">
                 <h3 className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-base font-bold leading-tight text-transparent sm:text-lg">
-                  코드 예제
+                  📝 Usage
                 </h3>
                 <div className="mt-3 space-y-4">
-                  <div className="rounded-lg bg-neutral-900/50 p-3 text-xs sm:p-4 sm:text-sm">
-                    <pre className="overflow-x-auto text-gray-300">
-                      {`import { useModal } from '@lani.ground/react-modal';
+                  <div className="rounded-lg bg-neutral-900/50 text-xs sm:text-sm">
+                    <SyntaxHighlighter
+                      language="tsx"
+                      children={`import { useModal } from '@lani.ground/react-modal';
 
 function MyComponent() {
   const { open, close, isOpen } = useModal();
@@ -515,7 +513,8 @@ function MyComponent() {
     </div>
   );
 }`}
-                    </pre>
+                      isPlayground
+                    />
                   </div>
                   <div className="text-xs text-gray-400 sm:text-sm">
                     <p className="mb-2">

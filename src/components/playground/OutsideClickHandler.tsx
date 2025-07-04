@@ -330,22 +330,6 @@ const [isVisible, setIsVisible] = useState(false);
               </div>
             </div>
 
-            <div className="rounded-lg border border-purple-500/20 bg-purple-500/5 p-4 sm:rounded-xl sm:p-6">
-              <div className="flex items-start gap-2 sm:gap-3">
-                <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-lg bg-purple-500/20 text-sm sm:h-8 sm:w-8 sm:text-lg">
-                  ✏️
-                </div>
-                <div className="min-w-0 space-y-1 sm:space-y-2">
-                  <h3 className="text-sm font-bold leading-tight text-purple-400 sm:text-base">
-                    인라인 편집
-                  </h3>
-                  <p className="text-xs leading-relaxed text-gray-400 sm:text-sm">
-                    인라인 에디터의 저장/취소 처리
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <div className="rounded-lg border border-orange-500/20 bg-orange-500/5 p-4 sm:rounded-xl sm:p-6">
               <div className="flex items-start gap-2 sm:gap-3">
                 <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-lg bg-orange-500/20 text-sm sm:h-8 sm:w-8 sm:text-lg">

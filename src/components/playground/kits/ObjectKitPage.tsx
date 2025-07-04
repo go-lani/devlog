@@ -106,7 +106,7 @@ export default function ObjectKitPage() {
                   {example.additionalExamples.map((addExample) => (
                     <div
                       key={addExample.code}
-                      className="rounded bg-neutral-800/30 p-3"
+                      className="rounded bg-neutral-800/30"
                     >
                       <div className="mb-2 rounded bg-neutral-900/50 p-2">
                         <code className="text-xs text-green-400">

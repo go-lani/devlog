@@ -390,22 +390,22 @@ export default function HooksPage() {
             <div ref={ref} className="space-y-3 sm:space-y-4">
               <div className="flex h-[30vh] items-center justify-center rounded-lg border border-red-500/20 bg-gradient-to-br from-red-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
                 <h3 className="text-lg font-bold text-red-400 sm:text-xl">
-                  Section 1
+                  Section 0
                 </h3>
               </div>
               <div className="flex h-[30vh] items-center justify-center rounded-lg border border-green-500/20 bg-gradient-to-br from-green-500/20 to-emerald-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
                 <h3 className="text-lg font-bold text-green-400 sm:text-xl">
-                  Section 2
+                  Section 1
                 </h3>
               </div>
               <div className="flex h-[30vh] items-center justify-center rounded-lg border border-blue-500/20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
                 <h3 className="text-lg font-bold text-blue-400 sm:text-xl">
-                  Section 3
+                  Section 2
                 </h3>
               </div>
               <div className="flex h-[30vh] items-center justify-center rounded-lg border border-purple-500/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 sm:h-[40vh] sm:rounded-xl xl:h-[50vh]">
                 <h3 className="text-lg font-bold text-purple-400 sm:text-xl">
-                  Section 4
+                  Section 3
                 </h3>
               </div>
             </div>

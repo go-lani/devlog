@@ -3,6 +3,8 @@
 import { useDeviceDetect } from '@lani.ground/react-device-detector';
 import { useEffect, useState } from 'react';
 
+import SyntaxHighlighter from '../detail/SyntaxHighlighter';
+
 import ExampleSection from './common/ExampleSection';
 
 function DeviceInfoCard() {
@@ -271,20 +273,18 @@ function App() {
           </div>
 
           {/* 코드 블록 */}
-          <div className="rounded-lg bg-neutral-900/50 p-3 sm:p-4">
-            <pre className="overflow-x-auto">
-              <code className="text-xs text-green-400 sm:text-sm">
-                {example.code}
-              </code>
-            </pre>
-          </div>
+          <SyntaxHighlighter
+            language="tsx"
+            children={example.code}
+            isPlayground
+          />
         </div>
       ))}
     </div>
   );
 }
 
-export default function DeviceDetectPage() {
+export default function DeviceDetectorPage() {
   return (
     <>
       <ExampleSection title="Device Detector Examples">
@@ -313,13 +313,17 @@ export default function DeviceDetectPage() {
                     <h4 className="mb-2 text-sm font-medium text-gray-300">
                       반환값:
                     </h4>
-                    <div className="rounded bg-neutral-900/50 p-3">
-                      <code className="text-xs text-green-400">{`{
+                    <div className="rounded bg-neutral-900/50">
+                      <SyntaxHighlighter
+                        language="tsx"
+                        children={`{
   isPhone: boolean,
   isTablet: boolean,
   isDesktop: boolean,
   isSmallDesktop?: boolean
-}`}</code>
+}`}
+                        isPlayground
+                      />
                     </div>
                   </div>
                   <div>
@@ -442,12 +446,16 @@ export default function DeviceDetectPage() {
                     <h4 className="mb-2 text-sm font-medium text-gray-300">
                       BreakPoints Interface:
                     </h4>
-                    <div className="rounded bg-neutral-900/50 p-3">
-                      <code className="text-xs text-green-400">{`interface BreakPoints {
-  PHONE?: number;           // 기본값: 720
-  TABLET?: number;          // 기본값: 1024
+                    <div className="rounded bg-neutral-900/50">
+                      <SyntaxHighlighter
+                        language="tsx"
+                        children={`interface BreakPoints {
+  PHONE: number;           // 기본값: 720
+  TABLET: number;          // 기본값: 1024
   SMALL_DESKTOP?: number;   // 선택사항
-}`}</code>
+}`}
+                        isPlayground
+                      />
                     </div>
                   </div>
                 </div>
