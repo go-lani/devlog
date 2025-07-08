@@ -59,7 +59,7 @@ export default function CustomPickerModal({
   };
 
   return (
-    <div className="flex h-full w-full items-start justify-center bg-[#27272a] pt-2">
+    <div className="flex min-h-full w-full items-start justify-center bg-[#27272a] py-4">
       <div className="w-full max-w-[400px]">
         <div className="mb-4 flex items-center justify-between">
           <button
